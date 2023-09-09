@@ -189,7 +189,7 @@
     <p class="text-center header-slogan">
         
             
-                Hi, nice to meet you.
+                孤独之人的避风巷
             
         
     </p>
@@ -202,7 +202,7 @@
         <a href="/archives/" class="navbar-link">归档</a>
     
     
-        <a href="/search" class="navbar-link">搜索</a>
+        <a href="" class="navbar-link">搜索</a>
     
     
     
@@ -212,37 +212,17 @@
 
         <!-- Share Weibo -->
         
-        <li class="menu-item">
-            <a href="http://service.weibo.com/share/share.php?appkey=&title=siehn_nx's bolg&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
-        </li>
-        
 
         <!-- Share Twitter -->
-        
-        <li class="menu-item">
-            <a href="https://twitter.com/intent/tweet?text=siehn_nx's bolg&url=http://example.com&via=siriehn_nx" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
-        </li>
         
 
         <!-- Share Facebook -->
         
-        <li class="menu-item">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
-        </li>
-        
 
         <!-- Share Google+ -->
         
-        <li class="menu-item">
-            <a href="https://plus.google.com/share?url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
-        </li>
-        
 
         <!-- Share LinkedIn -->
-        
-        <li class="menu-item">
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com&title=" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
-        </li>
         
 
         <!-- Share QQ -->
@@ -253,10 +233,6 @@
         
 
         <!-- Share Telegram -->
-        
-        <li class="menu-item">
-            <a href="https://t.me/share/url?url=http://example.com&text=" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
-        </li>
         
 
         <!-- QRCode -->
@@ -343,7 +319,7 @@
 
     <!-- footer custom text -->
     <p class="footer-text mb-0">
-    
+    Contact me with siriehn_nx@outlook.com
     </p>
     <!-- footer develop info -->
     <p class="footer-develop mb-0">
@@ -379,7 +355,17 @@ window.lazyLoadOptions = {
     elements_selector: ".lazyload",
     threshold: 50
 };
-document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2022;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
 console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
 
 </script>
