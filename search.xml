@@ -256,6 +256,70 @@
       </tags>
   </entry>
   <entry>
+    <title>数学分析笔记</title>
+    <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数学分析笔记"><a href="#数学分析笔记" class="headerlink" title="数学分析笔记"></a>数学分析笔记</h1><h2 id="实数与序列"><a href="#实数与序列" class="headerlink" title="实数与序列"></a>实数与序列</h2><h3 id="常见数集"><a href="#常见数集" class="headerlink" title="常见数集"></a>常见数集</h3><p>下面给出一些集合的定义<br>$$<br>\N &#x3D; {0, 1, 2, \ldots}\<br>\Z &#x3D; {\ldots,-1,0,1,\ldots}<br>\<br>\Q &#x3D; {\frac{p}{q}\vert p, q \in \Z, q\not &#x3D; 0}<br>$$<br>对于四则运算封闭的是 $\Q, \R, \C$</p>
+<h3 id="Dedkind分割"><a href="#Dedkind分割" class="headerlink" title="Dedkind分割"></a>Dedkind分割</h3><p>先定义一个分割</p>
+<p>$A, B$ 为有理数集合，满足：</p>
+<ol>
+<li>$A, B \not &#x3D; \empty, \Q &#x3D; A \cup B, A \cap B &#x3D; \emptyset$</li>
+<li>$\forall x\in A, y \in B, x &lt; y$</li>
+</ol>
+<p>显然有四种情况</p>
+<ol>
+<li>$A$ 中有最大值，$B$ 中有最小值</li>
+<li>$A$ 中无最大值，$B$ 中有最小值</li>
+<li>$A$ 中有最大值，$B$ 中无最小值</li>
+<li>$A$ 中无最大值，$B$ 中无最小值</li>
+</ol>
+<p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
+<p>Dedkind 分割就是 ${(A, B)是 \Q 的一个分割，且 A 中无最大值}$</p>
+<p>每一个 Dedkind 分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
+<h3 id="Dedkind-分割来定义无理数的运算"><a href="#Dedkind-分割来定义无理数的运算" class="headerlink" title="Dedkind 分割来定义无理数的运算"></a>Dedkind 分割来定义无理数的运算</h3><p>定义 $x &#x3D; (A_1, B_1), y &#x3D; (A_2, B_2)$ ，若 $A_1 \sub A_2$ 称 $x\le y$，若 $A_1 \sub A_2$ 且 $A_1 \not &#x3D; A_2$ 称 $x &lt; y$。</p>
+<p>性质</p>
+<ol>
+<li>反称性：$x\le y$ 则 $y\ge x$</li>
+<li>传递性：$x\le y$ 且 $y \le z$，则 $x \le z$</li>
+<li>完备性：$x, y\in \R$，则 $x\le y$ 或 $y\le x$</li>
+</ol>
+<p>四则运算定义</p>
+<p>$x + y &#x3D; (A_3, B_3)$，其中 $A_3 &#x3D; {r \in \Q\vert \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.} r &#x3D; r_1 + r_2}$， $B_3 &#x3D; Q&#x2F;A_3$</p>
+<p>负元 $-x &#x3D; (A_3, B_3)$，其中 $A_3 &#x3D; {r \in \Q\vert \exists r_1 \in B_1, r &#x3D; -r_1, r_1 不是最小元}$， $B_3 &#x3D; Q&#x2F;A_3$</p>
+<p>则减法定义为 $x - y &#x3D; x + (-y)$</p>
+<p>乘法：</p>
+<p>$xy &#x3D; (A_3, B_3)$</p>
+<ol>
+<li>$x\ge 0, y \ge 0, A_3 &#x3D; {r \in \Q\vert r &lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.} r_1 \ge 0, r_2 \ge 0, r &#x3D; r_1r_2}$ </li>
+<li>$x\ge 0, y &lt; 0,xy &#x3D; -(x(-y))$</li>
+<li>$x &lt; 0, y &lt; 0, xy &#x3D; (-x)(-y)$</li>
+</ol>
+<p>逆元 $A_3 &#x3D; {r \in Q\vert r\le 0 或 \exists r_1 \in B_1 , r_1 不是 B_1最小元, r &#x3D;\frac{1}{r_1}}, B &#x3D; Q &#x2F; A_3$</p>
+<p>实数域范围内：</p>
+<ol>
+<li>交换律</li>
+<li>结合律</li>
+<li>单位元</li>
+<li>逆元</li>
+<li>分配律</li>
+</ol>
+<p>相容性条件</p>
+<ol>
+<li>加法保序性 $x\le y$ 则 $x + z \le y + z$</li>
+<li>乘法保序性 $x\le y, z \ge 0$, 则 $xz\le yz$</li>
+</ol>
+<h3 id="实数确界存在定理"><a href="#实数确界存在定理" class="headerlink" title="实数确界存在定理"></a>实数确界存在定理</h3><p>定义 $X \sub \R,x\not &#x3D; \empty$ </p>
+<ol>
+<li>若 $C \in \R, \text{s.t.} \forall x \in X, x \le C$ 则称 $C$ 是 $X$ 的一个上界，下界同理</li>
+<li>若 $X$ 既有上界又有下界，那么称 $X$ 是有界集</li>
+<li>称 $a$ 是 $X$ 的一个上确界，若 $\forall C$ 是 $X$ 的上界，$C \ge a$，记 $a &#x3D; \sup X$ 上确界，下确界是 $\inf X$</li>
+</ol>
+<p>定理：确界存在定理：有上界或者下界的非空子集，必有唯一的上确界或者下确界。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>清华大学本科生日记</title>
     <url>/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="2023-9"><a href="#2023-9" class="headerlink" title="2023&#x2F;9"></a>2023&#x2F;9</h2><h3 id="16日"><a href="#16日" class="headerlink" title="16日"></a>16日</h3><p>身体还不是很好，一直在低烧状态，15日晚上速通回家了，早上在和平区的某个早点铺子吃了早点，速通了天津大学的两个校区和南开大学的卫津路校区。</p>
@@ -264,7 +328,6 @@
 <p>化学系的楼非常高大，远大于物理和数学的总和。然后去看了省身数学研究所，气抖冷，为什么不叫省君数学研究所。</p>
 <p>然后去拍了周恩来总理的石像，和南开中学里面的不同，那个是铜像，脸上总泛点绿，非常喜欢。</p>
 <p>回家倒头便睡，醒来发现很难受，但是要回北京了，于是在高铁顶着感冒写出以上文字。</p>
-<p>冲到了清华，和邱水打了个视频，十分钟。</p>
 <p>睡觉。</p>
 <h3 id="17日"><a href="#17日" class="headerlink" title="17日"></a>17日</h3><p>今天上午参观了北大，王如意带我参观了北京大学，非常喜欢这种带有历史气息的学校，参观了国际数学中心非常有实力，见到了潘神，中途还和刘鸿玮碰到了一面。</p>
 <p>中午把齐乐辰叫过来吃了个饭，感觉很好，羡慕图灵班。</p>
