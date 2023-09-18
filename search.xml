@@ -289,7 +289,7 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 \end{aligned}
 \]</span> 对于四则运算封闭的是 <span class="math inline">\(\mathbb Q,
 \mathbb R, \mathbb C\)</span></p>
-<h3 id="dedkind分割">Dedkind分割</h3>
+<h3 id="dedekind分割">Dedekind分割</h3>
 <p>先定义一个分割</p>
 <p><span class="math inline">\(A, B\)</span> 为有理数集合，满足：</p>
 <ol type="1">
@@ -310,11 +310,11 @@ class="math inline">\(B\)</span> 中无最小值</li>
 class="math inline">\(B\)</span> 中无最小值</li>
 </ol>
 <p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
-<p>Dedkind 分割就是 <span class="math inline">\(\{(A, B)是 \mathbb Q
+<p>Dedekind 分割就是 <span class="math inline">\(\{(A, B)是 \mathbb Q
 的一个分割，且 A 中无最大值\}\)</span></p>
-<p>每一个 Dedkind
+<p>每一个 Dedekind
 分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
-<h3 id="dedkind-分割来定义无理数的运算">Dedkind
+<h3 id="dedekind-分割来定义无理数的运算">Dedekind
 分割来定义无理数的运算</h3>
 <p>定义 <span class="math inline">\(x = (A_1, B_1), y = (A_2,
 B_2)\)</span> ，若 <span class="math inline">\(A_1 \subset A_2\)</span>
