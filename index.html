@@ -177,7 +177,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-09-18 17:15:46 / 修改时间：18:20:07" itemprop="dateCreated datePublished" datetime="2023-09-18T17:15:46+08:00">2023-09-18</time>
+      <time title="创建时间：2023-09-18 17:15:46 / 修改时间：19:24:42" itemprop="dateCreated datePublished" datetime="2023-09-18T17:15:46+08:00">2023-09-18</time>
     </span>
 
   
@@ -194,18 +194,20 @@
 <h2 id="实数与序列">实数与序列</h2>
 <h3 id="常见数集">常见数集</h3>
 <p>下面给出一些集合的定义 <span class="math display">\[
-\N = \{0, 1, 2, \ldots\}\\
-\Z = \{\ldots,-1,0,1,\ldots\}
+\begin{aligned}
+\mathbb N &amp;= \{0, 1, 2, \ldots\}\\
+\mathbb  Z &amp;= \{\ldots,-1,0,1,\ldots\}
 \\
-\Q = \{\frac{p}{q}\vert p, q \in \Z, q\not = 0\}
-\]</span> 对于四则运算封闭的是 <span class="math inline">\(\Q, \R,
-\C\)</span></p>
+\mathbb Q&amp; = \{\frac{p}{q}\vert p, q \in \mathbb Z, q\not = 0\}
+\end{aligned}
+\]</span> 对于四则运算封闭的是 <span class="math inline">\(\mathbb Q,
+\mathbb R, \mathbb C\)</span></p>
 <h3 id="dedkind分割">Dedkind分割</h3>
 <p>先定义一个分割</p>
 <p><span class="math inline">\(A, B\)</span> 为有理数集合，满足：</p>
 <ol type="1">
-<li><span class="math inline">\(A, B \not = \empty, \Q = A \cup B, A
-\cap B = \emptyset\)</span></li>
+<li><span class="math inline">\(A, B \not = \emptyset, \mathbb Q = A
+\cup B, A \cap B = \emptyset\)</span></li>
 <li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
 y\)</span></li>
 </ol>
@@ -221,16 +223,16 @@ class="math inline">\(B\)</span> 中无最小值</li>
 class="math inline">\(B\)</span> 中无最小值</li>
 </ol>
 <p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
-<p>Dedkind 分割就是 <span class="math inline">\(\{(A, B)是 \Q
+<p>Dedkind 分割就是 <span class="math inline">\(\{(A, B)是 \mathbb Q
 的一个分割，且 A 中无最大值\}\)</span></p>
 <p>每一个 Dedkind
 分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
 <h3 id="dedkind-分割来定义无理数的运算">Dedkind
 分割来定义无理数的运算</h3>
 <p>定义 <span class="math inline">\(x = (A_1, B_1), y = (A_2,
-B_2)\)</span> ，若 <span class="math inline">\(A_1 \sub A_2\)</span> 称
-<span class="math inline">\(x\le y\)</span>，若 <span
-class="math inline">\(A_1 \sub A_2\)</span> 且 <span
+B_2)\)</span> ，若 <span class="math inline">\(A_1 \subset A_2\)</span>
+称 <span class="math inline">\(x\le y\)</span>，若 <span
+class="math inline">\(A_1 \subset A_2\)</span> 且 <span
 class="math inline">\(A_1 \not = A_2\)</span> 称 <span
 class="math inline">\(x &lt; y\)</span>。</p>
 <p>性质</p>
@@ -238,37 +240,37 @@ class="math inline">\(x &lt; y\)</span>。</p>
 <li>反称性：<span class="math inline">\(x\le y\)</span> 则 <span
 class="math inline">\(y\ge x\)</span></li>
 <li>传递性：<span class="math inline">\(x\le y\)</span> 且 <span
-class="math inline">\(y \le z\)</span>，则 <span class="math inline">\(x
-\le z\)</span></li>
-<li>完备性：<span class="math inline">\(x, y\in \R\)</span>，则 <span
-class="math inline">\(x\le y\)</span> 或 <span
+class="math inline">\(y \le \mathbb Z\)</span>，则 <span
+class="math inline">\(x \le \mathbb Z\)</span></li>
+<li>完备性：<span class="math inline">\(x, y\in \mathbb R\)</span>，则
+<span class="math inline">\(x\le y\)</span> 或 <span
 class="math inline">\(y\le x\)</span></li>
 </ol>
 <p>四则运算定义</p>
 <p><span class="math inline">\(x + y = (A_3, B_3)\)</span>，其中 <span
-class="math inline">\(A_3 = \{r \in \Q\vert \exists r_1 \in A_1, \exists
-r_2 \in A_2, \text{s.t.} r = r_1 + r_2\}\)</span>， <span
-class="math inline">\(B_3 = Q/A_3\)</span></p>
+class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in A_1,
+\exists r_2 \in A_2, \text{s.t.} r = r_1 + r_2\}\)</span>， <span
+class="math inline">\(B_3 =\mathbb Q/A_3\)</span></p>
 <p>负元 <span class="math inline">\(-x = (A_3, B_3)\)</span>，其中 <span
-class="math inline">\(A_3 = \{r \in \Q\vert \exists r_1 \in B_1, r =
--r_1, r_1 不是最小元\}\)</span>， <span class="math inline">\(B_3 =
-Q/A_3\)</span></p>
+class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in B_1,
+r = -r_1, r_1 不是最小元\}\)</span>， <span class="math inline">\(B_3 =
+\mathbb Q/A_3\)</span></p>
 <p>则减法定义为 <span class="math inline">\(x - y = x +
 (-y)\)</span></p>
 <p>乘法：</p>
 <p><span class="math inline">\(xy = (A_3, B_3)\)</span></p>
 <ol type="1">
-<li><span class="math inline">\(x\ge 0, y \ge 0, A_3 = \{r \in \Q\vert r
-&lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.} r_1 \ge
-0, r_2 \ge 0, r = r_1r_2\}\)</span></li>
+<li><span class="math inline">\(x\ge 0, y \ge 0, A_3 = \{r \in \mathbb
+Q\vert r &lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.}
+r_1 \ge 0, r_2 \ge 0, r = r_1r_2\}, B = \mathbb Q / A_3\)</span></li>
 <li><span class="math inline">\(x\ge 0, y &lt; 0,xy =
 -(x(-y))\)</span></li>
 <li><span class="math inline">\(x &lt; 0, y &lt; 0, xy =
 (-x)(-y)\)</span></li>
 </ol>
 <p>逆元 <span class="math inline">\(A_3 = \{r \in Q\vert r\le 0 或
-\exists r_1 \in B_1 , r_1 不是 B_1最小元, r =\frac{1}{r_1}\}, B = Q /
-A_3\)</span></p>
+\exists r_1 \in B_1 , r_1 不是 B_1最小元,r=\frac{1}{r_1}\}, B = \mathbb
+Q / A_3\)</span></p>
 <p>实数域范围内：</p>
 <ol type="1">
 <li>交换律</li>
@@ -285,12 +287,12 @@ class="math inline">\(x + z \le y + z\)</span></li>
 <span class="math inline">\(xz\le yz\)</span></li>
 </ol>
 <h3 id="实数确界存在定理">实数确界存在定理</h3>
-<p>定义 <span class="math inline">\(X \sub \R,x\not =
-\empty\)</span></p>
+<p>定义 <span class="math inline">\(X \subset \mathbb R,x\not =
+\emptyset\)</span></p>
 <ol type="1">
-<li>若 <span class="math inline">\(C \in \R, \text{s.t.} \forall x \in
-X, x \le C\)</span> 则称 <span class="math inline">\(C\)</span> 是 <span
-class="math inline">\(X\)</span> 的一个上界，下界同理</li>
+<li>若 <span class="math inline">\(C \in \mathbb R, \text{s.t.} \forall
+x \in X, x \le C\)</span> 则称 <span class="math inline">\(C\)</span> 是
+<span class="math inline">\(X\)</span> 的一个上界，下界同理</li>
 <li>若 <span class="math inline">\(X\)</span> 既有上界又有下界，那么称
 <span class="math inline">\(X\)</span> 是有界集</li>
 <li>称 <span class="math inline">\(a\)</span> 是 <span
@@ -301,6 +303,17 @@ class="math inline">\(X\)</span> 的上界，<span class="math inline">\(C
 上确界，下确界是 <span class="math inline">\(\inf X\)</span></li>
 </ol>
 <p>定理：确界存在定理：有上界或者下界的非空子集，必有唯一的上确界或者下确界。</p>
+<p>证明：非空集 <span class="math inline">\(X\)</span> 有上界，定义集合
+<span class="math inline">\(A_1 = \{ r \in \mathbb Q \vert \exists(A, B)
+\in X, \text{s.t.}r\in A\}\)</span> 则 <span class="math inline">\(x_1 =
+(A_1, B_1) \in R\)</span> 并且 <span class="math inline">\(\forall (A,
+B) \in X\)</span> 我们有 <span class="math inline">\(A\subset
+A_1\)</span> 故 <span class="math inline">\(x_1 = (A_1, B_1)\)</span>
+是上界，现在设 <span class="math inline">\(x_0 = (A_0, B_0)\)</span> 是
+<span class="math inline">\(X\)</span> 的任一上界，根据定义，可以知道
+<span class="math inline">\(A_1 \subset A_0, x_1 \le x_0\)</span> 因此
+<span class="math inline">\(x_1\)</span> 是 <span
+class="math inline">\(X\)</span> 的唯一上确界。</p>
 
       
     </div>
