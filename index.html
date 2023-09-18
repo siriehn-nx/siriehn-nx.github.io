@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        hexo-theme-suka © SukkaW
-        GitHub: https://github.com/SukkaW/hexo-theme-suka
-    -->
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-    <!-- ### Resource Hint ### -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <!-- ## DNS Prefetch ## -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="stylesheet" href="/css/main.css">
 
-<!-- busuanzi -->
 
-    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<!-- comment -->
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
+    <meta property="og:type" content="website">
+<meta property="og:title" content="siehn_nx&#39;s blog">
+<meta property="og:url" content="http://example.com/">
+<meta property="og:site_name" content="siehn_nx&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="siriehn_nx">
+<meta property="article:tag" content="algorithm, essay">
+<meta name="twitter:card" content="summary">
 
 
+<link rel="canonical" href="http://example.com/">
 
 
 
-    <link rel="dns-prefetch" href="//cdn1.lncld.net">
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>siehn_nx's blog</title>
+  
 
-<!-- analytics -->
 
 
 
@@ -36,496 +46,831 @@
 
 
 
-    <!-- ## Preload ## -->
-    
-    <!-- Busuanzi -->
-    
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
 
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
 
+  <div class="site-meta">
 
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">siehn_nx's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">命运岐途</p>
+  </div>
 
-
-
-    <!-- ### Meta & Title & Info ### -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
-    <meta name="renderer" content="webkit">
-
-    <!-- Title -->
-    <title>siehn_nx&#39;s blog</title>
-
-    <!-- Favicons -->
-    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
-
-    <!-- ### Import File ### -->
-    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
-    body {
-        background-color: #f8f9fa;
-    }
-
-    a, a:visited {
-        color: #0070ff;
-    }
-
-    a:active, a:focus, a:hover {
-        color: #0070ff;
-        opacity: .75;
-    }
-
-    #post-content a,
-    #post-content a:hover,
-    #post-content a:focus,
-    #post-content a:visited {
-        color: #005eb9;
-        opacity: 1;
-    }
-
-    
-
-    .post-entry .card-body a {
-        color: #0070ff;
-    }
-
-    .avatar {
-        background: #444;
-    }
-
-    .navbar-link,
-    .navbar-link:visited,
-    .timeline .timeline-item .timeline-icon.icon-lg {
-        color: #0070ff;
-    }
-
-    .navbar-link:hover {
-        color: #0070ff;
-        opacity: .8;
-    }
-
-    #search-input .btn,
-    #disqus_click_btn,
-    #disqus-switch-to-direct,
-    #disqus-loadmore-button {
-        background: #727e96;
-        border-color: #727e96;
-        color: #fff;
-    }
-
-    #post-toc a.post-toc-link,
-    #post-toc a.post-toc-link:visited,
-    .share-menu.menu .menu-item>a {
-        color: #727e96;
-    }
-
-    .share-menu.menu .menu-item>a:hover,
-    .share-menu.menu .menu-item>a:focus,
-    .share-menu.menu .menu-item>a:visited {
-        color: #50596c;
-        background: #f8f9fa;
-        opacity: .85;
-    }
-</style><link rel="stylesheet" href="/css/style.min.css">
-
-
-
-
-
-
-
-
-    <!-- Prettify Theme -->
-    
-
-
-
-
-<script>
-/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
-</script>
-
-    <!-- ### Site Verification ### -->
-    
-
-
-    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="siehn_nx's blog"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="siehn_nx's blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="siehn_nx&#39;s blog"><meta property="og:site_name" content="siehn_nx&#39;s blog"><meta property="og:type" content="website"><meta property="og:url" content="http://example.com/"><meta property="og:locale" content="zh-CN"><meta name="description" content="siriehn_nx - siehn_nx&#39;s blog"><meta name="keywords" content="algorithm, essay">
-
-    
-
-    <!-- ### Canonical link ### -->
-    <link rel="canonical" href="http://example.com/">
-
-    <meta name="generator" content="Hexo 6.3.0">
-
-    <!-- ### Analytics ### -->
-    
-
-
-
-
-
-
-
-    <!-- ### Structured Data ### -->
-    
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Blog",
-    "author": {
-        "@type": "Person",
-        "name": "siriehn_nx",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png"
-        },
-        "description": "命运歧途"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "siehn_nx&#39;s blog",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http://example.com/img/suka-favicon.ico"
-        }
-    },
-    "url": "http://example.com",
-    "logo": "http://example.com/img/suka-favicon.ico",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://example.com/img/suka-favicon.ico"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://example.com"
-    },
-    
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "http://example.com/search?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-    },
-    
-    "keywords": "algorithm, essay",
-    "description": "siriehn_nx - siehn_nx&#39;s blog"
-}
-</script>
-
-
-
-
-
-    <!-- ### Custom Head ### -->
-    
-</head>
-
-    <body>
-            
-
-            <!-- ### Main content ### -->
-            <!-- ## Header ##-->
-<header>
-    <h1 class="header-title text-center"><a href="/">siehn_nx&#39;s blog</a></h1>
-
-    <p class="text-center header-slogan">
-        
-            
-                命运歧途
-            
-        
-    </p>
-
-    <nav class="navbar-section text-center">
-    
-        <a href="/" class="navbar-link">首页</a>
-    
-    
-        <a href="/archives/" class="navbar-link">归档</a>
-    
-    
-        <a href="/search" class="navbar-link">搜索</a>
-    
-    
-        <a href="/about" class="navbar-link">关于我</a>
-    
-        <a href="/links" class="navbar-link">友链</a>
-    
-        <a href="/tags" class="navbar-link">标签</a>
-    
-    
-        <div class="dropdown dropdown-right">
-    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
-    <ul class="menu share-menu">
-
-        <!-- Share Weibo -->
-        
-
-        <!-- Share Twitter -->
-        
-
-        <!-- Share Facebook -->
-        
-
-        <!-- Share Google+ -->
-        
-
-        <!-- Share LinkedIn -->
-        
-
-        <!-- Share QQ -->
-        
-        <li class="menu-item">
-            <a href="http://connect.qq.com/widget/shareqq/index.html?site=siehn_nx's blog&title=&summary=&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
-        </li>
-        
-
-        <!-- Share Telegram -->
-        
-
-        <!-- QRCode -->
-        
-        <li class="menu-item">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAAAAABx8Un7AAABOUlEQVR42u3a2w7CIBBF0f7/T+trJXDmDO0AJpsXk7ayTMS5gNdnw7hAQUGn0EuM3v37+34mDOYBXYt2v/Qbmr3Wmwd0PdpbQKPr7QJx5gE9B21//KOAAfo/aLSQQM9FVaAeJWn1/KMsA/oYjQoz9/XVahB0GrUanwAs6dpAp9G2cM40Uqqxshso0NdRFbBHk6qgL++DLkFVMTZMxuJ5tSECugZVi0YV2+qD2EkctAyNiqsoWKSLbdBSVBXWqlDrLbrR4gLdgzobG1FzFSV60HWoW5ypAOB8INA9qErQmQO9sNgGLUOdTQ7nwCAV8EFL0cyGpEraU10baBkabUI6h0TphQRajs4WXU7TBXoemvkzhQwUoEegzmZklPBB96CZDYvoEAl0P+oe7NkL5o1qEHQaXTlAQUFT4wuCqRKihhnhxAAAAABJRU5ErkJggg==" alr="QRCode">
-        </li>
-        
-
-    </ul>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
 </div>
-    
-    
-</nav>
+
+
+
+
+
+
+
 </header>
-
-            <div class="container">
-    <div class="main-container">
-        <main>
-            <div class="post-stream-container">
-                <!-- # Post List # -->
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" rel="bookmark">数学分析笔记</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        数学分析笔记
-    <a href="/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png" src="/img/suka-lazyload.gif" alt="siriehn_nx's Avatar">
-        <time>2023-09-18</time>
         
-        
-    </div>
+  
+  <aside class="sidebar">
 
-                </div>
-            
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-</article>
+        <!--/noindex-->
 
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/" rel="bookmark">清华大学本科生日记</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        2023&#x2F;9
-    <a href="/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png" src="/img/suka-lazyload.gif" alt="siriehn_nx's Avatar">
-        <time>2023-09-13</time>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/" rel="bookmark">具有强基计划的OIer的去向调查报告</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        2023届noi银牌大学去向调查报告
-前言：
-感谢参与调查的同学们抽出宝贵的时间填写问卷，我们将对个人信息进行保密。
-以下为部分统计结果，希望对学弟学妹们有一些参考作用。
-...
-    <a href="/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png" src="/img/suka-lazyload.gif" alt="siriehn_nx's Avatar">
-        <time>2023-09-10</time>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/hello-world/" rel="bookmark">Hello World</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        Welcome to Hexo! This is your very first post. Check 
-    <a href="/hello-world/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png" src="/img/suka-lazyload.gif" alt="siriehn_nx's Avatar">
-        <time>2023-09-07</time>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-            </div>
-        </main>
-        
-
-    </div>
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">siriehn_nx</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
 </div>
 
-            <!-- ### Footer ### -->
-            <footer class="text-center">
-    <!-- footer copyright -->
-    
-        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
-            <a class="footer-copyright-a" href="http://example.com">siehn_nx's blog</a>
-        </p>
+        </div>
+      </div>
+    </div>
 
-    <!-- footer custom text -->
-    <p class="footer-text mb-0">
-    Contact me with siriehn_nx@outlook.com
-    </p>
-    <!-- footer develop info -->
-    <p class="footer-develop mb-0">
-        
-    <!-- Busuanzi User Views -->
-    <span id="busuanzi_container_site_uv" hidden>
-        <span></span>
-        <span id="busuanzi_value_site_uv"></span>
-        <span>Viewers</span>
-        
-            <span>|</span>
-        
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="siriehn_nx">
     </span>
 
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
 
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">数学分析笔记</a>
+        </h2>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-        
-        Powered by&nbsp;<!--
-         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
-         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
-    </p>
-</footer>
+      <time title="创建时间：2023-09-18 17:15:46 / 修改时间：18:20:07" itemprop="dateCreated datePublished" datetime="2023-09-18T17:15:46+08:00">2023-09-18</time>
+    </span>
 
+  
+</div>
 
-        <!-- ### Import File ### -->
-        <!-- ### Footer JS Import ### -->
-
-<script>
-
-    
-window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 50
-};
-
-(function() {
-    var copyrightNow = new Date().getFullYear();
-    var copyrightContent = document.getElementById('copyright-year');
-    var copyrightSince = 2022;
-    if (copyrightSince === copyrightNow) {
-        copyrightContent.textContent = copyrightNow;
-    } else {
-        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
-    }
-})();
-console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
-
-</script>
-
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
-    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
-
-
-<!-- Offset -->
-
-
-
-
-<!-- Comment -->
+        </div>
+      </header>
 
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="数学分析笔记">数学分析笔记</h1>
+<h2 id="实数与序列">实数与序列</h2>
+<h3 id="常见数集">常见数集</h3>
+<p>下面给出一些集合的定义 <span class="math display">\[
+\N = \{0, 1, 2, \ldots\}\\
+\Z = \{\ldots,-1,0,1,\ldots\}
+\\
+\Q = \{\frac{p}{q}\vert p, q \in \Z, q\not = 0\}
+\]</span> 对于四则运算封闭的是 <span class="math inline">\(\Q, \R,
+\C\)</span></p>
+<h3 id="dedkind分割">Dedkind分割</h3>
+<p>先定义一个分割</p>
+<p><span class="math inline">\(A, B\)</span> 为有理数集合，满足：</p>
+<ol type="1">
+<li><span class="math inline">\(A, B \not = \empty, \Q = A \cup B, A
+\cap B = \emptyset\)</span></li>
+<li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
+y\)</span></li>
+</ol>
+<p>显然有四种情况</p>
+<ol type="1">
+<li><span class="math inline">\(A\)</span> 中有最大值，<span
+class="math inline">\(B\)</span> 中有最小值</li>
+<li><span class="math inline">\(A\)</span> 中无最大值，<span
+class="math inline">\(B\)</span> 中有最小值</li>
+<li><span class="math inline">\(A\)</span> 中有最大值，<span
+class="math inline">\(B\)</span> 中无最小值</li>
+<li><span class="math inline">\(A\)</span> 中无最大值，<span
+class="math inline">\(B\)</span> 中无最小值</li>
+</ol>
+<p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
+<p>Dedkind 分割就是 <span class="math inline">\(\{(A, B)是 \Q
+的一个分割，且 A 中无最大值\}\)</span></p>
+<p>每一个 Dedkind
+分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
+<h3 id="dedkind-分割来定义无理数的运算">Dedkind
+分割来定义无理数的运算</h3>
+<p>定义 <span class="math inline">\(x = (A_1, B_1), y = (A_2,
+B_2)\)</span> ，若 <span class="math inline">\(A_1 \sub A_2\)</span> 称
+<span class="math inline">\(x\le y\)</span>，若 <span
+class="math inline">\(A_1 \sub A_2\)</span> 且 <span
+class="math inline">\(A_1 \not = A_2\)</span> 称 <span
+class="math inline">\(x &lt; y\)</span>。</p>
+<p>性质</p>
+<ol type="1">
+<li>反称性：<span class="math inline">\(x\le y\)</span> 则 <span
+class="math inline">\(y\ge x\)</span></li>
+<li>传递性：<span class="math inline">\(x\le y\)</span> 且 <span
+class="math inline">\(y \le z\)</span>，则 <span class="math inline">\(x
+\le z\)</span></li>
+<li>完备性：<span class="math inline">\(x, y\in \R\)</span>，则 <span
+class="math inline">\(x\le y\)</span> 或 <span
+class="math inline">\(y\le x\)</span></li>
+</ol>
+<p>四则运算定义</p>
+<p><span class="math inline">\(x + y = (A_3, B_3)\)</span>，其中 <span
+class="math inline">\(A_3 = \{r \in \Q\vert \exists r_1 \in A_1, \exists
+r_2 \in A_2, \text{s.t.} r = r_1 + r_2\}\)</span>， <span
+class="math inline">\(B_3 = Q/A_3\)</span></p>
+<p>负元 <span class="math inline">\(-x = (A_3, B_3)\)</span>，其中 <span
+class="math inline">\(A_3 = \{r \in \Q\vert \exists r_1 \in B_1, r =
+-r_1, r_1 不是最小元\}\)</span>， <span class="math inline">\(B_3 =
+Q/A_3\)</span></p>
+<p>则减法定义为 <span class="math inline">\(x - y = x +
+(-y)\)</span></p>
+<p>乘法：</p>
+<p><span class="math inline">\(xy = (A_3, B_3)\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(x\ge 0, y \ge 0, A_3 = \{r \in \Q\vert r
+&lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.} r_1 \ge
+0, r_2 \ge 0, r = r_1r_2\}\)</span></li>
+<li><span class="math inline">\(x\ge 0, y &lt; 0,xy =
+-(x(-y))\)</span></li>
+<li><span class="math inline">\(x &lt; 0, y &lt; 0, xy =
+(-x)(-y)\)</span></li>
+</ol>
+<p>逆元 <span class="math inline">\(A_3 = \{r \in Q\vert r\le 0 或
+\exists r_1 \in B_1 , r_1 不是 B_1最小元, r =\frac{1}{r_1}\}, B = Q /
+A_3\)</span></p>
+<p>实数域范围内：</p>
+<ol type="1">
+<li>交换律</li>
+<li>结合律</li>
+<li>单位元</li>
+<li>逆元</li>
+<li>分配律</li>
+</ol>
+<p>相容性条件</p>
+<ol type="1">
+<li>加法保序性 <span class="math inline">\(x\le y\)</span> 则 <span
+class="math inline">\(x + z \le y + z\)</span></li>
+<li>乘法保序性 <span class="math inline">\(x\le y, z \ge 0\)</span>, 则
+<span class="math inline">\(xz\le yz\)</span></li>
+</ol>
+<h3 id="实数确界存在定理">实数确界存在定理</h3>
+<p>定义 <span class="math inline">\(X \sub \R,x\not =
+\empty\)</span></p>
+<ol type="1">
+<li>若 <span class="math inline">\(C \in \R, \text{s.t.} \forall x \in
+X, x \le C\)</span> 则称 <span class="math inline">\(C\)</span> 是 <span
+class="math inline">\(X\)</span> 的一个上界，下界同理</li>
+<li>若 <span class="math inline">\(X\)</span> 既有上界又有下界，那么称
+<span class="math inline">\(X\)</span> 是有界集</li>
+<li>称 <span class="math inline">\(a\)</span> 是 <span
+class="math inline">\(X\)</span> 的一个上确界，若 <span
+class="math inline">\(\forall C\)</span> 是 <span
+class="math inline">\(X\)</span> 的上界，<span class="math inline">\(C
+\ge a\)</span>，记 <span class="math inline">\(a = \sup X\)</span>
+上确界，下确界是 <span class="math inline">\(\inf X\)</span></li>
+</ol>
+<p>定理：确界存在定理：有上界或者下界的非空子集，必有唯一的上确界或者下确界。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-<!-- ### Custom Footer ### -->
 
-    </body>
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="siriehn_nx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">清华大学本科生日记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-13 18:56:59" itemprop="dateCreated datePublished" datetime="2023-09-13T18:56:59+08:00">2023-09-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-18 18:11:35" itemprop="dateModified" datetime="2023-09-18T18:11:35+08:00">2023-09-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="section">2023/9</h2>
+<h3 id="日">16日</h3>
+<p>身体还不是很好，一直在低烧状态，15日晚上速通回家了，早上在和平区的某个早点铺子吃了早点，速通了天津大学的两个校区和南开大学的卫津路校区。</p>
+<p>天津大学没有什么可以说的，主要说说看南开大学的体验，作为一个18年的天津人，我还是第一次进入南开大学，本来想找李欣然给我带进去，但是她回家了，于是找赵思远偷渡学生卡带我进去。</p>
+<p>第一的印象还是有些破旧，果然百年的历史让这座学校变得有些沧桑，老校区还剩下一些基础科学的院系，还有经管学院，感觉很有实力。</p>
+<p>化学系的楼非常高大，远大于物理和数学的总和。然后去看了省身数学研究所，气抖冷，为什么不叫省君数学研究所。</p>
+<p>然后去拍了周恩来总理的石像，和南开中学里面的不同，那个是铜像，脸上总泛点绿，非常喜欢。</p>
+<p>回家倒头便睡，醒来发现很难受，但是要回北京了，于是在高铁顶着感冒写出以上文字。</p>
+<p>睡觉。</p>
+<h3 id="日-1">17日</h3>
+<p>今天上午参观了北大，王如意带我参观了北京大学，非常喜欢这种带有历史气息的学校，参观了国际数学中心非常有实力，见到了潘神，中途还和刘鸿玮碰到了一面。</p>
+<p>中午把齐乐辰叫过来吃了个饭，感觉很好，羡慕图灵班。</p>
+<p>下午准备各种东西，明天就要开始大学生活了。</p>
+<p>成为了班级里面的组织委员。</p>
+<p>明天的数学课不知道听不听得懂，早睡身体好。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="siriehn_nx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/" class="post-title-link" itemprop="url">具有强基计划的OIer的去向调查报告</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-09-10 00:18:53 / 修改时间：00:20:02" itemprop="dateCreated datePublished" datetime="2023-09-10T00:18:53+08:00">2023-09-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>2023届noi银牌大学去向调查报告</p>
+<p>前言：</p>
+<p>感谢参与调查的同学们抽出宝贵的时间填写问卷，我们将对个人信息进行保密。</p>
+<p>以下为部分统计结果，希望对学弟学妹们有一些参考作用。</p>
+<p>我们的调查可能有纰漏，感谢大家的包容，也恳请大家批评指正。调查报告将持续更新。</p>
+<p>如果想要了解其他问题，可以提出更多建议，我们在未来也可能扩大调查对象范围或者增加调查内容，进行更多的调查，争取帮助更多同学。</p>
+<p>食用指南：</p>
+<ol type="1">
+<li>作者语文数学都不太好</li>
+<li>以下有些问题将tp分为一类进行统计，但我们不希望贬低任何一所学校或者任何一个同学。无论去哪里都要继续努力，大学只是一个开始。</li>
+<li>以下平均分/平均排名为了便于统计未考虑各省差异。</li>
+<li>观点会偏主观</li>
+</ol>
+<p>基本情况：2023届noi银牌为109人，本次调查参与人数为70人。</p>
+<p>统计问题：（以下“人数”均指参与该问题调查的人数）</p>
+<ol type="1">
+<li>高考： 62人平均分660.44，58人平均排名3962.43</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>区间</th>
+<th>总共</th>
+<th>690+</th>
+<th>680+</th>
+<th>670+</th>
+<th>650+</th>
+<th>630+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>人数</td>
+<td>62</td>
+<td>11</td>
+<td>16</td>
+<td>27</td>
+<td>44</td>
+<td>52</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>区间</th>
+<th>总共</th>
+<th>前100</th>
+<th>前1000</th>
+<th>前5000</th>
+<th>前10000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>人数</td>
+<td>58</td>
+<td>10</td>
+<td>31</td>
+<td>48</td>
+<td>53</td>
+</tr>
+</tbody>
+</table>
+<p>有相当一部分同学高考靠前，有屏蔽生dalao，学oi的同学都有很大潜力，ag的学弟学妹不要太过焦虑，要相信自己</p>
+<ol start="2" type="1">
+<li>升学方式</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>方式</th>
+<th>总共</th>
+<th>强基</th>
+<th>综评</th>
+<th>裸分</th>
+<th>出国</th>
+<th>复读</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>人数</td>
+<td>70</td>
+<td>39</td>
+<td>4</td>
+<td>19</td>
+<td>0</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>注：“其他”选项中2人为中科大少创班</p>
+<ol start="3" type="1">
+<li>大学去向情况： 70人中tp人数47，其中t22，p25</li>
+</ol>
+<p>其他学校人数较少（&lt;=3），有：杭电，南开，上交，吉大，南科大，中科大，北邮，成电，港理工，浙大，中南大学，中大（不分先后）</p>
+<ol start="4" type="1">
+<li>各个noi排名段的tp人数</li>
+</ol>
+<p>noi2021</p>
+<table>
+<thead>
+<tr class="header">
+<th>区间</th>
+<th>51~100</th>
+<th>101~150</th>
+<th>151~200</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>调查总人数</td>
+<td>8</td>
+<td>12</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>tp人数</td>
+<td>7</td>
+<td>9</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>noi2022</p>
+<table>
+<thead>
+<tr class="header">
+<th>区间</th>
+<th>51~100</th>
+<th>101~150</th>
+<th>151~200</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>调查总人数</td>
+<td>23</td>
+<td>17</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>tp人数</td>
+<td>17</td>
+<td>11</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p>似乎21年ag的清北率更高，也许是因为21年ag后whk的时间相对更多。</p>
+<ol start="5" type="1">
+<li><p>tp的同学中：总共47，强基35，综评1，裸分11</p></li>
+<li><p>强基tp的营约与校测分数的关系：存在良好或没有约且校测满分，笔者盲猜与whk有关，当然有约很重要</p></li>
+<li><p>强基tp的高考情况：30人平均分667.8，平均排名936.53</p></li>
+<li><p>裸分tp的高考情况：11人平均分693.09，平均排名51.64</p></li>
+<li><p>tp外的强基情况：4人，有上交，南开，浙大，均校测满分</p></li>
+</ol>
+<p>南大报名破格强基的同学校测不为满分，均未能进入</p>
+<ol start="10" type="1">
+<li>去向满意度（10分满分）：</li>
+</ol>
+<p>总共：59人，8.36</p>
+<p>tp：42人，9.36</p>
+<ol start="11" type="1">
+<li>专业</li>
+</ol>
+<p>实际去向：</p>
+<p>tp+强基：信科</p>
+<p>非tp+强基：数学</p>
+<p>tp+裸分：p有计算机，元培，t有电子信息，自动化和计算机</p>
+<p>非tp+裸分：计算机，软件工程</p>
+<p>进了p就有机会进图灵班</p>
+<p>一般t计算机裸分比p难进，t进去可以再参加二招</p>
+<p>有哪些专业（不完全统计）：</p>
+<p>NJU强基：信科，报名nju强基的同学中有很多不推荐报考，有同学表示“如果想报考nju，请慎重考虑”。笔者个人认为每年情况可能会有变化，但同时每年情况也可能会有相似之处，建议大家全面了解后再做决定。</p>
+<p>tp+强基：信科，t有工科但被调剂的同学较少</p>
+<p>非tp+强基：数学/物理，少数有工科专业或信计</p>
+<ol start="12" type="1">
+<li>大家的感想与建议(不代表作者观点qaq)</li>
+</ol>
+<p>文化课要学好数学。</p>
+<p>卷卷卷</p>
+<p>傻孩子们，快跑啊！</p>
+<p>合理平衡oi和常规</p>
+<p>不如原神</p>
+<p>没有啊</p>
+<p>今年我身边的有优异 / 优秀约的 OIer 在校测都拿到了 15，但感觉清华 whk
+选手的校测分数都好高</p>
+<p>暂时不能给你明确的答复，这个你需要自己衡量。</p>
+<p>建议不学oi，直接卷whk</p>
+<p>现在 oi
+对升学力度大大减弱，建议尽早学，要么有实力进集训队，要么拿到银牌有很好的文化基础，要么高一就银牌，两年文化。</p>
+<p>两者都有运气成分，两者都强才能应对厄运。</p>
+<p>认真学，适度颓废，平时练习赛当成正经赛打，对比赛要绝对虔诚。</p>
+<p>文化课无聊，nju__</p>
+<p>这三年分数线越来越高</p>
+<p>建议不学算法竞赛。想进厂子打工也不用算法竞赛那些知识……</p>
+<p>寄</p>
+<p>感想是oi果然还是尽情的去享受比较重要……打oi就一心一意的oi，文化课就一心一意的文化课会比较好。</p>
+<p>别学oi，学弟们快跑（</p>
+<p>我得益于学校有较为可靠的
+给竞赛生补课的教学方案，因此最后文化课能捞上来</p>
+<p>还是希望对自己文化课（或自己学校）缺乏信心的选手慎重考虑oi</p>
+<p>做好计划，稳定心态，在教练或老师的任务以外一定要思考自己的不足并针对性给自己想方案
+只要有想法，有付出，九个月也能搞好高考！</p>
+<p>remake</p>
+<p>一年时间是刚刚好的，没有时间干其他事情，适当休息和良好心态是必须的。</p>
+<p>oi 方面因为我水平一般所以也没什么想法。</p>
+<p>感觉还没退役的时候可以适当花时间简单练习高中内容（背书、写点数学啥的），也避免整天坐在电脑前面？</p>
+<p>多交朋友 oi与文化相辅相成，相得益彰</p>
+<p>无论在哪条路上，都要努力向前，冲破黑暗就有光明</p>
+<p>一定要上文化课</p>
+<p>一些笔者的个人建议（综合了各方信息，仅供参考）：</p>
+<ol type="1">
+<li>tp强基</li>
+</ol>
+<p>初审：有约最重要，noi排名好像不太重要，可能也会看whk</p>
+<p>专业：信息与计算科学，据说是数学+计算机，被调剂的情况较少</p>
+<p>建议：whk越强越好</p>
+<ol start="2" type="1">
+<li>欢迎学弟学妹来thu！！！（夹带私货，请大家以个人情况为准，选最适合自己的</li>
+</ol>
+<p>后记：</p>
+<p>本次调查由吊任发起。</p>
+<p>调查前期，我们组了一个调查群，制作了调查问卷。调查群里的同学们积极提出修改建议。感谢问卷星提供平台。</p>
+<p>调查阶段，我们建了一个23届noi银牌交流群，联系同学们以及拉同学们进群。群里的同学们也帮忙拉更多同学进群，使调查得以顺利开展。我们在7月发放了调查问卷，感谢同学们积极参与填写问卷。</p>
+<p>本调查报告由Jake作为第一作者，吊任作为第二作者。</p>
+<p>本来想写篇论文，结果可能还不如初中做的调查报告（大哭</p>
+<p>附录：</p>
+<p>数据基本来源于我们发布的调查问卷</p>
+<p>包含各oier交流群中的少量信息，qq上一些同学提出的建议</p>
+<p>以及知乎等平台的部分信息</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="siriehn_nx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | siehn_nx's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-07 22:20:20" itemprop="dateCreated datePublished" datetime="2023-09-07T22:20:20+08:00">2023-09-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-10 00:09:49" itemprop="dateModified" datetime="2023-09-10T00:09:49+08:00">2023-09-10</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">siriehn_nx</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
 </html>
