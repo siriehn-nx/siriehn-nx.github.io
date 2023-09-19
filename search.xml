@@ -275,6 +275,19 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
+    <title>思想道德与法治</title>
+    <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
+<h1 id="思想道德与法治">思想道德与法治</h1>
+<h2 id="绪论">绪论</h2>
+<p>思法课是什么课？一门水课。一门金课。</p>
+<p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析笔记</title>
     <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="数学分析笔记">数学分析笔记</h1>
@@ -407,6 +420,20 @@ class="math inline">\(X\)</span> 的唯一上确界。</p>
       </tags>
   </entry>
   <entry>
+    <title>数据科学导论笔记</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
+<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
+<p>课程种类：新生研讨课</p>
+<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
+<p>三元空间</p>
+<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>清华大学本科生日记</title>
     <url>/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="section">2023/9</h2>
@@ -433,6 +460,160 @@ Next 主题，因为原来不支持 latex，非常菜。</p>
 ]]></content>
       <tags>
         <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>离散数学笔记</title>
+    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
+<h2 id="命题">命题</h2>
+<p>定义：命题是一个非真即假的的陈述句。</p>
+<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
+<p>任何命题的真值都是唯一的。</p>
+<p><strong>悖论不是命题</strong></p>
+<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
+q, r,\ldots\)</span></p>
+<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
+<h3 id="命题连接词">命题连接词</h3>
+<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
+\leftrightarrow\)</span></p>
+<ul>
+<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
+<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
+<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
+<li><span class="math inline">\(\rightarrow\)</span>
+蕴含联结词，推出</li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+双蕴含联结词，等价</li>
+</ul>
+<p>后面的都是方便好记但是错误的名字（</p>
+<p>虽然但是，既又，不但而且都是合取。</p>
+<p>或就是析取</p>
+<p>例题：</p>
+<p>张明报考的第一志愿是数学类或者计算机类。</p>
+<p>记张明第一志愿是数学类为 <span
+class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
+class="math inline">\(q\)</span>，那么应该是 <span
+class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
+这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
+q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
+q\)</span></p>
+<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
+\rightarrow q\)</span></p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科学通论笔记</title>
+    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="在科学通论笔记">在科学通论笔记</h1>
+<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
+<p>广义和狭义的科学：</p>
+<ul>
+<li>广义：自然知识，技术，书里科学，全地域起源</li>
+<li>狭义：数学，实验科学，希腊源头</li>
+</ul>
+<p>不懂数学的大科学家：达尔文</p>
+<ul>
+<li>在希腊起源</li>
+<li>在罗马式微</li>
+<li>在伊斯兰世界发扬光大</li>
+<li>在中世纪后期的基督世界重获新生</li>
+<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
+<li>19世纪全方位转化为技术成为强大的物质力量</li>
+<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
+</ul>
+<h3 id="狭义科学的样本">狭义科学的样本</h3>
+<ul>
+<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
+<li>希腊哲学</li>
+</ul>
+<p>问题：如何理解狭义科学的形式？</p>
+<h3 id="文明与科学">文明与科学</h3>
+<p>文明不等于科学，科学出现在希腊城邦文明。</p>
+<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
+<h3 id="纯粹科学">纯粹科学</h3>
+<p>高度的自主性，自足性，为自身的目的而存在</p>
+<ol type="1">
+<li>远离任何意义上的实用主义</li>
+<li>内在性：自己推出自己</li>
+</ol>
+<p>自由科学特征之一：无用无功利之学</p>
+<ul>
+<li>欧几里德的故事</li>
+<li>亚里士多德三种知识：经验、技艺、科学</li>
+</ul>
+<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
+<ul>
+<li>内在展开、证明的知识</li>
+<li>证明、论证、推理、演绎</li>
+</ul>
+<p>自由科学的条件：</p>
+<ul>
+<li>惊异，好奇</li>
+<li>闲暇，快乐</li>
+<li>外在自由（言论自由，财务自由）</li>
+<li>内在自由</li>
+</ul>
+<p>希腊城邦文明，自由科学的温床。</p>
+<p>城邦文明的开端</p>
+<ul>
+<li>荷马史诗</li>
+<li>希腊字母文字</li>
+<li>奥林波斯神话</li>
+<li>奥林匹克竞技会</li>
+</ul>
+<p>神人之别：不死与有死</p>
+<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
+<p>希腊人的宗教：无宗教教义，无宗教经典</p>
+<p>竞技会：</p>
+<ul>
+<li>祭祀奥林波斯诸神</li>
+<li>神圣休战原则</li>
+<li>希腊身份认同</li>
+<li>不仅有体育，还有音乐戏剧歌舞</li>
+<li>全程裸体，展示人体之美</li>
+<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
+</ul>
+<p>城邦小国寡民，直接民主制，参军是公民义务</p>
+<p>戏剧：起源于酒神祭祀</p>
+<p>雕刻：三大雕刻家</p>
+<h3 id="城邦文明小结">城邦文明小结</h3>
+<ul>
+<li>城邦本位主义，自治自给，独立自由</li>
+<li>科学哲学艺术</li>
+<li>希腊波斯战争</li>
+</ul>
+<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
+<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
+<p>奴隶制：自由民获得闲暇</p>
+<p>米利都，科学的策源地：</p>
+<ul>
+<li>独立与自由</li>
+<li>挑战与竞争</li>
+<li>开放与交流</li>
+</ul>
+<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
+<p>自然的发现，事物有其自然</p>
+<p>自然就是本质：事物的自己即其本质</p>
+<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
+<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
+<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
+<p>希腊数学，自由学术的典范</p>
+<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
+<p>实践科学：政治学，伦理学，家政学</p>
+<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
+<p>学数学可以涵养真正人性</p>
+<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
+<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
+<p>什么是自然？何谓自然的发现？</p>
+<p>为什么说几何学是理性科学的代表？</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
