@@ -459,13 +459,13 @@ class="math inline">\(D\)</span> 的最小元，则有 <span
 class="math inline">\(\alpha\)</span> 为上确界</li>
 </ol></li>
 </ol>
-<h3 id="例一">例一</h3>
+<h4 id="例一">例一</h4>
 <p>证明： <span class="math inline">\(x= (0, 1), \sup X = 1\)</span>
 。</p>
 <p><span class="math inline">\(\forall x \in X, x &lt; \frac{1 + x}{2}
 &lt; 1\)</span> 于是 <span class="math inline">\(1\)</span> 是上确界
 <span class="math inline">\(\Box\)</span></p>
-<h3 id="例二">例二</h3>
+<h4 id="例二">例二</h4>
 <p>证明：<span class="math inline">\(\sqrt 2\)</span> 的存在性</p>
 <p><span class="math inline">\(X = \{x \vert x ^ 2 &lt; 2\}\)</span>
 ，证明 <span class="math inline">\(\left(\sup X\right) ^ 2 = 1\)</span>
@@ -497,6 +497,7 @@ class="math inline">\(a_0.a_1\ldots a_n\in A, a_0.a_1\ldots a_n
 a_n\)</span></p>
 <p>例：<span class="math inline">\(\{1, \frac{1}{2},\frac{1}{3},\ldots,
 \frac{1}{n}\}\)</span></p>
+<h3 id="定义">定义</h3>
 <p>设 <span class="math inline">\(\{a_n\}\)</span> 为实数列，称 <span
 class="math inline">\(a\in \mathbb R\)</span> 是 <span
 class="math inline">\(\{a_n\}\)</span> 的极限，<span
@@ -508,7 +509,7 @@ class="math inline">\(\{a_n\}\)</span> 是收敛数列， <span
 class="math inline">\(a\)</span> 为其极限，记为 <span
 class="math inline">\(\lim \limits_{n\to \infty} a_n = a \Leftrightarrow
 a_n\rightarrow a\)</span></p>
-<h3 id="例一-1">例一</h3>
+<h4 id="例一-1">例一</h4>
 <p><span class="math inline">\((1)\lim\limits _{n\rightarrow \infty}
 \frac{1}{n} = 0, (2),\lim \limits _{n \rightarrow\infty} \frac{n ^ 2}{2
 n ^ 2+ 1} = \frac{1}{2} (3)\lim \limits _{n \rightarrow\infty}
@@ -537,7 +538,7 @@ class="math inline">\(\frac{1}{q ^ n} = \frac{1}{(1 + \alpha) ^ n}&lt;
 \frac{1}{n\alpha}&lt;\varepsilon\)</span>，<span
 class="math inline">\(\Box\)</span></li>
 </ol>
-<h3 id="例二-1">例二</h3>
+<h4 id="例二-1">例二</h4>
 <p><span class="math inline">\(\lim\limits _{n\rightarrow \infty}
 \sqrt[n] {n} = 1\)</span></p>
 <p>证明：<span class="math inline">\(\forall \varepsilon &gt;
@@ -550,7 +551,7 @@ n\)</span>，则 <span class="math inline">\(\frac{n(n - 1)}{2}\varepsilon
 class="math inline">\(n &gt; N\)</span> 时，<span
 class="math inline">\(\sqrt [n] {n}&lt;1 + \varepsilon\)</span>，<span
 class="math inline">\(\Box\)</span></p>
-<h3 id="例三">例三</h3>
+<h4 id="例三">例三</h4>
 <p><span class="math inline">\(\{(-1) ^ n\}\)</span>
 发散，这个是简单的，假设存在极限 <span class="math inline">\(a\ge
 0\)</span>，则 <span class="math inline">\(|a_{2n +1} - a|=1 + a &gt;
@@ -586,7 +587,7 @@ class="math inline">\(\{a_n\},\{b_n\}\)</span> 均收敛， 那么 <span
 class="math inline">\(\{\frac{a_n}{b_n}\} =
 \frac{a}{b}\)</span>，即数列四则运算之后的结果就极限四则运算的结果。</p>
 <p>这些证明都是平凡的。</p>
-<h3 id="例一-2">例一</h3>
+<h4 id="例一-2">例一</h4>
 <p>证明 <span class="math inline">\(a_n\rightarrow a\)</span> 则 <span
 class="math inline">\(\lim \limits _{n\rightarrow \infty} \frac{a_1
 +\ldots+a_n}{n} = a\)</span></p>
@@ -600,6 +601,160 @@ class="math inline">\(\vert\frac{b_1 + \ldots + b_n}{n} - 0\vert
 &lt;\vert \frac{b_1 + \ldots + b_{N_1}}{n}\vert + \vert \frac{b_{N_1 +
 1} + \ldots + b_n}{n}\vert &lt; 2\varepsilon\)</span> ，<span
 class="math inline">\(\Box\)</span></p>
+<p>### 拼挤定理</p>
+<p>设 <span class="math inline">\(\{a_n\},\{b_n\},\{c_n\}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n\le
+b_n \le c_n\)</span></li>
+<li><span class="math inline">\(\lim\limits _{n \rightarrow \infty} =
+\alpha, \lim\limits_{n\rightarrow\infty}c_n = \alpha\)</span>，则 <span
+class="math inline">\(\lim \limits_{n \rightarrow \infty} b_n =
+\alpha\)</span></li>
+</ol>
+<p>证明：<span class="math inline">\(\forall \varepsilon &gt; 0,\exists
+n &gt; N, a - \varepsilon &lt; a_n,b_n &lt; b + \varepsilon ,a -
+\varepsilon &lt; c_n &lt; a + \varepsilon,\Box\)</span></p>
+<h4 id="例一-3">例一</h4>
+<p>设 <span class="math inline">\(a &gt; 0\)</span>，<span
+class="math inline">\(\exists n \in \mathbb{R},\text{s.t.} n\ge
+a,\lim\limits _{n\rightarrow\infty} a ^ {\frac{1}{n}} = 1\)</span> 提示
+<span class="math inline">\(\lim \limits_{n\rightarrow\infty} n ^
+{\frac{1}{n}} = 1\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(a\ge 1, \exist n\in \mathbb{
+N},\text{s.t.}n\ge a, 1\le a ^ {\frac{1}{n}} \le n ^
+{\frac{1}{n}}\)</span>，有夹挤定理，此时收敛于 <span
+class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(a &lt; 1, \frac{1}{n} &gt; 1,\exist
+n,\text{s.t.}n &gt;\frac{1}{a},\lim\limits_{n\rightarrow\infty}a ^
+{\frac{1}{n}} = \lim\limits_{n\rightarrow\infty}a ^ {\frac{1}{n}} =
+\frac{1}{\lim\limits_{n\rightarrow\infty}\frac{1}{a} ^
+{\frac{1}{n}}}&lt; \frac{1}{\lim\limits_{n\rightarrow\infty}\frac{1}{n}
+^ {\frac{1}{n}}} = 1\)</span></li>
+</ol>
+<h4 id="例二-2">例二</h4>
+<p><span class="math inline">\(a _n &gt; 0,\forall n \in \mathbb
+{R},\lim\limits_{n\rightarrow \infty} a_n = a\)</span> 则 <span
+class="math inline">\(\lim\limits_{n \rightarrow\infty}
+\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} =
+a\)</span></p>
+<p>证明1：</p>
+<ol type="1">
+<li><span class="math inline">\(a = 0\)</span> 时，<span
+class="math inline">\(0 \le\lim \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}}\le \frac{\sum\limits_{k = 1} ^ n
+a_k}{n}\)</span>，由夹挤定理 <span class="math inline">\(\lim\limits_{n
+\rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k \right) ^
+{\frac{1}{n}} = 0\)</span></li>
+<li><span class="math inline">\(\frac{n}{\sum\limits_{i =1} ^ n
+\frac{1}{a _i}}\le\lim\limits_{n \rightarrow\infty}
+\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} \le
+\frac{\sum\limits_{k = 1} ^ n a_k}{n}\)</span> 由夹挤定理可得</li>
+</ol>
+<p>证明2：</p>
+<p><span class="math inline">\(a &gt; 0\)</span>，由极限定义 <span
+class="math inline">\(\forall \varepsilon &gt; 0, \exist N \in
+\mathbb{N}, \text{s.t.} n &gt; N, 0 \le a - \frac{\varepsilon}{2} &lt;
+a_n &lt; a + \frac{\varepsilon}{2}\)</span> <span
+class="math display">\[
+\begin{aligned}
+\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}}&amp;\le&amp; \left(\prod\limits_{k = 1} ^ N
+a_k\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right)^{\frac{n - N}{n}}
+\\
+&amp;=&amp;\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right)
+\end{aligned}
+\]</span></p>
+<p>由于 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} a
+^ {\frac{1}{n}} = 1\)</span></p>
+<p><span class="math inline">\(\lim \limits
+_{n\rightarrow\infty}\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right) = a + \frac{\varepsilon}{2}\)</span></p>
+<p><span class="math inline">\(\exist N_1 \in \mathbb{N},\text{s.t.} n
+&gt; N_1, \left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right) &lt; a + \frac{\varepsilon}{2} +
+\frac{\varepsilon}{2}\)</span></p>
+<p><span class="math inline">\(\exist N_2 = \max(N, N_1),n &gt;
+N_2,\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}} &lt; a + \varepsilon\)</span></p>
+<p>减号部分是同理的。</p>
+<p><span class="math inline">\(a = 0\)</span>，上面不需要证明 <span
+class="math inline">\(a - \frac{\varepsilon}{2}\)</span> 部分即可</p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例三-1">例三</h4>
+<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
+k!}{n!}\)</span> 则 <span class="math inline">\(\lim \limits
+_{n\rightarrow \infty} a_n = 1\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(1\le a_n \le 1+\frac{(n-2) (n-2)! +
+(n-1)!}{n!}&lt;1 + \frac{2}{n}\)</span></p>
+<p>由夹挤定理可证明极限为 <span class="math inline">\(1\)</span></p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例四">例四</h4>
+<p>求解 <span class="math inline">\(\lim \limits_{n\rightarrow \infty}
+\left( \sqrt[2]{n ^ 2 + n} - n\right) ^ {\frac{1}{n}}\)</span></p>
+<p>因为 <span class="math inline">\(\frac{1}{3}&lt; \left( \sqrt[2]{n ^
+2 + n} - n\right) ^ {\frac{1}{n}} &lt; \frac{1}{2}\)</span></p>
+<h3 id="保序性">保序性</h3>
+<ul>
+<li><span class="math inline">\(\{a_n\}\rightarrow a, b &gt; a, \exist
+N, n &gt; N, \text{s.t.} a_n &lt; b\)</span></li>
+<li><span class="math inline">\(\{a_n\}\rightarrow a,\{b_n\}\rightarrow
+b, b &gt; a, \exist N, n &gt; N, \text{s.t.} a_n &lt; b_n\)</span></li>
+<li><span class="math inline">\({a_n} \rightarrow a, b_n \rightarrow b,
+\exist N, \text{s.t.} n &gt; N, a_n &lt; b_n\)</span> 则 <span
+class="math inline">\(a\le b\)</span></li>
+</ul>
+<h3 id="数列极限的推广">数列极限的推广</h3>
+<p>设 <span class="math inline">\(\{a_n\}，\forall A &gt; 0, \exist N,
+\text{s.t.} n &gt; N, a_n &gt; A\)</span> 则 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
++\infty\)</span></p>
+<p>若 <span
+class="math inline">\(\vert\lim\limits_{n\rightarrow\infty}a_n\vert =
++\infty\)</span> 记为 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
+\infty\)</span></p>
+<p>若 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
+\infty\)</span>, <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}b_n = b(b &gt;
+0)\)</span>, 则 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_nb_n =
+\infty\)</span></p>
+<h3 id="单调数列">单调数列</h3>
+<p>定义： <span class="math inline">\(\{a_n\}\)</span>，满足 <span
+class="math inline">\(a_n \le a_{n + 1}, \forall n \in \mathbb
+N\)</span>，则称其为单调递增数列，没有等于号就是严格单调递增数列）</p>
+<p>定理：(weierstrass 单调收敛定理)：有界单调数列一定收敛</p>
+<p>证明：<span class="math inline">\(X = \{a_1, a_2,
+\ldots,a_n\}\)</span> 由确界存在定理 <span
+class="math inline">\(X\)</span> 有上确界 <span
+class="math inline">\(\alpha\)</span>，<span
+class="math inline">\(\forall \varepsilon &gt; 0, \exist N,
+\text{s.t.s},\alpha - \varepsilon &lt; a_N\)</span>, 则 <span
+class="math inline">\(n &gt; N\)</span> 时，<span
+class="math inline">\(\alpha - \varepsilon &lt; a_N \le a_n \le \alpha
+\le \alpha + \varepsilon\)</span></p>
+<p><span class="math inline">\(\Box\)</span></p>
+<p>该定理和确界定理等价。</p>
+<h4 id="例一-4">例一</h4>
+<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
+k!}{n!},\lim\limits_{n\rightarrow\infty} a_n = 1\)</span></p>
+<h4 id="例二-3">例二</h4>
+<p><span class="math inline">\(a_n = \sum\limits_{k = 1} ^ n
+\frac{1}{k}\)</span>，考察 $ {a_n}$ 的收敛性</p>
+<p>证明：考虑这么如下情况 <span class="math inline">\(\sum\limits_{k = 2
+^ {n - 1} + 1} ^ {2 ^ n}\frac{1}{k} &gt; 2 ^ {n - 1} \times \frac{1}{2 ^
+n} = \frac{1}{2}\)</span>，而 <span class="math inline">\(a_{2 ^ n} =
+\sum_{i = 1} ^ n\sum_{k = 2 ^ {i - 1} + 1 }^{2 ^ i} \frac{1}{k}
+&gt;\frac{n}{2}\)</span> 于是，<span
+class="math inline">\(\{a_n\}\)</span> 不收敛</p>
+<p><span class="math inline">\(\Box\)</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -1131,6 +1286,127 @@ class="math inline">\(x = \begin{bmatrix}2 - c\\c - 1\\
 c\end{bmatrix}\)</span></li>
 </ul>
 <p><span class="math inline">\(\Box\)</span></p>
+<h3 id="n-维向量空间-mathbb-f-n"><span class="math inline">\(n\)</span>
+维向量空间 <span class="math inline">\(\mathbb F ^ n\)</span></h3>
+<p>向量：具有大小和方向的量，如位移和速度等。</p>
+<p>定义数域 <span class="math inline">\(\mathbb F\)</span>, <span
+class="math inline">\(n\)</span> 个数 <span class="math inline">\(a_1,
+a_2,\ldots, a_n\)</span> 构成的一个有序数组，<span
+class="math inline">\(\alpha = (a_1, \ldots, a_n)\)</span> 称为 <span
+class="math inline">\(\mathbb F\)</span> 上的行向量。</p>
+<p>记 <span class="math inline">\(\mathbb F = \{(a_1, a_2,\ldots,
+a_n)\vert a_1, \ldots,a_n \in \mathbb F\}\)</span></p>
+<p>在 <span class="math inline">\(\mathbb F\)</span>
+上定义加法运算，<span class="math inline">\(\alpha = (a_1, \ldots, a_n),
+\beta = (b_1, \ldots, b_n)\)</span>，规定 <span
+class="math inline">\(\alpha + \beta = (a_1 + b_1, \ldots, a_n +
+b_n)\)</span></p>
+<p>另一方面定义数乘 <span class="math inline">\(\mathbb F\)</span>
+的一个数字与 <span class="math inline">\(\mathbb F ^ n\)</span>
+中的一个向量 <span class="math inline">\(k \in \mathbb F,\alpha = (a_1,
+\ldots, a_n) \in \mathbb F ^ n, k\alpha = (ka_1, \ldots,
+ka_n)\)</span></p>
+<p>设 <span class="math inline">\(\textbf{0} = (0, \ldots, 0)\)</span>
+为零向量，对于 <span class="math inline">\(\alpha + (-\alpha) =
+\textbf{0}\)</span>，称 <span class="math inline">\(-\alpha\)</span> 为
+<span class="math inline">\(\alpha\)</span> 的负向量。</p>
+<p><span class="math inline">\(\mathbb F ^ n\)</span> 及其加法和数乘为
+<span class="math inline">\(\mathbb F\)</span> 上的向量空间。</p>
+<p>根据定义，上述运算满足以下性质：</p>
+<p><span class="math inline">\(\alpha, \beta,\gamma \in \mathbb F ^ n,
+k, l\in \mathbb F\)</span></p>
+<ol type="1">
+<li><span class="math inline">\((\alpha + \beta) + \gamma = \alpha +
+(\beta + \gamma)\)</span></li>
+<li><span class="math inline">\(\alpha + \beta = \beta +
+\alpha\)</span></li>
+<li><span class="math inline">\(\alpha + \textbf 0 = \textbf 0 +
+\alpha\)</span></li>
+<li><span class="math inline">\(\alpha + (-\alpha) =
+\textbf{0}\)</span></li>
+<li><span class="math inline">\(k(l\alpha) = (kl)\alpha\)</span></li>
+<li><span class="math inline">\(kl\alpha = lk \alpha\)</span></li>
+<li><span class="math inline">\((k + l) \alpha = k\alpha +
+l\alpha\)</span></li>
+<li><span class="math inline">\(k(\alpha + \beta) = k\alpha +
+k\beta\)</span></li>
+</ol>
+<p>有时也考虑列向量 <span class="math inline">\(\alpha = \left(a_1, a_2,
+\ldots, a_n\right) ^ T\)</span></p>
+<p>类似得定义列向量加法和数乘，在不引起混淆的情况下，也用 <span
+class="math inline">\(\mathbb F ^ n\)</span> 表示 <span
+class="math inline">\(\mathbb F\)</span> 上的 <span
+class="math inline">\(n\)</span> 维列向量</p>
+<p>设 <span class="math inline">\(A = \begin{bmatrix} a_{11} &amp;
+\ldots &amp;a_{1n}\\ \vdots &amp;&amp; \vdots\\ a_{m1}&amp;
+\ldots&amp;a_{mn}\end{bmatrix} \in M_{m\times n}\left(\mathbb
+F\right)\)</span></p>
+<p>对于 <span class="math inline">\(1\le i \le m, 1\le j \le
+n\)</span>，记 <span class="math inline">\(\alpha_i = (a_{i1}, \ldots,
+a_{in}), \beta_j = (a_{1j}, a_{2j}, \ldots, a_{mj}) ^ T\)</span></p>
+<p>考虑线性方程组</p>
+<p><span class="math display">\[
+\begin{cases}
+a_{11}x_1 &amp; +&amp;a_{12}x_2&amp;+&amp;\ldots &amp;+&amp;a_{1n}x_n
+&amp; =&amp;b_1\\
+a_{21}x_1 &amp; +&amp;a_{22}x_2&amp;+&amp;\ldots&amp;+&amp;a_{2n}x_n
+&amp;= &amp;b_2\\
+\vdots&amp;&amp;&amp;&amp;&amp;&amp;&amp; \vdots\\
+a_{m1}x_1&amp;+&amp;a_{m2}x_2
+&amp;+&amp;\ldots&amp;+&amp;a_{mn}x_n&amp;=&amp;b_m
+\end{cases}
+\]</span></p>
+<p>令 <span class="math inline">\(\beta = (b_1, b_2, \ldots, b_m) ^
+T\)</span></p>
+<p>可以写为 <span class="math inline">\(x_1\beta_1 + x_2 \beta_2 +
+\ldots + x_n\beta_n = \beta\)</span></p>
+<p>如果解 <span class="math inline">\(k\)</span> 是方程组的解，那么
+<span class="math inline">\(\beta = k_1\beta_1 + k_2 \beta_2 + \ldots +
+k_n\beta_n\)</span></p>
+<p>定义 1. <span class="math inline">\(\alpha_1, \ldots, a_s \in \mathbb
+F ^ n, k_1, \ldots, k_s \in \mathbb F\)</span> 将 <span
+class="math inline">\(k_1\alpha_1 + \ldots + k_s\alpha_s\)</span> 为
+<span class="math inline">\(\alpha_1, \ldots, \alpha_s\)</span>
+的一个线性组合 2. <span class="math inline">\(\alpha_1, \ldots,
+a_s,\beta \in \mathbb F ^ n\)</span>，若 <span
+class="math inline">\(\beta\)</span> 可以表示为 <span
+class="math inline">\(\alpha_1, \ldots, \alpha_s\)</span>
+的一个线性组合，则称其可以被 <span class="math inline">\(\alpha_1,
+\ldots, \alpha_s\)</span> 线性表示</p>
+<h4 id="例一-2">例一</h4>
+<p>给定实平面两个不共线的向量 <span class="math inline">\(\alpha,
+\beta\)</span>，则平面内两个向量都可以被线性表示，在三位实空间三个不共面的向量
+<span class="math inline">\(\alpha, \beta,\gamma\)</span>
+则三维空间的每一个向量都可以被线性表示</p>
+<p><span class="math inline">\(\mathbb F ^ n\)</span> 中记 <span
+class="math inline">\(e_1 = (1, 0, \ldots, 0), e_2 = (0, 1, \ldots,
+0),\ldots, e_n = (0, \ldots, 0, 1)\)</span> 为标准单位向量</p>
+<p>给定 <span class="math inline">\(\alpha_1, \ldots, \alpha_s \in
+\mathbb F ^ n, \mathscr L(\alpha_1, \ldots, \alpha_s) = \{a_1 \alpha_1 +
+\ldots + a_s\alpha_s\vert \alpha_1, \ldots, \alpha_s \in \mathbb F ^
+n\}\)</span></p>
+<p>一般的给定 <span class="math inline">\(S \subseteq \mathbb F ^ n,
+\mathscr L(S) = \{a_1 \alpha_1 + \ldots + a_s\alpha_s\vert \alpha_1,
+\ldots, \alpha_s \in S\}\)</span></p>
+<p>定义：给定一组 <span class="math inline">\(\alpha_1, \ldots, \alpha_s
+\in \mathbb F ^ n\)</span>，若存在不全为 <span
+class="math inline">\(0\)</span> 的数 <span class="math inline">\(a_1,
+\ldots, a_s \in \mathbb F\)</span> 使得 <span class="math inline">\(a_1
+\alpha_1 + \ldots + a_s \alpha_s = 0\)</span>
+则称他们线性相关，否则称其为线性无关组</p>
+<ol type="1">
+<li>一个齐次线性方程组，只有零解当且进当他的列向量线性无关。</li>
+<li>会有 <span class="math inline">\(\textbf 0\)</span>
+的向量组线性相关</li>
+<li>只有一个向量的向量组线性相关当且进当含有 <span
+class="math inline">\(\textbf 0\)</span></li>
+<li>实平面里两个向量 <span class="math inline">\(\alpha, \beta\)</span>
+线性想光当且仅当两个向量共线，实平面中任意三个向量都线性相关</li>
+<li>在 <span class="math inline">\(\mathbb F ^ n,e_1, \ldots
+e_n\)</span> 是线性无关并且 <span class="math inline">\(\mathbb F ^
+n\)</span> 中任意大于 <span class="math inline">\(n\)</span>
+个向量构成的向量组是线性相关的</li>
+</ol>
 ]]></content>
       <tags>
         <tag>notes</tag>
