@@ -27,7 +27,7 @@
 <meta property="og:description" content="数学分析，真难啊～">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-18T09:15:46.000Z">
-<meta property="article:modified_time" content="2023-09-30T07:39:22.951Z">
+<meta property="article:modified_time" content="2023-10-03T05:20:33.090Z">
 <meta property="article:author" content="siriehn_nx">
 <meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-30 15:39:22" itemprop="dateModified" datetime="2023-09-30T15:39:22+08:00">2023-09-30</time>
+      <time title="修改时间：2023-10-03 13:20:33" itemprop="dateModified" datetime="2023-10-03T13:20:33+08:00">2023-10-03</time>
     </span>
 
   
@@ -594,11 +594,11 @@ a,\lim\limits _{n\rightarrow\infty} a ^ {\frac{1}{n}} = 1\)</span> 提示
 <span class="math inline">\(\lim \limits_{n\rightarrow\infty} n ^
 {\frac{1}{n}} = 1\)</span></p>
 <ol type="1">
-<li><span class="math inline">\(a\ge 1, \exist n\in \mathbb{
+<li><span class="math inline">\(a\ge 1, \exists n\in \mathbb{
 N},\text{s.t.}n\ge a, 1\le a ^ {\frac{1}{n}} \le n ^
 {\frac{1}{n}}\)</span>，有夹挤定理，此时收敛于 <span
 class="math inline">\(1\)</span></li>
-<li><span class="math inline">\(a &lt; 1, \frac{1}{n} &gt; 1,\exist
+<li><span class="math inline">\(a &lt; 1, \frac{1}{n} &gt; 1,\exists
 n,\text{s.t.}n &gt;\frac{1}{a},\lim\limits_{n\rightarrow\infty}a ^
 {\frac{1}{n}} = \lim\limits_{n\rightarrow\infty}a ^ {\frac{1}{n}} =
 \frac{1}{\lim\limits_{n\rightarrow\infty}\frac{1}{a} ^
@@ -626,7 +626,7 @@ a_k}{n}\)</span>，由夹挤定理 <span class="math inline">\(\lim\limits_{n
 </ol>
 <p>证明2：</p>
 <p><span class="math inline">\(a &gt; 0\)</span>，由极限定义 <span
-class="math inline">\(\forall \varepsilon &gt; 0, \exist N \in
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N \in
 \mathbb{N}, \text{s.t.} n &gt; N, 0 \le a - \frac{\varepsilon}{2} &lt;
 a_n &lt; a + \frac{\varepsilon}{2}\)</span> <span
 class="math display">\[
@@ -647,12 +647,12 @@ a_k\right) ^ {\frac{1}{n}}\left(a +
 _{n\rightarrow\infty}\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
 \frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
 \frac{\varepsilon}{2}\right) = a + \frac{\varepsilon}{2}\)</span></p>
-<p><span class="math inline">\(\exist N_1 \in \mathbb{N},\text{s.t.} n
+<p><span class="math inline">\(\exists N_1 \in \mathbb{N},\text{s.t.} n
 &gt; N_1, \left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
 \frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
 \frac{\varepsilon}{2}\right) &lt; a + \frac{\varepsilon}{2} +
 \frac{\varepsilon}{2}\)</span></p>
-<p><span class="math inline">\(\exist N_2 = \max(N, N_1),n &gt;
+<p><span class="math inline">\(\exists N_2 = \max(N, N_1),n &gt;
 N_2,\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
 \right) ^ {\frac{1}{n}} &lt; a + \varepsilon\)</span></p>
 <p>减号部分是同理的。</p>
@@ -675,16 +675,16 @@ _{n\rightarrow \infty} a_n = 1\)</span></p>
 2 + n} - n\right) ^ {\frac{1}{n}} &lt; \frac{1}{2}\)</span></p>
 <h3 id="保序性">保序性</h3>
 <ul>
-<li><span class="math inline">\(\{a_n\}\rightarrow a, b &gt; a, \exist
+<li><span class="math inline">\(\{a_n\}\rightarrow a, b &gt; a, \exists
 N, n &gt; N, \text{s.t.} a_n &lt; b\)</span></li>
 <li><span class="math inline">\(\{a_n\}\rightarrow a,\{b_n\}\rightarrow
-b, b &gt; a, \exist N, n &gt; N, \text{s.t.} a_n &lt; b_n\)</span></li>
+b, b &gt; a, \exists N, n &gt; N, \text{s.t.} a_n &lt; b_n\)</span></li>
 <li><span class="math inline">\({a_n} \rightarrow a, b_n \rightarrow b,
-\exist N, \text{s.t.} n &gt; N, a_n &lt; b_n\)</span> 则 <span
+\exists N, \text{s.t.} n &gt; N, a_n &lt; b_n\)</span> 则 <span
 class="math inline">\(a\le b\)</span></li>
 </ul>
 <h3 id="数列极限的推广">数列极限的推广</h3>
-<p>设 <span class="math inline">\(\{a_n\}，\forall A &gt; 0, \exist N,
+<p>设 <span class="math inline">\(\{a_n\}，\forall A &gt; 0, \exists N,
 \text{s.t.} n &gt; N, a_n &gt; A\)</span> 则 <span
 class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
 +\infty\)</span></p>
@@ -708,7 +708,7 @@ N\)</span>，则称其为单调递增数列，没有等于号就是严格单调�
 \ldots,a_n\}\)</span> 由确界存在定理 <span
 class="math inline">\(X\)</span> 有上确界 <span
 class="math inline">\(\alpha\)</span>，<span
-class="math inline">\(\forall \varepsilon &gt; 0, \exist N,
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N,
 \text{s.t.s},\alpha - \varepsilon &lt; a_N\)</span>, 则 <span
 class="math inline">\(n &gt; N\)</span> 时，<span
 class="math inline">\(\alpha - \varepsilon &lt; a_N \le a_n \le \alpha
@@ -749,7 +749,7 @@ class="math inline">\(a_n \le a \leftrightarrow a - 1 \le a_{n -
 [a_2, b_2]\supset\ldots\supset[a_n, b_n]\supset\)</span> 2. <span
 class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n - a_n) =
 0\)</span></p>
-<p>则 <span class="math inline">\(\exist ! \gamma \in \mathbb R,
+<p>则 <span class="math inline">\(\exists ! \gamma \in \mathbb R,
 \text{s.t.},\gamma \in \bigcap\limits_{n = 1} ^ {\infty} [a_n,
 b_n]\)</span></p>
 <p>证明:</p>
@@ -800,11 +800,11 @@ e_n &amp;= \left(1 + \frac{1}{n}\right) ^ {n}
 \\
 &amp;=\sum\limits_{k = 0} ^ n\binom{n}{k} \frac{1}{n ^ k}\\
 &amp;= \sum\limits_{k = 0} ^ n\frac{1}{k!} \frac{n!}{(n - k)!n ^
-{k}}  &lt; S_n \tag{*}
+{k}}  &lt; S_n
 \end{aligned}
 \]</span> 由极限保序性 <span class="math inline">\(e \le S\)</span>
 下面证明 <span class="math inline">\(S \le e\)</span></p>
-<p>由 <span class="math inline">\((*), n &gt; l\)</span></p>
+<p>由 上式，<span class="math inline">\(n &gt; l\)</span></p>
 <p><span class="math display">\[
 e_n &gt; \sum\limits_{k = 0} ^ l\frac{1}{k!} \frac{n!}{(n - k)!n ^ {k}}
 \]</span></p>
@@ -874,7 +874,7 @@ class="math inline">\(\lim\limits_{n\rightarrow \infty} \left(1 +
 \frac{k}{n}\right) ^ n = e ^ k\)</span></p>
 <h3 id="cauthy-列与-cauthy-收敛订立">Cauthy 列与 Cauthy 收敛订立</h3>
 <p>Cauthy 列定义：设 <span class="math inline">\(\{a_n\}\)</span>
-是数列，<span class="math inline">\(\forall \varepsilon &gt; 0, \exist
+是数列，<span class="math inline">\(\forall \varepsilon &gt; 0, \exists
 N\)</span>，当 <span class="math inline">\(n, m &gt; N\)</span>
 时，<span class="math inline">\(\vert a_m - a_n \vert &lt;
 \varepsilon\)</span></p>
@@ -894,7 +894,7 @@ class="math inline">\(X \subset \bigcup\limits_{\lambda\in
 \Lambda}I_{\lambda}\)</span> 称 <span
 class="math inline">\(\{I_{\lambda}\}_{\lambda \in \Lambda}\)</span> 为
 <span class="math inline">\(X\)</span> 的开覆盖</p>
-<p>若 <span class="math inline">\(\exist \lambda_1 , \ldots,
+<p>若 <span class="math inline">\(\exists \lambda_1 , \ldots,
 \lambda_n,\text{s.t.} X \subset \bigcup\limits _{R = 1} ^n I_{\lambda
 _R}\)</span></p>
 <p>定理：任何闭区间的开覆盖都有有限子覆盖</p>
@@ -910,12 +910,12 @@ I_1 \supset I_2\supset \ldots \supset I_n
 \]</span></p>
 <p>其中 <span class="math inline">\(\vert I_n \vert = \frac{1}{2 ^ n}(b
 - a)\)</span></p>
-<p>那么通过闭区间套定理，得到 <span class="math inline">\(\exist\gamma
+<p>那么通过闭区间套定理，得到 <span class="math inline">\(\exists\gamma
 \in \bigcap\limits_{i = 1} ^ {\infty} I_n\)</span>，<span
-class="math inline">\(\gamma \in [a, b] \subset S,\exist I _{\lambda_0}
+class="math inline">\(\gamma \in [a, b] \subset S,\exists I _{\lambda_0}
 = (\alpha, \beta),\text{s.t.} \gamma \in (\alpha, \beta)\)</span></p>
 <p>记 <span class="math inline">\(\delta = \min\{\gamma - \alpha, \beta
-- \gamma\}\)</span>，<span class="math inline">\(\exist m, \gamma \in
+- \gamma\}\)</span>，<span class="math inline">\(\exists m, \gamma \in
 I_m,\vert I_m \vert = \frac{1}{2 ^ m}(b - a) &lt;
 \frac{1}{2}\gamma\)</span>，故存在一个区间包含 <span
 class="math inline">\(I_m\)</span>，矛盾，故有限覆盖定理得证。</p>
