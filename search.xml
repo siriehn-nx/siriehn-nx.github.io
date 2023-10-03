@@ -601,7 +601,7 @@ class="math inline">\(\vert\frac{b_1 + \ldots + b_n}{n} - 0\vert
 &lt;\vert \frac{b_1 + \ldots + b_{N_1}}{n}\vert + \vert \frac{b_{N_1 +
 1} + \ldots + b_n}{n}\vert &lt; 2\varepsilon\)</span> ，<span
 class="math inline">\(\Box\)</span></p>
-<p>### 夹挤定理</p>
+<h3 id="夹挤定理">夹挤定理</h3>
 <p>设 <span class="math inline">\(\{a_n\},\{b_n\},\{c_n\}\)</span></p>
 <ol type="1">
 <li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n\le
@@ -772,7 +772,7 @@ class="math inline">\(a\ge b, a_2 = (a_1 - a) ^ 2 + b \le a\Rightarrow
 class="math inline">\(a_n \le a \leftrightarrow a - 1 \le a_{n -
 1}\)</span></p>
 <h4 id="定理">定理</h4>
-<p>设闭区间 <span class="math inline">\([a_n, b)n], n = 1, 2
+<p>设闭区间 <span class="math inline">\([a_n, b_n], n = 1, 2
 ,\ldots\)</span> 满足： 1. <span class="math inline">\([a_1, b_1]\supset
 [a_2, b_2]\supset\ldots\supset[a_n, b_n]\supset\)</span> 2. <span
 class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n - a_n) =
@@ -869,11 +869,10 @@ n}{n!}\)</span>，<span class="math inline">\(\frac{a_{n + 1}}{a_n} =
 class="math inline">\(\lim\limits_{n\rightarrow\infty} a_n ^
 {\frac{1}{n}} =e\)</span></p>
 <h4 id="例二-4">例二</h4>
-$$
-<span class="math display">\[\begin{aligned}
+<p>求解 <span class="math display">\[
+\begin{aligned}
 &amp;=\lim\limits_{n\rightarrow \infty} \left(1 - \frac{1}{n}\right) ^ n
 \\
-
 &amp;=\lim\limits_{n\rightarrow \infty} \left(\frac{1}{\frac{n}{n -
 1}}\right) ^ n
 \\
@@ -881,27 +880,27 @@ $$
 -1}\left(1  +\frac{1}{n - 1}\right)}
 \\
 &amp;=e ^ {-1}
-\end{aligned}\]</span>
-<p>$$</p>
+\end{aligned}
+\]</span></p>
 <h4 id="例三-3">例三</h4>
-<p><span class="math display">\[
+<p>求解 <span class="math display">\[
 \begin{aligned}
 \left(1 + \frac{k}{n}\right) ^ n
 \le \left(1+\frac{k}{n + 1}\right) ^ {n + 1}
 \end{aligned}
 \]</span></p>
-<p>$$</p>
-<span class="math display">\[\begin{aligned}
+<p><span class="math display">\[
+\begin{aligned}
 \left(1 + \frac{k}{n}\right) ^ n \le \left(1 + \frac{1}{n}\right) ^ {kn}
 &lt; e ^ k
-\end{aligned}\]</span>
-<p>$$</p>
+\end{aligned}
+\]</span></p>
 <p>有子列 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
 \left(1 + \frac{1}{n}\right) ^{nk} = e ^ k\)</span></p>
 <p>因为其本身有界收敛，则 <span
 class="math inline">\(\lim\limits_{n\rightarrow \infty} \left(1 +
 \frac{k}{n}\right) ^ n = e ^ k\)</span></p>
-<h3 id="cauthy-列与-cauthy-收敛订立">Cauthy 列与 Cauthy 收敛订立</h3>
+<h3 id="cauthy-列与-cauthy-收敛定理">Cauthy 列与 Cauthy 收敛定理</h3>
 <p>Cauthy 列定义：设 <span class="math inline">\(\{a_n\}\)</span>
 是数列，<span class="math inline">\(\forall \varepsilon &gt; 0, \exists
 N\)</span>，当 <span class="math inline">\(n, m &gt; N\)</span>
