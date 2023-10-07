@@ -1881,8 +1881,8 @@ M_{m,n} (\mathbb F)  =\{ A = (a_{ij})_{m\times n}\vert a_{ij} \in
 \mathbb F\}
 \]</span> 当 <span class="math inline">\(n = m\)</span> 时，称 <span
 class="math inline">\(m\times n\)</span> 矩阵是一个方阵。</p>
-由方程组 <span class="math inline">\((*)\)</span> 得到的两个矩阵： <span
-class="math display">\[
+<p>由方程组 <span class="math inline">\((*)\)</span> 得到的两个矩阵：
+<span class="math display">\[
 A = \begin{bmatrix}
 a_{11} &amp; \ldots&amp;a_{1n}\\
 a_{21} &amp; \ldots &amp; a_{2n}
@@ -1901,10 +1901,8 @@ a_{m1}&amp; \ldots &amp; a_{mn}&amp;b_m
 \]</span> 我们称 <span class="math inline">\(A\)</span>
 为系数矩阵，<span class="math inline">\(\tilde{A}\)</span>
 为增广矩阵，由 <span class="math inline">\((*)\)</span>
-的常数项得到一个数列 $=
-<span class="math display">\[\begin{bmatrix}b_{1}\\b_{2}\\\vdots
-\\b_{m}\end{bmatrix}\]</span>
-<p>$。</p>
+的常数项得到一个数列 <span class="math inline">\(\beta =
+\begin{bmatrix}b_{1}\\b_{2}\\\vdots \\b_{m}\end{bmatrix}\)</span>。</p>
 <p>对 <span class="math inline">\((*)\)</span>
 相当与对其系数矩阵与增广矩阵做以下变换：</p>
 <ol type="1">
@@ -2283,6 +2281,156 @@ class="math inline">\(r_c(A)\)</span></li>
 \]</span></p>
 <p>引理：矩阵的初等变换不改变秩</p>
 <p>证明：只需证明矩阵的行秩与列秩在初等行变换和列变换不变即可。</p>
+<p>首先证明初等行变换不影响矩阵的列秩，那么：</p>
+<p>先证明这个引理：</p>
+<p>设 <span class="math inline">\(\gamma_1, \ldots, \gamma_s\)</span> 与
+<span class="math inline">\(\delta_1, \ldots,\delta_s\)</span> 是 <span
+class="math inline">\(\mathbb F ^ m\)</span> 中两个大小为 <span
+class="math inline">\(s\)</span> 的向量组，如果对于任意的 <span
+class="math inline">\(k_1, k_2, \ldots, k_s\)</span>均有</p>
+<p><span class="math display">\[
+k_1\gamma_1 + \ldots + k_s\gamma_s = 0 \Leftrightarrow k_1 \delta_1 +
+\ldots + k_s\delta_s = 0
+\]</span></p>
+<p>那么则有 <span class="math inline">\(r = r(\gamma_1,\ldots,
+\gamma_s)\)</span> 并且不妨设 <span class="math inline">\(\gamma_1,
+\ldots,\gamma_r\)</span> 是一个极大线性无关组，下面说明 <span
+class="math inline">\(\delta_1, \ldots, \delta_s\)</span>
+也线性无关。</p>
+<p>如果 <span class="math inline">\(k_1 \delta_1 + \ldots + k_r \delta
+_r = 0\)</span>，其中 <span class="math inline">\(k_1, \ldots, k_r\in
+\mathbb F\)</span></p>
+<p>设 <span class="math inline">\(k_1\delta_1 + \ldots + k_s \delta_s =
+0\)</span></p>
+<p>那么可以得到 <span class="math inline">\(k_1 \gamma_1 + \ldots + k_r
+\gamma_r = 0\)</span>，所以 <span class="math inline">\(k_1 = \ldots =
+k_s = 0\)</span></p>
+<p>于是 <span class="math inline">\(\delta_1, \delta_2,\ldots,
+\delta_r\)</span> 线性无关。</p>
+<p>对于 <span class="math inline">\(r &lt; j \le s, \gamma_j\)</span>
+均可被 <span class="math inline">\(\gamma_1, \ldots,
+\gamma_r\)</span></p>
+<p><span class="math inline">\(0 = \lambda_1\gamma_1 + \ldots +
+\lambda_r \gamma_r - \gamma_j\Rightarrow 0 = \lambda_1\delta_1 + \ldots
++ \lambda_r \delta_r - \delta_j\)</span></p>
+<p>于是 <span class="math inline">\(\delta_1, \ldots, \delta_r\)</span>
+是极大线性无关组</p>
+<p>设 <span class="math inline">\(B\)</span> 是由 <span
+class="math inline">\(A\)</span> 经过一系列初等行变换得到的矩阵，用
+<span class="math inline">\(\beta_1, \ldots,\beta_n\)</span> 与 <span
+class="math inline">\(\beta_1‘, \ldots,\beta_n’\)</span>
+表示他们的列向量，于是以 <span class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span>
+为系数矩阵的齐次线性方程组可表示为：</p>
+<p><span class="math inline">\(x_1\beta_1 + \ldots + x_n\beta_n =
+0,x_1\beta_1&#39; + \ldots + x_n\beta_n&#39; = 0\)</span></p>
+<p>又这两个方程租是同解的，即 <span class="math inline">\(\#\)</span>
+的假设条件是满足的，<span class="math inline">\(\Rightarrow r_c(A) =
+r(\beta_1, \ldots,\beta_n) = r(\beta_1&#39;, \ldots,\beta_n&#39;) =
+r_c(B)\)</span></p>
+<p>定理：设 <span class="math inline">\(A\in M_{m, n}(\mathbb
+F)\)</span> 则 <span class="math inline">\(r_r(A) = r_c(A)\)</span></p>
+<p>证明：用初等行变换将 <span class="math inline">\(A\)</span>
+化为阶梯型矩阵 <span class="math inline">\(C\)</span>，<span
+class="math inline">\(r_r(A) = r_r(C) = r = r_c(C) = r_c(A)\)</span></p>
+<p>定义：设 <span class="math inline">\(A \in M_{m, n} (\mathbb
+F)\)</span> 称 <span class="math inline">\(A\)</span> 的行秩和列秩为
+<span class="math inline">\(A\)</span> 的秩，记作 <span
+class="math inline">\(r(A)\)</span> 或 <span
+class="math inline">\(rank(A)\)</span></p>
+<p>推论：设 <span class="math inline">\(A\in M_{m, n}(\mathbb
+F)\)</span> 则通过初等变换可以将 <span class="math inline">\(A\)</span>
+化为类对角矩阵，其中 <span class="math inline">\(1\)</span> 的个数有
+<span class="math inline">\(r(A)\)</span> 个。</p>
+<p>注：一个矩阵的列向量的极大无关组的求法</p>
+<p>设 <span class="math inline">\(A\in M_{m, n}(\mathbb
+F)\)</span>，首先利用初等行变换化为行阶梯型矩阵 <span
+class="math inline">\(B\)</span>，分别用 <span
+class="math inline">\(\beta_1, \ldots,\beta_n\)</span> 与 <span
+class="math inline">\(\beta_1‘, \ldots,\beta_n’\)</span> 表示 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 的行向量，可以得到 <span
+class="math inline">\(\beta&#39;_{i_1},\beta&#39;_{i_2},\ldots,\beta&#39;_{i_r}\)</span>
+线性无关，并且是极大线性无关组，则 <span class="math inline">\(\beta
+_{i_1} ,\ldots,\beta_{i_r}\)</span> 也是 <span
+class="math inline">\(A\)</span> 的极大线性无关组。</p>
+<p>转置：将 <span class="math inline">\(A\in M_{m, n}(\mathbb
+F)\)</span> 的行列互换，得到 <span class="math inline">\(n\times
+m\)</span> 的矩阵，为 <span class="math inline">\(A\)</span>
+的转置，记作 <span class="math inline">\(A^T\in M_{n,m} (\mathbb
+F)\)</span></p>
+<h4 id="例一-3">例一</h4>
+<p>求矩阵</p>
+<p><span class="math display">\[
+A = \begin{bmatrix}
+   1 &amp; -1 &amp; -3 &amp; 1 &amp; 1\\
+   1 &amp; -1&amp;2 &amp; -1 &amp; 3\\
+   4 &amp; -4 &amp; 3 &amp; -2 &amp; 10\\
+   2 &amp; -2 &amp; -11 &amp; 4 &amp; 1
+\end{bmatrix}
+\]</span></p>
+<p>用初等行变换化为阶梯型矩阵</p>
+<p><span class="math display">\[
+A\rightarrow\begin{bmatrix}
+1 &amp; 1 &amp; -3 &amp; 1&amp; 1\\
+0 &amp; 0&amp;5&amp;-2&amp;2\\
+0 &amp; 0 &amp; 15 &amp; -6 &amp; 6\\
+0 &amp; 0 &amp; -5 &amp; 2 &amp; 1
+\end{bmatrix}
+\rightarrow\begin{bmatrix}
+1 &amp; 1 &amp; -3 &amp; 1&amp; 1\\
+0 &amp; 0&amp;5&amp;-2&amp;2\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}\Rightarrow r(A) = 3
+\]</span></p>
+<p>并且极大无关组就是第 <span class="math inline">\(1, 3, 5\)</span>
+个列向量</p>
+<h4 id="例二">例二</h4>
+<p><span class="math inline">\(A = (a_{ij})\in M_{m, n}(\mathbb F),B =
+(b{ij})\in M_{s, t}(\mathbb F)\)</span></p>
+<p><span class="math inline">\(C = \begin{bmatrix} A &amp; 0 \\ 0 &amp;
+B\end{bmatrix}\)</span></p>
+<p>证明： <span class="math inline">\(r(C) = r(A) + r(B)\)</span></p>
+<p>记 <span class="math inline">\(A =
+\begin{bmatrix}\alpha_1\\\vdots\\\alpha_m\end{bmatrix}\)</span>，<span
+class="math inline">\(B =
+\begin{bmatrix}\beta_1\\\vdots\\\beta_s\end{bmatrix}\)</span></p>
+<p>记 <span class="math inline">\(p = r(A), q = r(B)\)</span> 且 <span
+class="math inline">\(\alpha_{i_1}, \ldots,\alpha_{i_p}\)</span> 是
+<span class="math inline">\(\alpha_1,\ldots,\alpha_m\)</span>
+的极大线性无关组，<span class="math inline">\(\beta{i_1},
+\ldots,\beta{i_q}\)</span> 是 <span
+class="math inline">\(\beta_1,\ldots,\beta_s\)</span>
+的极大线性无关组</p>
+<p>于是 <span class="math inline">\(\tilde{\alpha_{i_1}},
+\ldots,\tilde{\alpha_{i_p}},\tilde{\beta{i_1}},
+\ldots,\tilde{\beta{i_q}}\)</span> 为 <span
+class="math inline">\(C\)</span> 的极大线性无关组 <span
+class="math inline">\(\Rightarrow\)</span> <span
+class="math inline">\(r(C) = r(A) + r(B)\)</span></p>
+<h4 id="例三">例三</h4>
+<p><span class="math inline">\(A \in M_{m, n} (\mathbb{F} ^ n)\)</span>
+且 <span class="math inline">\(1\le s\le m\)</span> 在 <span
+class="math inline">\(A\)</span> 中取出一个 <span
+class="math inline">\(s\times n\)</span> 的矩阵 <span
+class="math inline">\(B\)</span>，则 <span class="math inline">\(r(B)\ge
+r(A) + s - m\)</span></p>
+<p>证明：<span class="math inline">\(A =
+\begin{bmatrix}\alpha_1\\\vdots\\\alpha_m\end{bmatrix}\)</span> 并且设
+<span class="math inline">\(B\)</span> 由 <span
+class="math inline">\(A\)</span> 的 <span class="math inline">\(i_1,
+i_2,\ldots,i_s\)</span> 行组成的矩阵，即 <span class="math inline">\(B =
+\begin{bmatrix}\alpha_{i_1}\\\vdots\\\alpha_{i_s}\end{bmatrix}\)</span></p>
+<p>用 <span class="math inline">\(\alpha_{i_{s +
+1}},\ldots,\alpha_{i_m}\)</span> 表示剩下 <span class="math inline">\(m
+- s\)</span> 行，令 <span class="math inline">\(p = r(B)\)</span>，
+<span class="math inline">\(j_1, j_2,\ldots,j_p\)</span> 是 <span
+class="math inline">\(\alpha_{i_1},\ldots,\alpha_{i_s}\)</span>
+的一个极大线性无关组，那么</p>
+<p><span class="math inline">\(r(A) = r(\alpha) =
+r(\alpha_{j_1},\ldots,\alpha_{j_p},\alpha_{i_{s + 1}},\alpha_{i_m}) \le
+p + s - m\)</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
