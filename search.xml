@@ -2254,6 +2254,35 @@ class="math inline">\(\mathbb F ^ n\)</span> 的子空间，并且 <span
 class="math inline">\(W_1 \subseteq W_2\)</span>，则 <span
 class="math inline">\(W_1\)</span> 的每一个基都可以扩充 <span
 class="math inline">\(W_2\)</span> 的基。</p>
+<h3
+id="矩阵的秩与线性方程组的有解判别准则">矩阵的秩与线性方程组的有解判别准则</h3>
+<p>定义：设 <span class="math inline">\(A \in M_{m, n} (\mathbb
+F)\)</span></p>
+<ol type="1">
+<li>由 <span class="math inline">\(A\)</span> 的 <span
+class="math inline">\(m\)</span> 个行向量生成的 <span
+class="math inline">\(\mathbb F ^ n\)</span> 生成的子空间称为 <span
+class="math inline">\(A\)</span> 的行空间，其维数成为 <span
+class="math inline">\(A\)</span> 的行秩，记作 <span
+class="math inline">\(r_r(A)\)</span></li>
+<li>由 <span class="math inline">\(A\)</span> 的 <span
+class="math inline">\(n\)</span> 个行向量生成的 <span
+class="math inline">\(\mathbb F ^ m\)</span> 生成的子空间称为 <span
+class="math inline">\(A\)</span> 的列空间，其维数成为 <span
+class="math inline">\(A\)</span> 的列秩，记作 <span
+class="math inline">\(r_c(A)\)</span></li>
+</ol>
+<p>根据定义，<span class="math inline">\(0\le r_r(A), r_c(A) \le
+\min\{m, n\}\)</span></p>
+<p>例：</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+1 &amp; 0 &amp; 1\\
+2 &amp; -1 &amp; 1\\
+\end{bmatrix}
+\]</span></p>
+<p>引理：矩阵的初等变换不改变秩</p>
+<p>证明：只需证明矩阵的行秩与列秩在初等行变换和列变换不变即可。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
