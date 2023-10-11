@@ -32,6 +32,19 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
+    <title>思想道德与法治</title>
+    <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
+<h1 id="思想道德与法治">思想道德与法治</h1>
+<h2 id="绪论">绪论</h2>
+<p>思法课是什么课？一门水课。一门金课。</p>
+<p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>具有强基计划的OIer的去向调查报告</title>
     <url>/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/</url>
     <content><![CDATA[<p>2023届noi银牌大学去向调查报告</p>
@@ -275,1159 +288,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
-    <title>思想道德与法治</title>
-    <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
-<h1 id="思想道德与法治">思想道德与法治</h1>
-<h2 id="绪论">绪论</h2>
-<p>思法课是什么课？一门水课。一门金课。</p>
-<p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析笔记</title>
-    <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="数学分析笔记">数学分析笔记</h1>
-<h2 id="实数与序列">实数与序列</h2>
-<h3 id="常见数集">常见数集</h3>
-<p>下面给出一些集合的定义 <span class="math display">\[
-\begin{aligned}
-\mathbb N &amp;= \{0, 1, 2, \ldots\}\\
-\mathbb  Z &amp;= \{\ldots,-1,0,1,\ldots\}
-\\
-\mathbb Q&amp; = \{\frac{p}{q}\vert p, q \in \mathbb Z, q\not = 0\}
-\end{aligned}
-\]</span> 对于四则运算封闭的是 <span class="math inline">\(\mathbb Q,
-\mathbb R, \mathbb C\)</span></p>
-<h3 id="dedekind分割">Dedekind分割</h3>
-<p>先定义一个分割</p>
-<p><span class="math inline">\(A, B\)</span> 为有理数集合，满足：</p>
-<ol type="1">
-<li><span class="math inline">\(A, B \not = \emptyset, \mathbb Q = A
-\cup B, A \cap B = \emptyset\)</span></li>
-<li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
-y\)</span></li>
-</ol>
-<p>显然有四种情况</p>
-<ol type="1">
-<li><span class="math inline">\(A\)</span> 中有最大值，<span
-class="math inline">\(B\)</span> 中有最小值</li>
-<li><span class="math inline">\(A\)</span> 中无最大值，<span
-class="math inline">\(B\)</span> 中有最小值</li>
-<li><span class="math inline">\(A\)</span> 中有最大值，<span
-class="math inline">\(B\)</span> 中无最小值</li>
-<li><span class="math inline">\(A\)</span> 中无最大值，<span
-class="math inline">\(B\)</span> 中无最小值</li>
-</ol>
-<p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
-<p>Dedekind 分割就是 <span class="math inline">\(\{(A, B)是 \mathbb Q
-的一个分割，且 A 中无最大值\}\)</span></p>
-<p>每一个 Dedekind
-分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
-<h3 id="dedekind-分割来定义无理数的运算">Dedekind
-分割来定义无理数的运算</h3>
-<p>定义 <span class="math inline">\(x = (A_1, B_1), y = (A_2,
-B_2)\)</span> ，若 <span class="math inline">\(A_1 \subset A_2\)</span>
-称 <span class="math inline">\(x\le y\)</span>，若 <span
-class="math inline">\(A_1 \subset A_2\)</span> 且 <span
-class="math inline">\(A_1 \not = A_2\)</span> 称 <span
-class="math inline">\(x &lt; y\)</span>。</p>
-<p>性质</p>
-<ol type="1">
-<li>反称性：<span class="math inline">\(x\le y\)</span> 则 <span
-class="math inline">\(y\ge x\)</span></li>
-<li>传递性：<span class="math inline">\(x\le y\)</span> 且 <span
-class="math inline">\(y \le Z\)</span>，则 <span class="math inline">\(x
-\le Z\)</span></li>
-<li>完备性：<span class="math inline">\(x, y\in \mathbb R\)</span>，则
-<span class="math inline">\(x\le y\)</span> 或 <span
-class="math inline">\(y\le x\)</span></li>
-</ol>
-<p>四则运算定义</p>
-<p><span class="math inline">\(x + y = (A_3, B_3)\)</span>，其中 <span
-class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in A_1,
-\exists r_2 \in A_2, \text{s.t.} r = r_1 + r_2\}\)</span>， <span
-class="math inline">\(B_3 =\mathbb Q/A_3\)</span></p>
-<p>负元 <span class="math inline">\(-x = (A_3, B_3)\)</span>，其中 <span
-class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in B_1,
-r = -r_1, r_1 不是最小元\}\)</span>， <span class="math inline">\(B_3 =
-\mathbb Q/A_3\)</span></p>
-<p>则减法定义为 <span class="math inline">\(x - y = x +
-(-y)\)</span></p>
-<p>乘法：</p>
-<p><span class="math inline">\(xy = (A_3, B_3)\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(x\ge 0, y \ge 0, A_3 = \{r \in \mathbb
-Q\vert r &lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.}
-r_1 \ge 0, r_2 \ge 0, r = r_1r_2\}, B = \mathbb Q / A_3\)</span></li>
-<li><span class="math inline">\(x\ge 0, y &lt; 0,xy =
--(x(-y))\)</span></li>
-<li><span class="math inline">\(x &lt; 0, y &lt; 0, xy =
-(-x)(-y)\)</span></li>
-</ol>
-<p>逆元 <span class="math inline">\(A_3 = \{r \in Q\vert r\le 0 或
-\exists r_1 \in B_1 , r_1 不是 B_1最小元,r=\frac{1}{r_1}\}, B = \mathbb
-Q / A_3\)</span></p>
-<p>实数域范围内：</p>
-<ol type="1">
-<li>交换律</li>
-<li>结合律</li>
-<li>单位元</li>
-<li>逆元</li>
-<li>分配律</li>
-</ol>
-<p>相容性条件</p>
-<ol type="1">
-<li>加法保序性 <span class="math inline">\(x\le y\)</span> 则 <span
-class="math inline">\(x + z \le y + z\)</span></li>
-<li>乘法保序性 <span class="math inline">\(x\le y, z \ge 0\)</span>, 则
-<span class="math inline">\(xz\le yz\)</span></li>
-</ol>
-<h3 id="实数确界存在定理">实数确界存在定理</h3>
-<p>定义 ：<span class="math inline">\(X \subset \mathbb R,x\not =
-\emptyset\)</span></p>
-<ol type="1">
-<li>若 <span class="math inline">\(C \in \mathbb R, \text{s.t.} \forall
-x \in X, x \le C\)</span> 则称 <span class="math inline">\(C\)</span> 是
-<span class="math inline">\(X\)</span> 的一个上界，下界同理</li>
-<li>若 <span class="math inline">\(X\)</span> 既有上界又有下界，那么称
-<span class="math inline">\(X\)</span> 是有界集</li>
-<li>称 <span class="math inline">\(a\)</span> 是 <span
-class="math inline">\(X\)</span> 的一个上确界，若 <span
-class="math inline">\(\forall C\)</span> 是 <span
-class="math inline">\(X\)</span> 的上界，<span class="math inline">\(C
-\ge a\)</span>，记 <span class="math inline">\(a = \sup X\)</span>
-上确界，下确界是 <span class="math inline">\(\inf X\)</span></li>
-</ol>
-<p>定理：确界存在定理：有上界或者下界的非空子集，必有唯一的上确界或者下确界。</p>
-<p>证明：非空集 <span class="math inline">\(X\)</span> 有上界，定义集合
-<span class="math inline">\(A_1 = \{ r \in \mathbb Q \vert \exists(A, B)
-\in X, \text{s.t.}r\in A\}\)</span> 则 <span class="math inline">\(x_1 =
-(A_1, B_1) \in R\)</span> 并且 <span class="math inline">\(\forall (A,
-B) \in X\)</span> 我们有 <span class="math inline">\(A\subset
-A_1\)</span> 故 <span class="math inline">\(x_1 = (A_1, B_1)\)</span>
-是上界，现在设 <span class="math inline">\(x_0 = (A_0, B_0)\)</span> 是
-<span class="math inline">\(X\)</span> 的任一上界，根据定义，可以知道
-<span class="math inline">\(A_1 \subset A_0, x_1 \le x_0\)</span> 因此
-<span class="math inline">\(x_1\)</span> 是 <span
-class="math inline">\(X\)</span> 的唯一上确界。</p>
-<h3 id="实数分割">实数分割</h3>
-<p>定义</p>
-<ol type="1">
-<li><span class="math inline">\(A, B\)</span> 为 <span
-class="math inline">\(R\)</span> 的子集</li>
-<li><span class="math inline">\(A,B\not = \emptyset, A \cap B =
-\emptyset, A\cup B = \mathbb R\)</span></li>
-<li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
-y\)</span></li>
-</ol>
-<p>实数连续性定理： <span class="math inline">\(\mathbb R\)</span>
-的一个分割，对应唯一一个实数 <span class="math inline">\(\alpha\)</span>
-并且 <span class="math inline">\(\alpha\)</span> 是 <span
-class="math inline">\(A\)</span> 的最大值或者是 <span
-class="math inline">\(B\)</span> 的最小值。</p>
-<p>由确界定理可知，<span class="math inline">\(A\)</span> 有上确界 <span
-class="math inline">\(\alpha\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(\alpha \in A\)</span></li>
-<li><span class="math inline">\(\alpha \in B\)</span> 且 <span
-class="math inline">\(\alpha\)</span> 是 <span
-class="math inline">\(B\)</span> 中最小元</li>
-</ol>
-<h4 id="连续性推出确界存在性">连续性推出确界存在性</h4>
-<p>证明： <span class="math inline">\(x\subset \mathbb R, x \not =
-\emptyset\)</span> 有上界 <span class="math inline">\(c\)</span>，<span
-class="math inline">\(x\)</span> 有上确界。</p>
-<p>分为两种情况讨论</p>
-<ol type="1">
-<li><span class="math inline">\(c\in X\)</span></li>
-<li><span class="math inline">\(c\not \in X, D = \{\beta\vert \beta 是 X
-的上界\}\)</span>，<span class="math inline">\(C = \mathbb R / D,\exists
-\alpha = (C, D)\)</span> 要么是 <span class="math inline">\(C\)</span>
-的最大值，要么是 <span class="math inline">\(D\)</span>
-的最小值，在分成两种情况讨论。
-<ol type="1">
-<li><span class="math inline">\(\alpha\)</span> 是 <span
-class="math inline">\(C\)</span> 的最大元，<span class="math inline">\(X
-\subset C\)</span>，这个和 <span class="math inline">\(\alpha\not \in
-D\)</span> 矛盾。</li>
-<li><span class="math inline">\(\alpha\)</span> 是 <span
-class="math inline">\(D\)</span> 的最小元，则有 <span
-class="math inline">\(\alpha\)</span> 为上确界</li>
-</ol></li>
-</ol>
-<h4 id="例一">例一</h4>
-<p>证明： <span class="math inline">\(x= (0, 1), \sup X = 1\)</span>
-。</p>
-<p><span class="math inline">\(\forall x \in X, x &lt; \frac{1 + x}{2}
-&lt; 1\)</span> 于是 <span class="math inline">\(1\)</span> 是上确界
-<span class="math inline">\(\Box\)</span></p>
-<h4 id="例二">例二</h4>
-<p>证明：<span class="math inline">\(\sqrt 2\)</span> 的存在性</p>
-<p><span class="math inline">\(X = \{x \vert x ^ 2 &lt; 2\}\)</span>
-，证明 <span class="math inline">\(\left(\sup X\right) ^ 2 = 1\)</span>
-即可，记其为 <span class="math inline">\(\gamma\)</span></p>
-<p>分成两个步骤证明：</p>
-<ol type="1">
-<li><span class="math inline">\(\gamma ^ 2 \ge 2\)</span> 利用反证法，若
-<span class="math inline">\(\gamma ^ 2 &lt; 2\)</span> ，构造 <span
-class="math inline">\(w \in (0, 1), \left(w + \gamma\right) ^ 2 &lt;
-2\)</span> 即可。<span class="math inline">\((\gamma + w) ^ 2 &lt;
-\gamma ^ 2 + 3\gamma w\)</span> ，令 <span class="math inline">\(w =
-\frac{2 - \gamma ^ 2}{3 \gamma}\)</span></li>
-<li><span class="math inline">\(\gamma ^ 2 \le
-2\)</span>，反证法，考虑构造 <span class="math inline">\(u \in (0,
-\gamma), (\gamma - u) ^ 2 &gt; 2\)</span> 即可，令 <span
-class="math inline">\(u = \frac{r ^2 - 2}{2r}\)</span> 即可，<span
-class="math inline">\(\Box\)</span></li>
-</ol>
-<p>推广：<span class="math inline">\(\exists \gamma\in \mathbb R, \gamma
-^ n = 2\)</span></p>
-<p>有限或者无限小数表示实数 <span
-class="math inline">\(\alpha\)</span>，令 <span
-class="math inline">\(\alpha = (A, B)\)</span>， 找到 <span
-class="math inline">\(a_0, a_1, \ldots , a_n\)</span> 使得 <span
-class="math inline">\(a_0.a_1\ldots a_n\in A, a_0.a_1\ldots a_n
-+\frac{1}{10 ^ n}\in B\)</span> 即可。一直这么找下去。</p>
-<h2 id="数列及其收敛性">数列及其收敛性</h2>
-<p><span class="math inline">\(\mathbb N \rightarrow \mathbb R, n\mapsto
-a_n\)</span></p>
-<p>例：<span class="math inline">\(\{1, \frac{1}{2},\frac{1}{3},\ldots,
-\frac{1}{n}\}\)</span></p>
-<h3 id="定义">定义</h3>
-<p>设 <span class="math inline">\(\{a_n\}\)</span> 为实数列，称 <span
-class="math inline">\(a\in \mathbb R\)</span> 是 <span
-class="math inline">\(\{a_n\}\)</span> 的极限，<span
-class="math inline">\(\forall \varepsilon &gt; 0, \exists N &gt;
-0\)</span>，使得 <span class="math inline">\(n &gt; N\)</span> 时，<span
-class="math inline">\(\vert a_n - a\vert &lt;
-\varepsilon\)</span>，并且称 <span
-class="math inline">\(\{a_n\}\)</span> 是收敛数列， <span
-class="math inline">\(a\)</span> 为其极限，记为 <span
-class="math inline">\(\lim \limits_{n\to \infty} a_n = a \Leftrightarrow
-a_n\rightarrow a\)</span></p>
-<h4 id="例一-1">例一</h4>
-<p><span class="math inline">\((1)\lim\limits _{n\rightarrow \infty}
-\frac{1}{n} = 0, (2),\lim \limits _{n \rightarrow\infty} \frac{n ^ 2}{2
-n ^ 2+ 1} = \frac{1}{2} (3)\lim \limits _{n \rightarrow\infty}
-\frac{1}{q ^ n} = 0, (\vert q \vert &gt; 1)\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N =
-\left[\frac{1}{\varepsilon}\right]\)</span>, 在 <span
-class="math inline">\(n &gt; N\)</span> 时，<span
-class="math inline">\(\vert \frac{1}{n} - 0\vert &lt;
-\varepsilon\)</span>，<span class="math inline">\(\Box\)</span></li>
-<li><span class="math inline">\(\vert \frac{n ^ 2}{2n ^ 2 + 1} -
-\frac{1}{2}\vert = \frac{1}{4n ^ 2+2}&lt;\frac{1}{n}, N =
-\left[\frac{1}{\varepsilon}\right]\)</span>，当 <span
-class="math inline">\(n &gt; N\)</span> 时，<span
-class="math inline">\(\vert \frac{n ^ 2}{2 n ^ 2 + 1} - \frac{1}{2}\vert
-&lt; \frac{1}{n} &lt; \varepsilon\)</span>，<span
-class="math inline">\(\Box\)</span></li>
-<li>不妨设 <span class="math inline">\(q &gt; 1, q = 1 + \alpha, \forall
-\varepsilon &gt; 0\)</span>，想要找到一个 <span
-class="math inline">\(N\)</span> 使得 <span
-class="math inline">\(\frac{1}{(1 + \alpha) ^ n}&lt;\frac{1}{n \alpha}
-&lt; \varepsilon\)</span>，于是 <span class="math inline">\(N =
-\left[\frac{1}{\varepsilon\alpha}\right]\)</span>，在 <span
-class="math inline">\(n &gt; N\)</span> 时，有 <span
-class="math inline">\(\frac{1}{q ^ n} = \frac{1}{(1 + \alpha) ^ n}&lt;
-\frac{1}{n\alpha}&lt;\varepsilon\)</span>，<span
-class="math inline">\(\Box\)</span></li>
-</ol>
-<h4 id="例二-1">例二</h4>
-<p><span class="math inline">\(\lim\limits _{n\rightarrow \infty}
-\sqrt[n] {n} = 1\)</span></p>
-<p>证明：<span class="math inline">\(\forall \varepsilon &gt;
-0\)</span>，想找到一个 <span class="math inline">\(N\)</span> 使得 <span
-class="math inline">\({n} &lt; \left(1 + \varepsilon \right) ^
-n\)</span>，则 <span class="math inline">\(\frac{n(n -
-1)}{2}\varepsilon^2 &gt; n\)</span> 故而，<span
-class="math inline">\(\varepsilon ^ 2 &gt; \frac{2}{n - 1}\)</span> 则
-<span class="math inline">\(N = \left[\frac{2}{\varepsilon ^ 2} +
-1\right]\)</span> 在 <span class="math inline">\(n &gt; N\)</span>
-时，<span class="math inline">\(\sqrt [n] {n}&lt;1 +
-\varepsilon\)</span>，<span class="math inline">\(\Box\)</span></p>
-<h4 id="例三">例三</h4>
-<p><span class="math inline">\(\{(-1) ^ n\}\)</span>
-发散，这个是简单的，假设存在极限 <span class="math inline">\(a\ge
-0\)</span>，则 <span class="math inline">\(|a_{2n +1} - a|=1 + a &gt;
-\varepsilon\)</span></p>
-<h3 id="收敛数列的性质">收敛数列的性质</h3>
-<p>收敛的有界性和唯一性</p>
-<p>定义：<span class="math inline">\(\{a_n\},\exists M &gt;
-0,\text{s.t.} \vert a_n \vert &lt; M, \forall n \in \mathbb
-N\)</span>，则称 <span class="math inline">\(\{a_n\}\)</span>
-是有界数列。</p>
-<p>定理，收敛的数列有界，收敛数列的极限唯一。</p>
-<p>证明：</p>
-<p><span class="math inline">\(\{a_n\}\)</span> 收敛，<span
-class="math inline">\(\varepsilon = 1,\exists N, \text{s.t.} n &gt;
-N,\vert a _n \vert &lt; |a| + 1\)</span>，此时 <span
-class="math inline">\(M = \max\{a_1, \ldots, a_N,\vert a\vert +
-1\}\)</span></p>
-<p>若 <span class="math inline">\(\{a_n\}\)</span> 收敛于 <span
-class="math inline">\(a, b\)</span>，不妨设 <span
-class="math inline">\(a &lt; b\)</span>，取 <span
-class="math inline">\(\varepsilon = \frac{b - a}{2}\)</span>，<span
-class="math inline">\(\vert a - b\vert \le \vert a - a_n\vert + \vert
-a_n - b\vert &lt; \varepsilon + \varepsilon &lt; b -
-a\)</span>，矛盾，<span class="math inline">\(\Box\)</span></p>
-<h3 id="子列">子列</h3>
-<p><span class="math inline">\(\{b_n\}\)</span> 是 <span
-class="math inline">\(\{a_n\}\)</span> 的子列，若严格单调递增数列 <span
-class="math inline">\(\{k_n\}\)</span> 使得 <span
-class="math inline">\(b_n = a_{k_n}\)</span></p>
-<p>定理：收敛数列的子列一定收敛。</p>
-<p>数列的四则运算，设 <span
-class="math inline">\(\{a_n\},\{b_n\}\)</span> 均收敛， 那么 <span
-class="math inline">\(\{\frac{a_n}{b_n}\} =
-\frac{a}{b}\)</span>，即数列四则运算之后的结果就极限四则运算的结果。</p>
-<p>这些证明都是平凡的。</p>
-<h4 id="例一-2">例一</h4>
-<p>证明 <span class="math inline">\(a_n\rightarrow a\)</span> 则 <span
-class="math inline">\(\lim \limits _{n\rightarrow \infty} \frac{a_1
-+\ldots+a_n}{n} = a\)</span></p>
-<p>首先只要令 <span class="math inline">\(b_n = a_n - a\)</span>
-那么只要证明 <span class="math inline">\(\frac{b_1 + \ldots + b_n}{n} =
-0\)</span> 即可，<span class="math inline">\(\forall \varepsilon,\exists
-N_1,n&gt;N_1,\vert b_n \vert &lt; \varepsilon,\exists N _2 \text{s.t.}
-\frac{b_1 + \ldots b_{n_1}}{ N_2} &lt; \varepsilon\)</span>，在 <span
-class="math inline">\(n &gt; \max\{N_1, N_2\}\)</span> 时候 <span
-class="math inline">\(\vert\frac{b_1 + \ldots + b_n}{n} - 0\vert
-&lt;\vert \frac{b_1 + \ldots + b_{N_1}}{n}\vert + \vert \frac{b_{N_1 +
-1} + \ldots + b_n}{n}\vert &lt; 2\varepsilon\)</span> ，<span
-class="math inline">\(\Box\)</span></p>
-<h3 id="夹挤定理">夹挤定理</h3>
-<p>设 <span class="math inline">\(\{a_n\},\{b_n\},\{c_n\}\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n\le
-b_n \le c_n\)</span></li>
-<li><span class="math inline">\(\lim\limits _{n \rightarrow \infty} =
-\alpha, \lim\limits_{n\rightarrow\infty}c_n = \alpha\)</span>，则 <span
-class="math inline">\(\lim \limits_{n \rightarrow \infty} b_n =
-\alpha\)</span></li>
-</ol>
-<p>证明：<span class="math inline">\(\forall \varepsilon &gt; 0,\exists
-n &gt; N, a - \varepsilon &lt; a_n,b_n &lt; b + \varepsilon ,a -
-\varepsilon &lt; c_n &lt; a + \varepsilon,\Box\)</span></p>
-<h4 id="例一-3">例一</h4>
-<p>设 <span class="math inline">\(a &gt; 0\)</span>，<span
-class="math inline">\(\exists n \in \mathbb{R},\text{s.t.} n\ge
-a,\lim\limits _{n\rightarrow\infty} a ^ {\frac{1}{n}} = 1\)</span> 提示
-<span class="math inline">\(\lim \limits_{n\rightarrow\infty} n ^
-{\frac{1}{n}} = 1\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(a\ge 1, \exists n\in \mathbb{
-N},\text{s.t.}n\ge a, 1\le a ^ {\frac{1}{n}} \le n ^
-{\frac{1}{n}}\)</span>，有夹挤定理，此时收敛于 <span
-class="math inline">\(1\)</span></li>
-<li><span class="math inline">\(a &lt; 1, \frac{1}{a} &gt; 1,\exists
-n,\text{s.t.}n &gt;\frac{1}{a},\lim\limits_{n\rightarrow\infty}a ^
-{\frac{1}{n}} = \frac{1}{\lim\limits_{n\rightarrow\infty}\frac{1}{a} ^
-{\frac{1}{n}}}= 1\)</span></li>
-</ol>
-<h4 id="例二-2">例二</h4>
-<p><span class="math inline">\(a _n &gt; 0,\forall n \in \mathbb
-{R},\lim\limits_{n\rightarrow \infty} a_n = a\)</span> 则 <span
-class="math inline">\(\lim\limits_{n \rightarrow\infty}
-\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} =
-a\)</span></p>
-<p>证明1：</p>
-<ol type="1">
-<li><span class="math inline">\(a = 0\)</span> 时，<span
-class="math inline">\(0 \le\lim \left(\prod\limits_{k = 1} ^ n a_k
-\right) ^ {\frac{1}{n}}\le \frac{\sum\limits_{k = 1} ^ n
-a_k}{n}\)</span>，由夹挤定理 <span class="math inline">\(\lim\limits_{n
-\rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k \right) ^
-{\frac{1}{n}} = 0\)</span></li>
-<li><span class="math inline">\(\frac{n}{\sum\limits_{i =1} ^ n
-\frac{1}{a _i}}\le\lim\limits_{n \rightarrow\infty}
-\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} \le
-\frac{\sum\limits_{k = 1} ^ n a_k}{n}\)</span> 由夹挤定理可得</li>
-</ol>
-<p>证明2：</p>
-<p><span class="math inline">\(a &gt; 0\)</span>，由极限定义 <span
-class="math inline">\(\forall \varepsilon &gt; 0, \exists N \in
-\mathbb{N}, \text{s.t.} n &gt; N, 0 \le a - \frac{\varepsilon}{2} &lt;
-a_n &lt; a + \frac{\varepsilon}{2}\)</span> <span
-class="math display">\[
-\begin{aligned}
-\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
-\right) ^ {\frac{1}{n}}&amp;\le&amp; \left(\prod\limits_{k = 1} ^ N
-a_k\right) ^ {\frac{1}{n}}\left(a +
-\frac{\varepsilon}{2}\right)^{\frac{n - N}{n}}
-\\
-&amp;=&amp;\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
-\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
-\frac{\varepsilon}{2}\right)
-\end{aligned}
-\]</span></p>
-<p>由于 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} a
-^ {\frac{1}{n}} = 1\)</span></p>
-<p><span class="math inline">\(\lim \limits
-_{n\rightarrow\infty}\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
-\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
-\frac{\varepsilon}{2}\right) = a + \frac{\varepsilon}{2}\)</span></p>
-<p><span class="math inline">\(\exists N_1 \in \mathbb{N},\text{s.t.} n
-&gt; N_1, \left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
-\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
-\frac{\varepsilon}{2}\right) &lt; a + \frac{\varepsilon}{2} +
-\frac{\varepsilon}{2}\)</span></p>
-<p><span class="math inline">\(\exists N_2 = \max(N, N_1),n &gt;
-N_2,\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
-\right) ^ {\frac{1}{n}} &lt; a + \varepsilon\)</span></p>
-<p>减号部分是同理的。</p>
-<p><span class="math inline">\(a = 0\)</span>，上面不需要证明 <span
-class="math inline">\(a - \frac{\varepsilon}{2}\)</span> 部分即可</p>
-<p><span class="math inline">\(\Box\)</span></p>
-<h4 id="例三-1">例三</h4>
-<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
-k!}{n!}\)</span> 则 <span class="math inline">\(\lim \limits
-_{n\rightarrow \infty} a_n = 1\)</span></p>
-<p>证明：</p>
-<p><span class="math inline">\(1\le a_n \le 1+\frac{(n-2) (n-2)! +
-(n-1)!}{n!}&lt;1 + \frac{2}{n}\)</span></p>
-<p>由夹挤定理可证明极限为 <span class="math inline">\(1\)</span></p>
-<p><span class="math inline">\(\Box\)</span></p>
-<h4 id="例四">例四</h4>
-<p>求解 <span class="math inline">\(\lim \limits_{n\rightarrow \infty}
-\left( \sqrt[2]{n ^ 2 + n} - n\right) ^ {\frac{1}{n}}\)</span></p>
-<p>因为 <span class="math inline">\(\frac{1}{3}&lt; \left( \sqrt[2]{n ^
-2 + n} - n\right) ^ {\frac{1}{n}} &lt; \frac{1}{2}\)</span></p>
-<h3 id="保序性">保序性</h3>
-<ul>
-<li><span class="math inline">\(\{a_n\}\rightarrow a, b &gt; a, \exists
-N, n &gt; N, \text{s.t.} a_n &lt; b\)</span></li>
-<li><span class="math inline">\(\{a_n\}\rightarrow a,\{b_n\}\rightarrow
-b, b &gt; a, \exists N, n &gt; N, \text{s.t.} a_n &lt; b_n\)</span></li>
-<li><span class="math inline">\({a_n} \rightarrow a, b_n \rightarrow b,
-\exists N, \text{s.t.} n &gt; N, a_n &lt; b_n\)</span> 则 <span
-class="math inline">\(a\le b\)</span></li>
-</ul>
-<h3 id="数列极限的推广">数列极限的推广</h3>
-<p>设 <span class="math inline">\(\{a_n\}，\forall A &gt; 0, \exists N,
-\text{s.t.} n &gt; N, a_n &gt; A\)</span> 则 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
-+\infty\)</span></p>
-<p>若 <span
-class="math inline">\(\vert\lim\limits_{n\rightarrow\infty}a_n\vert =
-+\infty\)</span> 记为 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
-\infty\)</span></p>
-<p>若 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
-\infty\)</span>, <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty}b_n = b(b &gt;
-0)\)</span>, 则 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty}a_nb_n =
-\infty\)</span></p>
-<h3 id="单调数列">单调数列</h3>
-<p>定义： <span class="math inline">\(\{a_n\}\)</span>，满足 <span
-class="math inline">\(a_n \le a_{n + 1}, \forall n \in \mathbb
-N\)</span>，则称其为单调递增数列，没有等于号就是严格单调递增数列）</p>
-<p>定理：(weierstrass 单调收敛定理)：有界单调数列一定收敛</p>
-<p>证明：<span class="math inline">\(X = \{a_1, a_2,
-\ldots,a_n\}\)</span> 由确界存在定理 <span
-class="math inline">\(X\)</span> 有上确界 <span
-class="math inline">\(\alpha\)</span>，<span
-class="math inline">\(\forall \varepsilon &gt; 0, \exists N,
-\text{s.t.s},\alpha - \varepsilon &lt; a_N\)</span>, 则 <span
-class="math inline">\(n &gt; N\)</span> 时，<span
-class="math inline">\(\alpha - \varepsilon &lt; a_N \le a_n \le \alpha
-\le \alpha + \varepsilon\)</span></p>
-<p><span class="math inline">\(\Box\)</span></p>
-<p>该定理和确界定理等价。</p>
-<h4 id="例一-4">例一</h4>
-<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
-k!}{n!},\lim\limits_{n\rightarrow\infty} a_n = 1\)</span></p>
-<h4 id="例二-3">例二</h4>
-<p><span class="math inline">\(a_n = \sum\limits_{k = 1} ^ n
-\frac{1}{k}\)</span>，考察 <span class="math inline">\(\{a_n\}\)</span>
-的收敛性</p>
-<p>证明：考虑这么如下情况 <span class="math inline">\(\sum\limits_{k = 2
-^ {n - 1} + 1} ^ {2 ^ n}\frac{1}{k} &gt; 2 ^ {n - 1} \times \frac{1}{2 ^
-n} = \frac{1}{2}\)</span>，而 <span class="math inline">\(a_{2 ^ n} =
-\sum_{i = 1} ^ n\sum_{k = 2 ^ {i - 1} + 1 }^{2 ^ i} \frac{1}{k}
-&gt;\frac{n}{2}\)</span> 于是，<span
-class="math inline">\(\{a_n\}\)</span> 不收敛</p>
-<p><span class="math inline">\(\Box\)</span></p>
-<h4 id="例三-2">例三</h4>
-<p>考察数列 <span class="math inline">\(\{a_n\}\)</span> 满足 <span
-class="math inline">\(a_1 = b, a_{n + 1} = (a _n - a) ^ 2 +
-a_n\)</span></p>
-<p>试问满足什么条件能让 <span class="math inline">\(a\)</span> 收敛</p>
-<p><span class="math inline">\(a_{n + 1} - a_n = (a_n - a) ^ 2 \ge
-0\)</span>，所以 <span class="math inline">\(a_n\)</span>
-单调增，设极限存在为 <span class="math inline">\(\alpha\)</span></p>
-<p>对于 <span class="math inline">\(a_{n + 1} = (a_n - a) ^ 2 +
-a_n\)</span> 两边取极限，<span class="math inline">\(\alpha = (\alpha -
-a) ^ 2 + \alpha\Rightarrow \alpha = a\)</span> 1. <span
-class="math inline">\(a\ge b, a_2 = (a_1 - a) ^ 2 + b \le a\Rightarrow
-(a - b) ^ 2 \le a - b\Rightarrow a - 1 \le b\)</span> 假设 <span
-class="math inline">\(a_n \le a \leftrightarrow a - 1 \le a_{n -
-1}\)</span></p>
-<h4 id="定理">定理</h4>
-<p>设闭区间 <span class="math inline">\([a_n, b_n], n = 1, 2
-,\ldots\)</span> 满足：</p>
-<ol type="1">
-<li><span class="math inline">\([a_1, b_1]\supset [a_2,
-b_2]\supset\ldots\supset[a_n, b_n]\supset\)</span></li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n -
-a_n) = 0\)</span></li>
-</ol>
-<p>则 <span class="math inline">\(\exists ! \gamma \in \mathbb R,
-\text{s.t.},\gamma \in \bigcap\limits_{n = 1} ^ {\infty} [a_n,
-b_n]\)</span></p>
-<p>证明:</p>
-<p><span class="math inline">\(a_1\le a_2\le \ldots \le a_n \le \ldots
-&lt; b_1\)</span></p>
-<p><span class="math inline">\(\{a_n\}\)</span> 单调增有上界，同理 <span
-class="math inline">\({b_n}\)</span> 单调减有下界，故都收敛，设 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty} a_n =
-\gamma\)</span>。</p>
-<p>要证明 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-b_n = \gamma\)</span></p>
-<p><span class="math inline">\(\forall \varepsilon &gt; 0\)</span>，由
-<span class="math inline">\(\lim\limits_{n\rightarrow \infty}a_n =
-\gamma\)</span>，<span class="math inline">\(\exists N_1, \text{s.t.} n
-&gt; N_1, \vert a_n - \gamma\vert &lt; \varepsilon\)</span></p>
-<p>由于 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n
-- a_n) = 0\)</span> 则 <span class="math inline">\(\exists N_2,
-\text{s.t.} n &gt; N_2, \vert a_n - b_n\vert &lt;
-\varepsilon\)</span></p>
-<p>则 <span class="math inline">\(N = \max(N_1, N_2),\text{s.t.} n &gt;
-N, \vert a_n - \gamma\vert &lt; 2\varepsilon\)</span></p>
-<p>注：<span class="math inline">\((0, \frac{1}{n}), n\ge 1,
-\bigcap\limits_{n = 1} ^ \infty \left(0, \frac{1}{n}\right) =
-\emptyset\)</span></p>
-<h3 id="自然对数底数-e">自然对数底数 e</h3>
-<h4 id="定义-1">定义</h4>
-<p><span class="math inline">\(e_n = \left(1 + \frac{1}{n}\right) ^
-n\\S_n = 1 + 1 + \frac{1}{2!} + \frac{1}{3}!+\ldots\)</span></p>
-<p><span class="math inline">\(e_n = 1 \cdot (1 + \frac{1}{n}) ^ n \le
-\left(\frac{n + 2}{n + 1}\right)^{n +1} = e_{n + 1}\)</span></p>
-<p>故 <span class="math inline">\(\{e_n\}\)</span> 单调递增</p>
-<p><span class="math inline">\(\frac{1}{2} \frac{1}{2} e_n \le
-\left(\frac{\frac{1}{2}+\frac{1}{2}+n(\frac{1}{n}+1)}{n+2}\right) ^ {n +
-2}=1\)</span></p>
-<p>所以 <span class="math inline">\(e_n \le 4\)</span>，故 <span
-class="math inline">\(e_n\)</span> 有上界</p>
-<p><span class="math inline">\(\text{i.e.}
-\lim\limits_{n\rightarrow\infty} \left(1 + \frac{1}{n}\right)^n =
-e\)</span></p>
-<p><span class="math inline">\(S_n &lt; S_{n + 1} &lt; 1 + 1 + (1 -
-\frac{1}{2})+\ldots+(\frac{1}{n - 1} - \frac{1}{n}) =
-3-\frac{1}{n}&lt;3\)</span></p>
-<p><span class="math inline">\(\{S_n\}\)</span> 收敛，下面证明 <span
-class="math inline">\(S = e\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-e_n &amp;= \left(1 + \frac{1}{n}\right) ^ {n}
-\\
-&amp;=\sum\limits_{k = 0} ^ n\binom{n}{k} \frac{1}{n ^ k}\\
-&amp;= \sum\limits_{k = 0} ^ n\frac{1}{k!} \frac{n!}{(n - k)!n ^
-{k}}  &lt; S_n
-\end{aligned}
-\]</span></p>
-<p>由极限保序性 <span class="math inline">\(e \le S\)</span>，下面证明
-<span class="math inline">\(S \le e\)</span></p>
-<p>由上式 <span class="math inline">\(n &gt; l\)</span> 时候，对于固定的
-<span class="math inline">\(l\)</span></p>
-<p><span class="math display">\[
-e_n &gt; \sum\limits_{k = 0} ^ l\frac{1}{k!} \frac{n!}{(n - k)!n ^ {k}}
-\]</span></p>
-<p>令 <span class="math inline">\(n\rightarrow + \infty,e\ge
-\sum\limits_{k = 0} ^ l\frac{1}{k!}\)</span>，于是 <span
-class="math inline">\(\text{i.e.} e \ge S_l\)</span> 令 <span
-class="math inline">\(l \rightarrow \infty\)</span> 故有 <span
-class="math inline">\(e\ge S\)</span></p>
-<p><span class="math inline">\(\Box\)</span></p>
-<p>定理：<span class="math inline">\(e\)</span> 不是有理数</p>
-<p><span class="math inline">\(\exists p, q \in \mathbb N,\text{s.t} e =
-\frac{p}{q}, q! e = (q - 1)!p \in \mathbb N\)</span></p>
-<p><span class="math inline">\(e_n= S_n +
-\frac{1}{nn!}\alpha_n\)</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-q!
-e &amp;= (e - S_q + S_q) q!\\
-&amp;=\frac{1}{q}\alpha_q + S_q q!
-\Rightarrow q!(e - S_q) = \frac{1}{q}\alpha_q
-\end{aligned}
-\]</span></p>
-<p>而与 <span class="math inline">\(\frac{1}{q + 1} &lt;
-\frac{\alpha_n}{q} &lt; \frac{1}{q}\)</span> 矛盾。</p>
-<h4 id="例一-5">例一</h4>
-<p><span class="math inline">\(\lim\limits _{n\rightarrow\infty}
-\frac{n}{(n!) ^ \frac{1}{n}} = e\)</span></p>
-<p>解：设 <span class="math inline">\(a_n = \frac{n ^
-n}{n!}\)</span>，<span class="math inline">\(\frac{a_{n + 1}}{a_n} =
-(\frac{n + 1}{n}) ^ {\frac{1}{n}}\)</span></p>
-<p>所以 <span class="math inline">\(\lim \limits_{n\rightarrow \infty}
-\frac{a_{n + 1}}{a_n} = e\)</span>，则由夹挤定理的例二，有 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty} a_n ^
-{\frac{1}{n}} =e\)</span></p>
-<h4 id="例二-4">例二</h4>
-<p>求解 <span class="math display">\[
-\begin{aligned}
-&amp;=\lim\limits_{n\rightarrow \infty} \left(1 - \frac{1}{n}\right) ^ n
-\\
-&amp;=\lim\limits_{n\rightarrow \infty} \left(\frac{1}{\frac{n}{n -
-1}}\right) ^ n
-\\
-&amp;=\frac{1}{\left(1 + \frac{1}{n - 1}\right) ^ {n
--1}\left(1  +\frac{1}{n - 1}\right)}
-\\
-&amp;=e ^ {-1}
-\end{aligned}
-\]</span></p>
-<h4 id="例三-3">例三</h4>
-<p>求解 <span class="math display">\[
-\begin{aligned}
-\left(1 + \frac{k}{n}\right) ^ n
-\le \left(1+\frac{k}{n + 1}\right) ^ {n + 1}
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-\left(1 + \frac{k}{n}\right) ^ n \le \left(1 + \frac{1}{n}\right) ^ {kn}
-&lt; e ^ k
-\end{aligned}
-\]</span></p>
-<p>有子列 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\left(1 + \frac{1}{n}\right) ^{nk} = e ^ k\)</span></p>
-<p>因为其本身有界收敛，则 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \left(1 +
-\frac{k}{n}\right) ^ n = e ^ k\)</span></p>
-<h3 id="cauthy-列与-cauthy-收敛定理">Cauthy 列与 Cauthy 收敛定理</h3>
-<p>Cauthy 列定义：设 <span class="math inline">\(\{a_n\}\)</span>
-是数列，<span class="math inline">\(\forall \varepsilon &gt; 0, \exists
-N\)</span>，当 <span class="math inline">\(n, m &gt; N\)</span>
-时，<span class="math inline">\(\vert a_m - a_n \vert &lt;
-\varepsilon\)</span></p>
-<p>定理： <span class="math inline">\(\{a_n\}\)</span> 是收敛 <span
-class="math inline">\(\Leftrightarrow\)</span> <span
-class="math inline">\(\{a_n\}\)</span> 是Cauthy 列</p>
-<h4 id="例一-6">例一</h4>
-<p><span class="math inline">\(\{\frac{1}{n}\}\)</span> 是 Cauthy 列</p>
-<h4 id="例二-5">例二</h4>
-<p><span class="math inline">\(a_n = \sum\limits_{k = 1} ^ n
-\frac{1}{k}\)</span>，他不是 Cauthy 列</p>
-<h4 id="有限覆盖定理">有限覆盖定理</h4>
-<p>定义：<span class="math inline">\(X \subset \mathbb R,
-\{I_{\lambda}\}_{\lambda \in \Lambda}\)</span> 为开集簇</p>
-<p>若 <span class="math inline">\(X\)</span> 满足 <span
-class="math inline">\(X \subset \bigcup\limits_{\lambda\in
-\Lambda}I_{\lambda}\)</span> 称 <span
-class="math inline">\(\{I_{\lambda}\}_{\lambda \in \Lambda}\)</span> 为
-<span class="math inline">\(X\)</span> 的开覆盖</p>
-<p>若 <span class="math inline">\(\exists \lambda_1 , \ldots,
-\lambda_n,\text{s.t.} X \subset \bigcup\limits _{R = 1} ^n I_{\lambda
-_R}\)</span></p>
-<p>定理：任何闭区间的开覆盖都有有限子覆盖</p>
-<p>假设不存在区间 <span class="math inline">\(I_1 = [a, b]\)</span>
-不存在区间子覆盖。</p>
-<p>那么，对于 <span class="math inline">\(\left[a, \frac{a +
-b}{2}\right]\)</span> 或者是区间 <span
-class="math inline">\(\left[\frac{a + b}{2}, b\right]\)</span>
-肯定有一个区间不能被有限覆盖，设其为 <span
-class="math inline">\(I_2\)</span>，那么一定有一串区间</p>
-<p><span class="math display">\[
-I_1 \supset I_2\supset \ldots \supset I_n
-\]</span></p>
-<p>其中 <span class="math inline">\(\vert I_n \vert = \frac{1}{2 ^ n}(b
-- a)\)</span></p>
-<p>那么通过闭区间套定理，得到 <span class="math inline">\(\exists\gamma
-\in \bigcap\limits_{i = 1} ^ {\infty} I_n\)</span>，<span
-class="math inline">\(\gamma \in [a, b] \subset S,\exists I _{\lambda_0}
-= (\alpha, \beta),\text{s.t.} \gamma \in (\alpha, \beta)\)</span></p>
-<p>记 <span class="math inline">\(\delta = \min\{\gamma - \alpha, \beta
-- \gamma\}\)</span>，<span class="math inline">\(\exists m, \gamma \in
-I_m,\vert I_m \vert = \frac{1}{2 ^ m}(b - a) &lt;
-\frac{1}{2}\gamma\)</span>，故存在一个区间包含 <span
-class="math inline">\(I_m\)</span>，矛盾，故有限覆盖定理得证。</p>
-<h3 id="cauthy收敛定理">Cauthy收敛定理</h3>
-<p>数列 <span class="math inline">\(\{a_n\}\)</span> 收敛 <span
-class="math inline">\(\Leftrightarrow\)</span> 数列 <span
-class="math inline">\(\{a_n\}\)</span> 为 Cauthy 列</p>
-<p>紧致集的定义：任何开覆盖都有有限子覆盖的集合称为紧致集</p>
-<p>极限点的定义：称 <span class="math inline">\(\alpha \in \mathbb
-R\)</span> 是 <span class="math inline">\(X\subset \mathbb R\)</span>
-的一个极限点，如果 <span class="math inline">\(\forall \delta &gt;
-0\)</span>，在 <span class="math inline">\(B_\delta\left(\alpha\right) =
-(\alpha - \delta, \alpha + \delta)\)</span> 中有 <span
-class="math inline">\(X\)</span> 的无穷多项。在 <span
-class="math inline">\(B_\delta (\check{\alpha}) =
-B_\delta(\alpha)/\{\alpha\}\)</span> 为去心邻域。</p>
-<h3 id="bwbolzano-weierstrass定理">BW(Bolzano-Weierstrass)定理</h3>
-<p>定义：任何有界数列都有收敛子列</p>
-<p>设 <span class="math inline">\(\{a_n\}\)</span> 是有界数列，<span
-class="math inline">\(X = \{a_1, \ldots, a_n,\ldots\}\)</span>，由于
-<span class="math inline">\(\{a_n\}\)</span> 有界，则 <span
-class="math inline">\(\exists [a, b],\text{s.t.},X\subset
-[a,b]\)</span></p>
-<p>claim: <span class="math inline">\([a, b]\)</span> 存在 <span
-class="math inline">\(X\)</span> 的极限点</p>
-<p>反证法：<span class="math inline">\(\forall x \in [a, b], \exists
-\delta(x), \text{s.t.} B_{\delta(x)}\)</span> 只包含 <span
-class="math inline">\(X\)</span>，<span
-class="math inline">\(\bigcup_{x\in[a,b]} B_{\delta(x)}\)</span> 为
-<span class="math inline">\((a, b)\)</span>
-开覆盖，由有限覆盖定理可知，<span class="math inline">\(\exists [a,
-b]\)</span> 的有限子覆盖 <span
-class="math inline">\(B_{\delta(x_1)},B_{\delta(x_2)},\ldots,
-B_{\delta(x_n)}\)</span>，由于其含有有限多个 <span
-class="math inline">\(X\)</span> 中的点，但是 <span
-class="math inline">\(X\)</span> 包含无穷多个点，矛盾。</p>
-<p>设 <span class="math inline">\(x\in [a, b]\)</span> 为 <span
-class="math inline">\(X\)</span> 的极限点，<span
-class="math inline">\(\forall n, \exists a_{k_n}\in X,\text{s.t.},
-a_{k_n} \in B_{\frac{1}{n}}(\check{x})\)</span>，且 <span
-class="math inline">\(k_n\)</span> 单调递增，知道 <span
-class="math inline">\(a_{k_n}\)</span> 收敛</p>
-<h4 id="cauthy-收敛定理的证明">Cauthy 收敛定理的证明</h4>
-<p><span class="math inline">\(\Rightarrow\)</span> 若 <span
-class="math inline">\(\{a_n\}\)</span> 收敛，则 <span
-class="math inline">\(\forall \varepsilon &gt; 0, \exists N, \text{s.t.}
-n &gt; N, \vert a - a_n\vert&lt;\varepsilon\)</span>，则 <span
-class="math inline">\(n, m&gt;N, \vert a_n - a_m\vert &lt; 2
-\varepsilon\)</span> 证明完毕。</p>
-<p><span class="math inline">\(\Leftarrow\)</span>，设 Cauthy列 <span
-class="math inline">\(\{a_n\}\)</span>，<span
-class="math inline">\(\forall \varepsilon &gt; 0, \exists N, \text{s.t.}
-\vert a_n - a_m\vert &lt; \frac{\varepsilon}{2}\)</span></p>
-<p>显然 Cauthy 列是有界数列，根据 <span
-class="math inline">\(B-W\)</span> 定理必然存在收敛子列，<span
-class="math inline">\(\vert a_{k_n} - a\vert &lt;
-\frac{\varepsilon}{2},k_n &gt; N,\vert a_n - a\vert &lt; \vert a_n -
-a_{k_n}\vert + \vert a_{k_n} - a\vert &lt; \varepsilon\)</span></p>
-<p>则收敛，<span class="math inline">\(\Box\)</span></p>
-<h3 id="无穷级数">无穷级数</h3>
-<p>设 <span class="math inline">\(\{a_n\}\)</span> 为数列，称 <span
-class="math inline">\(\sum\limits _{ n = 1} ^{\infty} a_n\)</span>
-为无穷级数，并且称 <span class="math inline">\(S_n = \sum\limits_{k = 1}
-^ na_k\)</span> 为无穷级数的部分和，如果 <span
-class="math inline">\(\{S_n\}\)</span> 收敛至 <span
-class="math inline">\(S\)</span>，则称无穷级数收敛，记作 <span
-class="math inline">\(S = \sum\limits_{n = 1} ^ \infty
-a_n\)</span>。</p>
-<p>若无穷级数收敛，<span class="math inline">\(\forall \varepsilon
-&gt;0, \exists N, \text{s.t.}n&gt; N, \vert \sum\limits_{k = n} ^ m a_k
-\vert&lt;\varepsilon,\forall m \ge n\)</span>，这是柯西收敛准则。</p>
-<p>若存在正项级数 <span class="math inline">\(\sum\limits_{n = 1} ^
-\infty M_n\)</span> 满足 <span class="math inline">\(\vert a_n \vert\le
-M_n\)</span>，若 <span class="math inline">\(M\)</span> 收敛，那么 <span
-class="math inline">\(a\)</span> 收敛</p>
-<h4 id="例一-7">例一</h4>
-<p><span class="math inline">\(\sum\limits_{n = 1} ^
-\infty\frac{1}{n}\)</span> 发散</p>
-<h4 id="例二-6">例二</h4>
-<p><span class="math inline">\(\sum\limits_{n = 1} ^ \infty \frac{1}{n
-^2}\)</span> 收敛</p>
-<p><span class="math inline">\(\frac{1}{n ^ 2}&lt;\frac{1}{n(n -
-1)}\)</span>，则原数列单调，并且有界，则收敛。</p>
-<h3 id="数列的上极限和下极限">数列的上极限和下极限</h3>
-<h4 id="例一-8">例一</h4>
-<p><span class="math inline">\(\{a_n\},a_n = (-1) ^ n + \frac{(-1) ^
-n}{n}\)</span></p>
-<p><span class="math inline">\(a_{2n}\rightarrow 1, a_{2n - 1}
-\rightarrow -1\)</span></p>
-<h4 id="例二-7">例二</h4>
-<p><span class="math inline">\(\{\sin \frac{n\pi}{4}\},n\in \mathbb
-N\)</span></p>
-<h4 id="例三-4">例三</h4>
-<p><span class="math inline">\(\{1, 2, 1, 3, 1, 4, 1,
-5,\ldots\}\)</span></p>
-<p><span class="math inline">\(a_{2n - 1} = 1, a_{2n} = n +
-1\)</span></p>
-<p>子列也有极限</p>
-<p>定义，给定 <span class="math inline">\(\{a_n\},\mathbb R_{\infty} =
-\mathbb R \cup \{\pm \infty\}\)</span></p>
-<p><span class="math inline">\(E = \{x \in \mathbb R_{\infty}\vert
-数列\{a_n\} 中存在子列 ,\text{s.t.}\lim\limits_{n\rightarrow \infty}
-a_{k_n} = x\}\)</span></p>
-<p><span class="math inline">\(E\)</span> 中元素是 <span
-class="math inline">\(\{a_n\}\)</span> 的部分极限</p>
-<p>称 <span class="math inline">\(a_{*} = \inf E, a^{*} = \sup
-E\)</span></p>
-<p>分别是 <span class="math inline">\(\{a_n\}\)</span>
-的上极限或者下极限</p>
-<p>记</p>
-<p><span class="math inline">\(a_* = \lim\limits_{n\rightarrow
-\infty}\inf a_n\)</span></p>
-<p><span class="math inline">\(a^* = \lim\limits_{n\rightarrow\infty}
-\sup a_n\)</span></p>
-<p>定理 ： <span class="math inline">\(a_* \in E, a^*\in E\)</span></p>
-<p>只需要证明 <span class="math inline">\(a_* \in E\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(a_* = -\infty\)</span> 此时 <span
-class="math inline">\(E\)</span> 没有下界，若存在 <span
-class="math inline">\(M\)</span> <span class="math inline">\(\text{s.t.}
-E \in [M, +\infty]\)</span>，从而 <span class="math inline">\(E \ge
-M\)</span> 此时于无下界矛盾，则 <span class="math inline">\(E\)</span>
-无下界，<span class="math inline">\(\forall A,\exists a_{kn},\text{s.t.}
-a_{k_n} &lt; -A\)</span>，则 <span class="math inline">\(\lim _{a_{k_n}}
-= -\infty\)</span></li>
-<li><span class="math inline">\(a_* \in \mathbb R,\forall n, \exists x_n
-\in E, x_n \in [a_*, a_* + \frac{1}{n}), \exists\{a_n\}\)</span> 的子列
-<span class="math inline">\(\text{s.t.}a_{k_n}, a_{k_{n}}\)</span>，从而
-<span class="math inline">\(\lim \limits_{n\rightarrow\infty}a_{k_n} =
-a_*\)</span></li>
-<li><span class="math inline">\(a_* = +\infty\)</span> 则 <span
-class="math inline">\(\lim \limits_{n\rightarrow\infty}a_n =
-+\infty\)</span>，事实上，如果 <span class="math inline">\(\exists M
-&gt; 0, \exists\)</span> 子列 <span class="math inline">\(\{a_{k_n}\}
-\le M\)</span> 故 <span class="math inline">\({a_{k_n}}\)</span>
-存在子列 <span class="math inline">\(\{a_{k_{n_j}}\}\)</span> 收敛到
-<span class="math inline">\(\gamma \in (\infty, M]\)</span>，与 <span
-class="math inline">\(a_{*} = +\infty\)</span></li>
-</ol>
-<p><span class="math inline">\(\Box\)</span></p>
-<p>注： 若 <span class="math inline">\(a_* \in \mathbb R\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N,
-\text{s.t.} n &gt; N, a_* - \varepsilon \le a_n\)</span></li>
-<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists
-\{a_{k_n}\}, N, k_n &gt; N, \text{s.t.} a_{k_n}\le a_* +
-\varepsilon\)</span></li>
-</ol>
-<p>在 <span class="math inline">\(a^*\)</span> 是同理的</p>
-<p>记 <span class="math inline">\(\sup _n = \sup\{a_k\vert k \ge
-n\}\)</span> <span class="math inline">\(\inf\)</span> 同理</p>
-<p>定理 <span class="math inline">\(\lim \limits_{n\rightarrow
-\infty}{\inf a_n} = a_*\)</span></p>
-<ol type="1">
-<li><span class="math inline">\(a_* = \infty\)</span>，由于存在子列
-<span class="math inline">\(\{a_{k_n}\}\)</span> 趋于 <span
-class="math inline">\(-\infty\)</span>，由于 <span
-class="math inline">\(\inf a_{n}\le \inf a_{k_n}\)</span>，则 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty} a_{k_n} =
--\infty\)</span> 则 <span
-class="math inline">\(\lim\limits_{n\Rightarrow \infty} a_n =
--\infty\)</span></li>
-<li><span class="math inline">\(a_* \in \mathbb R, \forall \varepsilon
-&gt; 0,\exists N , \text{s.t.} a_n \ge a_{*} - \varepsilon,\forall n,
-\exists \{a_{k_n}\}, k_n &gt; n, a_{k_n} \le a_{*} +
-\varepsilon\)</span>，<span class="math inline">\(\inf a_n\in (a _* -
-\varepsilon, a_* + \varepsilon)\)</span>，从而 <span
-class="math inline">\(\lim\limits_{n\rightarrow\infty} \inf a_n =
-a_*\)</span></li>
-<li><span class="math inline">\(a_* = +\infty\)</span> 则 <span
-class="math inline">\(\lim \limits_{n\rightarrow\infty}a_n =
-+\infty\)</span>,<span class="math inline">\(\forall M &gt; 0, \exists
-N, \text{s.t.} n &gt; N, a_n &gt; M,\inf a_n \ge M\Rightarrow
-\lim\limits_{n\rightarrow \infty} \inf a_n = +\infty = a_*\)</span></li>
-</ol>
-<p>定理：</p>
-<ol type="1">
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}\inf
-a_n \le \lim\limits_{n\rightarrow \infty} \sup a_n\)</span></li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n
-=a\Rightarrow\lim\limits_{n\rightarrow \infty}\inf a_n =
-\lim\limits_{n\rightarrow \infty} \sup a_n = a\)</span></li>
-<li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n \le
-b_n, \lim\limits_{n\rightarrow \infty} \inf a_n \le
-\lim\limits_{n\rightarrow \infty} \inf b_n, \lim\limits_{n\rightarrow
-\infty} \sup a_n \le \lim\limits_{n\rightarrow \infty}\sup
-b_n\)</span></li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf
-a_n + \lim\limits_{n\rightarrow \infty} \inf b_n \le
-\lim\limits_{n\rightarrow \infty}\inf(a_n + b_n) \le
-\lim\limits_{n\rightarrow \infty} \inf a_n + \lim\limits_{n\rightarrow
-\infty} \sup b_n\)</span></li>
-<li><span class="math inline">\(a_n, b_n \ge 0,
-\lim\limits_{n\rightarrow \infty} \inf a_n \cdot
-\lim\limits_{n\rightarrow \infty} \inf b_n \le \lim\limits_{n\rightarrow
-\infty} \inf(a_n b_n) \le \lim\limits_{n\rightarrow \infty} \inf a_n
-\cdot \lim\limits_{n\rightarrow \infty} \sup b_n\)</span></li>
-</ol>
-<p>命题：</p>
-<ol type="1">
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\inf(-a_n) = \lim\limits_{n\rightarrow \infty}\sup a_n\)</span></li>
-<li>若 <span class="math inline">\(a_n &gt; 0, n\in \mathbb N,
-\lim\limits_{n\rightarrow \infty}\inf\frac{1}{a_n} =
-\frac{1}{\lim\limits_{n\rightarrow \infty} \sup a_n}\)</span></li>
-<li>若 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n
-= a,\lim\limits_{n\rightarrow \infty}\inf(a_n + b_n) = a +
-\lim\limits_{n\rightarrow \infty}\inf b_n\)</span>，<span
-class="math inline">\(\sup\)</span> 同理，证明是简单的</li>
-</ol>
-<p>例子：</p>
-<h4 id="例一-9">例一</h4>
-<p><span class="math inline">\(\{x_n\},\{y_n\}\)</span> 满足</p>
-<ol type="1">
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} y_n =
-y\)</span></li>
-<li><span class="math inline">\(y_n = x_n + 2x _{n + 1}\)</span></li>
-</ol>
-<p>证明 <span class="math inline">\(x_n\)</span> 收敛，并且求 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} x_n\)</span></p>
-<p>等式两边同时取上极限，</p>
-<p><span class="math inline">\(y - \lim\limits_{n\rightarrow \infty}
-\inf x_n = 2\lim\limits_{n\rightarrow \infty}\sup x_n\)</span></p>
-<p><span class="math inline">\(y - \lim\limits_{n\rightarrow \infty}
-\sup x_n = 2\lim\limits_{n\rightarrow \infty}\inf x_n\)</span></p>
-<p>如果 <span class="math inline">\(x_n\)</span> 有界，<span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf x_n =
-\lim\limits_{n\rightarrow \infty}\sup x_n =
-\frac{1}{3}y\)</span>，下面证明 <span class="math inline">\(x_n\)</span>
-有界， <span class="math inline">\(\exists M &gt; 0, \text{s.t.}\vert
-x_1\vert\le M, \vert y_n\vert\le M\)</span>，<span
-class="math inline">\(\vert x_{n+ 1}\vert\le = \frac{1}{2}\vert y_n -
-x_{n}\vert \le M\)</span> 则数学归纳法，于是 <span
-class="math inline">\(\{x_n\}\)</span> 有界</p>
-<h4 id="例二-8">例二</h4>
-<p>设 <span class="math inline">\(\{a_n\}\)</span> 是基本列，则收敛</p>
-<p>证明：</p>
-<p><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N
-&gt; 0, \text{s.t.}n, m &gt; N, \vert a_n - a_m\vert &lt;
-\varepsilon\)</span> 取 <span class="math inline">\(m = N + 1\)</span>
-有 <span class="math inline">\(a_{N + 1} - \varepsilon &lt; a_n &lt;
-a_{N + 1} + \varepsilon\)</span>，<span class="math inline">\(a_{N + 1}
-- \varepsilon &lt; \lim\limits_{n\rightarrow \infty} \inf a_n \le
-\lim\limits_{n\rightarrow \infty}\sup a_n \le a_{N + 1} +
-\varepsilon\)</span></p>
-<p>从而 <span class="math inline">\(0\le \lim\limits_{n\rightarrow
-\infty} \sup a_n - \lim\limits_{n\rightarrow \infty}\inf a_n \le 2
-\varepsilon\)</span> 由于 <span
-class="math inline">\(\varepsilon\)</span> 的任意性，有 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_n =
-\lim\limits_{n\rightarrow \infty} \sup a_n\)</span></p>
-<p>则 <span class="math inline">\(\{a_n\}\)</span> 收敛</p>
-<p><span class="math inline">\(\Box\)</span></p>
-<h4 id="例三-5">例三</h4>
-<p>设 <span class="math inline">\(b_1 = 1\)</span>，<span
-class="math inline">\(\{b_n\}\)</span> 满足 <span
-class="math inline">\(b_{n + 1} = 1 + \frac{1}{b_n},n\ge 1\)</span></p>
-<p>证明：</p>
-<p>显然 <span class="math inline">\(b_n\in [1, 2]\)</span> 设 <span
-class="math inline">\(\alpha = \lim\limits_{n\rightarrow \infty} \inf
-b_n, \beta = \lim\limits_{n\rightarrow \infty} \sup b_n\)</span></p>
-<p>那么有 <span class="math inline">\(\alpha = 1 + \frac{1}{\beta},\beta
-= 1 + \frac{1}{\alpha}\)</span>，那么 <span class="math inline">\(\alpha
-= \beta = \frac{1 + \sqrt{5}}{2}\)</span></p>
-<h4 id="例四-1">例四</h4>
-<ol type="1">
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
-a\)</span></li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\left(b_n ^ 2 - a_nb _n - 6 a_n ^ 2\right) = 0\)</span></li>
-</ol>
-<p>让你证明 <span class="math inline">\(\lim\limits_{n\rightarrow
-\infty} \sup b_n \le 3 a_n\)</span></p>
-<p>证明：</p>
-<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\left(b_n - \frac{1}{2}a_n\right) ^ 2 = \frac{25}{4} a ^
-2\)</span>，从而 <span class="math inline">\(\lim\limits_{n\rightarrow
-\infty} \sup \left(b_n - \frac{1}{2} a_n\right) \le \frac{5}{2}
-a_n\)</span></p>
-<p>然后证明完了</p>
-<h4 id="例五">例五</h4>
-<p><span class="math inline">\(\{a_n\},a_n &gt; 0\)</span></p>
-<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf
-\frac{a_{n + 1}}{a_n} \le \lim\limits_{n\rightarrow \infty} \inf a _n ^
-{\frac{1}{n}} \le \lim\limits_{n\rightarrow \infty} \sup a_n ^
-{\frac{1}{n}}\le \lim\limits_{n\rightarrow \infty} \sup \frac{a_{n +
-1}}{a_n}\)</span></p>
-<p>证明：</p>
-<p>设 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} \sup
-\frac{a_{n + 1}}{a_n} \in \mathbb R,\lim\limits_{n\rightarrow \infty}
-\inf \frac{a_{n + 1}}{a_n} = \alpha\)</span>，则 <span
-class="math inline">\(\forall \varepsilon 0, \exists N \in \mathbb
-N,\text{s.t.} n \ge N, \frac{a_{n + 1}}{a_n} &gt; \alpha -
-\varepsilon\)</span>，则 <span class="math inline">\(a_n \ge a_{n - 1}
-(\alpha - \varepsilon) \ge \ldots \ge a_{N} (\alpha - \varepsilon)^{n -
-N}\)</span></p>
-<p><span class="math inline">\(\text{i.e.} a_n ^ {\frac{1}{n}}
-&gt;\left[\frac{a_N}{(\alpha - \varepsilon) ^ N}\right] ^
-{\frac{1}{n}}(\alpha - \varepsilon)\)</span>，则 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
-{\frac{1}{n}}\ge (\alpha - \varepsilon) \lim\limits_{n\rightarrow
-\infty}\left(\frac{a_N}{\alpha - \varepsilon}\right) ^ {\frac{1}{n}} =
-\alpha - \varepsilon\)</span> 由 <span
-class="math inline">\(\varepsilon\)</span> 的任意性，可以知道 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
-{\frac{1}{n}} \ge \alpha\)</span>，上极限是类似的。 <span
-class="math inline">\(\Box\)</span></p>
-<h3 id="stolz-cesaro-定理">Stolz-Cesaro 定理</h3>
-<p>定理：<span class="math inline">\(\{a_n\},\{b_n\}\)</span> 满足 1 1.
-<span class="math inline">\({b_n}\)</span> 严格单调递增 2. <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} b_n = +
-\infty\)</span> 3. <span class="math inline">\(\lim\limits_{n\rightarrow
-\infty} \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} = A\)</span></p>
-<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\frac{a_n}{b_n}= A\)</span> 注：此处 <span
-class="math inline">\(A\)</span> 可以为 <span class="math inline">\(\pm
-\infty\)</span></p>
-<p>证明：</p>
-<p>分三种情况讨论 1：<span class="math inline">\(A\in \mathbb R,\forall
-\varepsilon &gt; 0 , \exists N, \text{s.t.} n &gt; N, A - \varepsilon
-&lt; \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} &lt; A +
-\varepsilon\)</span></p>
-<p>从而有取 <span class="math inline">\(k = N + 1, \ldots,
-n\)</span></p>
-<p><span class="math inline">\((b_k - b_{k - 1})(A - \varepsilon) &lt;
-a_{k} - a_{k - 1} &lt; (A + \varepsilon)(b_k - b_{k - 1})\)</span></p>
-<p>累加</p>
-<p>从而有 <span class="math inline">\(\left(1 - \frac{b_N}{b_n}\right)(A
-- \varepsilon) &lt; \frac{a_n}{b_n} - \frac{a_N}{b_n} &lt; \left(1 -
-\frac{b_N}{b_n}\right)(A + \varepsilon)\)</span> 当 <span
-class="math inline">\(n\rightarrow \infty\)</span>，有 <span
-class="math inline">\(A - \varepsilon\le \lim\limits_{n\rightarrow
-\infty} \inf\frac{a_n}{b_n}\le \lim\limits_{n\rightarrow \infty} \sup
-\frac{a_n}{b_n }\le A + \varepsilon\)</span> 由于 <span
-class="math inline">\(\varepsilon\)</span> 的任意性，<span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_n}{b_n}
-= A\)</span></p>
-<p>2：<span class="math inline">\(A = +\infty, \exists N, \text{s.t.} n
-&gt; N, a_n - a_{n - 1} &gt; b_n - b_{n - 1} &gt; 0\Rightarrow a_n &gt;
-a_{n - 1}\)</span> 且 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
-+\infty\)</span></p>
-<p>且 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\frac{b_n - b_{n - 1}}{a_n - a_{n - 1}} = 0\)</span> 从而有 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{b_n}{a_n}
-= 0\)</span>，所以 <span class="math inline">\(\lim\limits_{n\rightarrow
-\infty} \frac{a_n}{b_n} = +\infty = A\)</span></p>
-<p>3：极限为负无穷的时候，由前两种可知。</p>
-<p>逆命题不一定成立！！！</p>
-<p>定理：</p>
-<p><span class="math inline">\(\{a_n\}, \{b_n\}\)</span> 满足</p>
-<ol type="1">
-<li><span class="math inline">\(\{b_n\}\)</span> 严格单调</li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
-0, \lim\limits_{n\rightarrow \infty}b_n = 0\)</span></li>
-<li><span class="math inline">\(\lim\limits_{n\rightarrow
-\infty}\frac{a_n - a_n - 1}{b_n - b_n - 1} = A\)</span></li>
-</ol>
-<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\frac{a_n}{b_n} = A\)</span></p>
-<p>证明：</p>
-<p><span class="math inline">\(A = \pm\infty\)</span> 留做练习</p>
-<p><span class="math inline">\(A\in \mathbb R\)</span> 时， 当 <span
-class="math inline">\(n, m&gt;N\)</span> 时候，<span
-class="math inline">\(\vert\frac{a_n - a_m}{b_n -
-b_m}\vert&lt;\varepsilon\)</span>，令 <span
-class="math inline">\(m\rightarrow \infty\)</span> 则 <span
-class="math inline">\(\vert \frac{a_n}{b_n} - A\vert &lt;
-\varepsilon\)</span> <span class="math inline">\(\Box\)</span></p>
-<h4 id="例一-10">例一</h4>
-<p>给定数列 <span class="math inline">\(\{a_n\},
-\lim\limits_{n\rightarrow \infty} a_n = 0\)</span>，则 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_1 +
-\ldots+a_n}{n} = a\)</span></p>
-<p>一下证明完了。</p>
-<p>引理：</p>
-<p>设 <span class="math inline">\(s_1,\ldots,s_n, t_1,
-\ldots,t_n\)</span>，令 <span class="math inline">\(S_k = \sum_{i = 1} ^
-k s_i\)</span> 则有 <span class="math inline">\(\sum\limits_{k = 1} ^ n
-s_k t_k =S_n t_n - \sum\limits_{k = 1} ^ {n - 1}{S_k (t_{k + 1} -
-t_k)}\)</span></p>
-<p>证明是显然的。</p>
-<h4 id="例二-9">例二</h4>
-<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
-\frac{a_1 + a_2 + \ldots + a_n}{n} = \alpha\)</span>,，证明 <span
-class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
-n}\sum_{k = 1} ^ n \frac{a_k}{k} = \alpha\)</span></p>
-<p>令 <span class="math inline">\(S_k = a_1 + \ldots +a_k, S_0 =
-0\)</span></p>
-<p><span class="math inline">\(\begin{aligned}\lim\limits_{n\rightarrow
-\infty} \frac{1}{\ln n}\sum_{k = 1} ^ n \frac{a_k}{k}
-&amp;\overset{\text{Abel}}{=}\lim\limits_{n\rightarrow \infty}
-\frac{1}{\ln n}\left(\frac{S_n}{n}-\sum\limits_{k = 1} ^ {n - 1} S_k
-\left(\frac{1}{k + 1} - \frac{1}{k}\right)\right)\\&amp;\overset{}{=}
-\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\left(\frac{S_n}{n}
-+\sum\limits_{k = 1} ^ {n - 1}\frac{S_k/k}{k + 1}\right)\\
-&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\sum\limits_{k =
-1} ^ {n - 1} \frac{S_k/k}{k + 1}\\&amp;\overset{S-C}{=}
-\lim\limits_{n\rightarrow \infty} \frac{\frac{S_{n - 1}}{n(n - 1)}}{\ln
-n - \ln(n - 1)} \\&amp;=\lim\limits_{n\rightarrow \infty} \frac{S_{n -
-1}}{n - 1}\frac{1}{n(\ln n - \ln (n -
-1))}\\&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
-\left(\frac{n}{n - 1}\right) ^ n} \\&amp;\overset{承认}{=}
-\frac{1}{\ln\lim\limits_{n\rightarrow \infty}\left(1 + \frac{1}{n -
-1}\right) ^ {n}}\\ &amp;= \frac{1}{\ln e}\\ &amp;=
-1\end{aligned}\)</span></p>
-<p>实数完备性六大定理：</p>
-<ol type="1">
-<li>确界存在原理</li>
-<li>Weierstrass 单调收敛定理</li>
-<li>Cauthy-Canter 闭区间套定理</li>
-<li>Heine-Borel 有限覆盖定理</li>
-<li>Bolzano-Weierstrass 列紧性定理</li>
-<li>Cauthy 收敛定理</li>
-</ol>
-<h2 id="函数的连续性">函数的连续性</h2>
-<h3 id="集合的映射">集合的映射</h3>
-<p>集合：<span class="math inline">\(X\)</span>，<span
-class="math inline">\(x\)</span> 属于 <span
-class="math inline">\(X\)</span>，记作 <span class="math inline">\(x\in
-X\)</span></p>
-<p>映射：存在集合 <span class="math inline">\(X,
-Y\)</span>，存在某种法则 <span class="math inline">\(f\)</span>，<span
-class="math inline">\(\text{s.t.}\forall X, \exists! y \in Y\)</span>
-与之对应，称 <span class="math inline">\(f\)</span> 为 <span
-class="math inline">\(X\)</span> 到 <span
-class="math inline">\(Y\)</span> 的映射，记 <span
-class="math inline">\(y = f(x)\)</span>，记 <span
-class="math inline">\(f:X\rightarrow Y, x\mapsto y\)</span>，称 <span
-class="math inline">\(X\)</span> 为映射的定义域，<span
-class="math inline">\(y\)</span> 为目标域，记 <span
-class="math inline">\(f(x) = \{ f(x)\vert \forall x \in X \}\subset
-Y\)</span>，称 <span class="math inline">\(f(x)\)</span>
-是映射的值域。</p>
-<h4 id="例一-11">例一</h4>
-<p><span class="math inline">\(f:\mathbb N \rightarrow \mathbb Z,
-n\mapsto f(n) = 2n - 5\)</span></p>
-<h4 id="例二-10">例二</h4>
-<p>记 <span class="math inline">\(\mathbb R ^ 2 = \mathbb R \times
-\mathbb R,(x, t) \mapsto f(x, t) = (x - t\gamma, t)\)</span>
-称为从一个惯性系 <span class="math inline">\((x, t)\)</span>
-到另外一个惯性系 <span class="math inline">\((x&#39;,t&#39;)\)</span>
-的伽利略变换</p>
-<p>定义：给定集合 <span class="math inline">\(X, Y\)</span>，映射 <span
-class="math inline">\(f:X\rightarrow Y\)</span></p>
-<ol type="1">
-<li>称 <span class="math inline">\(f\)</span> 为单射，若 <span
-class="math inline">\(\forall x_1, x_2 \in X, x_1 \not = x_2, f(x_1)\not
-= f(x_2)\)</span></li>
-<li>称 <span class="math inline">\(f\)</span> 为满射，若 <span
-class="math inline">\(\forall y \in Y, \exist x, \text{s.t.} f(x) =
-y\)</span></li>
-<li>若 <span class="math inline">\(f\)</span>
-既是单射又是满射，则是双射。</li>
-</ol>
-<p>若 <span class="math inline">\(f:X\rightarrow Y\)</span>
-是单射，可以定义 <span class="math inline">\(g:f(x)\subset Y \rightarrow
-X\)</span>，满足 <span class="math inline">\(f(g(y)) = y, \forall y \in
-f(x)\)</span>，称 <span class="math inline">\(g\)</span> 为 <span
-class="math inline">\(f\)</span> 逆映射，记为 <span
-class="math inline">\(f^{-1}\)</span></p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据科学导论笔记</title>
-    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
-<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
-<p>课程种类：新生研讨课</p>
-<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
-<p>三元空间</p>
-<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
-<p>退课了。</p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>清华大学本科生日记</title>
     <url>/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E7%94%9F%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="section">2023/9</h2>
@@ -1497,520 +357,15 @@ Next 主题，因为原来不支持 latex，非常菜。</p>
       </tags>
   </entry>
   <entry>
-    <title>离散数学笔记</title>
-    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
-<h2 id="命题">命题</h2>
-<p>定义：命题是一个非真即假的的陈述句。</p>
-<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
-<p>任何命题的真值都是唯一的。</p>
-<p><strong>悖论不是命题</strong></p>
-<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
-q, r,\ldots\)</span></p>
-<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
-<h3 id="命题连接词">命题连接词</h3>
-<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
-\leftrightarrow\)</span></p>
-<ul>
-<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
-<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
-<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
-<li><span class="math inline">\(\rightarrow\)</span>
-蕴含联结词，推出</li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-双蕴含联结词，等价</li>
-</ul>
-<p>后面的都是方便好记但是错误的名字（</p>
-<p>虽然但是，既又，不但而且都是合取。</p>
-<p>或就是析取</p>
-<p>例题：</p>
-<p>张明报考的第一志愿是数学类或者计算机类。</p>
-<p>记张明第一志愿是数学类为 <span
-class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
-class="math inline">\(q\)</span>，那么应该是 <span
-class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
-这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
-q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
-q\)</span></p>
-<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
-class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
-\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
-q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
-class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
-<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
-class="math inline">\(q\)</span> 的充分条件，并且 <span
-class="math inline">\(q\)</span> 是 <span
-class="math inline">\(p\)</span> 的必要条件，</p>
-<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
-class="math inline">\(r\)</span>，我去上学为 <span
-class="math inline">\(s\)</span>，那么这句话是 <span
-class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
-<span class="math inline">\(s\rightarrow r\)</span></p>
-<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
-q\)</span> 语言就是当且仅当。</p>
-<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
-(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
-class="math inline">\(x, y\)</span></p>
-<p>联结词优先级，不要记！！！！直接加括号。</p>
-<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
-<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
-<p>真值可以变化的陈述句叫做命题变项</p>
-<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
-<p>如果一个 <span class="math inline">\(A\)</span>
-不是永假式，那么叫做可满足式。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
-<span class="math inline">\(B\)</span>，那么 <span
-class="math inline">\(B\)</span> 也是永真式。</p>
-<p>几个需要注意的点：</p>
-<ol type="1">
-<li>这盆花真香！（不是命题</li>
-<li>这盆花真香。（是命题</li>
-<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
-</ol>
-<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
-<h3 id="波兰表达式">1.6 波兰表达式</h3>
-<p>一般而言，使用联结词构成公式有三种方式，</p>
-<ul>
-<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
-<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
-<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
-</ul>
-<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
-故称之为波兰表达式。</p>
-<p>关于中缀和逆波兰的转化
-https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
-<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
-<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
-<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
-<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
-<h3 id="等值定理">等值定理</h3>
-<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
-<span class="math inline">\(B\)</span>，设 <span
-class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 共有 <span
-class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 的真值都相同，则称 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
-class="math inline">\(A = B\)</span>.</p>
-<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
-为两个命题公式，<span class="math inline">\(A = B\)</span>
-的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
-为一个重言式。</p>
-<p>等值定理满足：</p>
-<ol type="1">
-<li>自反性 <span class="math inline">\(A = A\)</span></li>
-<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
-class="math inline">\(A = C\)</span></li>
-<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
-class="math inline">\(B = A\)</span></li>
-</ol>
-<p>逆命题、否命题与逆否命题。</p>
-<ul>
-<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
-class="math inline">\(q \rightarrow p\)</span></li>
-<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
-class="math inline">\(p\rightarrow \neg q\)</span></li>
-<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
-<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
-</ul>
-<p>两个重要结论</p>
-<ul>
-<li>原命题和逆否命题等价</li>
-<li>逆命题与否命题等价</li>
-</ul>
-<h3 id="等值公式">等值公式</h3>
-<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
-是含命题公式 A的命题公式， <span
-class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
-class="math inline">\(B\)</span> 置换了<span
-class="math inline">\(\varPhi(A)\)</span> 中的 <span
-class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
-class="math inline">\(A = B\)</span>，则 <span
-class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
-<p>基本的等值公式</p>
-<ol type="1">
-<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
-<li>结合律
-<ol type="1">
-<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
-R)\)</span></li>
-<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
-\wedge R)\)</span></li>
-<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
-P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
-<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
-\rightarrow (Q \rightarrow R)\)</span></li>
-</ol></li>
-<li>交换律
-<ol type="1">
-<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
-<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
-<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
-P\)</span></li>
-<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
-P\)</span></li>
-</ol></li>
-<li>分配律
-<ol type="1">
-<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
-P\vee R)\)</span></li>
-<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
-(P \wedge R)\)</span></li>
-<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
-\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-不满足分配律</li>
-</ol></li>
-<li>幂等律
-<ol type="1">
-<li><span class="math inline">\(P \vee P = P\)</span></li>
-<li><span class="math inline">\(P \wedge P = P\)</span></li>
-<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
-</ol></li>
-<li>吸收律
-<ol type="1">
-<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
-<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
-</ol></li>
-<li>De Morgan律
-<ol type="1">
-<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
-\leftrightarrow Q\)</span></li>
-</ol></li>
-<li>同一律
-<ol type="1">
-<li><span class="math inline">\(P \vee F = P\)</span></li>
-<li><span class="math inline">\(P \wedge T = P\)</span></li>
-<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
-<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
-<li><span class="math inline">\(F \leftrightarrow P = \neg
-P\)</span></li>
-</ol></li>
-<li>零律
-<ol type="1">
-<li><span class="math inline">\(P \vee T = T\)</span></li>
-<li><span class="math inline">\(P \wedge F = 0\)</span></li>
-</ol></li>
-<li>补余律
-<ol type="1">
-<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
-<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
-<li><span class="math inline">\(P\rightarrow \neg P = \neg
-P\)</span></li>
-<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow \neg P =
-F\)</span></li>
-</ol></li>
-</ol>
-<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
-Q = \neg P \vee Q\)</span> - 前提合取合并 <span
-class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
-Q)\rightarrow R\)</span> - 等价等值式 <span
-class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
-\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
-\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
-class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
-Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
-(P\rightarrow \neg Q) = \neg P\)</span> - <span
-class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
-\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
-class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
-\vee Q)\)</span> 用取假来描述双条件 - <span
-class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
-\rightarrow R)\)</span> 前提交换 - <span
-class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
-\vee Q)\rightarrow R\)</span></p>
-<h3 id="等值演算">等值演算</h3>
-<h4 id="例1">例1</h4>
-<p><span class="math display">\[
-\begin{aligned}
-\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
-\\
-\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
-&amp;蕴涵表达式，结合律\\
-(P \wedge Q) \vee(\neg P \vee Q)
-&amp;双重否定律，幂等律\\
-( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
-Q \vee \neg P&amp;吸收律
-\end{aligned}
-\]</span></p>
-<h4 id="例2">例2</h4>
-$$
-<span class="math display">\[\begin{aligned}
-&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
-\\
-=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
-\\
-
-=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
-&amp; (摩根律)
-\\
-=&amp;F\wedge R &amp; (补余律，零律)
-\\
-=&amp;F(零律)
-\end{aligned}\]</span>
-<p>$$</p>
-<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
-<h4 id="例1-1">例1</h4>
-<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
-\wedge Q) \vee (P \wedge Q)\)</span></p>
-<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
-<h4 id="例2-1">例2</h4>
-<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
-\wedge Q)\)</span> 然后摩根一下就行了。</p>
-<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
-Q)\)</span></p>
-<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
-Q)\)</span></p>
-<h3 id="完备集">完备集</h3>
-<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
-<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
-是完备的联结词集合。</p>
-<ol type="1">
-<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
-<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
-<li><span class="math inline">\(S_3 = \{\neg,
-\rightarrow\}\)</span></li>
-<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
-<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
-</ol>
-<p>这些集合都是完备的</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;\neg P = \neg (P \wedge P) = P \uparrow P
-\\
-&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
-&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
-\end{aligned}
-\]</span></p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科学通论笔记</title>
-    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
-<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
-<p>广义和狭义的科学：</p>
-<ul>
-<li>广义：自然知识，技术，书里科学，全地域起源</li>
-<li>狭义：数学，实验科学，希腊源头</li>
-</ul>
-<p>不懂数学的大科学家：达尔文</p>
-<ul>
-<li>在希腊起源</li>
-<li>在罗马式微</li>
-<li>在伊斯兰世界发扬光大</li>
-<li>在中世纪后期的基督世界重获新生</li>
-<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
-<li>19世纪全方位转化为技术成为强大的物质力量</li>
-<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
-</ul>
-<h3 id="狭义科学的样本">狭义科学的样本</h3>
-<ul>
-<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
-<li>希腊哲学</li>
-</ul>
-<p>问题：如何理解狭义科学的形式？</p>
-<h3 id="文明与科学">文明与科学</h3>
-<p>文明不等于科学，科学出现在希腊城邦文明。</p>
-<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
-<h3 id="纯粹科学">纯粹科学</h3>
-<p>高度的自主性，自足性，为自身的目的而存在</p>
-<ol type="1">
-<li>远离任何意义上的实用主义</li>
-<li>内在性：自己推出自己</li>
-</ol>
-<p>自由科学特征之一：无用无功利之学</p>
-<ul>
-<li>欧几里德的故事</li>
-<li>亚里士多德三种知识：经验、技艺、科学</li>
-</ul>
-<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
-<ul>
-<li>内在展开、证明的知识</li>
-<li>证明、论证、推理、演绎</li>
-</ul>
-<p>自由科学的条件：</p>
-<ul>
-<li>惊异，好奇</li>
-<li>闲暇，快乐</li>
-<li>外在自由（言论自由，财务自由）</li>
-<li>内在自由</li>
-</ul>
-<p>希腊城邦文明，自由科学的温床。</p>
-<p>城邦文明的开端</p>
-<ul>
-<li>荷马史诗</li>
-<li>希腊字母文字</li>
-<li>奥林波斯神话</li>
-<li>奥林匹克竞技会</li>
-</ul>
-<p>神人之别：不死与有死</p>
-<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
-<p>希腊人的宗教：无宗教教义，无宗教经典</p>
-<p>竞技会：</p>
-<ul>
-<li>祭祀奥林波斯诸神</li>
-<li>神圣休战原则</li>
-<li>希腊身份认同</li>
-<li>不仅有体育，还有音乐戏剧歌舞</li>
-<li>全程裸体，展示人体之美</li>
-<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
-</ul>
-<p>城邦小国寡民，直接民主制，参军是公民义务</p>
-<p>戏剧：起源于酒神祭祀</p>
-<p>雕刻：三大雕刻家</p>
-<h3 id="城邦文明小结">城邦文明小结</h3>
-<ul>
-<li>城邦本位主义，自治自给，独立自由</li>
-<li>科学哲学艺术</li>
-<li>希腊波斯战争</li>
-</ul>
-<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
-<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
-<p>奴隶制：自由民获得闲暇</p>
-<p>米利都，科学的策源地：</p>
-<ul>
-<li>独立与自由</li>
-<li>挑战与竞争</li>
-<li>开放与交流</li>
-</ul>
-<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
-<p>自然的发现，事物有其自然</p>
-<p>自然就是本质：事物的自己即其本质</p>
-<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
-<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
-<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
-<p>希腊数学，自由学术的典范</p>
-<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
-<p>实践科学：政治学，伦理学，家政学</p>
-<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
-<p>学数学可以涵养真正人性</p>
-<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
-<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
-<p>什么是自然？何谓自然的发现？</p>
-<p>为什么说几何学是理性科学的代表？</p>
-<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
-<h3 id="本讲纲要">本讲纲要</h3>
-<ul>
-<li>天文学作为科学</li>
-<li>柏拉图及其理念论</li>
-<li>天球-地球宇宙</li>
-<li>行星问题与拯救形象</li>
-</ul>
-<h3 id="原始天文学">原始天文学</h3>
-<ul>
-<li>观天</li>
-<li>命名</li>
-<li>占卜</li>
-</ul>
-<h3 id="科学天文学">科学天文学</h3>
-<ul>
-<li>寻找规律</li>
-<li>预测天象</li>
-</ul>
-<h3 id="中国天文学">中国天文学</h3>
-<ul>
-<li>天人合一</li>
-<li>政治占星学</li>
-<li>日常伦理学</li>
-<li>当食不食</li>
-</ul>
-<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
-<h3 id="理念论">理念论</h3>
-<ul>
-<li>理想，相，理想，形式</li>
-<li>理想是可以超与的</li>
-<li>显示的可理解性来自与他对理念的模仿</li>
-<li>洞穴隐喻</li>
-</ul>
-<h3 id="思想来源">思想来源</h3>
-<ul>
-<li>巴门尼德</li>
-<li>苏格拉底</li>
-<li>泰拉泰德</li>
-<li>欧多克斯</li>
-<li>欧几里德</li>
-</ul>
-<p>《蒂迈欧篇》：理性创世</p>
-<h3 id="世界躯体">世界躯体</h3>
-<ul>
-<li>可视可见，就需要火</li>
-<li>可触可碰，就需要土</li>
-<li>火土结合，就需要中项</li>
-<li>世界是独一无二的球体</li>
-</ul>
-<h3 id="世界灵魂">世界灵魂</h3>
-<ul>
-<li>灵魂=运动</li>
-<li>宇宙的运动有相同运动和相异运动</li>
-</ul>
-<h3 id="宇宙">宇宙</h3>
-<ul>
-<li>有限，秩序，和谐</li>
-<li>宇宙=完美/完善/完满</li>
-</ul>
-<h3 id="地球">地球</h3>
-<ul>
-<li><p>圆盘浮在水上</p></li>
-<li><p>鼓状居于宇宙之上</p></li>
-<li><p>绕中心火转动</p></li>
-<li><p>居于宇宙之中</p></li>
-<li><p>经验之谈</p></li>
-<li><p>理论根据</p></li>
-</ul>
-<h3 id="圆球">圆球</h3>
-<ul>
-<li>几何化的天体把球心放到醒目位置</li>
-<li>对称性</li>
-<li>几何偏好</li>
-</ul>
-<h3 id="天界不朽">天界不朽</h3>
-<ul>
-<li>天地二分</li>
-<li>天界纯粹，绝对，不朽
-<ul>
-<li>位置不变</li>
-<li>性质不变</li>
-<li>数量不变</li>
-</ul></li>
-</ul>
-<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
-<h3 id="拯救现象">拯救现象</h3>
-<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
-<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
-<ul>
-<li>优点：拯救现象</li>
-<li>地球并不处于宇宙集合中心</li>
-<li>也不处于本轮中心的晕素运动中心</li>
-</ul>
-<p>小结</p>
-<ul>
-<li>观察记录不等于科学</li>
-<li>哲学预设：天界存在绝对规则运动</li>
-<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
-<li>透过现象看本质</li>
-<li>集合分解与还原</li>
-</ul>
+    <title>数据科学导论笔记</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
+<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
+<p>课程种类：新生研讨课</p>
+<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
+<p>三元空间</p>
+<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
+<p>退课了。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -3159,6 +1514,1651 @@ d_n\end{bmatrix} = \text{diag} (d_1, d_2, \ldots, d_n)\)</span>
 d_n\)</span> 都不为 <span class="math inline">\(0\)</span> ，此时 <span
 class="math inline">\(D ^ {-1} = \text{diag}(d_1 ^ {-1}, \ldots,d_n ^
 {-1})\)</span>。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科学通论笔记</title>
+    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
+<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
+<p>广义和狭义的科学：</p>
+<ul>
+<li>广义：自然知识，技术，书里科学，全地域起源</li>
+<li>狭义：数学，实验科学，希腊源头</li>
+</ul>
+<p>不懂数学的大科学家：达尔文</p>
+<ul>
+<li>在希腊起源</li>
+<li>在罗马式微</li>
+<li>在伊斯兰世界发扬光大</li>
+<li>在中世纪后期的基督世界重获新生</li>
+<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
+<li>19世纪全方位转化为技术成为强大的物质力量</li>
+<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
+</ul>
+<h3 id="狭义科学的样本">狭义科学的样本</h3>
+<ul>
+<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
+<li>希腊哲学</li>
+</ul>
+<p>问题：如何理解狭义科学的形式？</p>
+<h3 id="文明与科学">文明与科学</h3>
+<p>文明不等于科学，科学出现在希腊城邦文明。</p>
+<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
+<h3 id="纯粹科学">纯粹科学</h3>
+<p>高度的自主性，自足性，为自身的目的而存在</p>
+<ol type="1">
+<li>远离任何意义上的实用主义</li>
+<li>内在性：自己推出自己</li>
+</ol>
+<p>自由科学特征之一：无用无功利之学</p>
+<ul>
+<li>欧几里德的故事</li>
+<li>亚里士多德三种知识：经验、技艺、科学</li>
+</ul>
+<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
+<ul>
+<li>内在展开、证明的知识</li>
+<li>证明、论证、推理、演绎</li>
+</ul>
+<p>自由科学的条件：</p>
+<ul>
+<li>惊异，好奇</li>
+<li>闲暇，快乐</li>
+<li>外在自由（言论自由，财务自由）</li>
+<li>内在自由</li>
+</ul>
+<p>希腊城邦文明，自由科学的温床。</p>
+<p>城邦文明的开端</p>
+<ul>
+<li>荷马史诗</li>
+<li>希腊字母文字</li>
+<li>奥林波斯神话</li>
+<li>奥林匹克竞技会</li>
+</ul>
+<p>神人之别：不死与有死</p>
+<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
+<p>希腊人的宗教：无宗教教义，无宗教经典</p>
+<p>竞技会：</p>
+<ul>
+<li>祭祀奥林波斯诸神</li>
+<li>神圣休战原则</li>
+<li>希腊身份认同</li>
+<li>不仅有体育，还有音乐戏剧歌舞</li>
+<li>全程裸体，展示人体之美</li>
+<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
+</ul>
+<p>城邦小国寡民，直接民主制，参军是公民义务</p>
+<p>戏剧：起源于酒神祭祀</p>
+<p>雕刻：三大雕刻家</p>
+<h3 id="城邦文明小结">城邦文明小结</h3>
+<ul>
+<li>城邦本位主义，自治自给，独立自由</li>
+<li>科学哲学艺术</li>
+<li>希腊波斯战争</li>
+</ul>
+<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
+<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
+<p>奴隶制：自由民获得闲暇</p>
+<p>米利都，科学的策源地：</p>
+<ul>
+<li>独立与自由</li>
+<li>挑战与竞争</li>
+<li>开放与交流</li>
+</ul>
+<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
+<p>自然的发现，事物有其自然</p>
+<p>自然就是本质：事物的自己即其本质</p>
+<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
+<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
+<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
+<p>希腊数学，自由学术的典范</p>
+<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
+<p>实践科学：政治学，伦理学，家政学</p>
+<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
+<p>学数学可以涵养真正人性</p>
+<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
+<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
+<p>什么是自然？何谓自然的发现？</p>
+<p>为什么说几何学是理性科学的代表？</p>
+<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
+<h3 id="本讲纲要">本讲纲要</h3>
+<ul>
+<li>天文学作为科学</li>
+<li>柏拉图及其理念论</li>
+<li>天球-地球宇宙</li>
+<li>行星问题与拯救形象</li>
+</ul>
+<h3 id="原始天文学">原始天文学</h3>
+<ul>
+<li>观天</li>
+<li>命名</li>
+<li>占卜</li>
+</ul>
+<h3 id="科学天文学">科学天文学</h3>
+<ul>
+<li>寻找规律</li>
+<li>预测天象</li>
+</ul>
+<h3 id="中国天文学">中国天文学</h3>
+<ul>
+<li>天人合一</li>
+<li>政治占星学</li>
+<li>日常伦理学</li>
+<li>当食不食</li>
+</ul>
+<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
+<h3 id="理念论">理念论</h3>
+<ul>
+<li>理想，相，理想，形式</li>
+<li>理想是可以超与的</li>
+<li>显示的可理解性来自与他对理念的模仿</li>
+<li>洞穴隐喻</li>
+</ul>
+<h3 id="思想来源">思想来源</h3>
+<ul>
+<li>巴门尼德</li>
+<li>苏格拉底</li>
+<li>泰拉泰德</li>
+<li>欧多克斯</li>
+<li>欧几里德</li>
+</ul>
+<p>《蒂迈欧篇》：理性创世</p>
+<h3 id="世界躯体">世界躯体</h3>
+<ul>
+<li>可视可见，就需要火</li>
+<li>可触可碰，就需要土</li>
+<li>火土结合，就需要中项</li>
+<li>世界是独一无二的球体</li>
+</ul>
+<h3 id="世界灵魂">世界灵魂</h3>
+<ul>
+<li>灵魂=运动</li>
+<li>宇宙的运动有相同运动和相异运动</li>
+</ul>
+<h3 id="宇宙">宇宙</h3>
+<ul>
+<li>有限，秩序，和谐</li>
+<li>宇宙=完美/完善/完满</li>
+</ul>
+<h3 id="地球">地球</h3>
+<ul>
+<li><p>圆盘浮在水上</p></li>
+<li><p>鼓状居于宇宙之上</p></li>
+<li><p>绕中心火转动</p></li>
+<li><p>居于宇宙之中</p></li>
+<li><p>经验之谈</p></li>
+<li><p>理论根据</p></li>
+</ul>
+<h3 id="圆球">圆球</h3>
+<ul>
+<li>几何化的天体把球心放到醒目位置</li>
+<li>对称性</li>
+<li>几何偏好</li>
+</ul>
+<h3 id="天界不朽">天界不朽</h3>
+<ul>
+<li>天地二分</li>
+<li>天界纯粹，绝对，不朽
+<ul>
+<li>位置不变</li>
+<li>性质不变</li>
+<li>数量不变</li>
+</ul></li>
+</ul>
+<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
+<h3 id="拯救现象">拯救现象</h3>
+<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
+<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
+<ul>
+<li>优点：拯救现象</li>
+<li>地球并不处于宇宙集合中心</li>
+<li>也不处于本轮中心的晕素运动中心</li>
+</ul>
+<p>小结</p>
+<ul>
+<li>观察记录不等于科学</li>
+<li>哲学预设：天界存在绝对规则运动</li>
+<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
+<li>透过现象看本质</li>
+<li>集合分解与还原</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>离散数学笔记</title>
+    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
+<h2 id="命题">命题</h2>
+<p>定义：命题是一个非真即假的的陈述句。</p>
+<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
+<p>任何命题的真值都是唯一的。</p>
+<p><strong>悖论不是命题</strong></p>
+<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
+q, r,\ldots\)</span></p>
+<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
+<h3 id="命题连接词">命题连接词</h3>
+<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
+\leftrightarrow\)</span></p>
+<ul>
+<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
+<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
+<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
+<li><span class="math inline">\(\rightarrow\)</span>
+蕴含联结词，推出</li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+双蕴含联结词，等价</li>
+</ul>
+<p>后面的都是方便好记但是错误的名字（</p>
+<p>虽然但是，既又，不但而且都是合取。</p>
+<p>或就是析取</p>
+<p>例题：</p>
+<p>张明报考的第一志愿是数学类或者计算机类。</p>
+<p>记张明第一志愿是数学类为 <span
+class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
+class="math inline">\(q\)</span>，那么应该是 <span
+class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
+这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
+q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
+q\)</span></p>
+<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
+\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
+q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
+class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
+<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充分条件，并且 <span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(p\)</span> 的必要条件，</p>
+<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
+class="math inline">\(r\)</span>，我去上学为 <span
+class="math inline">\(s\)</span>，那么这句话是 <span
+class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
+<span class="math inline">\(s\rightarrow r\)</span></p>
+<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
+q\)</span> 语言就是当且仅当。</p>
+<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
+(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
+class="math inline">\(x, y\)</span></p>
+<p>联结词优先级，不要记！！！！直接加括号。</p>
+<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
+<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
+<p>真值可以变化的陈述句叫做命题变项</p>
+<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
+<p>如果一个 <span class="math inline">\(A\)</span>
+不是永假式，那么叫做可满足式。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
+<span class="math inline">\(B\)</span>，那么 <span
+class="math inline">\(B\)</span> 也是永真式。</p>
+<p>几个需要注意的点：</p>
+<ol type="1">
+<li>这盆花真香！（不是命题</li>
+<li>这盆花真香。（是命题</li>
+<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
+</ol>
+<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
+<h3 id="波兰表达式">1.6 波兰表达式</h3>
+<p>一般而言，使用联结词构成公式有三种方式，</p>
+<ul>
+<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
+<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
+<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
+</ul>
+<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
+故称之为波兰表达式。</p>
+<p>关于中缀和逆波兰的转化
+https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
+<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
+<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
+<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
+<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
+<h3 id="等值定理">等值定理</h3>
+<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
+<span class="math inline">\(B\)</span>，设 <span
+class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 共有 <span
+class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 的真值都相同，则称 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
+class="math inline">\(A = B\)</span>.</p>
+<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
+为两个命题公式，<span class="math inline">\(A = B\)</span>
+的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
+为一个重言式。</p>
+<p>等值定理满足：</p>
+<ol type="1">
+<li>自反性 <span class="math inline">\(A = A\)</span></li>
+<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
+class="math inline">\(A = C\)</span></li>
+<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
+class="math inline">\(B = A\)</span></li>
+</ol>
+<p>逆命题、否命题与逆否命题。</p>
+<ul>
+<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
+class="math inline">\(q \rightarrow p\)</span></li>
+<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
+class="math inline">\(p\rightarrow \neg q\)</span></li>
+<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
+<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
+</ul>
+<p>两个重要结论</p>
+<ul>
+<li>原命题和逆否命题等价</li>
+<li>逆命题与否命题等价</li>
+</ul>
+<h3 id="等值公式">等值公式</h3>
+<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
+是含命题公式 A的命题公式， <span
+class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
+class="math inline">\(B\)</span> 置换了<span
+class="math inline">\(\varPhi(A)\)</span> 中的 <span
+class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
+class="math inline">\(A = B\)</span>，则 <span
+class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
+<p>基本的等值公式</p>
+<ol type="1">
+<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
+<li>结合律
+<ol type="1">
+<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
+R)\)</span></li>
+<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
+\wedge R)\)</span></li>
+<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
+P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
+<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
+\rightarrow (Q \rightarrow R)\)</span></li>
+</ol></li>
+<li>交换律
+<ol type="1">
+<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
+<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
+<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
+P\)</span></li>
+<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
+P\)</span></li>
+</ol></li>
+<li>分配律
+<ol type="1">
+<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
+P\vee R)\)</span></li>
+<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
+(P \wedge R)\)</span></li>
+<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
+\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+不满足分配律</li>
+</ol></li>
+<li>幂等律
+<ol type="1">
+<li><span class="math inline">\(P \vee P = P\)</span></li>
+<li><span class="math inline">\(P \wedge P = P\)</span></li>
+<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
+</ol></li>
+<li>吸收律
+<ol type="1">
+<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
+<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
+</ol></li>
+<li>De Morgan律
+<ol type="1">
+<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
+\leftrightarrow Q\)</span></li>
+</ol></li>
+<li>同一律
+<ol type="1">
+<li><span class="math inline">\(P \vee F = P\)</span></li>
+<li><span class="math inline">\(P \wedge T = P\)</span></li>
+<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
+<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
+<li><span class="math inline">\(F \leftrightarrow P = \neg
+P\)</span></li>
+</ol></li>
+<li>零律
+<ol type="1">
+<li><span class="math inline">\(P \vee T = T\)</span></li>
+<li><span class="math inline">\(P \wedge F = 0\)</span></li>
+</ol></li>
+<li>补余律
+<ol type="1">
+<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
+<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
+<li><span class="math inline">\(P\rightarrow \neg P = \neg
+P\)</span></li>
+<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow \neg P =
+F\)</span></li>
+</ol></li>
+</ol>
+<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
+Q = \neg P \vee Q\)</span> - 前提合取合并 <span
+class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
+Q)\rightarrow R\)</span> - 等价等值式 <span
+class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
+\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
+\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
+class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
+Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
+(P\rightarrow \neg Q) = \neg P\)</span> - <span
+class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
+\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
+class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
+\vee Q)\)</span> 用取假来描述双条件 - <span
+class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
+\rightarrow R)\)</span> 前提交换 - <span
+class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
+\vee Q)\rightarrow R\)</span></p>
+<h3 id="等值演算">等值演算</h3>
+<h4 id="例1">例1</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
+\\
+\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
+&amp;蕴涵表达式，结合律\\
+(P \wedge Q) \vee(\neg P \vee Q)
+&amp;双重否定律，幂等律\\
+( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
+Q \vee \neg P&amp;吸收律
+\end{aligned}
+\]</span></p>
+<h4 id="例2">例2</h4>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
+\\
+=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
+\\
+
+=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
+&amp; (摩根律)
+\\
+=&amp;F\wedge R &amp; (补余律，零律)
+\\
+=&amp;F(零律)
+\end{aligned}\]</span>
+<p>$$</p>
+<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
+<h4 id="例1-1">例1</h4>
+<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
+\wedge Q) \vee (P \wedge Q)\)</span></p>
+<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
+<h4 id="例2-1">例2</h4>
+<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
+\wedge Q)\)</span> 然后摩根一下就行了。</p>
+<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
+Q)\)</span></p>
+<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
+Q)\)</span></p>
+<h3 id="完备集">完备集</h3>
+<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
+<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
+是完备的联结词集合。</p>
+<ol type="1">
+<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
+<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
+<li><span class="math inline">\(S_3 = \{\neg,
+\rightarrow\}\)</span></li>
+<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
+<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
+</ol>
+<p>这些集合都是完备的</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\neg P = \neg (P \wedge P) = P \uparrow P
+\\
+&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
+&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
+\end{aligned}
+\]</span></p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析笔记</title>
+    <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数学分析笔记">数学分析笔记</h1>
+<h2 id="实数与序列">实数与序列</h2>
+<h3 id="常见数集">常见数集</h3>
+<p>下面给出一些集合的定义 <span class="math display">\[
+\begin{aligned}
+\mathbb N &amp;= \{0, 1, 2, \ldots\}\\
+\mathbb  Z &amp;= \{\ldots,-1,0,1,\ldots\}
+\\
+\mathbb Q&amp; = \{\frac{p}{q}\vert p, q \in \mathbb Z, q\not = 0\}
+\end{aligned}
+\]</span> 对于四则运算封闭的是 <span class="math inline">\(\mathbb Q,
+\mathbb R, \mathbb C\)</span></p>
+<h3 id="dedekind分割">Dedekind分割</h3>
+<p>先定义一个分割</p>
+<p><span class="math inline">\(A, B\)</span> 为有理数集合，满足：</p>
+<ol type="1">
+<li><span class="math inline">\(A, B \not = \emptyset, \mathbb Q = A
+\cup B, A \cap B = \emptyset\)</span></li>
+<li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
+y\)</span></li>
+</ol>
+<p>显然有四种情况</p>
+<ol type="1">
+<li><span class="math inline">\(A\)</span> 中有最大值，<span
+class="math inline">\(B\)</span> 中有最小值</li>
+<li><span class="math inline">\(A\)</span> 中无最大值，<span
+class="math inline">\(B\)</span> 中有最小值</li>
+<li><span class="math inline">\(A\)</span> 中有最大值，<span
+class="math inline">\(B\)</span> 中无最小值</li>
+<li><span class="math inline">\(A\)</span> 中无最大值，<span
+class="math inline">\(B\)</span> 中无最小值</li>
+</ol>
+<p>第一种情况不会出现，所以我们只讨论后面的三种。</p>
+<p>Dedekind 分割就是 <span class="math inline">\(\{(A, B)是 \mathbb Q
+的一个分割，且 A 中无最大值\}\)</span></p>
+<p>每一个 Dedekind
+分割唯一对应一个实数，无理数对应了第四种，有理数对应了第二种。</p>
+<h3 id="dedekind-分割来定义无理数的运算">Dedekind
+分割来定义无理数的运算</h3>
+<p>定义 <span class="math inline">\(x = (A_1, B_1), y = (A_2,
+B_2)\)</span> ，若 <span class="math inline">\(A_1 \subset A_2\)</span>
+称 <span class="math inline">\(x\le y\)</span>，若 <span
+class="math inline">\(A_1 \subset A_2\)</span> 且 <span
+class="math inline">\(A_1 \not = A_2\)</span> 称 <span
+class="math inline">\(x &lt; y\)</span>。</p>
+<p>性质</p>
+<ol type="1">
+<li>反称性：<span class="math inline">\(x\le y\)</span> 则 <span
+class="math inline">\(y\ge x\)</span></li>
+<li>传递性：<span class="math inline">\(x\le y\)</span> 且 <span
+class="math inline">\(y \le Z\)</span>，则 <span class="math inline">\(x
+\le Z\)</span></li>
+<li>完备性：<span class="math inline">\(x, y\in \mathbb R\)</span>，则
+<span class="math inline">\(x\le y\)</span> 或 <span
+class="math inline">\(y\le x\)</span></li>
+</ol>
+<p>四则运算定义</p>
+<p><span class="math inline">\(x + y = (A_3, B_3)\)</span>，其中 <span
+class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in A_1,
+\exists r_2 \in A_2, \text{s.t.} r = r_1 + r_2\}\)</span>， <span
+class="math inline">\(B_3 =\mathbb Q/A_3\)</span></p>
+<p>负元 <span class="math inline">\(-x = (A_3, B_3)\)</span>，其中 <span
+class="math inline">\(A_3 = \{r \in \mathbb Q\vert \exists r_1 \in B_1,
+r = -r_1, r_1 不是最小元\}\)</span>， <span class="math inline">\(B_3 =
+\mathbb Q/A_3\)</span></p>
+<p>则减法定义为 <span class="math inline">\(x - y = x +
+(-y)\)</span></p>
+<p>乘法：</p>
+<p><span class="math inline">\(xy = (A_3, B_3)\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(x\ge 0, y \ge 0, A_3 = \{r \in \mathbb
+Q\vert r &lt; 0 或 \exists r_1 \in A_1, \exists r_2 \in A_2, \text{s.t.}
+r_1 \ge 0, r_2 \ge 0, r = r_1r_2\}, B = \mathbb Q / A_3\)</span></li>
+<li><span class="math inline">\(x\ge 0, y &lt; 0,xy =
+-(x(-y))\)</span></li>
+<li><span class="math inline">\(x &lt; 0, y &lt; 0, xy =
+(-x)(-y)\)</span></li>
+</ol>
+<p>逆元 <span class="math inline">\(A_3 = \{r \in Q\vert r\le 0 或
+\exists r_1 \in B_1 , r_1 不是 B_1最小元,r=\frac{1}{r_1}\}, B = \mathbb
+Q / A_3\)</span></p>
+<p>实数域范围内：</p>
+<ol type="1">
+<li>交换律</li>
+<li>结合律</li>
+<li>单位元</li>
+<li>逆元</li>
+<li>分配律</li>
+</ol>
+<p>相容性条件</p>
+<ol type="1">
+<li>加法保序性 <span class="math inline">\(x\le y\)</span> 则 <span
+class="math inline">\(x + z \le y + z\)</span></li>
+<li>乘法保序性 <span class="math inline">\(x\le y, z \ge 0\)</span>, 则
+<span class="math inline">\(xz\le yz\)</span></li>
+</ol>
+<h3 id="实数确界存在定理">实数确界存在定理</h3>
+<p>定义 ：<span class="math inline">\(X \subset \mathbb R,x\not =
+\emptyset\)</span></p>
+<ol type="1">
+<li>若 <span class="math inline">\(C \in \mathbb R, \text{s.t.} \forall
+x \in X, x \le C\)</span> 则称 <span class="math inline">\(C\)</span> 是
+<span class="math inline">\(X\)</span> 的一个上界，下界同理</li>
+<li>若 <span class="math inline">\(X\)</span> 既有上界又有下界，那么称
+<span class="math inline">\(X\)</span> 是有界集</li>
+<li>称 <span class="math inline">\(a\)</span> 是 <span
+class="math inline">\(X\)</span> 的一个上确界，若 <span
+class="math inline">\(\forall C\)</span> 是 <span
+class="math inline">\(X\)</span> 的上界，<span class="math inline">\(C
+\ge a\)</span>，记 <span class="math inline">\(a = \sup X\)</span>
+上确界，下确界是 <span class="math inline">\(\inf X\)</span></li>
+</ol>
+<p>定理：确界存在定理：有上界或者下界的非空子集，必有唯一的上确界或者下确界。</p>
+<p>证明：非空集 <span class="math inline">\(X\)</span> 有上界，定义集合
+<span class="math inline">\(A_1 = \{ r \in \mathbb Q \vert \exists(A, B)
+\in X, \text{s.t.}r\in A\}\)</span> 则 <span class="math inline">\(x_1 =
+(A_1, B_1) \in R\)</span> 并且 <span class="math inline">\(\forall (A,
+B) \in X\)</span> 我们有 <span class="math inline">\(A\subset
+A_1\)</span> 故 <span class="math inline">\(x_1 = (A_1, B_1)\)</span>
+是上界，现在设 <span class="math inline">\(x_0 = (A_0, B_0)\)</span> 是
+<span class="math inline">\(X\)</span> 的任一上界，根据定义，可以知道
+<span class="math inline">\(A_1 \subset A_0, x_1 \le x_0\)</span> 因此
+<span class="math inline">\(x_1\)</span> 是 <span
+class="math inline">\(X\)</span> 的唯一上确界。</p>
+<h3 id="实数分割">实数分割</h3>
+<p>定义</p>
+<ol type="1">
+<li><span class="math inline">\(A, B\)</span> 为 <span
+class="math inline">\(R\)</span> 的子集</li>
+<li><span class="math inline">\(A,B\not = \emptyset, A \cap B =
+\emptyset, A\cup B = \mathbb R\)</span></li>
+<li><span class="math inline">\(\forall x\in A, y \in B, x &lt;
+y\)</span></li>
+</ol>
+<p>实数连续性定理： <span class="math inline">\(\mathbb R\)</span>
+的一个分割，对应唯一一个实数 <span class="math inline">\(\alpha\)</span>
+并且 <span class="math inline">\(\alpha\)</span> 是 <span
+class="math inline">\(A\)</span> 的最大值或者是 <span
+class="math inline">\(B\)</span> 的最小值。</p>
+<p>由确界定理可知，<span class="math inline">\(A\)</span> 有上确界 <span
+class="math inline">\(\alpha\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha \in A\)</span></li>
+<li><span class="math inline">\(\alpha \in B\)</span> 且 <span
+class="math inline">\(\alpha\)</span> 是 <span
+class="math inline">\(B\)</span> 中最小元</li>
+</ol>
+<h4 id="连续性推出确界存在性">连续性推出确界存在性</h4>
+<p>证明： <span class="math inline">\(x\subset \mathbb R, x \not =
+\emptyset\)</span> 有上界 <span class="math inline">\(c\)</span>，<span
+class="math inline">\(x\)</span> 有上确界。</p>
+<p>分为两种情况讨论</p>
+<ol type="1">
+<li><span class="math inline">\(c\in X\)</span></li>
+<li><span class="math inline">\(c\not \in X, D = \{\beta\vert \beta 是 X
+的上界\}\)</span>，<span class="math inline">\(C = \mathbb R / D,\exists
+\alpha = (C, D)\)</span> 要么是 <span class="math inline">\(C\)</span>
+的最大值，要么是 <span class="math inline">\(D\)</span>
+的最小值，在分成两种情况讨论。
+<ol type="1">
+<li><span class="math inline">\(\alpha\)</span> 是 <span
+class="math inline">\(C\)</span> 的最大元，<span class="math inline">\(X
+\subset C\)</span>，这个和 <span class="math inline">\(\alpha\not \in
+D\)</span> 矛盾。</li>
+<li><span class="math inline">\(\alpha\)</span> 是 <span
+class="math inline">\(D\)</span> 的最小元，则有 <span
+class="math inline">\(\alpha\)</span> 为上确界</li>
+</ol></li>
+</ol>
+<h4 id="例一">例一</h4>
+<p>证明： <span class="math inline">\(x= (0, 1), \sup X = 1\)</span>
+。</p>
+<p><span class="math inline">\(\forall x \in X, x &lt; \frac{1 + x}{2}
+&lt; 1\)</span> 于是 <span class="math inline">\(1\)</span> 是上确界
+<span class="math inline">\(\Box\)</span></p>
+<h4 id="例二">例二</h4>
+<p>证明：<span class="math inline">\(\sqrt 2\)</span> 的存在性</p>
+<p><span class="math inline">\(X = \{x \vert x ^ 2 &lt; 2\}\)</span>
+，证明 <span class="math inline">\(\left(\sup X\right) ^ 2 = 1\)</span>
+即可，记其为 <span class="math inline">\(\gamma\)</span></p>
+<p>分成两个步骤证明：</p>
+<ol type="1">
+<li><span class="math inline">\(\gamma ^ 2 \ge 2\)</span> 利用反证法，若
+<span class="math inline">\(\gamma ^ 2 &lt; 2\)</span> ，构造 <span
+class="math inline">\(w \in (0, 1), \left(w + \gamma\right) ^ 2 &lt;
+2\)</span> 即可。<span class="math inline">\((\gamma + w) ^ 2 &lt;
+\gamma ^ 2 + 3\gamma w\)</span> ，令 <span class="math inline">\(w =
+\frac{2 - \gamma ^ 2}{3 \gamma}\)</span></li>
+<li><span class="math inline">\(\gamma ^ 2 \le
+2\)</span>，反证法，考虑构造 <span class="math inline">\(u \in (0,
+\gamma), (\gamma - u) ^ 2 &gt; 2\)</span> 即可，令 <span
+class="math inline">\(u = \frac{r ^2 - 2}{2r}\)</span> 即可，<span
+class="math inline">\(\Box\)</span></li>
+</ol>
+<p>推广：<span class="math inline">\(\exists \gamma\in \mathbb R, \gamma
+^ n = 2\)</span></p>
+<p>有限或者无限小数表示实数 <span
+class="math inline">\(\alpha\)</span>，令 <span
+class="math inline">\(\alpha = (A, B)\)</span>， 找到 <span
+class="math inline">\(a_0, a_1, \ldots , a_n\)</span> 使得 <span
+class="math inline">\(a_0.a_1\ldots a_n\in A, a_0.a_1\ldots a_n
++\frac{1}{10 ^ n}\in B\)</span> 即可。一直这么找下去。</p>
+<h2 id="数列及其收敛性">数列及其收敛性</h2>
+<p><span class="math inline">\(\mathbb N \rightarrow \mathbb R, n\mapsto
+a_n\)</span></p>
+<p>例：<span class="math inline">\(\{1, \frac{1}{2},\frac{1}{3},\ldots,
+\frac{1}{n}\}\)</span></p>
+<h3 id="定义">定义</h3>
+<p>设 <span class="math inline">\(\{a_n\}\)</span> 为实数列，称 <span
+class="math inline">\(a\in \mathbb R\)</span> 是 <span
+class="math inline">\(\{a_n\}\)</span> 的极限，<span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N &gt;
+0\)</span>，使得 <span class="math inline">\(n &gt; N\)</span> 时，<span
+class="math inline">\(\vert a_n - a\vert &lt;
+\varepsilon\)</span>，并且称 <span
+class="math inline">\(\{a_n\}\)</span> 是收敛数列， <span
+class="math inline">\(a\)</span> 为其极限，记为 <span
+class="math inline">\(\lim \limits_{n\to \infty} a_n = a \Leftrightarrow
+a_n\rightarrow a\)</span></p>
+<h4 id="例一-1">例一</h4>
+<p><span class="math inline">\((1)\lim\limits _{n\rightarrow \infty}
+\frac{1}{n} = 0, (2),\lim \limits _{n \rightarrow\infty} \frac{n ^ 2}{2
+n ^ 2+ 1} = \frac{1}{2} (3)\lim \limits _{n \rightarrow\infty}
+\frac{1}{q ^ n} = 0, (\vert q \vert &gt; 1)\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N =
+\left[\frac{1}{\varepsilon}\right]\)</span>, 在 <span
+class="math inline">\(n &gt; N\)</span> 时，<span
+class="math inline">\(\vert \frac{1}{n} - 0\vert &lt;
+\varepsilon\)</span>，<span class="math inline">\(\Box\)</span></li>
+<li><span class="math inline">\(\vert \frac{n ^ 2}{2n ^ 2 + 1} -
+\frac{1}{2}\vert = \frac{1}{4n ^ 2+2}&lt;\frac{1}{n}, N =
+\left[\frac{1}{\varepsilon}\right]\)</span>，当 <span
+class="math inline">\(n &gt; N\)</span> 时，<span
+class="math inline">\(\vert \frac{n ^ 2}{2 n ^ 2 + 1} - \frac{1}{2}\vert
+&lt; \frac{1}{n} &lt; \varepsilon\)</span>，<span
+class="math inline">\(\Box\)</span></li>
+<li>不妨设 <span class="math inline">\(q &gt; 1, q = 1 + \alpha, \forall
+\varepsilon &gt; 0\)</span>，想要找到一个 <span
+class="math inline">\(N\)</span> 使得 <span
+class="math inline">\(\frac{1}{(1 + \alpha) ^ n}&lt;\frac{1}{n \alpha}
+&lt; \varepsilon\)</span>，于是 <span class="math inline">\(N =
+\left[\frac{1}{\varepsilon\alpha}\right]\)</span>，在 <span
+class="math inline">\(n &gt; N\)</span> 时，有 <span
+class="math inline">\(\frac{1}{q ^ n} = \frac{1}{(1 + \alpha) ^ n}&lt;
+\frac{1}{n\alpha}&lt;\varepsilon\)</span>，<span
+class="math inline">\(\Box\)</span></li>
+</ol>
+<h4 id="例二-1">例二</h4>
+<p><span class="math inline">\(\lim\limits _{n\rightarrow \infty}
+\sqrt[n] {n} = 1\)</span></p>
+<p>证明：<span class="math inline">\(\forall \varepsilon &gt;
+0\)</span>，想找到一个 <span class="math inline">\(N\)</span> 使得 <span
+class="math inline">\({n} &lt; \left(1 + \varepsilon \right) ^
+n\)</span>，则 <span class="math inline">\(\frac{n(n -
+1)}{2}\varepsilon^2 &gt; n\)</span> 故而，<span
+class="math inline">\(\varepsilon ^ 2 &gt; \frac{2}{n - 1}\)</span> 则
+<span class="math inline">\(N = \left[\frac{2}{\varepsilon ^ 2} +
+1\right]\)</span> 在 <span class="math inline">\(n &gt; N\)</span>
+时，<span class="math inline">\(\sqrt [n] {n}&lt;1 +
+\varepsilon\)</span>，<span class="math inline">\(\Box\)</span></p>
+<h4 id="例三">例三</h4>
+<p><span class="math inline">\(\{(-1) ^ n\}\)</span>
+发散，这个是简单的，假设存在极限 <span class="math inline">\(a\ge
+0\)</span>，则 <span class="math inline">\(|a_{2n +1} - a|=1 + a &gt;
+\varepsilon\)</span></p>
+<h3 id="收敛数列的性质">收敛数列的性质</h3>
+<p>收敛的有界性和唯一性</p>
+<p>定义：<span class="math inline">\(\{a_n\},\exists M &gt;
+0,\text{s.t.} \vert a_n \vert &lt; M, \forall n \in \mathbb
+N\)</span>，则称 <span class="math inline">\(\{a_n\}\)</span>
+是有界数列。</p>
+<p>定理，收敛的数列有界，收敛数列的极限唯一。</p>
+<p>证明：</p>
+<p><span class="math inline">\(\{a_n\}\)</span> 收敛，<span
+class="math inline">\(\varepsilon = 1,\exists N, \text{s.t.} n &gt;
+N,\vert a _n \vert &lt; |a| + 1\)</span>，此时 <span
+class="math inline">\(M = \max\{a_1, \ldots, a_N,\vert a\vert +
+1\}\)</span></p>
+<p>若 <span class="math inline">\(\{a_n\}\)</span> 收敛于 <span
+class="math inline">\(a, b\)</span>，不妨设 <span
+class="math inline">\(a &lt; b\)</span>，取 <span
+class="math inline">\(\varepsilon = \frac{b - a}{2}\)</span>，<span
+class="math inline">\(\vert a - b\vert \le \vert a - a_n\vert + \vert
+a_n - b\vert &lt; \varepsilon + \varepsilon &lt; b -
+a\)</span>，矛盾，<span class="math inline">\(\Box\)</span></p>
+<h3 id="子列">子列</h3>
+<p><span class="math inline">\(\{b_n\}\)</span> 是 <span
+class="math inline">\(\{a_n\}\)</span> 的子列，若严格单调递增数列 <span
+class="math inline">\(\{k_n\}\)</span> 使得 <span
+class="math inline">\(b_n = a_{k_n}\)</span></p>
+<p>定理：收敛数列的子列一定收敛。</p>
+<p>数列的四则运算，设 <span
+class="math inline">\(\{a_n\},\{b_n\}\)</span> 均收敛， 那么 <span
+class="math inline">\(\{\frac{a_n}{b_n}\} =
+\frac{a}{b}\)</span>，即数列四则运算之后的结果就极限四则运算的结果。</p>
+<p>这些证明都是平凡的。</p>
+<h4 id="例一-2">例一</h4>
+<p>证明 <span class="math inline">\(a_n\rightarrow a\)</span> 则 <span
+class="math inline">\(\lim \limits _{n\rightarrow \infty} \frac{a_1
++\ldots+a_n}{n} = a\)</span></p>
+<p>首先只要令 <span class="math inline">\(b_n = a_n - a\)</span>
+那么只要证明 <span class="math inline">\(\frac{b_1 + \ldots + b_n}{n} =
+0\)</span> 即可，<span class="math inline">\(\forall \varepsilon,\exists
+N_1,n&gt;N_1,\vert b_n \vert &lt; \varepsilon,\exists N _2 \text{s.t.}
+\frac{b_1 + \ldots b_{n_1}}{ N_2} &lt; \varepsilon\)</span>，在 <span
+class="math inline">\(n &gt; \max\{N_1, N_2\}\)</span> 时候 <span
+class="math inline">\(\vert\frac{b_1 + \ldots + b_n}{n} - 0\vert
+&lt;\vert \frac{b_1 + \ldots + b_{N_1}}{n}\vert + \vert \frac{b_{N_1 +
+1} + \ldots + b_n}{n}\vert &lt; 2\varepsilon\)</span> ，<span
+class="math inline">\(\Box\)</span></p>
+<h3 id="夹挤定理">夹挤定理</h3>
+<p>设 <span class="math inline">\(\{a_n\},\{b_n\},\{c_n\}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n\le
+b_n \le c_n\)</span></li>
+<li><span class="math inline">\(\lim\limits _{n \rightarrow \infty} =
+\alpha, \lim\limits_{n\rightarrow\infty}c_n = \alpha\)</span>，则 <span
+class="math inline">\(\lim \limits_{n \rightarrow \infty} b_n =
+\alpha\)</span></li>
+</ol>
+<p>证明：<span class="math inline">\(\forall \varepsilon &gt; 0,\exists
+n &gt; N, a - \varepsilon &lt; a_n,b_n &lt; b + \varepsilon ,a -
+\varepsilon &lt; c_n &lt; a + \varepsilon,\Box\)</span></p>
+<h4 id="例一-3">例一</h4>
+<p>设 <span class="math inline">\(a &gt; 0\)</span>，<span
+class="math inline">\(\exists n \in \mathbb{R},\text{s.t.} n\ge
+a,\lim\limits _{n\rightarrow\infty} a ^ {\frac{1}{n}} = 1\)</span> 提示
+<span class="math inline">\(\lim \limits_{n\rightarrow\infty} n ^
+{\frac{1}{n}} = 1\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(a\ge 1, \exists n\in \mathbb{
+N},\text{s.t.}n\ge a, 1\le a ^ {\frac{1}{n}} \le n ^
+{\frac{1}{n}}\)</span>，有夹挤定理，此时收敛于 <span
+class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(a &lt; 1, \frac{1}{a} &gt; 1,\exists
+n,\text{s.t.}n &gt;\frac{1}{a},\lim\limits_{n\rightarrow\infty}a ^
+{\frac{1}{n}} = \frac{1}{\lim\limits_{n\rightarrow\infty}\frac{1}{a} ^
+{\frac{1}{n}}}= 1\)</span></li>
+</ol>
+<h4 id="例二-2">例二</h4>
+<p><span class="math inline">\(a _n &gt; 0,\forall n \in \mathbb
+{R},\lim\limits_{n\rightarrow \infty} a_n = a\)</span> 则 <span
+class="math inline">\(\lim\limits_{n \rightarrow\infty}
+\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} =
+a\)</span></p>
+<p>证明1：</p>
+<ol type="1">
+<li><span class="math inline">\(a = 0\)</span> 时，<span
+class="math inline">\(0 \le\lim \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}}\le \frac{\sum\limits_{k = 1} ^ n
+a_k}{n}\)</span>，由夹挤定理 <span class="math inline">\(\lim\limits_{n
+\rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k \right) ^
+{\frac{1}{n}} = 0\)</span></li>
+<li><span class="math inline">\(\frac{n}{\sum\limits_{i =1} ^ n
+\frac{1}{a _i}}\le\lim\limits_{n \rightarrow\infty}
+\left(\prod\limits_{k = 1} ^ n a_k \right) ^ {\frac{1}{n}} \le
+\frac{\sum\limits_{k = 1} ^ n a_k}{n}\)</span> 由夹挤定理可得</li>
+</ol>
+<p>证明2：</p>
+<p><span class="math inline">\(a &gt; 0\)</span>，由极限定义 <span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N \in
+\mathbb{N}, \text{s.t.} n &gt; N, 0 \le a - \frac{\varepsilon}{2} &lt;
+a_n &lt; a + \frac{\varepsilon}{2}\)</span> <span
+class="math display">\[
+\begin{aligned}
+\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}}&amp;\le&amp; \left(\prod\limits_{k = 1} ^ N
+a_k\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right)^{\frac{n - N}{n}}
+\\
+&amp;=&amp;\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right)
+\end{aligned}
+\]</span></p>
+<p>由于 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} a
+^ {\frac{1}{n}} = 1\)</span></p>
+<p><span class="math inline">\(\lim \limits
+_{n\rightarrow\infty}\left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right) = a + \frac{\varepsilon}{2}\)</span></p>
+<p><span class="math inline">\(\exists N_1 \in \mathbb{N},\text{s.t.} n
+&gt; N_1, \left(\frac{\prod\limits_{k = 1} ^ N a_k}{\left(a +
+\frac{\varepsilon}{2}\right) ^ N}\right) ^ {\frac{1}{n}}\left(a +
+\frac{\varepsilon}{2}\right) &lt; a + \frac{\varepsilon}{2} +
+\frac{\varepsilon}{2}\)</span></p>
+<p><span class="math inline">\(\exists N_2 = \max(N, N_1),n &gt;
+N_2,\lim\limits_{n \rightarrow\infty} \left(\prod\limits_{k = 1} ^ n a_k
+\right) ^ {\frac{1}{n}} &lt; a + \varepsilon\)</span></p>
+<p>减号部分是同理的。</p>
+<p><span class="math inline">\(a = 0\)</span>，上面不需要证明 <span
+class="math inline">\(a - \frac{\varepsilon}{2}\)</span> 部分即可</p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例三-1">例三</h4>
+<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
+k!}{n!}\)</span> 则 <span class="math inline">\(\lim \limits
+_{n\rightarrow \infty} a_n = 1\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(1\le a_n \le 1+\frac{(n-2) (n-2)! +
+(n-1)!}{n!}&lt;1 + \frac{2}{n}\)</span></p>
+<p>由夹挤定理可证明极限为 <span class="math inline">\(1\)</span></p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例四">例四</h4>
+<p>求解 <span class="math inline">\(\lim \limits_{n\rightarrow \infty}
+\left( \sqrt[2]{n ^ 2 + n} - n\right) ^ {\frac{1}{n}}\)</span></p>
+<p>因为 <span class="math inline">\(\frac{1}{3}&lt; \left( \sqrt[2]{n ^
+2 + n} - n\right) ^ {\frac{1}{n}} &lt; \frac{1}{2}\)</span></p>
+<h3 id="保序性">保序性</h3>
+<ul>
+<li><span class="math inline">\(\{a_n\}\rightarrow a, b &gt; a, \exists
+N, n &gt; N, \text{s.t.} a_n &lt; b\)</span></li>
+<li><span class="math inline">\(\{a_n\}\rightarrow a,\{b_n\}\rightarrow
+b, b &gt; a, \exists N, n &gt; N, \text{s.t.} a_n &lt; b_n\)</span></li>
+<li><span class="math inline">\({a_n} \rightarrow a, b_n \rightarrow b,
+\exists N, \text{s.t.} n &gt; N, a_n &lt; b_n\)</span> 则 <span
+class="math inline">\(a\le b\)</span></li>
+</ul>
+<h3 id="数列极限的推广">数列极限的推广</h3>
+<p>设 <span class="math inline">\(\{a_n\}，\forall A &gt; 0, \exists N,
+\text{s.t.} n &gt; N, a_n &gt; A\)</span> 则 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
++\infty\)</span></p>
+<p>若 <span
+class="math inline">\(\vert\lim\limits_{n\rightarrow\infty}a_n\vert =
++\infty\)</span> 记为 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
+\infty\)</span></p>
+<p>若 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}a_n =
+\infty\)</span>, <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}b_n = b(b &gt;
+0)\)</span>, 则 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty}a_nb_n =
+\infty\)</span></p>
+<h3 id="单调数列">单调数列</h3>
+<p>定义： <span class="math inline">\(\{a_n\}\)</span>，满足 <span
+class="math inline">\(a_n \le a_{n + 1}, \forall n \in \mathbb
+N\)</span>，则称其为单调递增数列，没有等于号就是严格单调递增数列）</p>
+<p>定理：(weierstrass 单调收敛定理)：有界单调数列一定收敛</p>
+<p>证明：<span class="math inline">\(X = \{a_1, a_2,
+\ldots,a_n\}\)</span> 由确界存在定理 <span
+class="math inline">\(X\)</span> 有上确界 <span
+class="math inline">\(\alpha\)</span>，<span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N,
+\text{s.t.s},\alpha - \varepsilon &lt; a_N\)</span>, 则 <span
+class="math inline">\(n &gt; N\)</span> 时，<span
+class="math inline">\(\alpha - \varepsilon &lt; a_N \le a_n \le \alpha
+\le \alpha + \varepsilon\)</span></p>
+<p><span class="math inline">\(\Box\)</span></p>
+<p>该定理和确界定理等价。</p>
+<h4 id="例一-4">例一</h4>
+<p><span class="math inline">\(a_n = \frac{\sum\limits_{k = 1} ^ n
+k!}{n!},\lim\limits_{n\rightarrow\infty} a_n = 1\)</span></p>
+<h4 id="例二-3">例二</h4>
+<p><span class="math inline">\(a_n = \sum\limits_{k = 1} ^ n
+\frac{1}{k}\)</span>，考察 <span class="math inline">\(\{a_n\}\)</span>
+的收敛性</p>
+<p>证明：考虑这么如下情况 <span class="math inline">\(\sum\limits_{k = 2
+^ {n - 1} + 1} ^ {2 ^ n}\frac{1}{k} &gt; 2 ^ {n - 1} \times \frac{1}{2 ^
+n} = \frac{1}{2}\)</span>，而 <span class="math inline">\(a_{2 ^ n} =
+\sum_{i = 1} ^ n\sum_{k = 2 ^ {i - 1} + 1 }^{2 ^ i} \frac{1}{k}
+&gt;\frac{n}{2}\)</span> 于是，<span
+class="math inline">\(\{a_n\}\)</span> 不收敛</p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例三-2">例三</h4>
+<p>考察数列 <span class="math inline">\(\{a_n\}\)</span> 满足 <span
+class="math inline">\(a_1 = b, a_{n + 1} = (a _n - a) ^ 2 +
+a_n\)</span></p>
+<p>试问满足什么条件能让 <span class="math inline">\(a\)</span> 收敛</p>
+<p><span class="math inline">\(a_{n + 1} - a_n = (a_n - a) ^ 2 \ge
+0\)</span>，所以 <span class="math inline">\(a_n\)</span>
+单调增，设极限存在为 <span class="math inline">\(\alpha\)</span></p>
+<p>对于 <span class="math inline">\(a_{n + 1} = (a_n - a) ^ 2 +
+a_n\)</span> 两边取极限，<span class="math inline">\(\alpha = (\alpha -
+a) ^ 2 + \alpha\Rightarrow \alpha = a\)</span> 1. <span
+class="math inline">\(a\ge b, a_2 = (a_1 - a) ^ 2 + b \le a\Rightarrow
+(a - b) ^ 2 \le a - b\Rightarrow a - 1 \le b\)</span> 假设 <span
+class="math inline">\(a_n \le a \leftrightarrow a - 1 \le a_{n -
+1}\)</span></p>
+<h4 id="定理">定理</h4>
+<p>设闭区间 <span class="math inline">\([a_n, b_n], n = 1, 2
+,\ldots\)</span> 满足：</p>
+<ol type="1">
+<li><span class="math inline">\([a_1, b_1]\supset [a_2,
+b_2]\supset\ldots\supset[a_n, b_n]\supset\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n -
+a_n) = 0\)</span></li>
+</ol>
+<p>则 <span class="math inline">\(\exists ! \gamma \in \mathbb R,
+\text{s.t.},\gamma \in \bigcap\limits_{n = 1} ^ {\infty} [a_n,
+b_n]\)</span></p>
+<p>证明:</p>
+<p><span class="math inline">\(a_1\le a_2\le \ldots \le a_n \le \ldots
+&lt; b_1\)</span></p>
+<p><span class="math inline">\(\{a_n\}\)</span> 单调增有上界，同理 <span
+class="math inline">\({b_n}\)</span> 单调减有下界，故都收敛，设 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty} a_n =
+\gamma\)</span>。</p>
+<p>要证明 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+b_n = \gamma\)</span></p>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0\)</span>，由
+<span class="math inline">\(\lim\limits_{n\rightarrow \infty}a_n =
+\gamma\)</span>，<span class="math inline">\(\exists N_1, \text{s.t.} n
+&gt; N_1, \vert a_n - \gamma\vert &lt; \varepsilon\)</span></p>
+<p>由于 <span class="math inline">\(\lim\limits_{n\rightarrow\infty}(b_n
+- a_n) = 0\)</span> 则 <span class="math inline">\(\exists N_2,
+\text{s.t.} n &gt; N_2, \vert a_n - b_n\vert &lt;
+\varepsilon\)</span></p>
+<p>则 <span class="math inline">\(N = \max(N_1, N_2),\text{s.t.} n &gt;
+N, \vert a_n - \gamma\vert &lt; 2\varepsilon\)</span></p>
+<p>注：<span class="math inline">\((0, \frac{1}{n}), n\ge 1,
+\bigcap\limits_{n = 1} ^ \infty \left(0, \frac{1}{n}\right) =
+\emptyset\)</span></p>
+<h3 id="自然对数底数-e">自然对数底数 e</h3>
+<h4 id="定义-1">定义</h4>
+<p><span class="math inline">\(e_n = \left(1 + \frac{1}{n}\right) ^
+n\\S_n = 1 + 1 + \frac{1}{2!} + \frac{1}{3}!+\ldots\)</span></p>
+<p><span class="math inline">\(e_n = 1 \cdot (1 + \frac{1}{n}) ^ n \le
+\left(\frac{n + 2}{n + 1}\right)^{n +1} = e_{n + 1}\)</span></p>
+<p>故 <span class="math inline">\(\{e_n\}\)</span> 单调递增</p>
+<p><span class="math inline">\(\frac{1}{2} \frac{1}{2} e_n \le
+\left(\frac{\frac{1}{2}+\frac{1}{2}+n(\frac{1}{n}+1)}{n+2}\right) ^ {n +
+2}=1\)</span></p>
+<p>所以 <span class="math inline">\(e_n \le 4\)</span>，故 <span
+class="math inline">\(e_n\)</span> 有上界</p>
+<p><span class="math inline">\(\text{i.e.}
+\lim\limits_{n\rightarrow\infty} \left(1 + \frac{1}{n}\right)^n =
+e\)</span></p>
+<p><span class="math inline">\(S_n &lt; S_{n + 1} &lt; 1 + 1 + (1 -
+\frac{1}{2})+\ldots+(\frac{1}{n - 1} - \frac{1}{n}) =
+3-\frac{1}{n}&lt;3\)</span></p>
+<p><span class="math inline">\(\{S_n\}\)</span> 收敛，下面证明 <span
+class="math inline">\(S = e\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+e_n &amp;= \left(1 + \frac{1}{n}\right) ^ {n}
+\\
+&amp;=\sum\limits_{k = 0} ^ n\binom{n}{k} \frac{1}{n ^ k}\\
+&amp;= \sum\limits_{k = 0} ^ n\frac{1}{k!} \frac{n!}{(n - k)!n ^
+{k}}  &lt; S_n
+\end{aligned}
+\]</span></p>
+<p>由极限保序性 <span class="math inline">\(e \le S\)</span>，下面证明
+<span class="math inline">\(S \le e\)</span></p>
+<p>由上式 <span class="math inline">\(n &gt; l\)</span> 时候，对于固定的
+<span class="math inline">\(l\)</span></p>
+<p><span class="math display">\[
+e_n &gt; \sum\limits_{k = 0} ^ l\frac{1}{k!} \frac{n!}{(n - k)!n ^ {k}}
+\]</span></p>
+<p>令 <span class="math inline">\(n\rightarrow + \infty,e\ge
+\sum\limits_{k = 0} ^ l\frac{1}{k!}\)</span>，于是 <span
+class="math inline">\(\text{i.e.} e \ge S_l\)</span> 令 <span
+class="math inline">\(l \rightarrow \infty\)</span> 故有 <span
+class="math inline">\(e\ge S\)</span></p>
+<p><span class="math inline">\(\Box\)</span></p>
+<p>定理：<span class="math inline">\(e\)</span> 不是有理数</p>
+<p><span class="math inline">\(\exists p, q \in \mathbb N,\text{s.t} e =
+\frac{p}{q}, q! e = (q - 1)!p \in \mathbb N\)</span></p>
+<p><span class="math inline">\(e_n= S_n +
+\frac{1}{nn!}\alpha_n\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+q!
+e &amp;= (e - S_q + S_q) q!\\
+&amp;=\frac{1}{q}\alpha_q + S_q q!
+\Rightarrow q!(e - S_q) = \frac{1}{q}\alpha_q
+\end{aligned}
+\]</span></p>
+<p>而与 <span class="math inline">\(\frac{1}{q + 1} &lt;
+\frac{\alpha_n}{q} &lt; \frac{1}{q}\)</span> 矛盾。</p>
+<h4 id="例一-5">例一</h4>
+<p><span class="math inline">\(\lim\limits _{n\rightarrow\infty}
+\frac{n}{(n!) ^ \frac{1}{n}} = e\)</span></p>
+<p>解：设 <span class="math inline">\(a_n = \frac{n ^
+n}{n!}\)</span>，<span class="math inline">\(\frac{a_{n + 1}}{a_n} =
+(\frac{n + 1}{n}) ^ {\frac{1}{n}}\)</span></p>
+<p>所以 <span class="math inline">\(\lim \limits_{n\rightarrow \infty}
+\frac{a_{n + 1}}{a_n} = e\)</span>，则由夹挤定理的例二，有 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty} a_n ^
+{\frac{1}{n}} =e\)</span></p>
+<h4 id="例二-4">例二</h4>
+<p>求解 <span class="math display">\[
+\begin{aligned}
+&amp;=\lim\limits_{n\rightarrow \infty} \left(1 - \frac{1}{n}\right) ^ n
+\\
+&amp;=\lim\limits_{n\rightarrow \infty} \left(\frac{1}{\frac{n}{n -
+1}}\right) ^ n
+\\
+&amp;=\frac{1}{\left(1 + \frac{1}{n - 1}\right) ^ {n
+-1}\left(1  +\frac{1}{n - 1}\right)}
+\\
+&amp;=e ^ {-1}
+\end{aligned}
+\]</span></p>
+<h4 id="例三-3">例三</h4>
+<p>求解 <span class="math display">\[
+\begin{aligned}
+\left(1 + \frac{k}{n}\right) ^ n
+\le \left(1+\frac{k}{n + 1}\right) ^ {n + 1}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\left(1 + \frac{k}{n}\right) ^ n \le \left(1 + \frac{1}{n}\right) ^ {kn}
+&lt; e ^ k
+\end{aligned}
+\]</span></p>
+<p>有子列 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\left(1 + \frac{1}{n}\right) ^{nk} = e ^ k\)</span></p>
+<p>因为其本身有界收敛，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \left(1 +
+\frac{k}{n}\right) ^ n = e ^ k\)</span></p>
+<h3 id="cauthy-列与-cauthy-收敛定理">Cauthy 列与 Cauthy 收敛定理</h3>
+<p>Cauthy 列定义：设 <span class="math inline">\(\{a_n\}\)</span>
+是数列，<span class="math inline">\(\forall \varepsilon &gt; 0, \exists
+N\)</span>，当 <span class="math inline">\(n, m &gt; N\)</span>
+时，<span class="math inline">\(\vert a_m - a_n \vert &lt;
+\varepsilon\)</span></p>
+<p>定理： <span class="math inline">\(\{a_n\}\)</span> 是收敛 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\{a_n\}\)</span> 是Cauthy 列</p>
+<h4 id="例一-6">例一</h4>
+<p><span class="math inline">\(\{\frac{1}{n}\}\)</span> 是 Cauthy 列</p>
+<h4 id="例二-5">例二</h4>
+<p><span class="math inline">\(a_n = \sum\limits_{k = 1} ^ n
+\frac{1}{k}\)</span>，他不是 Cauthy 列</p>
+<h4 id="有限覆盖定理">有限覆盖定理</h4>
+<p>定义：<span class="math inline">\(X \subset \mathbb R,
+\{I_{\lambda}\}_{\lambda \in \Lambda}\)</span> 为开集簇</p>
+<p>若 <span class="math inline">\(X\)</span> 满足 <span
+class="math inline">\(X \subset \bigcup\limits_{\lambda\in
+\Lambda}I_{\lambda}\)</span> 称 <span
+class="math inline">\(\{I_{\lambda}\}_{\lambda \in \Lambda}\)</span> 为
+<span class="math inline">\(X\)</span> 的开覆盖</p>
+<p>若 <span class="math inline">\(\exists \lambda_1 , \ldots,
+\lambda_n,\text{s.t.} X \subset \bigcup\limits _{R = 1} ^n I_{\lambda
+_R}\)</span></p>
+<p>定理：任何闭区间的开覆盖都有有限子覆盖</p>
+<p>假设不存在区间 <span class="math inline">\(I_1 = [a, b]\)</span>
+不存在区间子覆盖。</p>
+<p>那么，对于 <span class="math inline">\(\left[a, \frac{a +
+b}{2}\right]\)</span> 或者是区间 <span
+class="math inline">\(\left[\frac{a + b}{2}, b\right]\)</span>
+肯定有一个区间不能被有限覆盖，设其为 <span
+class="math inline">\(I_2\)</span>，那么一定有一串区间</p>
+<p><span class="math display">\[
+I_1 \supset I_2\supset \ldots \supset I_n
+\]</span></p>
+<p>其中 <span class="math inline">\(\vert I_n \vert = \frac{1}{2 ^ n}(b
+- a)\)</span></p>
+<p>那么通过闭区间套定理，得到 <span class="math inline">\(\exists\gamma
+\in \bigcap\limits_{i = 1} ^ {\infty} I_n\)</span>，<span
+class="math inline">\(\gamma \in [a, b] \subset S,\exists I _{\lambda_0}
+= (\alpha, \beta),\text{s.t.} \gamma \in (\alpha, \beta)\)</span></p>
+<p>记 <span class="math inline">\(\delta = \min\{\gamma - \alpha, \beta
+- \gamma\}\)</span>，<span class="math inline">\(\exists m, \gamma \in
+I_m,\vert I_m \vert = \frac{1}{2 ^ m}(b - a) &lt;
+\frac{1}{2}\gamma\)</span>，故存在一个区间包含 <span
+class="math inline">\(I_m\)</span>，矛盾，故有限覆盖定理得证。</p>
+<h3 id="cauthy收敛定理">Cauthy收敛定理</h3>
+<p>数列 <span class="math inline">\(\{a_n\}\)</span> 收敛 <span
+class="math inline">\(\Leftrightarrow\)</span> 数列 <span
+class="math inline">\(\{a_n\}\)</span> 为 Cauthy 列</p>
+<p>紧致集的定义：任何开覆盖都有有限子覆盖的集合称为紧致集</p>
+<p>极限点的定义：称 <span class="math inline">\(\alpha \in \mathbb
+R\)</span> 是 <span class="math inline">\(X\subset \mathbb R\)</span>
+的一个极限点，如果 <span class="math inline">\(\forall \delta &gt;
+0\)</span>，在 <span class="math inline">\(B_\delta\left(\alpha\right) =
+(\alpha - \delta, \alpha + \delta)\)</span> 中有 <span
+class="math inline">\(X\)</span> 的无穷多项。在 <span
+class="math inline">\(B_\delta (\check{\alpha}) =
+B_\delta(\alpha)/\{\alpha\}\)</span> 为去心邻域。</p>
+<h3 id="bwbolzano-weierstrass定理">BW(Bolzano-Weierstrass)定理</h3>
+<p>定义：任何有界数列都有收敛子列</p>
+<p>设 <span class="math inline">\(\{a_n\}\)</span> 是有界数列，<span
+class="math inline">\(X = \{a_1, \ldots, a_n,\ldots\}\)</span>，由于
+<span class="math inline">\(\{a_n\}\)</span> 有界，则 <span
+class="math inline">\(\exists [a, b],\text{s.t.},X\subset
+[a,b]\)</span></p>
+<p>claim: <span class="math inline">\([a, b]\)</span> 存在 <span
+class="math inline">\(X\)</span> 的极限点</p>
+<p>反证法：<span class="math inline">\(\forall x \in [a, b], \exists
+\delta(x), \text{s.t.} B_{\delta(x)}\)</span> 只包含 <span
+class="math inline">\(X\)</span>，<span
+class="math inline">\(\bigcup_{x\in[a,b]} B_{\delta(x)}\)</span> 为
+<span class="math inline">\((a, b)\)</span>
+开覆盖，由有限覆盖定理可知，<span class="math inline">\(\exists [a,
+b]\)</span> 的有限子覆盖 <span
+class="math inline">\(B_{\delta(x_1)},B_{\delta(x_2)},\ldots,
+B_{\delta(x_n)}\)</span>，由于其含有有限多个 <span
+class="math inline">\(X\)</span> 中的点，但是 <span
+class="math inline">\(X\)</span> 包含无穷多个点，矛盾。</p>
+<p>设 <span class="math inline">\(x\in [a, b]\)</span> 为 <span
+class="math inline">\(X\)</span> 的极限点，<span
+class="math inline">\(\forall n, \exists a_{k_n}\in X,\text{s.t.},
+a_{k_n} \in B_{\frac{1}{n}}(\check{x})\)</span>，且 <span
+class="math inline">\(k_n\)</span> 单调递增，知道 <span
+class="math inline">\(a_{k_n}\)</span> 收敛</p>
+<h4 id="cauthy-收敛定理的证明">Cauthy 收敛定理的证明</h4>
+<p><span class="math inline">\(\Rightarrow\)</span> 若 <span
+class="math inline">\(\{a_n\}\)</span> 收敛，则 <span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N, \text{s.t.}
+n &gt; N, \vert a - a_n\vert&lt;\varepsilon\)</span>，则 <span
+class="math inline">\(n, m&gt;N, \vert a_n - a_m\vert &lt; 2
+\varepsilon\)</span> 证明完毕。</p>
+<p><span class="math inline">\(\Leftarrow\)</span>，设 Cauthy列 <span
+class="math inline">\(\{a_n\}\)</span>，<span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists N, \text{s.t.}
+\vert a_n - a_m\vert &lt; \frac{\varepsilon}{2}\)</span></p>
+<p>显然 Cauthy 列是有界数列，根据 <span
+class="math inline">\(B-W\)</span> 定理必然存在收敛子列，<span
+class="math inline">\(\vert a_{k_n} - a\vert &lt;
+\frac{\varepsilon}{2},k_n &gt; N,\vert a_n - a\vert &lt; \vert a_n -
+a_{k_n}\vert + \vert a_{k_n} - a\vert &lt; \varepsilon\)</span></p>
+<p>则收敛，<span class="math inline">\(\Box\)</span></p>
+<h3 id="无穷级数">无穷级数</h3>
+<p>设 <span class="math inline">\(\{a_n\}\)</span> 为数列，称 <span
+class="math inline">\(\sum\limits _{ n = 1} ^{\infty} a_n\)</span>
+为无穷级数，并且称 <span class="math inline">\(S_n = \sum\limits_{k = 1}
+^ na_k\)</span> 为无穷级数的部分和，如果 <span
+class="math inline">\(\{S_n\}\)</span> 收敛至 <span
+class="math inline">\(S\)</span>，则称无穷级数收敛，记作 <span
+class="math inline">\(S = \sum\limits_{n = 1} ^ \infty
+a_n\)</span>。</p>
+<p>若无穷级数收敛，<span class="math inline">\(\forall \varepsilon
+&gt;0, \exists N, \text{s.t.}n&gt; N, \vert \sum\limits_{k = n} ^ m a_k
+\vert&lt;\varepsilon,\forall m \ge n\)</span>，这是柯西收敛准则。</p>
+<p>若存在正项级数 <span class="math inline">\(\sum\limits_{n = 1} ^
+\infty M_n\)</span> 满足 <span class="math inline">\(\vert a_n \vert\le
+M_n\)</span>，若 <span class="math inline">\(M\)</span> 收敛，那么 <span
+class="math inline">\(a\)</span> 收敛</p>
+<h4 id="例一-7">例一</h4>
+<p><span class="math inline">\(\sum\limits_{n = 1} ^
+\infty\frac{1}{n}\)</span> 发散</p>
+<h4 id="例二-6">例二</h4>
+<p><span class="math inline">\(\sum\limits_{n = 1} ^ \infty \frac{1}{n
+^2}\)</span> 收敛</p>
+<p><span class="math inline">\(\frac{1}{n ^ 2}&lt;\frac{1}{n(n -
+1)}\)</span>，则原数列单调，并且有界，则收敛。</p>
+<h3 id="数列的上极限和下极限">数列的上极限和下极限</h3>
+<h4 id="例一-8">例一</h4>
+<p><span class="math inline">\(\{a_n\},a_n = (-1) ^ n + \frac{(-1) ^
+n}{n}\)</span></p>
+<p><span class="math inline">\(a_{2n}\rightarrow 1, a_{2n - 1}
+\rightarrow -1\)</span></p>
+<h4 id="例二-7">例二</h4>
+<p><span class="math inline">\(\{\sin \frac{n\pi}{4}\},n\in \mathbb
+N\)</span></p>
+<h4 id="例三-4">例三</h4>
+<p><span class="math inline">\(\{1, 2, 1, 3, 1, 4, 1,
+5,\ldots\}\)</span></p>
+<p><span class="math inline">\(a_{2n - 1} = 1, a_{2n} = n +
+1\)</span></p>
+<p>子列也有极限</p>
+<p>定义，给定 <span class="math inline">\(\{a_n\},\mathbb R_{\infty} =
+\mathbb R \cup \{\pm \infty\}\)</span></p>
+<p><span class="math inline">\(E = \{x \in \mathbb R_{\infty}\vert
+数列\{a_n\} 中存在子列 ,\text{s.t.}\lim\limits_{n\rightarrow \infty}
+a_{k_n} = x\}\)</span></p>
+<p><span class="math inline">\(E\)</span> 中元素是 <span
+class="math inline">\(\{a_n\}\)</span> 的部分极限</p>
+<p>称 <span class="math inline">\(a_{*} = \inf E, a^{*} = \sup
+E\)</span></p>
+<p>分别是 <span class="math inline">\(\{a_n\}\)</span>
+的上极限或者下极限</p>
+<p>记</p>
+<p><span class="math inline">\(a_* = \lim\limits_{n\rightarrow
+\infty}\inf a_n\)</span></p>
+<p><span class="math inline">\(a^* = \lim\limits_{n\rightarrow\infty}
+\sup a_n\)</span></p>
+<p>定理 ： <span class="math inline">\(a_* \in E, a^*\in E\)</span></p>
+<p>只需要证明 <span class="math inline">\(a_* \in E\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(a_* = -\infty\)</span> 此时 <span
+class="math inline">\(E\)</span> 没有下界，若存在 <span
+class="math inline">\(M\)</span> <span class="math inline">\(\text{s.t.}
+E \in [M, +\infty]\)</span>，从而 <span class="math inline">\(E \ge
+M\)</span> 此时于无下界矛盾，则 <span class="math inline">\(E\)</span>
+无下界，<span class="math inline">\(\forall A,\exists a_{kn},\text{s.t.}
+a_{k_n} &lt; -A\)</span>，则 <span class="math inline">\(\lim _{a_{k_n}}
+= -\infty\)</span></li>
+<li><span class="math inline">\(a_* \in \mathbb R,\forall n, \exists x_n
+\in E, x_n \in [a_*, a_* + \frac{1}{n}), \exists\{a_n\}\)</span> 的子列
+<span class="math inline">\(\text{s.t.}a_{k_n}, a_{k_{n}}\)</span>，从而
+<span class="math inline">\(\lim \limits_{n\rightarrow\infty}a_{k_n} =
+a_*\)</span></li>
+<li><span class="math inline">\(a_* = +\infty\)</span> 则 <span
+class="math inline">\(\lim \limits_{n\rightarrow\infty}a_n =
++\infty\)</span>，事实上，如果 <span class="math inline">\(\exists M
+&gt; 0, \exists\)</span> 子列 <span class="math inline">\(\{a_{k_n}\}
+\le M\)</span> 故 <span class="math inline">\({a_{k_n}}\)</span>
+存在子列 <span class="math inline">\(\{a_{k_{n_j}}\}\)</span> 收敛到
+<span class="math inline">\(\gamma \in (\infty, M]\)</span>，与 <span
+class="math inline">\(a_{*} = +\infty\)</span></li>
+</ol>
+<p><span class="math inline">\(\Box\)</span></p>
+<p>注： 若 <span class="math inline">\(a_* \in \mathbb R\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N,
+\text{s.t.} n &gt; N, a_* - \varepsilon \le a_n\)</span></li>
+<li><span class="math inline">\(\forall \varepsilon &gt; 0, \exists
+\{a_{k_n}\}, N, k_n &gt; N, \text{s.t.} a_{k_n}\le a_* +
+\varepsilon\)</span></li>
+</ol>
+<p>在 <span class="math inline">\(a^*\)</span> 是同理的</p>
+<p>记 <span class="math inline">\(\sup _n = \sup\{a_k\vert k \ge
+n\}\)</span> <span class="math inline">\(\inf\)</span> 同理</p>
+<p>定理 <span class="math inline">\(\lim \limits_{n\rightarrow
+\infty}{\inf a_n} = a_*\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(a_* = \infty\)</span>，由于存在子列
+<span class="math inline">\(\{a_{k_n}\}\)</span> 趋于 <span
+class="math inline">\(-\infty\)</span>，由于 <span
+class="math inline">\(\inf a_{n}\le \inf a_{k_n}\)</span>，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty} a_{k_n} =
+-\infty\)</span> 则 <span
+class="math inline">\(\lim\limits_{n\Rightarrow \infty} a_n =
+-\infty\)</span></li>
+<li><span class="math inline">\(a_* \in \mathbb R, \forall \varepsilon
+&gt; 0,\exists N , \text{s.t.} a_n \ge a_{*} - \varepsilon,\forall n,
+\exists \{a_{k_n}\}, k_n &gt; n, a_{k_n} \le a_{*} +
+\varepsilon\)</span>，<span class="math inline">\(\inf a_n\in (a _* -
+\varepsilon, a_* + \varepsilon)\)</span>，从而 <span
+class="math inline">\(\lim\limits_{n\rightarrow\infty} \inf a_n =
+a_*\)</span></li>
+<li><span class="math inline">\(a_* = +\infty\)</span> 则 <span
+class="math inline">\(\lim \limits_{n\rightarrow\infty}a_n =
++\infty\)</span>,<span class="math inline">\(\forall M &gt; 0, \exists
+N, \text{s.t.} n &gt; N, a_n &gt; M,\inf a_n \ge M\Rightarrow
+\lim\limits_{n\rightarrow \infty} \inf a_n = +\infty = a_*\)</span></li>
+</ol>
+<p>定理：</p>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}\inf
+a_n \le \lim\limits_{n\rightarrow \infty} \sup a_n\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n
+=a\Rightarrow\lim\limits_{n\rightarrow \infty}\inf a_n =
+\lim\limits_{n\rightarrow \infty} \sup a_n = a\)</span></li>
+<li><span class="math inline">\(\exists N, \text{s.t.} n &gt; N, a_n \le
+b_n, \lim\limits_{n\rightarrow \infty} \inf a_n \le
+\lim\limits_{n\rightarrow \infty} \inf b_n, \lim\limits_{n\rightarrow
+\infty} \sup a_n \le \lim\limits_{n\rightarrow \infty}\sup
+b_n\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf
+a_n + \lim\limits_{n\rightarrow \infty} \inf b_n \le
+\lim\limits_{n\rightarrow \infty}\inf(a_n + b_n) \le
+\lim\limits_{n\rightarrow \infty} \inf a_n + \lim\limits_{n\rightarrow
+\infty} \sup b_n\)</span></li>
+<li><span class="math inline">\(a_n, b_n \ge 0,
+\lim\limits_{n\rightarrow \infty} \inf a_n \cdot
+\lim\limits_{n\rightarrow \infty} \inf b_n \le \lim\limits_{n\rightarrow
+\infty} \inf(a_n b_n) \le \lim\limits_{n\rightarrow \infty} \inf a_n
+\cdot \lim\limits_{n\rightarrow \infty} \sup b_n\)</span></li>
+</ol>
+<p>命题：</p>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\inf(-a_n) = \lim\limits_{n\rightarrow \infty}\sup a_n\)</span></li>
+<li>若 <span class="math inline">\(a_n &gt; 0, n\in \mathbb N,
+\lim\limits_{n\rightarrow \infty}\inf\frac{1}{a_n} =
+\frac{1}{\lim\limits_{n\rightarrow \infty} \sup a_n}\)</span></li>
+<li>若 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n
+= a,\lim\limits_{n\rightarrow \infty}\inf(a_n + b_n) = a +
+\lim\limits_{n\rightarrow \infty}\inf b_n\)</span>，<span
+class="math inline">\(\sup\)</span> 同理，证明是简单的</li>
+</ol>
+<p>例子：</p>
+<h4 id="例一-9">例一</h4>
+<p><span class="math inline">\(\{x_n\},\{y_n\}\)</span> 满足</p>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} y_n =
+y\)</span></li>
+<li><span class="math inline">\(y_n = x_n + 2x _{n + 1}\)</span></li>
+</ol>
+<p>证明 <span class="math inline">\(x_n\)</span> 收敛，并且求 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} x_n\)</span></p>
+<p>等式两边同时取上极限，</p>
+<p><span class="math inline">\(y - \lim\limits_{n\rightarrow \infty}
+\inf x_n = 2\lim\limits_{n\rightarrow \infty}\sup x_n\)</span></p>
+<p><span class="math inline">\(y - \lim\limits_{n\rightarrow \infty}
+\sup x_n = 2\lim\limits_{n\rightarrow \infty}\inf x_n\)</span></p>
+<p>如果 <span class="math inline">\(x_n\)</span> 有界，<span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf x_n =
+\lim\limits_{n\rightarrow \infty}\sup x_n =
+\frac{1}{3}y\)</span>，下面证明 <span class="math inline">\(x_n\)</span>
+有界， <span class="math inline">\(\exists M &gt; 0, \text{s.t.}\vert
+x_1\vert\le M, \vert y_n\vert\le M\)</span>，<span
+class="math inline">\(\vert x_{n+ 1}\vert\le = \frac{1}{2}\vert y_n -
+x_{n}\vert \le M\)</span> 则数学归纳法，于是 <span
+class="math inline">\(\{x_n\}\)</span> 有界</p>
+<h4 id="例二-8">例二</h4>
+<p>设 <span class="math inline">\(\{a_n\}\)</span> 是基本列，则收敛</p>
+<p>证明：</p>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0, \exists N
+&gt; 0, \text{s.t.}n, m &gt; N, \vert a_n - a_m\vert &lt;
+\varepsilon\)</span> 取 <span class="math inline">\(m = N + 1\)</span>
+有 <span class="math inline">\(a_{N + 1} - \varepsilon &lt; a_n &lt;
+a_{N + 1} + \varepsilon\)</span>，<span class="math inline">\(a_{N + 1}
+- \varepsilon &lt; \lim\limits_{n\rightarrow \infty} \inf a_n \le
+\lim\limits_{n\rightarrow \infty}\sup a_n \le a_{N + 1} +
+\varepsilon\)</span></p>
+<p>从而 <span class="math inline">\(0\le \lim\limits_{n\rightarrow
+\infty} \sup a_n - \lim\limits_{n\rightarrow \infty}\inf a_n \le 2
+\varepsilon\)</span> 由于 <span
+class="math inline">\(\varepsilon\)</span> 的任意性，有 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_n =
+\lim\limits_{n\rightarrow \infty} \sup a_n\)</span></p>
+<p>则 <span class="math inline">\(\{a_n\}\)</span> 收敛</p>
+<p><span class="math inline">\(\Box\)</span></p>
+<h4 id="例三-5">例三</h4>
+<p>设 <span class="math inline">\(b_1 = 1\)</span>，<span
+class="math inline">\(\{b_n\}\)</span> 满足 <span
+class="math inline">\(b_{n + 1} = 1 + \frac{1}{b_n},n\ge 1\)</span></p>
+<p>证明：</p>
+<p>显然 <span class="math inline">\(b_n\in [1, 2]\)</span> 设 <span
+class="math inline">\(\alpha = \lim\limits_{n\rightarrow \infty} \inf
+b_n, \beta = \lim\limits_{n\rightarrow \infty} \sup b_n\)</span></p>
+<p>那么有 <span class="math inline">\(\alpha = 1 + \frac{1}{\beta},\beta
+= 1 + \frac{1}{\alpha}\)</span>，那么 <span class="math inline">\(\alpha
+= \beta = \frac{1 + \sqrt{5}}{2}\)</span></p>
+<h4 id="例四-1">例四</h4>
+<ol type="1">
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
+a\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\left(b_n ^ 2 - a_nb _n - 6 a_n ^ 2\right) = 0\)</span></li>
+</ol>
+<p>让你证明 <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \sup b_n \le 3 a_n\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\left(b_n - \frac{1}{2}a_n\right) ^ 2 = \frac{25}{4} a ^
+2\)</span>，从而 <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \sup \left(b_n - \frac{1}{2} a_n\right) \le \frac{5}{2}
+a_n\)</span></p>
+<p>然后证明完了</p>
+<h4 id="例五">例五</h4>
+<p><span class="math inline">\(\{a_n\},a_n &gt; 0\)</span></p>
+<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf
+\frac{a_{n + 1}}{a_n} \le \lim\limits_{n\rightarrow \infty} \inf a _n ^
+{\frac{1}{n}} \le \lim\limits_{n\rightarrow \infty} \sup a_n ^
+{\frac{1}{n}}\le \lim\limits_{n\rightarrow \infty} \sup \frac{a_{n +
+1}}{a_n}\)</span></p>
+<p>证明：</p>
+<p>设 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} \sup
+\frac{a_{n + 1}}{a_n} \in \mathbb R,\lim\limits_{n\rightarrow \infty}
+\inf \frac{a_{n + 1}}{a_n} = \alpha\)</span>，则 <span
+class="math inline">\(\forall \varepsilon 0, \exists N \in \mathbb
+N,\text{s.t.} n \ge N, \frac{a_{n + 1}}{a_n} &gt; \alpha -
+\varepsilon\)</span>，则 <span class="math inline">\(a_n \ge a_{n - 1}
+(\alpha - \varepsilon) \ge \ldots \ge a_{N} (\alpha - \varepsilon)^{n -
+N}\)</span></p>
+<p><span class="math inline">\(\text{i.e.} a_n ^ {\frac{1}{n}}
+&gt;\left[\frac{a_N}{(\alpha - \varepsilon) ^ N}\right] ^
+{\frac{1}{n}}(\alpha - \varepsilon)\)</span>，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
+{\frac{1}{n}}\ge (\alpha - \varepsilon) \lim\limits_{n\rightarrow
+\infty}\left(\frac{a_N}{\alpha - \varepsilon}\right) ^ {\frac{1}{n}} =
+\alpha - \varepsilon\)</span> 由 <span
+class="math inline">\(\varepsilon\)</span> 的任意性，可以知道 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
+{\frac{1}{n}} \ge \alpha\)</span>，上极限是类似的。 <span
+class="math inline">\(\Box\)</span></p>
+<h3 id="stolz-cesaro-定理">Stolz-Cesaro 定理</h3>
+<p>定理：<span class="math inline">\(\{a_n\},\{b_n\}\)</span> 满足 1 1.
+<span class="math inline">\({b_n}\)</span> 严格单调递增 2. <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} b_n = +
+\infty\)</span> 3. <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} = A\)</span></p>
+<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_n}{b_n}= A\)</span> 注：此处 <span
+class="math inline">\(A\)</span> 可以为 <span class="math inline">\(\pm
+\infty\)</span></p>
+<p>证明：</p>
+<p>分三种情况讨论 1：<span class="math inline">\(A\in \mathbb R,\forall
+\varepsilon &gt; 0 , \exists N, \text{s.t.} n &gt; N, A - \varepsilon
+&lt; \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} &lt; A +
+\varepsilon\)</span></p>
+<p>从而有取 <span class="math inline">\(k = N + 1, \ldots,
+n\)</span></p>
+<p><span class="math inline">\((b_k - b_{k - 1})(A - \varepsilon) &lt;
+a_{k} - a_{k - 1} &lt; (A + \varepsilon)(b_k - b_{k - 1})\)</span></p>
+<p>累加</p>
+<p>从而有 <span class="math inline">\(\left(1 - \frac{b_N}{b_n}\right)(A
+- \varepsilon) &lt; \frac{a_n}{b_n} - \frac{a_N}{b_n} &lt; \left(1 -
+\frac{b_N}{b_n}\right)(A + \varepsilon)\)</span> 当 <span
+class="math inline">\(n\rightarrow \infty\)</span>，有 <span
+class="math inline">\(A - \varepsilon\le \lim\limits_{n\rightarrow
+\infty} \inf\frac{a_n}{b_n}\le \lim\limits_{n\rightarrow \infty} \sup
+\frac{a_n}{b_n }\le A + \varepsilon\)</span> 由于 <span
+class="math inline">\(\varepsilon\)</span> 的任意性，<span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_n}{b_n}
+= A\)</span></p>
+<p>2：<span class="math inline">\(A = +\infty, \exists N, \text{s.t.} n
+&gt; N, a_n - a_{n - 1} &gt; b_n - b_{n - 1} &gt; 0\Rightarrow a_n &gt;
+a_{n - 1}\)</span> 且 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
++\infty\)</span></p>
+<p>且 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{b_n - b_{n - 1}}{a_n - a_{n - 1}} = 0\)</span> 从而有 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{b_n}{a_n}
+= 0\)</span>，所以 <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \frac{a_n}{b_n} = +\infty = A\)</span></p>
+<p>3：极限为负无穷的时候，由前两种可知。</p>
+<p>逆命题不一定成立！！！</p>
+<p>定理：</p>
+<p><span class="math inline">\(\{a_n\}, \{b_n\}\)</span> 满足</p>
+<ol type="1">
+<li><span class="math inline">\(\{b_n\}\)</span> 严格单调</li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
+0, \lim\limits_{n\rightarrow \infty}b_n = 0\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow
+\infty}\frac{a_n - a_n - 1}{b_n - b_n - 1} = A\)</span></li>
+</ol>
+<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_n}{b_n} = A\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(A = \pm\infty\)</span> 留做练习</p>
+<p><span class="math inline">\(A\in \mathbb R\)</span> 时， 当 <span
+class="math inline">\(n, m&gt;N\)</span> 时候，<span
+class="math inline">\(\vert\frac{a_n - a_m}{b_n -
+b_m}\vert&lt;\varepsilon\)</span>，令 <span
+class="math inline">\(m\rightarrow \infty\)</span> 则 <span
+class="math inline">\(\vert \frac{a_n}{b_n} - A\vert &lt;
+\varepsilon\)</span> <span class="math inline">\(\Box\)</span></p>
+<h4 id="例一-10">例一</h4>
+<p>给定数列 <span class="math inline">\(\{a_n\},
+\lim\limits_{n\rightarrow \infty} a_n = 0\)</span>，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_1 +
+\ldots+a_n}{n} = a\)</span></p>
+<p>一下证明完了。</p>
+<p>引理：</p>
+<p>设 <span class="math inline">\(s_1,\ldots,s_n, t_1,
+\ldots,t_n\)</span>，令 <span class="math inline">\(S_k = \sum_{i = 1} ^
+k s_i\)</span> 则有 <span class="math inline">\(\sum\limits_{k = 1} ^ n
+s_k t_k =S_n t_n - \sum\limits_{k = 1} ^ {n - 1}{S_k (t_{k + 1} -
+t_k)}\)</span></p>
+<p>证明是显然的。</p>
+<h4 id="例二-9">例二</h4>
+<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_1 + a_2 + \ldots + a_n}{n} = \alpha\)</span>,，证明 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
+n}\sum_{k = 1} ^ n \frac{a_k}{k} = \alpha\)</span></p>
+<p>令 <span class="math inline">\(S_k = a_1 + \ldots +a_k, S_0 =
+0\)</span></p>
+<p><span class="math inline">\(\begin{aligned}\lim\limits_{n\rightarrow
+\infty} \frac{1}{\ln n}\sum_{k = 1} ^ n \frac{a_k}{k}
+&amp;\overset{\text{Abel}}{=}\lim\limits_{n\rightarrow \infty}
+\frac{1}{\ln n}\left(\frac{S_n}{n}-\sum\limits_{k = 1} ^ {n - 1} S_k
+\left(\frac{1}{k + 1} - \frac{1}{k}\right)\right)\\&amp;\overset{}{=}
+\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\left(\frac{S_n}{n}
++\sum\limits_{k = 1} ^ {n - 1}\frac{S_k/k}{k + 1}\right)\\
+&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\sum\limits_{k =
+1} ^ {n - 1} \frac{S_k/k}{k + 1}\\&amp;\overset{S-C}{=}
+\lim\limits_{n\rightarrow \infty} \frac{\frac{S_{n - 1}}{n(n - 1)}}{\ln
+n - \ln(n - 1)} \\&amp;=\lim\limits_{n\rightarrow \infty} \frac{S_{n -
+1}}{n - 1}\frac{1}{n(\ln n - \ln (n -
+1))}\\&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
+\left(\frac{n}{n - 1}\right) ^ n} \\&amp;\overset{承认}{=}
+\frac{1}{\ln\lim\limits_{n\rightarrow \infty}\left(1 + \frac{1}{n -
+1}\right) ^ {n}}\\ &amp;= \frac{1}{\ln e}\\ &amp;=
+1\end{aligned}\)</span></p>
+<p>实数完备性六大定理：</p>
+<ol type="1">
+<li>确界存在原理</li>
+<li>Weierstrass 单调收敛定理</li>
+<li>Cauthy-Canter 闭区间套定理</li>
+<li>Heine-Borel 有限覆盖定理</li>
+<li>Bolzano-Weierstrass 列紧性定理</li>
+<li>Cauthy 收敛定理</li>
+</ol>
+<h2 id="函数的连续性">函数的连续性</h2>
+<h3 id="集合的映射">集合的映射</h3>
+<p>集合：<span class="math inline">\(X\)</span>，<span
+class="math inline">\(x\)</span> 属于 <span
+class="math inline">\(X\)</span>，记作 <span class="math inline">\(x\in
+X\)</span></p>
+<p>映射：存在集合 <span class="math inline">\(X,
+Y\)</span>，存在某种法则 <span class="math inline">\(f\)</span>，<span
+class="math inline">\(\text{s.t.}\forall X, \exists! y \in Y\)</span>
+与之对应，称 <span class="math inline">\(f\)</span> 为 <span
+class="math inline">\(X\)</span> 到 <span
+class="math inline">\(Y\)</span> 的映射，记 <span
+class="math inline">\(y = f(x)\)</span>，记 <span
+class="math inline">\(f:X\rightarrow Y, x\mapsto y\)</span>，称 <span
+class="math inline">\(X\)</span> 为映射的定义域，<span
+class="math inline">\(y\)</span> 为目标域，记 <span
+class="math inline">\(f(x) = \{ f(x)\vert \forall x \in X \}\subset
+Y\)</span>，称 <span class="math inline">\(f(x)\)</span>
+是映射的值域。</p>
+<h4 id="例一-11">例一</h4>
+<p><span class="math inline">\(f:\mathbb N \rightarrow \mathbb Z,
+n\mapsto f(n) = 2n - 5\)</span></p>
+<h4 id="例二-10">例二</h4>
+<p>记 <span class="math inline">\(\mathbb R ^ 2 = \mathbb R \times
+\mathbb R,(x, t) \mapsto f(x, t) = (x - t\gamma, t)\)</span>
+称为从一个惯性系 <span class="math inline">\((x, t)\)</span>
+到另外一个惯性系 <span class="math inline">\((x&#39;,t&#39;)\)</span>
+的伽利略变换</p>
+<p>定义：给定集合 <span class="math inline">\(X, Y\)</span>，映射 <span
+class="math inline">\(f:X\rightarrow Y\)</span></p>
+<ol type="1">
+<li>称 <span class="math inline">\(f\)</span> 为单射，若 <span
+class="math inline">\(\forall x_1, x_2 \in X, x_1 \not = x_2, f(x_1)\not
+= f(x_2)\)</span></li>
+<li>称 <span class="math inline">\(f\)</span> 为满射，若 <span
+class="math inline">\(\forall y \in Y, \exist x, \text{s.t.} f(x) =
+y\)</span></li>
+<li>若 <span class="math inline">\(f\)</span>
+既是单射又是满射，则是双射。</li>
+</ol>
+<p>若 <span class="math inline">\(f:X\rightarrow Y\)</span>
+是单射，可以定义 <span class="math inline">\(g:f(x)\subset Y \rightarrow
+X\)</span>，满足 <span class="math inline">\(f(g(y)) = y, \forall y \in
+f(x)\)</span>，称 <span class="math inline">\(g\)</span> 为 <span
+class="math inline">\(f\)</span> 逆映射，记为 <span
+class="math inline">\(f^{-1}\)</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
