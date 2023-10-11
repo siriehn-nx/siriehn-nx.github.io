@@ -288,21 +288,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
-    <title>数据科学导论笔记</title>
-    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
-<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
-<p>课程种类：新生研讨课</p>
-<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
-<p>三元空间</p>
-<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
-<p>退课了。</p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学分析笔记</title>
     <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="数学分析笔记">数学分析笔记</h1>
@@ -1248,6 +1233,195 @@ a_n\)</span></p>
 {\frac{1}{n}} \le \lim\limits_{n\rightarrow \infty} \sup a_n ^
 {\frac{1}{n}}\le \lim\limits_{n\rightarrow \infty} \sup \frac{a_{n +
 1}}{a_n}\)</span></p>
+<p>证明：</p>
+<p>设 <span class="math inline">\(\lim\limits_{n\rightarrow \infty} \sup
+\frac{a_{n + 1}}{a_n} \in \mathbb R,\lim\limits_{n\rightarrow \infty}
+\inf \frac{a_{n + 1}}{a_n} = \alpha\)</span>，则 <span
+class="math inline">\(\forall \varepsilon 0, \exists N \in \mathbb
+N,\text{s.t.} n \ge N, \frac{a_{n + 1}}{a_n} &gt; \alpha -
+\varepsilon\)</span>，则 <span class="math inline">\(a_n \ge a_{n - 1}
+(\alpha - \varepsilon) \ge \ldots \ge a_{N} (\alpha - \varepsilon)^{n -
+N}\)</span></p>
+<p><span class="math inline">\(\text{i.e.} a_n ^ {\frac{1}{n}}
+&gt;\left[\frac{a_N}{(\alpha - \varepsilon) ^ N}\right] ^
+{\frac{1}{n}}(\alpha - \varepsilon)\)</span>，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
+{\frac{1}{n}}\ge (\alpha - \varepsilon) \lim\limits_{n\rightarrow
+\infty}\left(\frac{a_N}{\alpha - \varepsilon}\right) ^ {\frac{1}{n}} =
+\alpha - \varepsilon\)</span> 由 <span
+class="math inline">\(\varepsilon\)</span> 的任意性，可以知道 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \inf a_{n} ^
+{\frac{1}{n}} \ge \alpha\)</span>，上极限是类似的。 <span
+class="math inline">\(\Box\)</span></p>
+<h3 id="stolz-cesaro-定理">Stolz-Cesaro 定理</h3>
+<p>定理：<span class="math inline">\(\{a_n\},\{b_n\}\)</span> 满足 1 1.
+<span class="math inline">\({b_n}\)</span> 严格单调递增 2. <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} b_n = +
+\infty\)</span> 3. <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} = A\)</span></p>
+<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_n}{b_n}= A\)</span> 注：此处 <span
+class="math inline">\(A\)</span> 可以为 <span class="math inline">\(\pm
+\infty\)</span></p>
+<p>证明：</p>
+<p>分三种情况讨论 1：<span class="math inline">\(A\in \mathbb R,\forall
+\varepsilon &gt; 0 , \exists N, \text{s.t.} n &gt; N, A - \varepsilon
+&lt; \frac{a_n - a_{n - 1}}{b_n - b_{n - 1}} &lt; A +
+\varepsilon\)</span></p>
+<p>从而有取 <span class="math inline">\(k = N + 1, \ldots,
+n\)</span></p>
+<p><span class="math inline">\((b_k - b_{k - 1})(A - \varepsilon) &lt;
+a_{k} - a_{k - 1} &lt; (A + \varepsilon)(b_k - b_{k - 1})\)</span></p>
+<p>累加</p>
+<p>从而有 <span class="math inline">\(\left(1 - \frac{b_N}{b_n}\right)(A
+- \varepsilon) &lt; \frac{a_n}{b_n} - \frac{a_N}{b_n} &lt; \left(1 -
+\frac{b_N}{b_n}\right)(A + \varepsilon)\)</span> 当 <span
+class="math inline">\(n\rightarrow \infty\)</span>，有 <span
+class="math inline">\(A - \varepsilon\le \lim\limits_{n\rightarrow
+\infty} \inf\frac{a_n}{b_n}\le \lim\limits_{n\rightarrow \infty} \sup
+\frac{a_n}{b_n }\le A + \varepsilon\)</span> 由于 <span
+class="math inline">\(\varepsilon\)</span> 的任意性，<span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_n}{b_n}
+= A\)</span></p>
+<p>2：<span class="math inline">\(A = +\infty, \exists N, \text{s.t.} n
+&gt; N, a_n - a_{n - 1} &gt; b_n - b_{n - 1} &gt; 0\Rightarrow a_n &gt;
+a_{n - 1}\)</span> 且 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
++\infty\)</span></p>
+<p>且 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{b_n - b_{n - 1}}{a_n - a_{n - 1}} = 0\)</span> 从而有 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{b_n}{a_n}
+= 0\)</span>，所以 <span class="math inline">\(\lim\limits_{n\rightarrow
+\infty} \frac{a_n}{b_n} = +\infty = A\)</span></p>
+<p>3：极限为负无穷的时候，由前两种可知。</p>
+<p>逆命题不一定成立！！！</p>
+<p>定理：</p>
+<p><span class="math inline">\(\{a_n\}, \{b_n\}\)</span> 满足</p>
+<ol type="1">
+<li><span class="math inline">\(\{b_n\}\)</span> 严格单调</li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow \infty} a_n =
+0, \lim\limits_{n\rightarrow \infty}b_n = 0\)</span></li>
+<li><span class="math inline">\(\lim\limits_{n\rightarrow
+\infty}\frac{a_n - a_n - 1}{b_n - b_n - 1} = A\)</span></li>
+</ol>
+<p>则 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_n}{b_n} = A\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(A = \pm\infty\)</span> 留做练习</p>
+<p><span class="math inline">\(A\in \mathbb R\)</span> 时， 当 <span
+class="math inline">\(n, m&gt;N\)</span> 时候，<span
+class="math inline">\(\vert\frac{a_n - a_m}{b_n -
+b_m}\vert&lt;\varepsilon\)</span>，令 <span
+class="math inline">\(m\rightarrow \infty\)</span> 则 <span
+class="math inline">\(\vert \frac{a_n}{b_n} - A\vert &lt;
+\varepsilon\)</span> <span class="math inline">\(\Box\)</span></p>
+<h4 id="例一-10">例一</h4>
+<p>给定数列 <span class="math inline">\(\{a_n\},
+\lim\limits_{n\rightarrow \infty} a_n = 0\)</span>，则 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{a_1 +
+\ldots+a_n}{n} = a\)</span></p>
+<p>一下证明完了。</p>
+<p>引理：</p>
+<p>设 <span class="math inline">\(s_1,\ldots,s_n, t_1,
+\ldots,t_n\)</span>，令 <span class="math inline">\(S_k = \sum_{i = 1} ^
+k s_i\)</span> 则有 <span class="math inline">\(\sum\limits_{k = 1} ^ n
+s_k t_k =S_n t_n - \sum\limits_{k = 1} ^ {n - 1}{S_k (t_{k + 1} -
+t_k)}\)</span></p>
+<p>证明是显然的。</p>
+<h4 id="例二-9">例二</h4>
+<p><span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\frac{a_1 + a_2 + \ldots + a_n}{n} = \alpha\)</span>,，证明 <span
+class="math inline">\(\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
+n}\sum_{k = 1} ^ n \frac{a_k}{k} = \alpha\)</span></p>
+<p>令 <span class="math inline">\(S_k = a_1 + \ldots +a_k, S_0 =
+0\)</span></p>
+<p><span class="math inline">\(\begin{aligned}\lim\limits_{n\rightarrow
+\infty} \frac{1}{\ln n}\sum_{k = 1} ^ n \frac{a_k}{k}
+&amp;\overset{\text{Abel}}{=}\lim\limits_{n\rightarrow \infty}
+\frac{1}{\ln n}\left(\frac{S_n}{n}-\sum\limits_{k = 1} ^ {n - 1} S_k
+\left(\frac{1}{k + 1} - \frac{1}{k}\right)\right)\\&amp;\overset{}{=}
+\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\left(\frac{S_n}{n}
++\sum\limits_{k = 1} ^ {n - 1}\frac{S_k/k}{k + 1}\right)\\
+&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln n}\sum\limits_{k =
+1} ^ {n - 1} \frac{S_k/k}{k + 1}\\&amp;\overset{S-C}{=}
+\lim\limits_{n\rightarrow \infty} \frac{\frac{S_{n - 1}}{n(n - 1)}}{\ln
+n - \ln(n - 1)} \\&amp;=\lim\limits_{n\rightarrow \infty} \frac{S_{n -
+1}}{n - 1}\frac{1}{n(\ln n - \ln (n -
+1))}\\&amp;=\lim\limits_{n\rightarrow \infty} \frac{1}{\ln
+\left(\frac{n}{n - 1}\right) ^ n} \\&amp;\overset{承认}{=}
+\frac{1}{\ln\lim\limits_{n\rightarrow \infty}\left(1 + \frac{1}{n -
+1}\right) ^ {n}}\\ &amp;= \frac{1}{\ln e}\\ &amp;=
+1\end{aligned}\)</span></p>
+<p>实数完备性六大定理：</p>
+<ol type="1">
+<li>确界存在原理</li>
+<li>Weierstrass 单调收敛定理</li>
+<li>Cauthy-Canter 闭区间套定理</li>
+<li>Heine-Borel 有限覆盖定理</li>
+<li>Bolzano-Weierstrass 列紧性定理</li>
+<li>Cauthy 收敛定理</li>
+</ol>
+<h2 id="函数的连续性">函数的连续性</h2>
+<h3 id="集合的映射">集合的映射</h3>
+<p>集合：<span class="math inline">\(X\)</span>，<span
+class="math inline">\(x\)</span> 属于 <span
+class="math inline">\(X\)</span>，记作 <span class="math inline">\(x\in
+X\)</span></p>
+<p>映射：存在集合 <span class="math inline">\(X,
+Y\)</span>，存在某种法则 <span class="math inline">\(f\)</span>，<span
+class="math inline">\(\text{s.t.}\forall X, \exists! y \in Y\)</span>
+与之对应，称 <span class="math inline">\(f\)</span> 为 <span
+class="math inline">\(X\)</span> 到 <span
+class="math inline">\(Y\)</span> 的映射，记 <span
+class="math inline">\(y = f(x)\)</span>，记 <span
+class="math inline">\(f:X\rightarrow Y, x\mapsto y\)</span>，称 <span
+class="math inline">\(X\)</span> 为映射的定义域，<span
+class="math inline">\(y\)</span> 为目标域，记 <span
+class="math inline">\(f(x) = \{ f(x)\vert \forall x \in X \}\subset
+Y\)</span>，称 <span class="math inline">\(f(x)\)</span>
+是映射的值域。</p>
+<h4 id="例一-11">例一</h4>
+<p><span class="math inline">\(f:\mathbb N \rightarrow \mathbb Z,
+n\mapsto f(n) = 2n - 5\)</span></p>
+<h4 id="例二-10">例二</h4>
+<p>记 <span class="math inline">\(\mathbb R ^ 2 = \mathbb R \times
+\mathbb R,(x, t) \mapsto f(x, t) = (x - t\gamma, t)\)</span>
+称为从一个惯性系 <span class="math inline">\((x, t)\)</span>
+到另外一个惯性系 <span class="math inline">\((x&#39;,t&#39;)\)</span>
+的伽利略变换</p>
+<p>定义：给定集合 <span class="math inline">\(X, Y\)</span>，映射 <span
+class="math inline">\(f:X\rightarrow Y\)</span></p>
+<ol type="1">
+<li>称 <span class="math inline">\(f\)</span> 为单射，若 <span
+class="math inline">\(\forall x_1, x_2 \in X, x_1 \not = x_2, f(x_1)\not
+= f(x_2)\)</span></li>
+<li>称 <span class="math inline">\(f\)</span> 为满射，若 <span
+class="math inline">\(\forall y \in Y, \exist x, \text{s.t.} f(x) =
+y\)</span></li>
+<li>若 <span class="math inline">\(f\)</span>
+既是单射又是满射，则是双射。</li>
+</ol>
+<p>若 <span class="math inline">\(f:X\rightarrow Y\)</span>
+是单射，可以定义 <span class="math inline">\(g:f(x)\subset Y \rightarrow
+X\)</span>，满足 <span class="math inline">\(f(g(y)) = y, \forall y \in
+f(x)\)</span>，称 <span class="math inline">\(g\)</span> 为 <span
+class="math inline">\(f\)</span> 逆映射，记为 <span
+class="math inline">\(f^{-1}\)</span></p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据科学导论笔记</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
+<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
+<p>课程种类：新生研讨课</p>
+<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
+<p>三元空间</p>
+<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
+<p>退课了。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -1313,6 +1487,10 @@ Next 主题，因为原来不支持 latex，非常菜。</p>
 <p>还是希望有个为爱发电的相声社存在的好吧，曲艺队里面还有什么辅导员，支书，唉。</p>
 <p>给洛谷试讲，发现讲的还行。</p>
 <p>数分和高代很有趣，但是还是要多练习。</p>
+<h2 id="section-1">2023/10</h2>
+<h3 id="section-2">10/11</h3>
+<p>为什么前几天没有更新，因为忘了。</p>
+<p>早上看到一条言论，说全红蝉跳水运动员不如国足，我想这是不正确的，对于给国足洗白的人，如果把吸金能力与意义正相关考虑的话，我觉得体育运动的根本意义就被抹杀掉了，对于大力赞颂全红蝉的人，我想也不必给他过多的工资，不必在此制造社会矛盾，体育运动的意义在于强健体魄，本身就没有经济价值，究奥林匹克精神的根本，是对于强健体魄的追求，是重在参与，是在汗水拼搏的本身，在于比赛的过程，而非结果。所以我觉得现在的唯奖牌论是根本性错误的，是丢掉了体育的根本的思想。</p>
 ]]></content>
       <tags>
         <tag>diary</tag>
@@ -1546,7 +1724,7 @@ class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
 Q)\rightarrow R\)</span> - 等价等值式 <span
 class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
 \rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
-\rightarrow Q = \neg \rightarrow \neg P\)</span> - 等价否定等值式 <span
+\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
 class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
 Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
 (P\rightarrow \neg Q) = \neg P\)</span> - <span
@@ -1558,7 +1736,7 @@ class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
 \rightarrow R)\)</span> 前提交换 - <span
 class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
 \vee Q)\rightarrow R\)</span></p>
-<h3 id="等值严演算">等值严演算</h3>
+<h3 id="等值演算">等值演算</h3>
 <h4 id="例1">例1</h4>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2825,6 +3003,7 @@ W\)</span></li>
 class="math inline">\(\gamma + \subseteq \hat{W}\)</span></li>
 </ol>
 <h2 id="矩阵代数">矩阵代数</h2>
+<h3 id="矩阵的基本定义和性质">矩阵的基本定义和性质</h3>
 <p><span class="math inline">\(m, n\ge 1 M_{m, n}(\mathbb F) = \{A
 =(a_{i,j})_{m\times n} \vert a_{i, j} \in \mathbb F\}\)</span></p>
 <p>有两种运算：</p>
@@ -2848,6 +3027,138 @@ B\)</span></p>
 <li><span class="math inline">\((k + l) A = kA + lA\)</span></li>
 <li><span class="math inline">\(k(A + B) = kA + kB\)</span></li>
 </ol>
+<p>注： <span class="math inline">\(M_{m, n}(\mathbb F)\)</span>
+及上面的两个运算成为 <span class="math inline">\(\mathbb F\)</span>
+上的向量空间</p>
+<p>下面定义的矩阵的乘积 <span
+class="math inline">\(\text{Binet}\)</span></p>
+<p><span class="math inline">\(A = (a_{i, j}) \in M_{m, n}(\mathbb
+F)\)</span> 于是得到一个映射 <span class="math inline">\(\mathbb F ^ n
+\rightarrow \mathbb F ^ m,\phi_A = \begin{bmatrix}x_1 \\ x_2 \\ \vdots
+\\ x_n \end{bmatrix} \mapsto \begin{bmatrix}a_{1, 1} x_1 + \ldots +a_{1,
+n}x_n \\ \vdots \\ a_{m, 1}x_1 + \ldots+a_{m, n} x_n
+\end{bmatrix}\)</span></p>
+<p>设 <span class="math inline">\(A =(a_{i, j})_{m\times n},B = (b_{i,
+j})_{n\times s}\)</span> 其乘积 <span
+class="math inline">\(C\)</span>，则 <span class="math inline">\(C =
+(c_{i, j})\in M_{m, s}(\mathbb F)\)</span></p>
+<p>其中 <span class="math inline">\(c_{i, j} = \sum_{k = 1} ^ n a_{i, k}
+b_{k, j}\)</span></p>
+<p>根据定义 <span class="math inline">\(\phi_{A}\circ \phi_{B} =
+\phi_{AB}\)</span></p>
+<p>注：矩阵的乘积给除了一个代数运算 <span class="math inline">\(M_{m,
+n}(\mathbb F) \times M_{m, s}(\mathbb F) \rightarrow M_{m, s}(\mathbb
+F),(A, B) \mapsto AB\)</span></p>
+<h4 id="例一-4">例一：</h4>
+<p><span class="math inline">\(\alpha = (a_1, \ldots, a_n), \beta =
+(b_1, \ldots, b_n)^T\)</span></p>
+<p>于是 <span class="math inline">\(\alpha \beta = \sum_{k = 1} ^ n
+a_kb_k, \beta\alpha = \begin{bmatrix} b_1a_1 &amp; \ldots &amp;b_1a_n\\
+\ldots&amp;\ddots &amp; \ldots\\b_{n}a_1 &amp; \ldots &amp; b_n
+a_n\end{bmatrix}\)</span></p>
+<p>一个线性方程组 <span class="math inline">\(\begin{cases}a_{11} +&amp;
+\ldots +&amp; a_{1n} = b_1\\\vdots &amp;\ddots&amp; \vdots\\a_{m1} +
+&amp; \ldots + &amp; a_{mn} = b_m\end{cases}\)</span> 可以表示为 <span
+class="math inline">\(Ax = \beta\)</span> 其中 <span
+class="math inline">\(A = (a_{i, j})_{m\times n}, x = (x_1, \ldots,x_n)
+^ T, \beta = (b_1, \ldots,b_m) ^ T\)</span></p>
+<p>矩阵乘积的基本性质</p>
+<ol type="1">
+<li><span class="math inline">\((AB)C = A(BC)\)</span></li>
+<li><span class="math inline">\(k(AB) = (kA)B\)</span></li>
+<li><span class="math inline">\(A(B + C) = AB + AC, (B + C)D = BD +
+CD\)</span></li>
+<li>对于 <span class="math inline">\(n \ge 1, I_n =
+\begin{bmatrix}1&amp;0&amp;\ldots&amp;0\\ 0 &amp; 1&amp;\ldots &amp; 0\\
+\vdots &amp; \vdots&amp;\vdots&amp;\vdots \\ 0 &amp;0 &amp; 0 &amp;
+1\end{bmatrix}\)</span>，有 <span class="math inline">\(I_m A =
+A\)</span></li>
+</ol>
+<p>注：矩阵定义了 <span class="math inline">\(M_n(\mathbb F)\)</span>
+的一个二元运算，<span class="math inline">\(M_n(\mathbb F) \times
+M_n(\mathbb F) \rightarrow M_{n}(\mathbb F), (A, B)\mapsto
+AB\)</span></p>
+<p>事实上 <span class="math inline">\(M_n(\mathbb F)\)</span>
+对于这两个运算构成一个环，当 <span class="math inline">\(n\ge 2\)</span>
+的时候，<span class="math inline">\(M_{n}(\mathbb F)\)</span>
+是一个非交换环。</p>
+<p>消去律一般不成立。</p>
+<p>设 <span class="math inline">\(A\in M_{n} (\mathbb F),m\ge 1\)</span>
+定义 <span class="math inline">\(A\)</span> 的 <span
+class="math inline">\(m\)</span> 次幂为</p>
+<p><span class="math inline">\(A ^ m = \underbrace{A\ldots A}_m\)</span>
+约定 <span class="math inline">\(A ^ 0 = I_n\)</span></p>
+<p>记 <span class="math inline">\(f(A) = a_0 I_n + \ldots a_s A ^
+s\)</span>，</p>
+<p>定义</p>
+<ol type="1">
+<li>形如 <span class="math inline">\(D =
+\begin{bmatrix}d_1&amp;0&amp;\ldots&amp;0\\ 0 &amp; d_2&amp;\ldots &amp;
+0\\ \vdots &amp; \vdots&amp;\vdots&amp;\vdots \\ 0 &amp;0 &amp; 0 &amp;
+d_n\end{bmatrix}\)</span> 为对角矩阵，特别的，当 <span
+class="math inline">\(d_1 = \ldots = dn = d\)</span> 时候，称 <span
+class="math inline">\(d\)</span> 为标量矩阵。</li>
+<li><span class="math inline">\(A = \begin{bmatrix}a_{1, 1}&amp;a_{1,
+2}&amp;\ldots&amp;a_{1, n}\\ 0 &amp; a_{2, 2}&amp;\ldots &amp; a_{2,
+n}\\ \vdots &amp; \vdots&amp;\vdots&amp;\vdots \\ 0 &amp;0 &amp; 0 &amp;
+a_{m, n}\end{bmatrix}\)</span>
+是上三角矩阵，进一步，如果对角线上元素都是 <span
+class="math inline">\(0\)</span>，则为严格上三角矩阵</li>
+</ol>
+<p>矩阵转置运算规则：</p>
+<ol type="1">
+<li><span class="math inline">\((A + B) ^ T = A ^ T + B ^
+T\)</span></li>
+<li><span class="math inline">\((kA) ^ T = k(A) ^ T\)</span></li>
+<li><span class="math inline">\((AB) ^ T = B ^ TA ^ T\)</span></li>
+</ol>
+<p>如果 <span class="math inline">\(A ^ T =
+A\)</span>，则为对称矩阵，如果 <span class="math inline">\(A ^ T =
+-A\)</span> 则为反对称矩阵</p>
+<p><span class="math inline">\(A \in M_{m, n} (\mathbb C)\)</span>，记
+<span class="math inline">\(\overline{A} = (\overline{a_{i,
+j}})\)</span>，<span class="math inline">\(A\)</span> 的转置矩阵</p>
+<ol type="1">
+<li><span class="math inline">\(\overline{A + B} = \bar{A} +
+\bar{B}\)</span></li>
+<li><span class="math inline">\(\overline{kA} =
+\bar{k}\bar{A}\)</span></li>
+<li><span class="math inline">\(\overline{AB} = \bar{A}
+\bar{B}\)</span></li>
+</ol>
+<p>若 <span class="math inline">\(\bar{A} ^ T = A\)</span>，则其为 <span
+class="math inline">\(\text{Hermite}\)</span> 矩阵。</p>
+<p><span class="math inline">\(AB\)</span> 的每一个列向量都是 <span
+class="math inline">\(A\)</span> 的列向量的线性组合 <span
+class="math inline">\(\Rightarrow\)</span> <span
+class="math inline">\(AB\)</span> 的列空间 <span
+class="math inline">\(\subseteq\)</span> <span
+class="math inline">\(A\)</span> 的列空间</p>
+<p>对于行空间就是 <span class="math inline">\(B\)</span> 的了。所以得到
+<span class="math inline">\(r(AB)\le \min\{r(A), r(B)\}\)</span>。</p>
+<p><span class="math inline">\(\mathbb F \rightarrow M_{n}(\mathbb F), k
+\mapsto kI_n\)</span></p>
+<p><span class="math inline">\(\mathbb C \rightarrow M_2(\mathbb R), a +
+bi \mapsto \begin{bmatrix}a &amp; -b \\b &amp; a\end{bmatrix}, 1\mapsto
+\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}, i =
+\begin{bmatrix}0&amp; -1 \\ 1 &amp; 0\end{bmatrix}\)</span></p>
+<h3 id="可逆矩阵">可逆矩阵</h3>
+<p>定义：<span class="math inline">\(A \in M_{n} (\mathbb F)\)</span>
+若存在 <span class="math inline">\(B \in M_{n} (\mathbb F)\)</span> 满足
+<span class="math inline">\(AB = I_n = BA\)</span>，那么 <span
+class="math inline">\(A\)</span> 是一个可逆矩阵，此时称 <span
+class="math inline">\(B\)</span> 为 <span
+class="math inline">\(A\)</span> 的逆矩阵，记错 <span
+class="math inline">\(B = A ^ {-1}\)</span></p>
+<h4 id="例一-5">例一</h4>
+<p>一个对角矩阵 <span class="math inline">\(D =
+\begin{bmatrix}d_1&amp;0&amp;\ldots&amp;0\\ 0 &amp; d_2&amp;\ldots &amp;
+0\\ \vdots &amp; \vdots&amp;\vdots&amp;\vdots \\ 0 &amp;0 &amp; 0 &amp;
+d_n\end{bmatrix} = \text{diag} (d_1, d_2, \ldots, d_n)\)</span>
+是可逆的当且进当 <span class="math inline">\(d_1, d_2, \ldots,
+d_n\)</span> 都不为 <span class="math inline">\(0\)</span> ，此时 <span
+class="math inline">\(D ^ {-1} = \text{diag}(d_1 ^ {-1}, \ldots,d_n ^
+{-1})\)</span>。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
