@@ -1476,7 +1476,7 @@ f:X\rightarrow Y, n\mapsto f(x) =2n\)</span></p>
 <h5 id="例二-11">例二</h5>
 <p><span class="math inline">\(f:(-1, 1) \rightarrow \mathbb R, x\mapsto
 f(x) = \frac{x}{1 - \vert x \vert}\)</span>，从而 <span
-class="math inline">\(\text{Card}(-1. 1) = \text{Card}(\mathbb
+class="math inline">\(\text{Card}(-1, 1) = \text{Card}(\mathbb
 R)\)</span></p>
 <h4 id="有限集可数集和不可数集">有限集，可数集和不可数集</h4>
 <p>定义：对于集合 <span class="math inline">\(X\)</span></p>
@@ -1510,10 +1510,11 @@ f(x)=\begin{cases}\frac{1}{2} &amp; x = 0\\ \frac{1}{n + 2} &amp; x =
 <ol type="1">
 <li>设 <span class="math inline">\(A\)</span> 是可数集，<span
 class="math inline">\(E\subset A\)</span> 的无限子集，令 <span
-class="math inline">\(k_1\)</span> 为最小正数 $ a_{k_1} E,依次有 <span
+class="math inline">\(k_1\)</span> 为最小正数 <span
+class="math inline">\(\text{s.t.} a_{k_1} \in E\)</span>,依次有 <span
 class="math inline">\(k_1, \ldots, k_{s - 1} = \{a_n\}\)</span>，令
 <span class="math inline">\(k_s\)</span> 为最小的大于 <span
-class="math inline">\(k_1, ldots, k_{s - 1}\)</span> 的正数使得 <span
+class="math inline">\(k_1, \ldots, k_{s - 1}\)</span> 的正数使得 <span
 class="math inline">\(a_{k_s} \in E\)</span> 给出集合 <span
 class="math inline">\(f:E\rightarrow\mathbb N, f(a_{k_n}) = n\)</span>
 为双射，所以 <span class="math inline">\(E\)</span> 为可数集。</li>
@@ -1529,7 +1530,7 @@ class="math inline">\(x_{11},x_{21},x_{12},x_{31},x_{22},x_{13},\ldots\)</span>
 N&lt;\text{Card}\mathbb R\)</span></p>
 <p>证明：</p>
 <p>反证法， <span class="math inline">\(f:\mathbb N \rightarrow [0, 1]\\
-n \mapsto f(n) = x)n\)</span> 的双射，将线段三等分，至少有一个区间不含有
+n \mapsto f(n) = x_n\)</span> 的双射，将线段三等分，至少有一个区间不含有
 <span
 class="math inline">\(x_n\)</span>，逐步这么找，得到一个闭区间套，然后得到
 <span class="math inline">\(\gamma \not = x_1, x_2,
@@ -1681,12 +1682,12 @@ class="math inline">\(\lim\limits_{n\rightarrow \infty} x_n = a,
 \lim\limits_{n\rightarrow \infty} f(x_n) = A\)</span></p>
 <p>证明：</p>
 <p><span class="math inline">\(\Rightarrow,\forall \varepsilon &gt; 0,
-\exist \delta &gt; 0, \text{s.t.} \vert f(x) - A\vert &lt;\varepsilon ,
+\exists \delta &gt; 0, \text{s.t.} \vert f(x) - A\vert &lt;\varepsilon ,
 \forall x \in \mathring{\bigcup}_{X} (a, \delta)\)</span> 由于 <span
 class="math inline">\(\lim\limits_{n\rightarrow \infty} x_n = a, \exists
 N \in \mathbb N, \text{s.t.} n &gt; N, x_n \in \mathring{\bigcup}_{X}
 (a, \delta)\)</span> 有 <span class="math inline">\(\vert f(x_n) -A\vert
-&lt; \varepsilon,\text{i.e.} \lim\limits_{n\rightarrow} \infty f(x_n) =
+&lt; \varepsilon,\text{i.e.} \lim\limits_{n\rightarrow\infty} f(x_n) =
 A\)</span></p>
 <p><span class="math inline">\(\Leftarrow,\)</span> 若<span
 class="math inline">\(f\)</span> 在 <span
@@ -1768,6 +1769,195 @@ class="math inline">\(A = B\)</span>，则 <span
 class="math inline">\(\lim\limits_{n\rightarrow a} h(x) =
 A\)</span></li>
 </ol>
+<p>定理：复合函数的极限</p>
+<p><span class="math inline">\(f:X\rightarrow Y\)</span> ，<span
+class="math inline">\(x_0\)</span> 是 <span
+class="math inline">\(X\)</span> 的极限点</p>
+<p><span class="math inline">\(g:Y\rightarrow Z\)</span>, <span
+class="math inline">\(f(x) \subset Y\)</span>, <span
+class="math inline">\(y_0\)</span> 为 <span
+class="math inline">\(Y\)</span> 的极限点</p>
+<p><span class="math inline">\(\lim\limits_{x\rightarrow x_0} f(x) =
+y_0\)</span>，且 <span class="math inline">\(\exists \delta &gt; 0,
+\text{s.t.} \forall x \in \mathring{\bigcup}_X(x_0, \delta),f(x) \not =
+y_0,f(x)\not=y\)</span></p>
+<p>则 <span class="math inline">\(\lim\limits_{x\rightarrow x_0}(g\circ
+f) (x) = A\)</span></p>
+<p>例子：<span class="math inline">\(f(x) = 0\)</span>，<span
+class="math inline">\(g(y) = \begin{cases} 1 &amp; y = 0\\0 &amp;y \not
+= 0\end{cases}\)</span></p>
+<h4 id="左右极限">左右极限</h4>
+<p>定义：<span class="math inline">\(f\)</span> 定义在 <span
+class="math inline">\(X\)</span> 上的极限，<span
+class="math inline">\(a\)</span> 为 <span
+class="math inline">\(X\)</span> 的极限点，称 <span
+class="math inline">\(a\)</span> 处存在左极限，若将 <span
+class="math inline">\(X \cap (-\infty, a)\)</span> 在 <span
+class="math inline">\(a\)</span> 处有极限。</p>
+<p>记作：<span class="math inline">\(\lim\limits_{x\rightarrow a^-} =
+A\)</span></p>
+<p>右边的极限是同理的</p>
+<p>定理：<span class="math inline">\(f\)</span> 为定义在 <span
+class="math inline">\(X\)</span> 上的函数，<span
+class="math inline">\(a\)</span> 为极限点，则 <span
+class="math inline">\(f\)</span> 在 <span
+class="math inline">\(a\)</span> 处极限存在 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(f\)</span> 在 <span
+class="math inline">\(a\)</span> 上有左右极限，且相等。</p>
+<h3 id="一个重要的极限">一个重要的极限</h3>
+<p><span class="math inline">\(\lim\limits _{x\rightarrow 0} \frac{\sin
+x}{x} = 1\)</span></p>
+<p>证明：</p>
+<p>画一个形得到 <span class="math inline">\(\sin x &lt; x &lt; \tan
+x\)</span>，转化为 <span class="math inline">\(\frac{\sin x}{x}\)</span>
+的情况下，然后夹一下即可。</p>
+<h3 id="指数函数">指数函数</h3>
+<p>给出 <span class="math inline">\(a ^ x(a &gt; 1),x\in \mathbb
+R\)</span>，定义：</p>
+<ol type="1">
+<li><span class="math inline">\(x \in \mathbb
+N\)</span>，归纳方法定义，<span class="math inline">\(a ^ 0 =
+1\)</span>，<span class="math inline">\(a ^ {n + 1} = a \times a ^
+n\)</span></li>
+<li><span class="math inline">\(n \in \mathbb Z\)</span>， <span
+class="math inline">\(n\in \mathbb N\)</span>，<span
+class="math inline">\(a ^ {-n} = \frac{1}{a ^ n}\)</span></li>
+<li>由于实数完备性定理，<span class="math inline">\(\forall n \not in N,
+\exists !\gamma,\text{s.t.}\gamma ^ n = a, \text{s.t.}(a ^
+{\frac{1}{n}}) ^ n = a\)</span> , <span class="math inline">\(a ^
+\frac{m}{n} = \left(a ^ {\frac{1}{n}}\right) ^ m\)</span></li>
+<li><span class="math inline">\(x\in \mathbb R \backslash \mathbb
+Q\)</span>，<span class="math inline">\(x_0\)</span> 为有理数的极限，
+<span class="math inline">\(\lim \limits_{x\rightarrow x_0 \in, x\in
+\mathbb Q} = a ^ {x_0}\)</span> 由于 <span
+class="math inline">\(\lim\limits_{x \rightarrow 0 ^ +} = a ^ x =
+0\)</span>，<span class="math inline">\(\forall \varepsilon &gt; 0,
+\exists \delta &gt; 0, \text{s.t.} \forall x \in \mathring{\bigcup} _Q
+(0, 2 \delta), \vert a ^ x - 1 \vert &lt; \frac{\varepsilon}{ M}, M =
+\sup a ^ x, x \in \mathring{\bigcup}_Q(x_0, 1), \forall x_1, x_2 \in
+\mathring{\bigcup}_Q(x_0, \delta),\vert a ^ {x_1 } - a ^ {x_1}\vert = a
+^ {x_1}\vert 1 - a ^ {x_1 - x_2}\vert&lt;M \frac{\varepsilon}{M} =
+\varepsilon\)</span> 由于柯西判别法，存在极限且极限为 <span
+class="math inline">\(1\)</span>，则极限存在且存在唯一定义 <span
+class="math inline">\(a ^ {x_0} = \lim\limits_{x\rightarrow x_0, x \in
+\mathbb Q} a ^ x\)</span></li>
+</ol>
+<p>定理（指数函数的性质）</p>
+<p>设 <span class="math inline">\(a &gt; 1\)</span>，</p>
+<ol type="1">
+<li><span class="math inline">\(a ^ x\)</span> 严格单调递增</li>
+<li><span class="math inline">\(a ^ {x_1 + x_2} = a^{x_1} a ^
+{x_2}\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x\rightarrow x_0} a ^ x = a
+^ {x_0}\)</span></li>
+<li><span class="math inline">\(\forall y &gt; 0, \exists x \in \mathbb
+R, y = a ^ x\)</span></li>
+</ol>
+<p>指数函数有时候记称 <span class="math inline">\(\exp_a(x)\)</span>，当
+<span class="math inline">\(a = e\)</span> 时候，直接写成 <span
+class="math inline">\(\exp(x)\)</span></p>
+<h3 id="对数函数和幂函数">对数函数和幂函数</h3>
+<h4 id="例2">例2</h4>
+<p>设 <span class="math inline">\(a &gt; 1\)</span> 证明：<span
+class="math inline">\(\lim\limits_{x\rightarrow+\infty} a ^ {-x} =
+0\)</span></p>
+<p>令 <span class="math inline">\(a = 1 + \alpha &gt; 1\)</span>，<span
+class="math inline">\(\frac{1}{a ^ x} \le \frac{1}{a ^ {[x]}} =
+\frac{1}{(1 + \alpha) ^ {[x]}}\le \frac{1}{\alpha[x] + 1}\rightarrow
+0\)</span></p>
+<h4 id="例3">例3</h4>
+<p>设 <span class="math inline">\(a &gt; 0\)</span> 且 <span
+class="math inline">\(a \not = 1\)</span> 则 <span
+class="math inline">\(\lim \limits_{x \rightarrow + \infty} \frac{\log
+_{a} x}{x} = 0\)</span></p>
+<p>证明：</p>
+<ol type="1">
+<li><span class="math inline">\(a &gt; 1\)</span> 的时候，令 <span
+class="math inline">\(y = \log_a x, \lim\limits_{x\rightarrow
++\infty}\frac{\log_a x}{x} = \lim\limits_{y\rightarrow +\infty}
+\frac{y}{a ^ y} =\lim\limits_{y\rightarrow +\infty} \frac{y}{(1 +
+\alpha)^ y} \le \lim\limits_{y\rightarrow +\infty}\frac{y}{1 + \alpha[y]
++ \frac{[y][y - 1]}{2} \alpha ^ 2} \rightarrow 0\)</span></li>
+<li><span class="math inline">\(0 &lt; a &lt; 1\)</span> 时，<span
+class="math inline">\(\lim\limits_{x\rightarrow +\infty} \frac{\log _a
+x}{x} = \lim\limits_{x\rightarrow +\infty}
+-\frac{\log_{\frac{1}{a}}{x}}{x} = -\lim\limits_{x\rightarrow +\infty}
+\frac{\log_{\frac{1}{a}}{x}}{x}=0\)</span></li>
+</ol>
+<h3 id="无穷大量和无穷小量">无穷大量和无穷小量</h3>
+<h4 id="定义-2">定义</h4>
+<p>设 <span class="math inline">\(X\subset \mathbb R\)</span>，<span
+class="math inline">\(f\)</span> 为定义在 <span
+class="math inline">\(X\)</span> 上的函数，<span
+class="math inline">\(x_0\)</span> 为 <span
+class="math inline">\(X\)</span> 的极限点。</p>
+<p>定义：<span class="math inline">\(\forall A &gt; 0,\exists \delta
+&gt; 0, \text{s.t.}\forall x\in \mathring{\bigcup}_X (x_0,
+\delta)\)</span>，均有 <span
+class="math inline">\(f(x)&gt;A\)</span>，称 <span
+class="math inline">\(x\rightarrow x_0\)</span> 时,<span
+class="math inline">\(f(x)\)</span> 趋近于 <span
+class="math inline">\(+\infty\)</span>，记作 <span
+class="math inline">\(\lim\limits_{x\rightarrow x_0} f(x) = +
+\infty\)</span></p>
+<p>若 <span class="math inline">\(X \subset \mathbb R\)</span>
+无上界（下界） <span class="math inline">\(\lim\limits_{x\rightarrow
++\infty} f(x) = +\infty\)</span></p>
+<h4 id="无穷小量和无穷大量">无穷小量和无穷大量</h4>
+<ol type="1">
+<li>若 <span class="math inline">\(\lim\limits_{x\rightarrow x_0} f(x) =
+0\)</span>，那么 <span class="math inline">\(f(x)\)</span> 当 <span
+class="math inline">\(x\rightarrow x_0\)</span> 为无穷小量</li>
+<li>若 <span class="math inline">\(\lim\limits_{x\rightarrow x_0} f(x) =
+\infty\)</span>，那么 <span class="math inline">\(f(x)\)</span> 当 <span
+class="math inline">\(x\rightarrow x_0\)</span> 为无穷大量</li>
+</ol>
+<h4 id="相比较无穷小">相比较无穷小</h4>
+<p>定义 <span class="math inline">\(f, g\)</span> 满足定义，<span
+class="math inline">\(\exists \delta &gt; 0\)</span>, <span
+class="math inline">\(\exists\)</span> 定义在 <span
+class="math inline">\(\mathring{\bigcup}_X(x_0, \delta)\)</span>
+上的函数 <span class="math inline">\(\alpha(x)\)</span> 满足</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) = \alpha(x) g(x),\forall x \in
+\mathring{\bigcup}_X (x_0, \delta)\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x\rightarrow x_0} \alpha(x)
+= 0\)</span></li>
+</ol>
+<p>称 <span class="math inline">\(f(x)\)</span> 相对于 <span
+class="math inline">\(g(x)\)</span> 是无穷小量。记为 <span
+class="math inline">\(f(x) = o(g(x))\)</span></p>
+<h4 id="更高阶的量">更高阶的量</h4>
+<p>定义 <span class="math inline">\(f, g\)</span> 满足定义，<span
+class="math inline">\(\exists \delta &gt; 0\)</span>, <span
+class="math inline">\(\exists\)</span> 定义在 <span
+class="math inline">\(\mathring{\bigcup}_X(x_0, \delta)\)</span>
+上的函数 <span class="math inline">\(\alpha(x)\)</span> 满足:</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) = o(g(x))\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x\rightarrow
+x_0}g(x)=0\)</span></li>
+</ol>
+<p>称为 <span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x \rightarrow x_0\)</span> 时候比 <span
+class="math inline">\(g(x)\)</span> 是高阶无穷小量。</p>
+<p>定义 <span class="math inline">\(f, g\)</span> 满足定义，<span
+class="math inline">\(\exists \delta &gt; 0\)</span>, <span
+class="math inline">\(\exists\)</span> 定义在 <span
+class="math inline">\(\mathring{\bigcup}_X(x_0, \delta)\)</span>
+上的函数 <span class="math inline">\(\alpha(x)\)</span> 满足:</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) = o(g(x))\)</span></li>
+<li><span class="math inline">\(\lim\limits_{x\rightarrow
+x_0}g(x)=+\infty,\lim\limits_{x\rightarrow
+x_0}f(x)=+\infty\)</span></li>
+</ol>
+<p>称为 <span class="math inline">\(g(x)\)</span> 在 <span
+class="math inline">\(x \rightarrow x_0\)</span> 时候比 <span
+class="math inline">\(f(x)\)</span> 是高阶无穷大量。</p>
+<p>比如说 <span class="math inline">\(a ^ x\)</span> 比 <span
+class="math inline">\(x ^ a\)</span> 高阶。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -3714,9 +3904,8 @@ n\}\)</span></p>
 <ol type="1">
 <li>交换第 <span class="math inline">\(i\)</span> 行 或者是第 <span
 class="math inline">\(j\)</span> 行, <span class="math inline">\(P_{i,
-j}\)</span></li>
-<li>用非 <span class="math inline">\(0\)</span> 数乘上第 <span
-class="math inline">\(i\)</span> 行 ，<span
+j}\)</span> =2. 用非 <span class="math inline">\(0\)</span> 数乘上第
+<span class="math inline">\(i\)</span> 行 ，<span
 class="math inline">\(D_i(c)\)</span></li>
 <li>将第 <span class="math inline">\(I_n\)</span> 的第 <span
 class="math inline">\(i\)</span> 行乘上 <span
@@ -3885,6 +4074,144 @@ class="math inline">\(A\)</span> 的余子式，定义：</p>
 <p><span class="math display">\[
 \det A = \sum\limits_{i = 1} ^ n (-1) ^{i + 1} a_{i1}  M_{i1}
 \]</span></p>
+<p>注：对于 <span class="math inline">\(n\ge 1\)</span>，得到一个映射
+<span class="math inline">\(M_n(\mathbb F)\rightarrow \mathbb F,A
+\mapsto \det A\)</span></p>
+<p>命题：上三角矩阵的行列式等于对角线元素相乘</p>
+<p>命题：设 <span class="math inline">\(A\)</span> 是一个 <span
+class="math inline">\(n\)</span> 阶方阵，且 <span
+class="math inline">\(1\le s \le n\)</span>，假设 <span
+class="math inline">\(B\)</span> 是将 <span
+class="math inline">\(A\)</span> 的第 <span
+class="math inline">\(s\)</span> 列元素乘上 <span
+class="math inline">\(c\)</span> 的矩阵，则 <span
+class="math inline">\(\det B = c \det A\)</span>。</p>
+<p>证明：对 <span class="math inline">\(n\)</span> 做归纳法，当 <span
+class="math inline">\(n = 1\)</span> 时成立，设 <span
+class="math inline">\(n\ge 2\)</span> 的时候，假设对于所有 <span
+class="math inline">\(n-1\)</span> 阶行列式成立，设 <span
+class="math inline">\(M_{ij}, N_{i, j}\)</span> 分别是 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 的元素 <span
+class="math inline">\(a_{ij}, b_{i, j}\)</span> 的余子式，于是 <span
+class="math inline">\(M_{s1} = N_{s1}\)</span> 并且当 <span
+class="math inline">\(i \not = s\)</span> 时， <span
+class="math inline">\(N_{i1} = cM_{i1}\)</span>，因此 <span
+class="math inline">\(\det B = c\det A\)</span></p>
+<p>推论：如果一行全是 <span class="math inline">\(0\)</span>，那么 <span
+class="math inline">\(\det A = 0\)</span></p>
+<p>命题，设 <span class="math inline">\(A\)</span> 是一个 <span
+class="math inline">\(n\)</span> 阶方阵，并且 <span
+class="math inline">\(B\)</span> 是通过交换 <span
+class="math inline">\(A\)</span> 的第 <span
+class="math inline">\(s\)</span> 行与第 <span
+class="math inline">\(t\)</span> 行得到的矩阵，则 <span
+class="math inline">\(\det B = \det A\)</span></p>
+<p>推论：若有两个不同行向全相等，则 <span class="math inline">\(\det A =
+0\)</span>，若成比例，则 <span class="math inline">\(\det A =
+0\)</span></p>
+<p>命题：设 <span class="math inline">\(A, B, C\)</span> 是 <span
+class="math inline">\(n\)</span> 阶方阵，<span
+class="math inline">\(C\)</span> 是某一行的 <span
+class="math inline">\(AB\)</span> 加起来，其他行都是 <span
+class="math inline">\(A,B,C\)</span> 一模一样的，那么 <span
+class="math inline">\(\det C = \det A + \det B\)</span></p>
+<p>推论：设 <span class="math inline">\(A\)</span> 是 <span
+class="math inline">\(n\)</span> 阶方阵，那么 <span
+class="math inline">\(B\)</span> 是由某一行加到另一行所得的矩阵，那么
+<span class="math inline">\(\det B = \det A\)</span></p>
+<p>引理：设 <span class="math inline">\(A = (a_{ij})\)</span> 是一个
+<span class="math inline">\(n\)</span> 阶矩阵</p>
+<ol type="1">
+<li>若 <span class="math inline">\(D = \text{diag}(d_1, d_2, \ldots,
+d_n)\)</span> 则 <span class="math inline">\(\det (DA) = d_1 d_2\ldots
+d_n\det A\)</span></li>
+<li>若存在第三类初等矩阵 使得 <span class="math inline">\(A\)</span>
+化为对角矩阵 <span class="math inline">\(D\)</span>，那么 <span
+class="math inline">\(\det A =\det D9\)</span></li>
+</ol>
+<p>定理：<span class="math inline">\(A\)</span> 是一个 <span
+class="math inline">\(n\)</span> 阶方阵，则 <span
+class="math inline">\(\det A =\det A ^ T\)</span></p>
+<p>Cauchy 定理：设 <span class="math inline">\(A, B\)</span> 为两个
+<span class="math inline">\(n\)</span> 阶方阵，则 <span
+class="math inline">\(\vert AB\vert = \vert A\vert \vert
+B\vert\)</span></p>
+<p>推论：设 <span class="math inline">\(A\)</span> 是一个 <span
+class="math inline">\(n\)</span> 阶方阵，则 <span
+class="math inline">\(A\)</span> 可逆 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\det A \not = 0,\det \left(A^{-1}\right) =
+\frac{1}{\det A}\)</span></p>
+<p>证明是简单的</p>
+<p>注：一个矩阵是非奇异的则 <span class="math inline">\(A\)</span>
+可逆，否则则称 <span class="math inline">\(A\)</span> 是奇异的</p>
+<p>设 <span class="math inline">\(A\in M_{m, n}(\mathbb F), 1\le s \le
+\min\{m, n\}\)</span> 选取一个 <span class="math inline">\(s \times
+s\)</span> 子矩阵，即选择 <span class="math inline">\(s\)</span> 行
+<span class="math inline">\(s\)</span> 列按照在 <span
+class="math inline">\(A\)</span> 中相对位置构成 <span
+class="math inline">\(s\)</span> 阶行列式，称为这个矩阵的 <span
+class="math inline">\(s\)</span> 阶子式</p>
+<p>命题：设 <span class="math inline">\(A \in M_{m, n}(\mathbb
+F)\)</span> 则 <span class="math inline">\(r = r(A)\)</span> 当且进当
+<span class="math inline">\(A\)</span> 有一个非零 <span
+class="math inline">\(r\)</span> 阶子式，并且所有 <span
+class="math inline">\(r + 1\)</span> 阶子式都是 <span
+class="math inline">\(0\)</span></p>
+<p>即 <span class="math inline">\(A\)</span> 的秩 <span
+class="math inline">\(=\)</span> <span class="math inline">\(A\)</span>
+的最高阶非零子式的阶数。</p>
+<h3 id="行列式展开和-cramer-法则">行列式展开和 Cramer 法则</h3>
+<p><span class="math inline">\(A\)</span> 为 <span
+class="math inline">\(n\)</span> 阶方阵，并且 <span
+class="math inline">\(A_{ij}\)</span> 为 <span
+class="math inline">\(a_{ij}\)</span> 的代数余子式，<span
+class="math inline">\(\det A = \sum\limits_{i = 1} ^ na_{ij}
+A_{ij}\)</span></p>
+<p>定理：设 <span class="math inline">\(1\le s, t\le n\)</span>，则
+<span class="math inline">\(\sum\limits_{i = 1} ^ n a_{is}A_{it} =\delta
+_{st} \det A\)</span> 其中 <span class="math inline">\(\delta_{st} = [s
+= t]\)</span></p>
+<p>我们显然可以知道矩阵任意一行展开都可以，这个可以通过交换 <span
+class="math inline">\(s,s-1\)</span>、<span
+class="math inline">\(s-2,s-1\)</span>、<span
+class="math inline">\(\ldots\)</span>、<span class="math inline">\(2,
+1\)</span> 这些交换证明。</p>
+<p>如果我们用矩阵的第 <span class="math inline">\(s\)</span>
+列代替矩阵的第 <span class="math inline">\(t\)</span> 列，并且按照第
+<span class="math inline">\(s\)</span>
+列展开，那么就可以得到上面的定理。</p>
+<p>我们定义</p>
+<p><span class="math inline">\(A^*
+=\begin{bmatrix}A_{1,1}&amp;A_{2,1}&amp;\ldots&amp;A_{n,1}\\A_{1,2}&amp;A_{2,2}&amp;\ldots&amp;A_{n,2}\\
+\vdots&amp;\ddots&amp;\ddots&amp;\vdots\\A_{1,n}&amp;A_{2,n}&amp;\ldots&amp;A_{n,n}\end{bmatrix}\)</span></p>
+<p>那么 <span class="math inline">\(A^*A = \det (A) I_n\)</span></p>
+<p>推论，如果 <span class="math inline">\(A\)</span>
+是一个可逆矩阵，那么 <span class="math inline">\(A ^ {-1} =
+\frac{A^*}{\det A}\)</span></p>
+<p>定理：<span class="math inline">\(\text{Cramer}\)</span>
+法则，设线性方程组，<span class="math inline">\(Ax = \beta\)</span></p>
+<p>其中 <span class="math inline">\(A = (a_{i, j})_{n\times n}, x\in
+M_{n, 1}(\mathbb F),\beta = M_{n, 1}(\mathbb F)\)</span></p>
+<p>如果 <span class="math inline">\(A\)</span>
+可逆，那么该方程组有唯一解 <span class="math inline">\(x\)</span>， 其中
+<span class="math inline">\(x_i = \frac{D_i}{\det A}\)</span>， <span
+class="math inline">\(D_i\)</span> 是将 <span
+class="math inline">\(A\)</span> 的第 <span
+class="math inline">\(i\)</span> 列代替为 <span
+class="math inline">\(\beta\)</span> 的矩阵的行列式。</p>
+<p>证明是简单的。</p>
+<p>如果我们考虑一般的 <span class="math inline">\(m\times n\)</span>
+方程组 <span class="math inline">\((*)\)</span>，假设方程组有解，即
+<span class="math inline">\(r(A) = r(\hat{A})=r\)</span>，于是 <span
+class="math inline">\(A\)</span> 有一个 <span
+class="math inline">\(r\)</span> 阶余子式 <span
+class="math inline">\(D\)</span>，</p>
+<p>于是该方程组和余子式的 <span class="math inline">\(r\)</span>
+个构成的方程组 <span class="math inline">\((**)\)</span>
+同解，任意带入数值进剩下的 <span class="math inline">\(n-r\)</span>
+个变量</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
