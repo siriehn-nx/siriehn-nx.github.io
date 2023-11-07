@@ -288,21 +288,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
-    <title>数据科学导论笔记</title>
-    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
-<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
-<p>课程种类：新生研讨课</p>
-<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
-<p>三元空间</p>
-<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
-<p>退课了。</p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学分析笔记</title>
     <url>/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="数学分析笔记">数学分析笔记</h1>
@@ -2228,7 +2213,94 @@ f(a)\end{cases}\)</span></p>
 <p>定理：若 <span class="math inline">\(f\in C([a, b])\)</span>
 则一定存在 <span class="math inline">\(x_1, x_2 \in [a, b],\text{s.t.},
 f(x_1) = \sup\limits_{x\in [a, b]} f(x), f(x_2) = \inf\limits_{x\in [a,
-b]} f(x)\)</span></p>
+b]} f(x)(f(x_1) = \max\limits_{x\in [a, b]} f(x), f(x_2) =
+\min\limits_{x\in [a, b]} f(x))\)</span></p>
+<p>证明：</p>
+<p>先证明有界性：</p>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0, \exists
+\delta_x &gt; 0, \forall l \in U_{[a, b]}(x,\delta_x)\)</span>，满<span
+class="math inline">\(\vert f(x) - f(l)\vert &lt;
+\varepsilon\)</span>，由于有限覆盖定理，那么 <span
+class="math inline">\(\vert f(x_1)- f(x_2)\vert &lt; N
+\varepsilon\)</span></p>
+<p>第二步是反证法，如果 <span class="math inline">\(M =
+\sup\limits_{x\in [a, b]}f(x), \forall x \in [a, b], M &gt;
+f(x)\)</span>，则令 <span class="math inline">\(F(x) = \frac{1}{M -
+f(x)}\)</span>，且有 <span class="math inline">\(F \in C([a,
+b])\)</span>，从而 <span class="math inline">\(F(x)\)</span> 在 <span
+class="math inline">\([a, b]\)</span> 上有上界 <span
+class="math inline">\(\mu\)</span>，那么 <span
+class="math inline">\(f(x) \le M - \frac{1}{\mu}\)</span>，这和 <span
+class="math inline">\(M = \sup\limits_{x\in [a, b]} f(x)\)</span>
+矛盾，于是存在 <span class="math inline">\(x_1, f(x_1)
+=\sup\limits_{x\in [a, b]} f(x)\)</span>，最小值情况可以类似证明</p>
+<p>注：<span class="math inline">\(\mathbb R\)</span>
+上有界闭集成为紧集，紧集上的连续函数存在最值定理</p>
+<h4 id="一致连续性">一致连续性</h4>
+<p><span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(X\)</span> 上连续，<span class="math inline">\(x_0
+\in X, \forall \varepsilon &gt; 0, \exists \delta = \delta(x_0,
+\varepsilon) &gt; 0, \text{s.t.} \forall U_{X} (x_0, \delta),
+\text{s.t.} \vert f(x) - f(x_0) \vert &lt; \varepsilon\)</span></p>
+<p>如果在 <span class="math inline">\(X\)</span> 上一致连续，那么 <span
+class="math inline">\(\forall x_0 \in X,\forall \varepsilon &gt; 0,
+\exists \delta = \delta(\varepsilon) &gt; 0, \text{s.t.} \forall x \in
+U_{x}(x_0, \delta),\text{s.t.} \vert f(x) - f(x_0) \vert &lt;
+\varepsilon\)</span></p>
+<p><span class="math inline">\(\exists \varepsilon_0 &gt; 0, \forall n,
+\exists s_n, t_n \in X, \vert s_n - t_n\vert \ge
+\varepsilon_0\)</span></p>
+<h4 id="定理heine-cantor">定理(Heine-Cantor)</h4>
+<p>设 <span class="math inline">\(f(x)\in C([a, b])\)</span>，则 <span
+class="math inline">\(f\)</span> 在 <span class="math inline">\([a,
+b]\)</span> 上一致连续</p>
+<p>证明：先取有限覆盖，邻域大小是 <span
+class="math inline">\(\frac{1}{2}\delta\)</span>，里面都是然后 <span
+class="math inline">\(\delta =\frac{1}{2}\min\{\delta_1, \delta_2,
+\ldots, \delta_n\}\)</span>，然后对于 <span
+class="math inline">\(\forall x_0 \in X, x\in U(x_k, \frac{1}{2}
+\delta_{x_k})\)</span>，然后 <span class="math inline">\(\forall \vert
+x_1 - x_0 \vert &lt; \delta\)</span>，那么在一个邻域里面，则 <span
+class="math inline">\(\vert f(x_1) - f(x_0)\vert &lt;
+\varepsilon\)</span>，证毕。</p>
+<p>例题：设 <span class="math inline">\(f\in C[a, +\infty)\)</span> 且
+<span class="math inline">\(\lim\limits_{x \rightarrow +\infty}f(x) = A
+\in \mathbb R\)</span>，那么 <span class="math inline">\(f\)</span> 在
+<span class="math inline">\([a, +\infty)\)</span> 上一致连续</p>
+<h4 id="振幅">振幅</h4>
+<p>设 <span class="math inline">\(f:X\rightarrow \mathbb R,x_0\)</span>
+为 <span class="math inline">\(X\)</span> 的极限点，<span
+class="math inline">\(\delta &gt; 0\)</span>，令 <span
+class="math inline">\(\omega(f;x_0, \delta) = \sup\limits_{x \in
+U_X(x_0, \delta)}f(x) - \inf\limits_{x \in U_X(x_0, \delta)}f(x) =
+\sup\limits_{x, y \in U_X(x_0, \delta)}\vert f(x) - f(y) \vert\)</span>
+为 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(U_X(x_0, \delta)\)</span> 上的振幅。</p>
+<p><span class="math inline">\(\omega (f; x_0) = \lim\limits_{\delta
+\rightarrow 0+} \omega(f; x_0, \delta)\)</span> 称其为 <span
+class="math inline">\(f\)</span> 在 <span
+class="math inline">\(x\rightarrow x_0\)</span> 时的振幅。</p>
+<p>命题：<span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(x_0\)</span> 连续的条件是 <span
+class="math inline">\(\omega(f; x_0) = 0\)</span>，反例：<span
+class="math inline">\(\sin\frac{1}{x}\)</span></p>
+<p><span class="math inline">\(M(x) = \sup\limits_{x\in [a, x]} f(x),
+m(x) = \inf\limits_{x\in [a, x]} f(x)\)</span>，都是连续函数</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据科学导论笔记</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
+<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
+<p>课程种类：新生研讨课</p>
+<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
+<p>三元空间</p>
+<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
+<p>退课了。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -2301,314 +2373,6 @@ Next 主题，因为原来不支持 latex，非常菜。</p>
 ]]></content>
       <tags>
         <tag>diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>离散数学笔记</title>
-    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
-<h2 id="命题">命题</h2>
-<p>定义：命题是一个非真即假的的陈述句。</p>
-<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
-<p>任何命题的真值都是唯一的。</p>
-<p><strong>悖论不是命题</strong></p>
-<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
-q, r,\ldots\)</span></p>
-<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
-<h3 id="命题连接词">命题连接词</h3>
-<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
-\leftrightarrow\)</span></p>
-<ul>
-<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
-<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
-<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
-<li><span class="math inline">\(\rightarrow\)</span>
-蕴含联结词，推出</li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-双蕴含联结词，等价</li>
-</ul>
-<p>后面的都是方便好记但是错误的名字（</p>
-<p>虽然但是，既又，不但而且都是合取。</p>
-<p>或就是析取</p>
-<p>例题：</p>
-<p>张明报考的第一志愿是数学类或者计算机类。</p>
-<p>记张明第一志愿是数学类为 <span
-class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
-class="math inline">\(q\)</span>，那么应该是 <span
-class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
-这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
-q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
-q\)</span></p>
-<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
-class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
-\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
-q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
-class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
-<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
-class="math inline">\(q\)</span> 的充分条件，并且 <span
-class="math inline">\(q\)</span> 是 <span
-class="math inline">\(p\)</span> 的必要条件，</p>
-<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
-class="math inline">\(r\)</span>，我去上学为 <span
-class="math inline">\(s\)</span>，那么这句话是 <span
-class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
-<span class="math inline">\(s\rightarrow r\)</span></p>
-<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
-q\)</span> 语言就是当且仅当。</p>
-<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
-(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
-class="math inline">\(x, y\)</span></p>
-<p>联结词优先级，不要记！！！！直接加括号。</p>
-<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
-<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
-<p>真值可以变化的陈述句叫做命题变项</p>
-<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
-<p>如果一个 <span class="math inline">\(A\)</span>
-不是永假式，那么叫做可满足式。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
-<span class="math inline">\(B\)</span>，那么 <span
-class="math inline">\(B\)</span> 也是永真式。</p>
-<p>几个需要注意的点：</p>
-<ol type="1">
-<li>这盆花真香！（不是命题</li>
-<li>这盆花真香。（是命题</li>
-<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
-</ol>
-<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
-<h3 id="波兰表达式">1.6 波兰表达式</h3>
-<p>一般而言，使用联结词构成公式有三种方式，</p>
-<ul>
-<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
-<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
-<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
-</ul>
-<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
-故称之为波兰表达式。</p>
-<p>关于中缀和逆波兰的转化
-https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
-<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
-<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
-<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
-<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
-<h3 id="等值定理">等值定理</h3>
-<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
-<span class="math inline">\(B\)</span>，设 <span
-class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 共有 <span
-class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 的真值都相同，则称 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
-class="math inline">\(A = B\)</span>.</p>
-<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
-为两个命题公式，<span class="math inline">\(A = B\)</span>
-的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
-为一个重言式。</p>
-<p>等值定理满足：</p>
-<ol type="1">
-<li>自反性 <span class="math inline">\(A = A\)</span></li>
-<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
-class="math inline">\(A = C\)</span></li>
-<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
-class="math inline">\(B = A\)</span></li>
-</ol>
-<p>逆命题、否命题与逆否命题。</p>
-<ul>
-<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
-class="math inline">\(q \rightarrow p\)</span></li>
-<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
-class="math inline">\(p\rightarrow \neg q\)</span></li>
-<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
-<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
-</ul>
-<p>两个重要结论</p>
-<ul>
-<li>原命题和逆否命题等价</li>
-<li>逆命题与否命题等价</li>
-</ul>
-<h3 id="等值公式">等值公式</h3>
-<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
-是含命题公式 A的命题公式， <span
-class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
-class="math inline">\(B\)</span> 置换了<span
-class="math inline">\(\varPhi(A)\)</span> 中的 <span
-class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
-class="math inline">\(A = B\)</span>，则 <span
-class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
-<p>基本的等值公式</p>
-<ol type="1">
-<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
-<li>结合律
-<ol type="1">
-<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
-R)\)</span></li>
-<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
-\wedge R)\)</span></li>
-<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
-P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
-<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
-\rightarrow (Q \rightarrow R)\)</span></li>
-</ol></li>
-<li>交换律
-<ol type="1">
-<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
-<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
-<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
-P\)</span></li>
-<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
-P\)</span></li>
-</ol></li>
-<li>分配律
-<ol type="1">
-<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
-P\vee R)\)</span></li>
-<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
-(P \wedge R)\)</span></li>
-<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
-\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-不满足分配律</li>
-</ol></li>
-<li>幂等律
-<ol type="1">
-<li><span class="math inline">\(P \vee P = P\)</span></li>
-<li><span class="math inline">\(P \wedge P = P\)</span></li>
-<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
-</ol></li>
-<li>吸收律
-<ol type="1">
-<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
-<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
-</ol></li>
-<li>De Morgan律
-<ol type="1">
-<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
-\leftrightarrow Q\)</span></li>
-</ol></li>
-<li>同一律
-<ol type="1">
-<li><span class="math inline">\(P \vee F = P\)</span></li>
-<li><span class="math inline">\(P \wedge T = P\)</span></li>
-<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
-<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
-<li><span class="math inline">\(F \leftrightarrow P = \neg
-P\)</span></li>
-</ol></li>
-<li>零律
-<ol type="1">
-<li><span class="math inline">\(P \vee T = T\)</span></li>
-<li><span class="math inline">\(P \wedge F = 0\)</span></li>
-</ol></li>
-<li>补余律
-<ol type="1">
-<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
-<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
-<li><span class="math inline">\(P\rightarrow \neg P = \neg
-P\)</span></li>
-<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow \neg P =
-F\)</span></li>
-</ol></li>
-</ol>
-<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
-Q = \neg P \vee Q\)</span> - 前提合取合并 <span
-class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
-Q)\rightarrow R\)</span> - 等价等值式 <span
-class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
-\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
-\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
-class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
-Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
-(P\rightarrow \neg Q) = \neg P\)</span> - <span
-class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
-\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
-class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
-\vee Q)\)</span> 用取假来描述双条件 - <span
-class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
-\rightarrow R)\)</span> 前提交换 - <span
-class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
-\vee Q)\rightarrow R\)</span></p>
-<h3 id="等值演算">等值演算</h3>
-<h4 id="例1">例1</h4>
-<p><span class="math display">\[
-\begin{aligned}
-\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
-\\
-\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
-&amp;蕴涵表达式，结合律\\
-(P \wedge Q) \vee(\neg P \vee Q)
-&amp;双重否定律，幂等律\\
-( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
-Q \vee \neg P&amp;吸收律
-\end{aligned}
-\]</span></p>
-<h4 id="例2">例2</h4>
-$$
-<span class="math display">\[\begin{aligned}
-&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
-\\
-=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
-\\
-
-=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
-&amp; (摩根律)
-\\
-=&amp;F\wedge R &amp; (补余律，零律)
-\\
-=&amp;F(零律)
-\end{aligned}\]</span>
-<p>$$</p>
-<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
-<h4 id="例1-1">例1</h4>
-<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
-\wedge Q) \vee (P \wedge Q)\)</span></p>
-<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
-<h4 id="例2-1">例2</h4>
-<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
-\wedge Q)\)</span> 然后摩根一下就行了。</p>
-<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
-Q)\)</span></p>
-<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
-Q)\)</span></p>
-<h3 id="完备集">完备集</h3>
-<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
-<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
-是完备的联结词集合。</p>
-<ol type="1">
-<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
-<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
-<li><span class="math inline">\(S_3 = \{\neg,
-\rightarrow\}\)</span></li>
-<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
-<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
-</ol>
-<p>这些集合都是完备的</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;\neg P = \neg (P \wedge P) = P \uparrow P
-\\
-&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
-&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
-\end{aligned}
-\]</span></p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -2947,6 +2711,314 @@ Q)\)</span></p>
 <li>上帝的本体论证明</li>
 <li>神学是最高的哲学</li>
 </ul>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>离散数学笔记</title>
+    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
+<h2 id="命题">命题</h2>
+<p>定义：命题是一个非真即假的的陈述句。</p>
+<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
+<p>任何命题的真值都是唯一的。</p>
+<p><strong>悖论不是命题</strong></p>
+<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
+q, r,\ldots\)</span></p>
+<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
+<h3 id="命题连接词">命题连接词</h3>
+<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
+\leftrightarrow\)</span></p>
+<ul>
+<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
+<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
+<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
+<li><span class="math inline">\(\rightarrow\)</span>
+蕴含联结词，推出</li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+双蕴含联结词，等价</li>
+</ul>
+<p>后面的都是方便好记但是错误的名字（</p>
+<p>虽然但是，既又，不但而且都是合取。</p>
+<p>或就是析取</p>
+<p>例题：</p>
+<p>张明报考的第一志愿是数学类或者计算机类。</p>
+<p>记张明第一志愿是数学类为 <span
+class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
+class="math inline">\(q\)</span>，那么应该是 <span
+class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
+这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
+q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
+q\)</span></p>
+<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
+\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
+q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
+class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
+<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充分条件，并且 <span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(p\)</span> 的必要条件，</p>
+<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
+class="math inline">\(r\)</span>，我去上学为 <span
+class="math inline">\(s\)</span>，那么这句话是 <span
+class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
+<span class="math inline">\(s\rightarrow r\)</span></p>
+<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
+q\)</span> 语言就是当且仅当。</p>
+<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
+(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
+class="math inline">\(x, y\)</span></p>
+<p>联结词优先级，不要记！！！！直接加括号。</p>
+<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
+<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
+<p>真值可以变化的陈述句叫做命题变项</p>
+<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
+<p>如果一个 <span class="math inline">\(A\)</span>
+不是永假式，那么叫做可满足式。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
+<span class="math inline">\(B\)</span>，那么 <span
+class="math inline">\(B\)</span> 也是永真式。</p>
+<p>几个需要注意的点：</p>
+<ol type="1">
+<li>这盆花真香！（不是命题</li>
+<li>这盆花真香。（是命题</li>
+<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
+</ol>
+<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
+<h3 id="波兰表达式">1.6 波兰表达式</h3>
+<p>一般而言，使用联结词构成公式有三种方式，</p>
+<ul>
+<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
+<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
+<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
+</ul>
+<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
+故称之为波兰表达式。</p>
+<p>关于中缀和逆波兰的转化
+https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
+<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
+<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
+<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
+<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
+<h3 id="等值定理">等值定理</h3>
+<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
+<span class="math inline">\(B\)</span>，设 <span
+class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 共有 <span
+class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 的真值都相同，则称 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
+class="math inline">\(A = B\)</span>.</p>
+<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
+为两个命题公式，<span class="math inline">\(A = B\)</span>
+的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
+为一个重言式。</p>
+<p>等值定理满足：</p>
+<ol type="1">
+<li>自反性 <span class="math inline">\(A = A\)</span></li>
+<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
+class="math inline">\(A = C\)</span></li>
+<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
+class="math inline">\(B = A\)</span></li>
+</ol>
+<p>逆命题、否命题与逆否命题。</p>
+<ul>
+<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
+class="math inline">\(q \rightarrow p\)</span></li>
+<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
+class="math inline">\(p\rightarrow \neg q\)</span></li>
+<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
+<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
+</ul>
+<p>两个重要结论</p>
+<ul>
+<li>原命题和逆否命题等价</li>
+<li>逆命题与否命题等价</li>
+</ul>
+<h3 id="等值公式">等值公式</h3>
+<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
+是含命题公式 A的命题公式， <span
+class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
+class="math inline">\(B\)</span> 置换了<span
+class="math inline">\(\varPhi(A)\)</span> 中的 <span
+class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
+class="math inline">\(A = B\)</span>，则 <span
+class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
+<p>基本的等值公式</p>
+<ol type="1">
+<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
+<li>结合律
+<ol type="1">
+<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
+R)\)</span></li>
+<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
+\wedge R)\)</span></li>
+<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
+P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
+<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
+\rightarrow (Q \rightarrow R)\)</span></li>
+</ol></li>
+<li>交换律
+<ol type="1">
+<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
+<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
+<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
+P\)</span></li>
+<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
+P\)</span></li>
+</ol></li>
+<li>分配律
+<ol type="1">
+<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
+P\vee R)\)</span></li>
+<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
+(P \wedge R)\)</span></li>
+<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
+\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+不满足分配律</li>
+</ol></li>
+<li>幂等律
+<ol type="1">
+<li><span class="math inline">\(P \vee P = P\)</span></li>
+<li><span class="math inline">\(P \wedge P = P\)</span></li>
+<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
+</ol></li>
+<li>吸收律
+<ol type="1">
+<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
+<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
+</ol></li>
+<li>De Morgan律
+<ol type="1">
+<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
+\leftrightarrow Q\)</span></li>
+</ol></li>
+<li>同一律
+<ol type="1">
+<li><span class="math inline">\(P \vee F = P\)</span></li>
+<li><span class="math inline">\(P \wedge T = P\)</span></li>
+<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
+<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
+<li><span class="math inline">\(F \leftrightarrow P = \neg
+P\)</span></li>
+</ol></li>
+<li>零律
+<ol type="1">
+<li><span class="math inline">\(P \vee T = T\)</span></li>
+<li><span class="math inline">\(P \wedge F = 0\)</span></li>
+</ol></li>
+<li>补余律
+<ol type="1">
+<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
+<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
+<li><span class="math inline">\(P\rightarrow \neg P = \neg
+P\)</span></li>
+<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow \neg P =
+F\)</span></li>
+</ol></li>
+</ol>
+<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
+Q = \neg P \vee Q\)</span> - 前提合取合并 <span
+class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
+Q)\rightarrow R\)</span> - 等价等值式 <span
+class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
+\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
+\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
+class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
+Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
+(P\rightarrow \neg Q) = \neg P\)</span> - <span
+class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
+\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
+class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
+\vee Q)\)</span> 用取假来描述双条件 - <span
+class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
+\rightarrow R)\)</span> 前提交换 - <span
+class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
+\vee Q)\rightarrow R\)</span></p>
+<h3 id="等值演算">等值演算</h3>
+<h4 id="例1">例1</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
+\\
+\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
+&amp;蕴涵表达式，结合律\\
+(P \wedge Q) \vee(\neg P \vee Q)
+&amp;双重否定律，幂等律\\
+( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
+Q \vee \neg P&amp;吸收律
+\end{aligned}
+\]</span></p>
+<h4 id="例2">例2</h4>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
+\\
+=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
+\\
+
+=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
+&amp; (摩根律)
+\\
+=&amp;F\wedge R &amp; (补余律，零律)
+\\
+=&amp;F(零律)
+\end{aligned}\]</span>
+<p>$$</p>
+<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
+<h4 id="例1-1">例1</h4>
+<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
+\wedge Q) \vee (P \wedge Q)\)</span></p>
+<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
+<h4 id="例2-1">例2</h4>
+<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
+\wedge Q)\)</span> 然后摩根一下就行了。</p>
+<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
+Q)\)</span></p>
+<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
+Q)\)</span></p>
+<h3 id="完备集">完备集</h3>
+<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
+<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
+是完备的联结词集合。</p>
+<ol type="1">
+<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
+<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
+<li><span class="math inline">\(S_3 = \{\neg,
+\rightarrow\}\)</span></li>
+<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
+<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
+</ol>
+<p>这些集合都是完备的</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\neg P = \neg (P \wedge P) = P \uparrow P
+\\
+&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
+&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
+\end{aligned}
+\]</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -4582,6 +4654,100 @@ A\vert = \sum\limits_{1\le j_1&lt;j_2&lt;\ldots&lt;j_s\le n} A
 j_s\\i_1&amp;\ldots&amp;i_s\end{pmatrix} \hat{A}
 \begin{pmatrix}j_1&amp;\ldots&amp;
 j_s\\i_1&amp;\ldots&amp;i_s\end{pmatrix}\)</span></p>
+<p>Cauchy-Binet公式： 设 <span class="math inline">\(A = (a_{ij})\in
+M_{m, n} (\mathbb F), B = (b_{ij})\in M_{n, m} (\mathbb F)\)</span> 1.
+若 <span class="math inline">\(m &gt; n\)</span>，则 <span
+class="math inline">\(\vert AB\vert = 0\)</span> 2. <span
+class="math inline">\(\vert AB\vert = \sum\limits_{1\le
+j_1&lt;j_2&lt;\ldots&lt;j_m\le n} A
+\begin{pmatrix}1&amp;\ldots&amp;m\\j_1&amp;\ldots&amp; j_m\end{pmatrix}
+B \begin{pmatrix}j_1&amp;\ldots&amp;j_m\\1&amp;\ldots&amp;
+m\end{pmatrix}\)</span></p>
+<p>证明：</p>
+<p><span class="math inline">\(\begin{vmatrix}A &amp; 0 \\-I_n &amp;
+B\end{vmatrix} = \begin{vmatrix}0 &amp; AB \\-I_n &amp;
+B\end{vmatrix}\)</span></p>
+<p>按照 Laplace 定理对于前 <span class="math inline">\(m\)</span>
+行展开，那么应该有 <span class="math inline">\(\vert C \vert = (-1) ^
+{(m + 1) n}\vert AB\vert\)</span></p>
+<p>另一方面，按照 Laplace 定理直接把最开始的矩阵前 <span
+class="math inline">\(m\)</span> 行展开，有 <span
+class="math inline">\(\vert C \vert = \sum\limits_{1 \le j_1 &lt; \ldots
+&lt; j_m \le n + m} C\begin{pmatrix}1 &amp; \ldots
+&amp;m\\j_1&amp;\ldots&amp;j_m\end{pmatrix} \hat{C}\begin{pmatrix}1
+&amp; \ldots &amp;m\\j_1&amp;\ldots&amp;j_m\end{pmatrix}\)</span></p>
+<p>进一步，我们会取定 <span class="math inline">\(1\le j_1 &lt; j_2
+\ldots &lt;j_n \le m\)</span>，有 <span
+class="math inline">\(\hat{C}\begin{pmatrix}1 &amp; \ldots
+&amp;m\\j_1&amp;\ldots&amp;j_m\end{pmatrix} = (-1) ^
+{1+2+\ldots+m+j_1+j_2+\ldots+j_m} \det(-e_{j_{m +
+1}},\ldots,-e_{j_n},B)=(-1) ^ {1+2+\ldots+m+j_1+j_2+\ldots+j_m} \det
+B_1\)</span>，再按照前 <span class="math inline">\(n-m\)</span>
+列展开，于是得到 <span class="math inline">\(\det B_1 = (-1) ^{1 + 2 +
+\ldots + n - m + j_1 + j_2+\ldots + j_{n}}(-1) ^ {n -
+m}B\begin{pmatrix}j_1 &amp; \ldots &amp; j_m \\ 1 &amp; \ldots &amp;
+m\end{pmatrix}\)</span></p>
+<p>推论： Lagrange 恒等式</p>
+<p><span class="math inline">\(\left(\sum a_k\right)^2\left(\sum
+b_k\right)^2-\left(\sum a_i b_i\right) ^ 2 = \sum\limits_{1\le i &lt;
+j\le n}\left(a_ib_j - b_i a_j\right) ^ 2\)</span></p>
+<h2 id="向量空间">向量空间</h2>
+<h3 id="定义-1">定义</h3>
+<p>设 <span class="math inline">\(\mathbb F\)</span> 是一个数域，<span
+class="math inline">\(V\)</span> 是一个非空集合，假设 <span
+class="math inline">\(V\)</span> 上有一个二元运算 <span
+class="math inline">\(V\times V \rightarrow V,(\alpha,\beta)\mapsto
+\alpha + \beta\)</span>，以及数乘运算 <span
+class="math inline">\(\mathbb F \times V \rightarrow V, (k, \alpha)
+\mapsto k\cdot \alpha\)</span></p>
+<p>如果这两个运算满足下列性质：</p>
+<ol type="1">
+<li><span class="math inline">\((\alpha + \beta)+\gamma = \alpha +
+(\beta + \gamma)\)</span></li>
+<li><span class="math inline">\(\alpha + \beta = \beta +
+\alpha\)</span></li>
+<li><span class="math inline">\(\exists! \textbf{0} \in V,\text{s.t.}
+\alpha + \textbf{0} = \textbf{0} + \alpha\)</span></li>
+<li>对于任意 <span class="math inline">\(\alpha \in V\)</span>，存在
+<span class="math inline">\(\beta \in V, \text{s.t.} \alpha + \beta =
+0\)</span></li>
+<li><span class="math inline">\(1\cdot \alpha = \alpha\)</span></li>
+<li><span class="math inline">\((kl)\alpha = k(l\alpha)\)</span></li>
+<li><span class="math inline">\((k + l) \alpha = k\alpha + l
+\alpha\)</span></li>
+<li><span class="math inline">\(k(\alpha + \beta) = k\alpha +
+k\beta\)</span></li>
+</ol>
+<p>那么称 <span class="math inline">\(V\)</span> 相对于这两个运算是数域
+<span class="math inline">\(\mathbb F\)</span> 的一个向量空间，此时
+<span class="math inline">\(V\)</span> 中元素称为向量，<span
+class="math inline">\(\mathbb F\)</span> 中的数称为标量。</p>
+<p>容易看出，<span class="math inline">\(\mathbb F ^ n, M_{m, n}(\mathbb
+F), \mathbb F \subseteq \mathbb K\)</span> 都是向量空间。</p>
+<p>数域 <span class="math inline">\(\mathbb F\)</span> 上的关于变元
+<span class="math inline">\(x\)</span> 的所有多项式的集合 <span
+class="math inline">\(\mathbb F[x]\)</span> 取定 <span
+class="math inline">\(n\ge 0\)</span>，令 <span
+class="math inline">\(\mathbb F[x]_n\)</span> 是 <span
+class="math inline">\(n\)</span> 次多项式集合。则 <span
+class="math inline">\(\mathbb F[x]_n\)</span> 也是 <span
+class="math inline">\(\mathbb F\)</span> 上的向量空间</p>
+<p><span class="math inline">\(C[a, b]\)</span> 是闭区间 <span
+class="math inline">\([a, b]\)</span>
+上所有连续实函数的全体构成的集合。</p>
+<p>于是 <span class="math inline">\(C[a,b]\)</span> 是 <span
+class="math inline">\(\mathbb R\)</span> 的一个向量空，<span
+class="math inline">\(D[a,b]\)</span> 是 <span class="math inline">\([a,
+b]\)</span> 上可导实函数的全体构成集合，那么 <span
+class="math inline">\(D[a, b]\)</span> 也是 <span
+class="math inline">\(\mathbb R\)</span> 上的一个向量空间。</p>
+<p>设 <span class="math inline">\(X\)</span> 是一个集合，记 <span
+class="math inline">\(F ^ X = \{f:X\rightarrow F\}\)</span>，他也是
+<span class="math inline">\(\mathbb F\)</span> 的向量空间。</p>
+<p>进一步的，令 <span class="math inline">\(\mathbb F ^ {(X)} =
+\{f:X\rightarrow F \vert 只有有限个 f(x) (x\in X) 不是 0 \}\)</span>
+，于是 <span class="math inline">\(\mathbb F ^ {(x)}\)</span> 也是 <span
+class="math inline">\(\mathbb F\)</span> 上的向量空间。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
