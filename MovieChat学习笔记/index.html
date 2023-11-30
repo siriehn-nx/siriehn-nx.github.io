@@ -26,14 +26,14 @@
 <meta property="og:site_name" content="siehn_nx&#39;s blog">
 <meta property="og:description" content="这我怎么也ddl，受不了了">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Screenshot%20from%202023-11-27%2013-00-37.png">
-<meta property="og:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Screenshot%20from%202023-11-27%2013-31-42.png">
+<meta property="og:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.png">
+<meta property="og:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2.png">
 <meta property="article:published_time" content="2023-11-26T09:20:30.000Z">
-<meta property="article:modified_time" content="2023-11-30T05:07:30.076Z">
+<meta property="article:modified_time" content="2023-11-30T05:13:54.809Z">
 <meta property="article:author" content="siriehn_nx">
 <meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Screenshot%20from%202023-11-27%2013-00-37.png">
+<meta name="twitter:image" content="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.png">
 
 
 <link rel="canonical" href="http://example.com/MovieChat%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -249,7 +249,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-11-30 13:07:30" itemprop="dateModified" datetime="2023-11-30T13:07:30+08:00">2023-11-30</time>
+      <time title="修改时间：2023-11-30 13:13:54" itemprop="dateModified" datetime="2023-11-30T13:13:54+08:00">2023-11-30</time>
     </span>
 
   
@@ -295,7 +295,7 @@ Moviechat 在长视频理解方面有最好的性能。</p>
 </ul>
 <h2 id="moviechat">MovieChat</h2>
 <p>创新处：减少了视觉冗余信息，提出了创新记忆模型。</p>
-<p><img src="Screenshot%20from%202023-11-27%2013-00-37.png" /></p>
+<p><img src="1.png" /></p>
 <ul>
 <li><p>frame-wise visual feature extractor 逐帧特征提取器</p></li>
 <li><p>the short-term and long-term memory buffers
@@ -338,7 +338,7 @@ G\)</span>，短期记忆的更新策略就是队列式。</p>
 <p>前面提到由于 GPU 和 Memory Limitation
 的限制，所以我们需要构建长期记忆。时间上相似的帧可能在内容上也具有相似性，所以这篇文章提出了一种合并时间上相邻内容上具有相似性的
 tokens 将其变成 sparse memory 存到 Long-Term Meomory 中的算法。</p>
-<p><img src="Screenshot%20from%202023-11-27%2013-31-42.png" /></p>
+<p><img src="2.png" /></p>
 <p>定义相似度是 <span class="math inline">\(s = \frac{1}{N}
 \sum\limits_{j = 1} ^N cos(x_i ^ j , x_{i + 1} ^
 j)\)</span>，合并两个相邻 tokens 的方式是 ToMe
