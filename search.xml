@@ -115,6 +115,37 @@ studies.</p>
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>None</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>具有强基计划的OIer的去向调查报告</title>
     <url>/%E5%85%B7%E6%9C%89%E5%BC%BA%E5%9F%BA%E8%AE%A1%E5%88%92%E7%9A%84OIer%E7%9A%84%E5%8E%BB%E5%90%91%E8%B0%83%E6%9F%A5%E6%8A%A5%E5%91%8A/</url>
     <content><![CDATA[<p>2023届noi银牌大学去向调查报告</p>
@@ -358,37 +389,6 @@ studies.</p>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>None</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>思想道德与法治</title>
     <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
@@ -396,6 +396,21 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <h2 id="绪论">绪论</h2>
 <p>思法课是什么课？一门水课。一门金课。</p>
 <p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据科学导论笔记</title>
+    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
+<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
+<p>课程种类：新生研讨课</p>
+<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
+<p>三元空间</p>
+<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
+<p>退课了。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -471,15 +486,649 @@ Next 主题，因为原来不支持 latex，非常菜。</p>
       </tags>
   </entry>
   <entry>
-    <title>数据科学导论笔记</title>
-    <url>/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="数据科学导论">数据科学导论</h1>
-<p>授课教师：朱文武 wwzhu@tsinghua.edu.cn 大数据专家 大数据思维</p>
-<p>课程种类：新生研讨课</p>
-<p>三次小作业：占比 40%，期末大作业：占比 50%，课堂上表现：占比 10%</p>
-<p>三元空间</p>
-<p>什么是大行数据？所涉及的数据量巨大到无法在可接受时间内达到捕捉管理处理并整理成为人类所能解读的信息。</p>
-<p>退课了。</p>
+    <title>离散数学笔记</title>
+    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
+<h2 id="命题">命题</h2>
+<p>定义：命题是一个非真即假的的陈述句。</p>
+<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
+<p>任何命题的真值都是唯一的。</p>
+<p><strong>悖论不是命题</strong></p>
+<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
+q, r,\ldots\)</span></p>
+<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
+<h3 id="命题连接词">命题连接词</h3>
+<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
+\leftrightarrow\)</span></p>
+<ul>
+<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
+<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
+<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
+<li><span class="math inline">\(\rightarrow\)</span>
+蕴含联结词，推出</li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+双蕴含联结词，等价</li>
+</ul>
+<p>后面的都是方便好记但是错误的名字（</p>
+<p>虽然但是，既又，不但而且都是合取。</p>
+<p>或就是析取</p>
+<p>例题：</p>
+<p>张明报考的第一志愿是数学类或者计算机类。</p>
+<p>记张明第一志愿是数学类为 <span
+class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
+class="math inline">\(q\)</span>，那么应该是 <span
+class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
+这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
+q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
+q\)</span></p>
+<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
+\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
+q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
+class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
+<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充分条件，并且 <span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(p\)</span> 的必要条件，</p>
+<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
+class="math inline">\(r\)</span>，我去上学为 <span
+class="math inline">\(s\)</span>，那么这句话是 <span
+class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
+<span class="math inline">\(s\rightarrow r\)</span></p>
+<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
+q\)</span> 语言就是当且仅当。</p>
+<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
+(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
+class="math inline">\(x, y\)</span></p>
+<p>联结词优先级，不要记！！！！直接加括号。</p>
+<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
+<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
+<p>真值可以变化的陈述句叫做命题变项</p>
+<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
+<p>如果一个 <span class="math inline">\(A\)</span>
+不是永假式，那么叫做可满足式。</p>
+<p>如果 <span class="math inline">\(A\)</span>
+是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
+<span class="math inline">\(B\)</span>，那么 <span
+class="math inline">\(B\)</span> 也是永真式。</p>
+<p>几个需要注意的点：</p>
+<ol type="1">
+<li>这盆花真香！（不是命题</li>
+<li>这盆花真香。（是命题</li>
+<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
+</ol>
+<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
+<h3 id="波兰表达式">1.6 波兰表达式</h3>
+<p>一般而言，使用联结词构成公式有三种方式，</p>
+<ul>
+<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
+<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
+<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
+</ul>
+<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
+故称之为波兰表达式。</p>
+<p>关于中缀和逆波兰的转化
+https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
+<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
+<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
+<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
+<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
+<h3 id="等值定理">等值定理</h3>
+<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
+<span class="math inline">\(B\)</span>，设 <span
+class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 共有 <span
+class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 的真值都相同，则称 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
+class="math inline">\(A = B\)</span>.</p>
+<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
+为两个命题公式，<span class="math inline">\(A = B\)</span>
+的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
+为一个重言式。</p>
+<p>等值定理满足：</p>
+<ol type="1">
+<li>自反性 <span class="math inline">\(A = A\)</span></li>
+<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
+class="math inline">\(A = C\)</span></li>
+<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
+class="math inline">\(B = A\)</span></li>
+</ol>
+<p>逆命题、否命题与逆否命题。</p>
+<ul>
+<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
+class="math inline">\(q \rightarrow p\)</span></li>
+<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
+class="math inline">\(p\rightarrow \neg q\)</span></li>
+<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
+<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
+</ul>
+<p>两个重要结论</p>
+<ul>
+<li>原命题和逆否命题等价</li>
+<li>逆命题与否命题等价</li>
+</ul>
+<h3 id="等值公式">等值公式</h3>
+<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
+是含命题公式 A的命题公式， <span
+class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
+class="math inline">\(B\)</span> 置换了<span
+class="math inline">\(\varPhi(A)\)</span> 中的 <span
+class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
+class="math inline">\(A = B\)</span>，则 <span
+class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
+<p>基本的等值公式</p>
+<ol type="1">
+<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
+<li>结合律
+<ol type="1">
+<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
+R)\)</span></li>
+<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
+\wedge R)\)</span></li>
+<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
+P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
+<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
+\rightarrow (Q \rightarrow R)\)</span></li>
+</ol></li>
+<li>交换律
+<ol type="1">
+<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
+<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
+<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
+P\)</span></li>
+<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
+P\)</span></li>
+</ol></li>
+<li>分配律
+<ol type="1">
+<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
+P\vee R)\)</span></li>
+<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
+(P \wedge R)\)</span></li>
+<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
+\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
+<li><span class="math inline">\(\leftrightarrow\)</span>
+不满足分配律</li>
+</ol></li>
+<li>幂等律
+<ol type="1">
+<li><span class="math inline">\(P \vee P = P\)</span></li>
+<li><span class="math inline">\(P \wedge P = P\)</span></li>
+<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
+</ol></li>
+<li>吸收律
+<ol type="1">
+<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
+<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
+</ol></li>
+<li>De Morgan律
+<ol type="1">
+<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
+Q\)</span></li>
+<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
+\leftrightarrow Q\)</span></li>
+</ol></li>
+<li>同一律
+<ol type="1">
+<li><span class="math inline">\(P \vee F = P\)</span></li>
+<li><span class="math inline">\(P \wedge T = P\)</span></li>
+<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
+<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
+<li><span class="math inline">\(F \leftrightarrow P = \neg
+P\)</span></li>
+</ol></li>
+<li>零律
+<ol type="1">
+<li><span class="math inline">\(P \vee T = T\)</span></li>
+<li><span class="math inline">\(P \wedge F = 0\)</span></li>
+</ol></li>
+<li>补余律
+<ol type="1">
+<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
+<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
+<li><span class="math inline">\(P\rightarrow \neg P = \neg
+P\)</span></li>
+<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
+<li><span class="math inline">\(P \leftrightarrow \neg P =
+F\)</span></li>
+</ol></li>
+</ol>
+<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
+Q = \neg P \vee Q\)</span> - 前提合取合并 <span
+class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
+Q)\rightarrow R\)</span> - 等价等值式 <span
+class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
+\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
+\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
+class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
+Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
+(P\rightarrow \neg Q) = \neg P\)</span> - <span
+class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
+\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
+class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
+\vee Q)\)</span> 用取假来描述双条件 - <span
+class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
+\rightarrow R)\)</span> 前提交换 - <span
+class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
+\vee Q)\rightarrow R\)</span></p>
+<h3 id="等值演算">等值演算</h3>
+<h4 id="例1">例1</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
+\\
+\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
+&amp;蕴涵表达式，结合律\\
+(P \wedge Q) \vee(\neg P \vee Q)
+&amp;双重否定律，幂等律\\
+( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
+Q \vee \neg P&amp;吸收律
+\end{aligned}
+\]</span></p>
+<h4 id="例2">例2</h4>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
+\\
+=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
+\\
+
+=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
+&amp; (摩根律)
+\\
+=&amp;F\wedge R &amp; (补余律，零律)
+\\
+=&amp;F(零律)
+\end{aligned}\]</span>
+<p>$$</p>
+<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
+<h4 id="例1-1">例1</h4>
+<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
+\wedge Q) \vee (P \wedge Q)\)</span></p>
+<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
+<h4 id="例2-1">例2</h4>
+<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
+\wedge Q)\)</span> 然后摩根一下就行了。</p>
+<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
+Q)\)</span></p>
+<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
+Q)\)</span></p>
+<h3 id="完备集">完备集</h3>
+<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
+<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
+是完备的联结词集合。</p>
+<ol type="1">
+<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
+<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
+<li><span class="math inline">\(S_3 = \{\neg,
+\rightarrow\}\)</span></li>
+<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
+<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
+</ol>
+<p>这些集合都是完备的</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\neg P = \neg (P \wedge P) = P \uparrow P
+\\
+&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
+&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
+\end{aligned}
+\]</span></p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科学通论笔记</title>
+    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
+<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
+<p>广义和狭义的科学：</p>
+<ul>
+<li>广义：自然知识，技术，书里科学，全地域起源</li>
+<li>狭义：数学，实验科学，希腊源头</li>
+</ul>
+<p>不懂数学的大科学家：达尔文</p>
+<ul>
+<li>在希腊起源</li>
+<li>在罗马式微</li>
+<li>在伊斯兰世界发扬光大</li>
+<li>在中世纪后期的基督世界重获新生</li>
+<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
+<li>19世纪全方位转化为技术成为强大的物质力量</li>
+<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
+</ul>
+<h3 id="狭义科学的样本">狭义科学的样本</h3>
+<ul>
+<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
+<li>希腊哲学</li>
+</ul>
+<p>问题：如何理解狭义科学的形式？</p>
+<h3 id="文明与科学">文明与科学</h3>
+<p>文明不等于科学，科学出现在希腊城邦文明。</p>
+<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
+<h3 id="纯粹科学">纯粹科学</h3>
+<p>高度的自主性，自足性，为自身的目的而存在</p>
+<ol type="1">
+<li>远离任何意义上的实用主义</li>
+<li>内在性：自己推出自己</li>
+</ol>
+<p>自由科学特征之一：无用无功利之学</p>
+<ul>
+<li>欧几里德的故事</li>
+<li>亚里士多德三种知识：经验、技艺、科学</li>
+</ul>
+<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
+<ul>
+<li>内在展开、证明的知识</li>
+<li>证明、论证、推理、演绎</li>
+</ul>
+<p>自由科学的条件：</p>
+<ul>
+<li>惊异，好奇</li>
+<li>闲暇，快乐</li>
+<li>外在自由（言论自由，财务自由）</li>
+<li>内在自由</li>
+</ul>
+<p>希腊城邦文明，自由科学的温床。</p>
+<p>城邦文明的开端</p>
+<ul>
+<li>荷马史诗</li>
+<li>希腊字母文字</li>
+<li>奥林波斯神话</li>
+<li>奥林匹克竞技会</li>
+</ul>
+<p>神人之别：不死与有死</p>
+<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
+<p>希腊人的宗教：无宗教教义，无宗教经典</p>
+<p>竞技会：</p>
+<ul>
+<li>祭祀奥林波斯诸神</li>
+<li>神圣休战原则</li>
+<li>希腊身份认同</li>
+<li>不仅有体育，还有音乐戏剧歌舞</li>
+<li>全程裸体，展示人体之美</li>
+<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
+</ul>
+<p>城邦小国寡民，直接民主制，参军是公民义务</p>
+<p>戏剧：起源于酒神祭祀</p>
+<p>雕刻：三大雕刻家</p>
+<h3 id="城邦文明小结">城邦文明小结</h3>
+<ul>
+<li>城邦本位主义，自治自给，独立自由</li>
+<li>科学哲学艺术</li>
+<li>希腊波斯战争</li>
+</ul>
+<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
+<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
+<p>奴隶制：自由民获得闲暇</p>
+<p>米利都，科学的策源地：</p>
+<ul>
+<li>独立与自由</li>
+<li>挑战与竞争</li>
+<li>开放与交流</li>
+</ul>
+<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
+<p>自然的发现，事物有其自然</p>
+<p>自然就是本质：事物的自己即其本质</p>
+<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
+<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
+<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
+<p>希腊数学，自由学术的典范</p>
+<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
+<p>实践科学：政治学，伦理学，家政学</p>
+<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
+<p>学数学可以涵养真正人性</p>
+<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
+<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
+<p>什么是自然？何谓自然的发现？</p>
+<p>为什么说几何学是理性科学的代表？</p>
+<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
+<h3 id="本讲纲要">本讲纲要</h3>
+<ul>
+<li>天文学作为科学</li>
+<li>柏拉图及其理念论</li>
+<li>天球-地球宇宙</li>
+<li>行星问题与拯救形象</li>
+</ul>
+<h3 id="原始天文学">原始天文学</h3>
+<ul>
+<li>观天</li>
+<li>命名</li>
+<li>占卜</li>
+</ul>
+<h3 id="科学天文学">科学天文学</h3>
+<ul>
+<li>寻找规律</li>
+<li>预测天象</li>
+</ul>
+<h3 id="中国天文学">中国天文学</h3>
+<ul>
+<li>天人合一</li>
+<li>政治占星学</li>
+<li>日常伦理学</li>
+<li>当食不食</li>
+</ul>
+<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
+<h3 id="理念论">理念论</h3>
+<ul>
+<li>理想，相，理想，形式</li>
+<li>理想是可以超与的</li>
+<li>显示的可理解性来自与他对理念的模仿</li>
+<li>洞穴隐喻</li>
+</ul>
+<h3 id="思想来源">思想来源</h3>
+<ul>
+<li>巴门尼德</li>
+<li>苏格拉底</li>
+<li>泰拉泰德</li>
+<li>欧多克斯</li>
+<li>欧几里德</li>
+</ul>
+<p>《蒂迈欧篇》：理性创世</p>
+<h3 id="世界躯体">世界躯体</h3>
+<ul>
+<li>可视可见，就需要火</li>
+<li>可触可碰，就需要土</li>
+<li>火土结合，就需要中项</li>
+<li>世界是独一无二的球体</li>
+</ul>
+<h3 id="世界灵魂">世界灵魂</h3>
+<ul>
+<li>灵魂=运动</li>
+<li>宇宙的运动有相同运动和相异运动</li>
+</ul>
+<h3 id="宇宙">宇宙</h3>
+<ul>
+<li>有限，秩序，和谐</li>
+<li>宇宙=完美/完善/完满</li>
+</ul>
+<h3 id="地球">地球</h3>
+<ul>
+<li><p>圆盘浮在水上</p></li>
+<li><p>鼓状居于宇宙之上</p></li>
+<li><p>绕中心火转动</p></li>
+<li><p>居于宇宙之中</p></li>
+<li><p>经验之谈</p></li>
+<li><p>理论根据</p></li>
+</ul>
+<h3 id="圆球">圆球</h3>
+<ul>
+<li>几何化的天体把球心放到醒目位置</li>
+<li>对称性</li>
+<li>几何偏好</li>
+</ul>
+<h3 id="天界不朽">天界不朽</h3>
+<ul>
+<li>天地二分</li>
+<li>天界纯粹，绝对，不朽
+<ul>
+<li>位置不变</li>
+<li>性质不变</li>
+<li>数量不变</li>
+</ul></li>
+</ul>
+<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
+<h3 id="拯救现象">拯救现象</h3>
+<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
+<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
+<ul>
+<li>优点：拯救现象</li>
+<li>地球并不处于宇宙集合中心</li>
+<li>也不处于本轮中心的晕素运动中心</li>
+</ul>
+<p>小结</p>
+<ul>
+<li>观察记录不等于科学</li>
+<li>哲学预设：天界存在绝对规则运动</li>
+<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
+<li>透过现象看本质</li>
+<li>集合分解与还原</li>
+</ul>
+<h2 id="经院哲学与现代科学的起源">经院哲学与现代科学的起源</h2>
+<h3 id="三大历史背景">三大历史背景</h3>
+<ul>
+<li>希腊科学的衰落</li>
+<li>伊斯兰的传承和终端</li>
+<li>拉丁欧洲的黑暗和复兴</li>
+</ul>
+<h3 id="希腊科学为何衰落">希腊科学为何衰落</h3>
+<ul>
+<li>自由的科学</li>
+<li>早期基督教的反智主义</li>
+</ul>
+<h3 id="伊斯兰科学的贡献">伊斯兰科学的贡献</h3>
+<ul>
+<li>全面译介希腊科学</li>
+<li>炼金术</li>
+<li>代数</li>
+<li>天文学</li>
+<li>光学</li>
+</ul>
+<h3 id="伊斯兰科学的中断">伊斯兰科学的中断</h3>
+<ul>
+<li>伊斯兰为什么没有发生科学革命？</li>
+<li><ul>
+<li>宗教知识压倒世俗</li>
+</ul></li>
+<li><ul>
+<li>希腊科学没有制度化</li>
+</ul></li>
+<li><ul>
+<li>为产生伊斯兰版的经院哲学</li>
+</ul></li>
+</ul>
+<h3 id="欧洲的苏醒和三大技术革命">欧洲的苏醒和三大技术革命</h3>
+<ul>
+<li>奴隶制的废除与三大技术革命</li>
+<li>农业技术革命</li>
+<li>军事技术革命</li>
+<li>机械技术革命</li>
+</ul>
+<h3 id="机械钟表的出现">机械钟表的出现</h3>
+<ul>
+<li>擒纵器</li>
+</ul>
+<h3 id="什么是大学">什么是大学</h3>
+<ul>
+<li>拉丁翻译运动造就的欧洲学习热潮</li>
+<li>学生和教师的自治组织</li>
+<li>基督教世界的学位颁发机构</li>
+<li>两希文明的熔炉</li>
+</ul>
+<h3 id="学习中心">学习中心</h3>
+<ul>
+<li>神学</li>
+<li>法学</li>
+<li>医学</li>
+</ul>
+<h3 id="法律革命">法律革命</h3>
+<p>教会法</p>
+<ul>
+<li>教会经济财产的管理</li>
+<li>特殊权限规定</li>
+<li>处理教会当局与世俗当局的关系</li>
+<li>教会有法</li>
+<li>自治的法律实体</li>
+<li>法律是普遍和客观的</li>
+</ul>
+<h3 id="学生行会">学生行会</h3>
+<ul>
+<li>对外维护自然利益</li>
+<li>对内制定行业标准</li>
+<li>在王权和教权左右逢源</li>
+</ul>
+<h3 id="学位制度">学位制度</h3>
+<ul>
+<li>教师行会</li>
+<li>学士</li>
+<li>博士</li>
+<li>毕业文凭</li>
+</ul>
+<h3 id="融合两希文明">融合两希文明</h3>
+<ul>
+<li>设置艺学院</li>
+<li>将希腊学术作为大学教学的基础</li>
+<li>将亚里士多德的学说与基督教义密切结合</li>
+<li>为现在科学准备条件</li>
+</ul>
+<h3 id="四大学院">四大学院</h3>
+<ul>
+<li>医学院</li>
+<li>艺学院</li>
+<li>法学院</li>
+<li>法学院</li>
+</ul>
+<h3 id="自由辩论">自由辩论</h3>
+<ul>
+<li>讲座</li>
+<li><ul>
+<li>朗读经典文本</li>
+</ul></li>
+<li><ul>
+<li>解释概念和术语</li>
+</ul></li>
+<li><ul>
+<li>提出问题</li>
+</ul></li>
+<li>辩论</li>
+<li><ul>
+<li>教师引入问题</li>
+</ul></li>
+<li><ul>
+<li>学生正反两方辩论</li>
+</ul></li>
+<li><ul>
+<li>教师综合辩论</li>
+</ul></li>
+</ul>
+<h3 id="教父哲学">教父哲学</h3>
+<ul>
+<li>奥古斯丁</li>
+<li>启示为神学之本</li>
+<li>哲学是神学的婢女</li>
+</ul>
+<h3 id="经院哲学">经院哲学</h3>
+<ul>
+<li>安瑟尔谟</li>
+<li>上帝的本体论证明</li>
+<li>神学是最高的哲学</li>
+</ul>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -2992,655 +3641,270 @@ class="math inline">\(f(x) = T_n(x_0; x) + o((x - x_0) n)\)</span></p>
 <p>若 <span class="math inline">\(x = 0\)</span> 是 Maclawrin 展开。</p>
 <h3 id="带有-lagrange-余项和-cauchy-余项的-taylor-展开式">带有 Lagrange
 余项和 Cauchy 余项的 Taylor 展开式</h3>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>离散数学笔记</title>
-    <url>/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="离散数学">离散数学</h1>
-<h2 id="命题">命题</h2>
-<p>定义：命题是一个非真即假的的陈述句。</p>
-<p>命题的真值：命题所表达的判断结果，只有两个值（真或假）。</p>
-<p>任何命题的真值都是唯一的。</p>
-<p><strong>悖论不是命题</strong></p>
-<p>命题的符号化：用小写字母代替命题，比如 <span class="math inline">\(p,
-q, r,\ldots\)</span></p>
-<p>简单命题和复合命题：不能再分割的命题，能分割为简单命题的命题。</p>
-<h3 id="命题连接词">命题连接词</h3>
-<p><span class="math inline">\(\neg, \wedge, \vee, \rightarrow,
-\leftrightarrow\)</span></p>
-<ul>
-<li><span class="math inline">\(\neg\)</span> 否定联结词， 非</li>
-<li><span class="math inline">\(\wedge\)</span> 合取联结词，与</li>
-<li><span class="math inline">\(\vee\)</span> 析取联结词，或</li>
-<li><span class="math inline">\(\rightarrow\)</span>
-蕴含联结词，推出</li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-双蕴含联结词，等价</li>
-</ul>
-<p>后面的都是方便好记但是错误的名字（</p>
-<p>虽然但是，既又，不但而且都是合取。</p>
-<p>或就是析取</p>
-<p>例题：</p>
-<p>张明报考的第一志愿是数学类或者计算机类。</p>
-<p>记张明第一志愿是数学类为 <span
-class="math inline">\(p\)</span>，第一志愿是计算机类为 <span
-class="math inline">\(q\)</span>，那么应该是 <span
-class="math inline">\((p \wedge \neg q) \vee(\neg p \wedge q )\)</span>
-这个就是排斥或（异或）记录为 <span class="math inline">\(p \oplus
-q\)</span> 或者是 <span class="math inline">\(p\overline{\vee}
-q\)</span></p>
-<p>蕴含联结词，如果 <span class="math inline">\(p\)</span>，则 <span
-class="math inline">\(q\)</span>，一般写成 <span class="math inline">\(p
-\rightarrow q\)</span>，规定 <span class="math inline">\(p\rightarrow
-q\)</span> 当且进当 <span class="math inline">\(p\)</span> 为真，<span
-class="math inline">\(q\)</span> 为假的时候。这个东西表示因果关系。</p>
-<p>充分必要条件，这时候 <span class="math inline">\(p\)</span> 是 <span
-class="math inline">\(q\)</span> 的充分条件，并且 <span
-class="math inline">\(q\)</span> 是 <span
-class="math inline">\(p\)</span> 的必要条件，</p>
-<p>例题：除非今天是星期二，否则我不来上学。今天是星期二为 <span
-class="math inline">\(r\)</span>，我去上学为 <span
-class="math inline">\(s\)</span>，那么这句话是 <span
-class="math inline">\(\neg r \rightarrow \neg s\)</span> 其实等价于
-<span class="math inline">\(s\rightarrow r\)</span></p>
-<p>双蕴含联结词，就是 <span class="math inline">\(p\leftrightarrow
-q\)</span> 语言就是当且仅当。</p>
-<p>注意：<span class="math inline">\(x + y = 2 \leftrightarrow 2 \times
-(x + y) = 4\)</span> 根本不是一个命题，因为还不知道什么是 <span
-class="math inline">\(x, y\)</span></p>
-<p>联结词优先级，不要记！！！！直接加括号。</p>
-<h3 id="合式公式及其赋值">合式公式及其赋值</h3>
-<p>基本公式靠联结符，按照递归的方式联结的就叫做合法的合式公式。</p>
-<p>真值可以变化的陈述句叫做命题变项</p>
-<p>给每个变量一个值，叫做赋值或者解释，然后如果公式为真，那么就是成真赋值，否则是成假赋值。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-在任何赋值下都是真的，那么叫永真式，如果任何赋值下都是假的同理。</p>
-<p>如果一个 <span class="math inline">\(A\)</span>
-不是永假式，那么叫做可满足式。</p>
-<p>如果 <span class="math inline">\(A\)</span>
-是永真式，那么将其中的所有相同的命题变项用另外一个相同的式子代替得到
-<span class="math inline">\(B\)</span>，那么 <span
-class="math inline">\(B\)</span> 也是永真式。</p>
-<p>几个需要注意的点：</p>
-<ol type="1">
-<li>这盆花真香！（不是命题</li>
-<li>这盆花真香。（是命题</li>
-<li>我说的这句话是悖论。（这句话是命题，并且真值是假。</li>
-</ol>
-<p>悖论是自相矛盾的陈述（statement）。即如果承认这个陈述成立，就可推出它的否定陈述成立；反之，如果承认这个陈述的否定陈述成立，又可推出这个陈述成立。</p>
-<h3 id="波兰表达式">1.6 波兰表达式</h3>
-<p>一般而言，使用联结词构成公式有三种方式，</p>
-<ul>
-<li>中置式如 <span class="math inline">\(P∨Q\)</span>（中缀式）</li>
-<li>前置式如<span class="math inline">\(∨PQ\)</span>（前缀式）</li>
-<li>后置式如 <span class="math inline">\(PQ∨\)</span>（后缀式）</li>
-</ul>
-<p>前置式用于逻辑学是由波兰的数理逻辑学家 J. Lukasiewicz提出的,
-故称之为波兰表达式。</p>
-<p>关于中缀和逆波兰的转化
-https://www.cnblogs.com/lanhaicode/p/10776166.html</p>
-<p>https://www.cnblogs.com/nullxjx/p/5940030.html</p>
-<h3 id="定义1.8-真值表">定义1.8 真值表</h3>
-<p>将命题公式A在所有赋值下的取值情况列成表，称作A的真值表。</p>
-<h2 id="命题逻辑的等值和推理演算">命题逻辑的等值和推理演算</h2>
-<h3 id="等值定理">等值定理</h3>
-<p>等值: 给定两个命题公式 <span class="math inline">\(A\)</span> 和
-<span class="math inline">\(B\)</span>，设 <span
-class="math inline">\(P_1 , P_2 , \ldots , P_n\)</span>为出现于 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 中的所有命题变项，则公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 共有 <span
-class="math inline">\(2^n\)</span> 个解释。 若在任一解释下，公式 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 的真值都相同，则称 <span
-class="math inline">\(A\)</span> 和 <span
-class="math inline">\(B\)</span> 是等值的、或称等价记作 <span
-class="math inline">\(A = B\)</span>.</p>
-<p>定理2.1.1 设 <span class="math inline">\(A，B\)</span>
-为两个命题公式，<span class="math inline">\(A = B\)</span>
-的充分必要条件是 <span class="math inline">\(A\leftrightarrow B\)</span>
-为一个重言式。</p>
-<p>等值定理满足：</p>
-<ol type="1">
-<li>自反性 <span class="math inline">\(A = A\)</span></li>
-<li>传递性 <span class="math inline">\(A = B, A = C\)</span>，则 <span
-class="math inline">\(A = C\)</span></li>
-<li>对称性 <span class="math inline">\(A = B\)</span> 则 <span
-class="math inline">\(B = A\)</span></li>
-</ol>
-<p>逆命题、否命题与逆否命题。</p>
-<ul>
-<li><span class="math inline">\(p\rightarrow q\)</span> 逆命题是 <span
-class="math inline">\(q \rightarrow p\)</span></li>
-<li><span class="math inline">\(p \rightarrow q\)</span> 否命题是 <span
-class="math inline">\(p\rightarrow \neg q\)</span></li>
-<li><span class="math inline">\(p\rightarrow q\)</span> 的逆否命题是
-<span class="math inline">\(\neg q \rightarrow \neg p\)</span></li>
-</ul>
-<p>两个重要结论</p>
-<ul>
-<li>原命题和逆否命题等价</li>
-<li>逆命题与否命题等价</li>
-</ul>
-<h3 id="等值公式">等值公式</h3>
-<p>定理2.2.1： 设 <span class="math inline">\(\varPhi(A)\)</span>
-是含命题公式 A的命题公式， <span
-class="math inline">\(\varPhi(B)\)</span> 是 用命题公式 <span
-class="math inline">\(B\)</span> 置换了<span
-class="math inline">\(\varPhi(A)\)</span> 中的 <span
-class="math inline">\(A\)</span> 之后得到的命题公式如果 <span
-class="math inline">\(A = B\)</span>，则 <span
-class="math inline">\(\varPhi(A) = \varPhi(B)\)</span></p>
-<p>基本的等值公式</p>
-<ol type="1">
-<li>双重否定律 <span class="math inline">\(\neg \neg P = P\)</span></li>
-<li>结合律
-<ol type="1">
-<li><span class="math inline">\((P\vee Q) \vee R = P \vee (Q \vee
-R)\)</span></li>
-<li><span class="math inline">\((P\wedge Q) \wedge R = P \wedge (Q
-\wedge R)\)</span></li>
-<li><span class="math inline">\((P\leftrightarrow Q) \leftrightarrow R =
-P \leftrightarrow (Q \leftrightarrow R)\)</span></li>
-<li><span class="math inline">\((P\rightarrow Q) \rightarrow R \not= P
-\rightarrow (Q \rightarrow R)\)</span></li>
-</ol></li>
-<li>交换律
-<ol type="1">
-<li><span class="math inline">\(Q\vee P = P \vee Q\)</span></li>
-<li><span class="math inline">\(P\wedge Q = Q \wedge P\)</span></li>
-<li><span class="math inline">\(P\leftrightarrow Q = Q \leftrightarrow
-P\)</span></li>
-<li><span class="math inline">\(P\rightarrow Q \not= Q \rightarrow
-P\)</span></li>
-</ol></li>
-<li>分配律
-<ol type="1">
-<li><span class="math inline">\(P\vee (Q \wedge R) = (P \vee Q) \wedge(
-P\vee R)\)</span></li>
-<li><span class="math inline">\(P\wedge (Q \vee R) = (P \wedge Q) \vee
-(P \wedge R)\)</span></li>
-<li><span class="math inline">\(P\rightarrow (Q \rightarrow R )= (P
-\rightarrow Q)\rightarrow(P\rightarrow R)\)</span></li>
-<li><span class="math inline">\(\leftrightarrow\)</span>
-不满足分配律</li>
-</ol></li>
-<li>幂等律
-<ol type="1">
-<li><span class="math inline">\(P \vee P = P\)</span></li>
-<li><span class="math inline">\(P \wedge P = P\)</span></li>
-<li><span class="math inline">\(P \rightarrow P = T\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow P = T\)</span></li>
-</ol></li>
-<li>吸收律
-<ol type="1">
-<li><span class="math inline">\(P \vee (P \wedge Q) = P\)</span></li>
-<li><span class="math inline">\(P\wedge(P \vee Q) = P\)</span></li>
-</ol></li>
-<li>De Morgan律
-<ol type="1">
-<li><span class="math inline">\(\neg (P \vee Q) = \neg P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P \wedge Q) = \neg P \vee \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg(P \rightarrow Q) = P \wedge \neg
-Q\)</span></li>
-<li><span class="math inline">\(\neg (P\leftrightarrow Q) = \neg P
-\leftrightarrow Q\)</span></li>
-</ol></li>
-<li>同一律
-<ol type="1">
-<li><span class="math inline">\(P \vee F = P\)</span></li>
-<li><span class="math inline">\(P \wedge T = P\)</span></li>
-<li><span class="math inline">\(T \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(T \leftrightarrow P = P\)</span></li>
-<li><span class="math inline">\(P\rightarrow F = \neg P\)</span></li>
-<li><span class="math inline">\(F \leftrightarrow P = \neg
-P\)</span></li>
-</ol></li>
-<li>零律
-<ol type="1">
-<li><span class="math inline">\(P \vee T = T\)</span></li>
-<li><span class="math inline">\(P \wedge F = 0\)</span></li>
-</ol></li>
-<li>补余律
-<ol type="1">
-<li><span class="math inline">\(P \vee \neg P = T\)</span></li>
-<li><span class="math inline">\(P \wedge \neg P = F\)</span></li>
-<li><span class="math inline">\(P\rightarrow \neg P = \neg
-P\)</span></li>
-<li><span class="math inline">\(\neg P \rightarrow P = P\)</span></li>
-<li><span class="math inline">\(P \leftrightarrow \neg P =
-F\)</span></li>
-</ol></li>
-</ol>
-<p>常用的等值公式 - 蕴含等值式 <span class="math inline">\(P \rightarrow
-Q = \neg P \vee Q\)</span> - 前提合取合并 <span
-class="math inline">\(P\rightarrow (Q \rightarrow R) = (P \wedge
-Q)\rightarrow R\)</span> - 等价等值式 <span
-class="math inline">\(P\leftrightarrow Q = (P\rightarrow Q)\wedge (Q
-\rightarrow P)\)</span> - 假言易位 <span class="math inline">\(P
-\rightarrow Q = \neg Q\rightarrow \neg P\)</span> - 等价否定等值式 <span
-class="math inline">\(P\leftrightarrow Q = \neg P \leftrightarrow \neg
-Q\)</span> - 归缪论：<span class="math inline">\(P \rightarrow Q \wedge
-(P\rightarrow \neg Q) = \neg P\)</span> - <span
-class="math inline">\(P\leftrightarrow Q = (P\wedge Q)\vee (\neg P
-\wedge \neg Q)\)</span> 用取真来描述双条件 - <span
-class="math inline">\(P\leftrightarrow Q = (P\vee \neg Q) \wedge (\neg P
-\vee Q)\)</span> 用取假来描述双条件 - <span
-class="math inline">\(P\rightarrow(Q\rightarrow R)= Q \rightarrow (P
-\rightarrow R)\)</span> 前提交换 - <span
-class="math inline">\((P\rightarrow R) \wedge (Q \rightarrow R) = (P
-\vee Q)\rightarrow R\)</span></p>
-<h3 id="等值演算">等值演算</h3>
-<h4 id="例1">例1</h4>
+<p>定理： 设 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\([x_0, x]\)</span> 上 <span
+class="math inline">\(n\)</span> 阶连续可微，且在 <span
+class="math inline">\((x_0, x)\)</span> 上有 <span
+class="math inline">\(n + 1\)</span> 阶导数，那么</p>
 <p><span class="math display">\[
-\begin{aligned}
-\neg (P\wedge Q)\rightarrow(\neg P \vee(\neg P \vee Q))
-\\
-\neg\neg(P \wedge Q) \vee((\neg P\vee\neg P) \vee Q)
-&amp;蕴涵表达式，结合律\\
-(P \wedge Q) \vee(\neg P \vee Q)
-&amp;双重否定律，幂等律\\
-( (P\wedge Q) \vee Q)\vee \neg P &amp; 交换律，结合律\\
-Q \vee \neg P&amp;吸收律
-\end{aligned}
+f(x) = \sum\limits_{k = 0} ^ n \frac{f^{(k)}(x_0)}{k!} (x - x_0) ^
+k+\frac{f ^ {(n + 1) (\xi)}}{(n + 1)!}(x - x_0) ^ {n + 1}
 \]</span></p>
-<h4 id="例2">例2</h4>
+<p>其中 <span class="math inline">\(\xi \in (x_0, x)\)</span></p>
+<h4 id="例一-15">例一</h4>
+<p><span class="math inline">\(f(x) = e ^ x, f(x) = \sum \limits_{k = 0}
+^ n \frac{x ^ k}{k!} + \frac{e ^ {\theta x}}{(n + 1)!}x ^ {n + 1} =
+\sum\limits_{k = 0} ^ {\infty} \frac{x ^ k}{k!}\)</span></p>
+<p><span class="math inline">\(\sin x = \sum\limits_{k = 0} ^ \infty
+\frac{(-1) ^ k}{(2k + 1)!}x ^ {2k + 1}\)</span></p>
+<p><span class="math inline">\(\cos x = \sum\limits_{k = 0} ^ n
+\frac{(-1) ^ k}{(2k)!} x ^ {2k} + (-1) ^ {n + 1} \frac{\cos(\theta
+x)}{(2n + 2)!} x ^ {2n + 2} = \sum\limits_{k = 0} ^ \infty \frac{(-1) ^
+k}{(2k)!}x ^ {2k}\)</span></p>
+<h3 id="taylor-级数">Taylor 级数</h3>
+<p>定义：设 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(x_0\)</span> 点无穷次可微，那么 <span
+class="math inline">\(\sum\limits_{k = 0} \frac{f ^ {(k)} (x_0)}{k!}(x -
+x_0) ^ k\)</span>，一般而言函数的 Taylor 级数未必收敛到本身。</p>
+<p><span class="math inline">\(f ^ {(n + 1)} (x) = P_{n + 1}
+\left(\frac{1}{x}\right) e ^ {\frac{-1}{x ^ 2}}\)</span></p>
+<p><span class="math inline">\(\lim\limits_{x\rightarrow 0} \frac{f ^
+{(n)} (x)- f ^ {(n)}(0)} x = \lim_{x\rightarrow 0} \frac{ P
+_n(\frac{1}{x}) e ^ {-\frac{1}{x ^ 2}}}{x} = 0\)</span></p>
+<p>于是 <span class="math inline">\(f ^ {(k)}(0) = 0\)</span></p>
+<p>若 <span class="math inline">\(\vert f&#39;&#39;(x)\vert \le M,
+\forall x \in [a, b], \vert f(x) - f(a) - \frac{f(b) - f(a)}{b - a}
+\vert \le \frac{M}{8} (b - a) ^ 2\)</span></p>
+<h3 id="taylor-的唯一性">Taylor 的唯一性</h3>
+<p>定理：设 <span class="math inline">\(T_n(x_0; x)\)</span> 是 <span
+class="math inline">\(f\)</span> 的泰勒多项式，<span
+class="math inline">\(P_n = a_0 + a_1(x - x_0) + \cdots + a_n(x - x_0) ^
+n\)</span> 为唯一多项式，且 <span class="math inline">\(T_n(x_0; x) \not
+= P_n (x_0, x)\)</span> 则 <span class="math inline">\(\exists \delta
+&gt; 0, \text{s.t.} 0 &lt; \vert x - x_0\vert &lt; \delta\)</span> 有
+<span class="math inline">\(\vert f(x) - T_n (x_0; x) \vert &lt; \vert
+f(x) - P_n (x_0; x)\vert\)</span></p>
+<h2 id="求导的逆运算">求导的逆运算</h2>
+<h3 id="原函数的概念">原函数的概念</h3>
+<p>定义：<span class="math inline">\(I = (a, b), [a, b], (a, b], [a,
+b)\)</span></p>
+<p>设 <span class="math inline">\(F, f:I \rightarrow \mathbb R,
+F(x)\)</span> 可以微，<span class="math inline">\(\forall x \in
+I\)</span> 且 <span class="math inline">\(\mathrm{ d} F(x) = f(x)
+\mathrm{d} x\)</span> 称 <span class="math inline">\(F(x)\)</span> 为
+<span class="math inline">\(f(x)\)</span> 的一个原函数。</p>
+<p>定理 ：<span class="math inline">\(F_1, F_2\)</span> 为 <span
+class="math inline">\(f\)</span> 在 <span
+class="math inline">\(I\)</span> 上的原函数，则 <span
+class="math inline">\(F_1(x) = F_2(x) + C\)</span> ，那么 <span
+class="math inline">\(F_1&#39; - F_2&#39; = 0\)</span></p>
+<p><span class="math inline">\(F(x)\)</span> 为 <span
+class="math inline">\(f\)</span> 在 <span
+class="math inline">\(I\)</span> 上的一个原函数，<span
+class="math inline">\(\{F(x) + C\vert c \in \mathbb
+R\}\)</span>，定义，球一个函数 <span class="math inline">\(f\)</span> 在
+<span class="math inline">\(I\)</span>
+上的原函数的运算叫做不定积分，记作 <span class="math inline">\(\int f(x)
+\mathrm{d} x\)</span></p>
+<h3 id="不定积分的性质">不定积分的性质</h3>
+<ol type="1">
+<li><span class="math inline">\(\forall \alpha, \beta \in \mathbb R,
+\int (\alpha f(x) + \beta g(x))\mathrm{d}x = \alpha\int
+(f(x))\mathrm{d}x + \beta\int (g(x))\mathrm{d}x\)</span></li>
+<li><span class="math inline">\(f, g\)</span> 均可微</li>
+</ol>
+<p><span class="math display">\[
+\int (fg)&#39; \mathrm{d}x = \int (f&#39;g + fg&#39;) \mathrm{d}x\\
+\int (fg)&#39; \mathrm{d}x = \int d(fg)(x) = f(x)g(x) + C
+\int f&#39;g \mathrm{d}x = \int  (fg)&#39;\mathrm{d}x - \int
+g&#39;f\mathrm{d}x
+\]</span></p>
+<ol start="3" type="1">
+<li>换元公式</li>
+</ol>
+<p><span class="math inline">\(I\stackrel {\phi}
+{\longrightarrow}J\stackrel {f} {\longrightarrow} \mathbb R\)</span></p>
+<p>其中 <span class="math inline">\(I, J\)</span> 区间 <span
+class="math inline">\(\phi\)</span> 可微，<span
+class="math inline">\(F\)</span> 是 <span
+class="math inline">\(f\)</span> 的一个原函数</p>
+<p><span class="math inline">\(\int (f\circ \phi)(t) \phi&#39;(t)
+\mathrm{d}t = \int (f\circ \phi)(l) \mathrm{d}\phi(l) \stackrel{x =
+\phi(t)}{=} \int f(x) \mathrm{d}x = F(phi(t)) + C\)</span></p>
+<h3 id="几个基本公式">几个基本公式</h3>
 $$
 <span class="math display">\[\begin{aligned}
-&amp;\neg (P\rightarrow (p\vee Q)) \wedge R
+&amp;\int 0 \mathrm{d}x = C
 \\
-=&amp;\neg(\neg P \wedge P \wedge Q) \wedge R&amp;(蕴含等值式)
+&amp;\int x ^ {\alpha} \mathrm{d}x = \begin{cases}
+    \frac{1}{\alpha + 1} x ^ {\alpha + 1}\\
+    \ln \vert x \vert
+\end{cases}
 \\
 
-=&amp;(P\wedge\neg P \wedge \neg Q)\wedge R
-&amp; (摩根律)
-\\
-=&amp;F\wedge R &amp; (补余律，零律)
-\\
-=&amp;F(零律)
+&amp;\int e ^ x \mathrm{d}x = e ^ x + C\\
+&amp;\int a ^ x \mathrm{d}x = \frac{a ^ x}{\ln a} + C\\
+
+&amp;\int \sin x \mathrm{d}x = = -\cos x + C\\
+
+&amp;\int \cos x \mathrm{d}x = \sin x + C\\
+
+&amp;\int \frac{\mathrm{d}x}{1 + x ^ 2} = \arctan x + C\\
+
+&amp;\int \frac{\mathrm{d}x}{a ^ 2 + x ^ 2} = \frac{1}{a} \arctan x +
+C\\
+&amp;\int \frac{\mathrm{d}x}{\cos ^ 2 x} = \tan x + C\\
+&amp;\int \frac{\mathrm{d}x}{\sqrt{1 - x ^ 2}} =\arcsin x + C
+&amp;\int \frac{-\mathrm{d}x}{\sqrt{1 - x ^ 2}} =\arccos x + C  
 \end{aligned}\]</span>
 <p>$$</p>
-<h3 id="命题公式和真值表的关系">命题公式和真值表的关系</h3>
-<h4 id="例1-1">例1</h4>
-<p><span class="math inline">\(A = (\neg P \wedge \neg Q) \vee (\neg P
-\wedge Q) \vee (P \wedge Q)\)</span></p>
-<p>这种的，每次取一个 P，Q 的解释，然后把不同的解释或起来。</p>
-<h4 id="例2-1">例2</h4>
-<p><span class="math inline">\(\neg B = ( P \wedge \neg Q) \vee (P
-\wedge Q)\)</span> 然后摩根一下就行了。</p>
-<p>与非：<span class="math inline">\(P\uparrow Q = \neg(P \wedge
-Q)\)</span></p>
-<p>或非：<span class="math inline">\(P \downarrow Q = \neg(P \vee
-Q)\)</span></p>
-<h3 id="完备集">完备集</h3>
-<p>对所有的合式公式加以分类，将等值的公式视为同一类，从中选一个作代表称之为真值函项。每一个真值函项就有一个联结词与之对应。</p>
-<p>定理： <span class="math inline">\(\{\neg, \vee, \wedge\}\)</span>
-是完备的联结词集合。</p>
+<p>注：</p>
 <ol type="1">
-<li><span class="math inline">\(S_1 = \{ \neg, \vee\}\)</span></li>
-<li><span class="math inline">\(S_2 = \{\neg, \wedge\}\)</span></li>
-<li><span class="math inline">\(S_3 = \{\neg,
-\rightarrow\}\)</span></li>
-<li><span class="math inline">\(S_4 = \{\downarrow\}\)</span></li>
-<li><span class="math inline">\(S_5 = \{\uparrow\}\)</span></li>
+<li>连续函数均有原函数</li>
+<li>出等函数的导函数是初等函数，但是初等函数的不定积分不一定是初等函数</li>
 </ol>
-<p>这些集合都是完备的</p>
+<h3 id="分部积分和换元形式">分部积分和换元形式</h3>
+<h4 id="分部积分">分部积分</h4>
+<p><span class="math inline">\(f, g\)</span> 在 <span
+class="math inline">\(I\)</span> 上可微</p>
+<p><span class="math inline">\(\int f&#39;(x)g(x) \mathrm{d}x = f(x)
+g(x) - \int f(x) g&#39;(x) \mathrm{d}x\)</span>
+称为不定积分的分部积分</p>
+<p>或者等价的有 <span class="math inline">\(\int f(x) \mathrm{d} g(x) =
+f(x) g(x) - \int g(x) \mathrm d f(x)\)</span></p>
+<p>$$</p>
+<p>$$</p>
+<p>于是我们得到</p>
+<p><span class="math inline">\(\int \sin ^ n x \mathrm{d}x = -
+\frac{1}{n}\sin ^ {n - 1} x\cos x+ \frac{n - 1}{n} \int \sin ^ {n - 2} x
+\mathrm{d} x\)</span></p>
+<p><span class="math inline">\(n = 1\)</span> 时，<span
+class="math inline">\(\int \sin x \mathrm{d} x = -\cos x +
+C\)</span></p>
+<p><span class="math inline">\(n = 2\)</span> 时，<span
+class="math inline">\(\int \sin ^ 2 x \mathrm{d} x =-\frac{1}{2} \sin x
+\cos x + \frac{1}{2} x + C\)</span></p>
+<p>设 <span class="math inline">\(a &gt; 2\)</span> 考虑不定积分，</p>
 <p><span class="math display">\[
-\begin{aligned}
-&amp;\neg P = \neg (P \wedge P) = P \uparrow P
-\\
-&amp;P \wedge Q = \neg \neg(P \wedge Q) = \neg (P\uparrow Q)\\
-&amp;P \vee Q = \neg(\neg P \wedge \neg Q)
-\end{aligned}
+F = \int \frac{\mathrm{ d} x}{x ^ 4 + a x ^ 2 + 1}, G = \int\frac{x ^ 2
+\mathrm{d}x}{x ^ 4 + a x ^ 2 + 1}
 \]</span></p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科学通论笔记</title>
-    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
-<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
-<p>广义和狭义的科学：</p>
-<ul>
-<li>广义：自然知识，技术，书里科学，全地域起源</li>
-<li>狭义：数学，实验科学，希腊源头</li>
-</ul>
-<p>不懂数学的大科学家：达尔文</p>
-<ul>
-<li>在希腊起源</li>
-<li>在罗马式微</li>
-<li>在伊斯兰世界发扬光大</li>
-<li>在中世纪后期的基督世界重获新生</li>
-<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
-<li>19世纪全方位转化为技术成为强大的物质力量</li>
-<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
-</ul>
-<h3 id="狭义科学的样本">狭义科学的样本</h3>
-<ul>
-<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
-<li>希腊哲学</li>
-</ul>
-<p>问题：如何理解狭义科学的形式？</p>
-<h3 id="文明与科学">文明与科学</h3>
-<p>文明不等于科学，科学出现在希腊城邦文明。</p>
-<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
-<h3 id="纯粹科学">纯粹科学</h3>
-<p>高度的自主性，自足性，为自身的目的而存在</p>
+<p>我们有</p>
+<p>$$ F + G = = = + C \</p>
+<p>F - G = = = + C $$</p>
+<p>注：连续函数有原函数，反之不一定，比如说</p>
+$$ F(x) =
+<span class="math display">\[\begin{cases}
+x ^ 2 \sin \frac{1}{x}&amp; x \not = 0\\
+
+0 &amp; x = 0
+\end{cases}\]</span>
+,f(x) =
+<span class="math display">\[\begin{cases}
+2x \sin \frac{1}{x} - \cos \frac{1}{x}  &amp; x\not = 0
+
+0 &amp; x = 0
+\end{cases}\]</span>
+<p>$$</p>
+<p>显然 <span class="math inline">\(x = 0\)</span> 时 <span
+class="math inline">\(f(x)\)</span> 在 <span class="math inline">\(x =
+0\)</span> 时，不连续。</p>
+<h3 id="分部函数函数的积分">分部函数函数的积分</h3>
+<h4 id="因式分解">因式分解</h4>
+<p>$$ P(x) = a_n x ^ n++ a_0 \ Q(x) = b_n x ^ m + + b_0\</p>
+<p>R(x) = $$</p>
 <ol type="1">
-<li>远离任何意义上的实用主义</li>
-<li>内在性：自己推出自己</li>
+<li><span class="math inline">\(n \ge m, R(x)\)</span> 称为假分式</li>
+<li><span class="math inline">\(n &lt; m, R(x)\)</span> 称为真分式</li>
 </ol>
-<p>自由科学特征之一：无用无功利之学</p>
-<ul>
-<li>欧几里德的故事</li>
-<li>亚里士多德三种知识：经验、技艺、科学</li>
-</ul>
-<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
-<ul>
-<li>内在展开、证明的知识</li>
-<li>证明、论证、推理、演绎</li>
-</ul>
-<p>自由科学的条件：</p>
-<ul>
-<li>惊异，好奇</li>
-<li>闲暇，快乐</li>
-<li>外在自由（言论自由，财务自由）</li>
-<li>内在自由</li>
-</ul>
-<p>希腊城邦文明，自由科学的温床。</p>
-<p>城邦文明的开端</p>
-<ul>
-<li>荷马史诗</li>
-<li>希腊字母文字</li>
-<li>奥林波斯神话</li>
-<li>奥林匹克竞技会</li>
-</ul>
-<p>神人之别：不死与有死</p>
-<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
-<p>希腊人的宗教：无宗教教义，无宗教经典</p>
-<p>竞技会：</p>
-<ul>
-<li>祭祀奥林波斯诸神</li>
-<li>神圣休战原则</li>
-<li>希腊身份认同</li>
-<li>不仅有体育，还有音乐戏剧歌舞</li>
-<li>全程裸体，展示人体之美</li>
-<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
-</ul>
-<p>城邦小国寡民，直接民主制，参军是公民义务</p>
-<p>戏剧：起源于酒神祭祀</p>
-<p>雕刻：三大雕刻家</p>
-<h3 id="城邦文明小结">城邦文明小结</h3>
-<ul>
-<li>城邦本位主义，自治自给，独立自由</li>
-<li>科学哲学艺术</li>
-<li>希腊波斯战争</li>
-</ul>
-<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
-<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
-<p>奴隶制：自由民获得闲暇</p>
-<p>米利都，科学的策源地：</p>
-<ul>
-<li>独立与自由</li>
-<li>挑战与竞争</li>
-<li>开放与交流</li>
-</ul>
-<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
-<p>自然的发现，事物有其自然</p>
-<p>自然就是本质：事物的自己即其本质</p>
-<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
-<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
-<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
-<p>希腊数学，自由学术的典范</p>
-<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
-<p>实践科学：政治学，伦理学，家政学</p>
-<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
-<p>学数学可以涵养真正人性</p>
-<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
-<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
-<p>什么是自然？何谓自然的发现？</p>
-<p>为什么说几何学是理性科学的代表？</p>
-<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
-<h3 id="本讲纲要">本讲纲要</h3>
-<ul>
-<li>天文学作为科学</li>
-<li>柏拉图及其理念论</li>
-<li>天球-地球宇宙</li>
-<li>行星问题与拯救形象</li>
-</ul>
-<h3 id="原始天文学">原始天文学</h3>
-<ul>
-<li>观天</li>
-<li>命名</li>
-<li>占卜</li>
-</ul>
-<h3 id="科学天文学">科学天文学</h3>
-<ul>
-<li>寻找规律</li>
-<li>预测天象</li>
-</ul>
-<h3 id="中国天文学">中国天文学</h3>
-<ul>
-<li>天人合一</li>
-<li>政治占星学</li>
-<li>日常伦理学</li>
-<li>当食不食</li>
-</ul>
-<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
-<h3 id="理念论">理念论</h3>
-<ul>
-<li>理想，相，理想，形式</li>
-<li>理想是可以超与的</li>
-<li>显示的可理解性来自与他对理念的模仿</li>
-<li>洞穴隐喻</li>
-</ul>
-<h3 id="思想来源">思想来源</h3>
-<ul>
-<li>巴门尼德</li>
-<li>苏格拉底</li>
-<li>泰拉泰德</li>
-<li>欧多克斯</li>
-<li>欧几里德</li>
-</ul>
-<p>《蒂迈欧篇》：理性创世</p>
-<h3 id="世界躯体">世界躯体</h3>
-<ul>
-<li>可视可见，就需要火</li>
-<li>可触可碰，就需要土</li>
-<li>火土结合，就需要中项</li>
-<li>世界是独一无二的球体</li>
-</ul>
-<h3 id="世界灵魂">世界灵魂</h3>
-<ul>
-<li>灵魂=运动</li>
-<li>宇宙的运动有相同运动和相异运动</li>
-</ul>
-<h3 id="宇宙">宇宙</h3>
-<ul>
-<li>有限，秩序，和谐</li>
-<li>宇宙=完美/完善/完满</li>
-</ul>
-<h3 id="地球">地球</h3>
-<ul>
-<li><p>圆盘浮在水上</p></li>
-<li><p>鼓状居于宇宙之上</p></li>
-<li><p>绕中心火转动</p></li>
-<li><p>居于宇宙之中</p></li>
-<li><p>经验之谈</p></li>
-<li><p>理论根据</p></li>
-</ul>
-<h3 id="圆球">圆球</h3>
-<ul>
-<li>几何化的天体把球心放到醒目位置</li>
-<li>对称性</li>
-<li>几何偏好</li>
-</ul>
-<h3 id="天界不朽">天界不朽</h3>
-<ul>
-<li>天地二分</li>
-<li>天界纯粹，绝对，不朽
-<ul>
-<li>位置不变</li>
-<li>性质不变</li>
-<li>数量不变</li>
-</ul></li>
-</ul>
-<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
-<h3 id="拯救现象">拯救现象</h3>
-<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
-<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
-<ul>
-<li>优点：拯救现象</li>
-<li>地球并不处于宇宙集合中心</li>
-<li>也不处于本轮中心的晕素运动中心</li>
-</ul>
-<p>小结</p>
-<ul>
-<li>观察记录不等于科学</li>
-<li>哲学预设：天界存在绝对规则运动</li>
-<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
-<li>透过现象看本质</li>
-<li>集合分解与还原</li>
-</ul>
-<h2 id="经院哲学与现代科学的起源">经院哲学与现代科学的起源</h2>
-<h3 id="三大历史背景">三大历史背景</h3>
-<ul>
-<li>希腊科学的衰落</li>
-<li>伊斯兰的传承和终端</li>
-<li>拉丁欧洲的黑暗和复兴</li>
-</ul>
-<h3 id="希腊科学为何衰落">希腊科学为何衰落</h3>
-<ul>
-<li>自由的科学</li>
-<li>早期基督教的反智主义</li>
-</ul>
-<h3 id="伊斯兰科学的贡献">伊斯兰科学的贡献</h3>
-<ul>
-<li>全面译介希腊科学</li>
-<li>炼金术</li>
-<li>代数</li>
-<li>天文学</li>
-<li>光学</li>
-</ul>
-<h3 id="伊斯兰科学的中断">伊斯兰科学的中断</h3>
-<ul>
-<li>伊斯兰为什么没有发生科学革命？</li>
-<li><ul>
-<li>宗教知识压倒世俗</li>
-</ul></li>
-<li><ul>
-<li>希腊科学没有制度化</li>
-</ul></li>
-<li><ul>
-<li>为产生伊斯兰版的经院哲学</li>
-</ul></li>
-</ul>
-<h3 id="欧洲的苏醒和三大技术革命">欧洲的苏醒和三大技术革命</h3>
-<ul>
-<li>奴隶制的废除与三大技术革命</li>
-<li>农业技术革命</li>
-<li>军事技术革命</li>
-<li>机械技术革命</li>
-</ul>
-<h3 id="机械钟表的出现">机械钟表的出现</h3>
-<ul>
-<li>擒纵器</li>
-</ul>
-<h3 id="什么是大学">什么是大学</h3>
-<ul>
-<li>拉丁翻译运动造就的欧洲学习热潮</li>
-<li>学生和教师的自治组织</li>
-<li>基督教世界的学位颁发机构</li>
-<li>两希文明的熔炉</li>
-</ul>
-<h3 id="学习中心">学习中心</h3>
-<ul>
-<li>神学</li>
-<li>法学</li>
-<li>医学</li>
-</ul>
-<h3 id="法律革命">法律革命</h3>
-<p>教会法</p>
-<ul>
-<li>教会经济财产的管理</li>
-<li>特殊权限规定</li>
-<li>处理教会当局与世俗当局的关系</li>
-<li>教会有法</li>
-<li>自治的法律实体</li>
-<li>法律是普遍和客观的</li>
-</ul>
-<h3 id="学生行会">学生行会</h3>
-<ul>
-<li>对外维护自然利益</li>
-<li>对内制定行业标准</li>
-<li>在王权和教权左右逢源</li>
-</ul>
-<h3 id="学位制度">学位制度</h3>
-<ul>
-<li>教师行会</li>
-<li>学士</li>
-<li>博士</li>
-<li>毕业文凭</li>
-</ul>
-<h3 id="融合两希文明">融合两希文明</h3>
-<ul>
-<li>设置艺学院</li>
-<li>将希腊学术作为大学教学的基础</li>
-<li>将亚里士多德的学说与基督教义密切结合</li>
-<li>为现在科学准备条件</li>
-</ul>
-<h3 id="四大学院">四大学院</h3>
-<ul>
-<li>医学院</li>
-<li>艺学院</li>
-<li>法学院</li>
-<li>法学院</li>
-</ul>
-<h3 id="自由辩论">自由辩论</h3>
-<ul>
-<li>讲座</li>
-<li><ul>
-<li>朗读经典文本</li>
-</ul></li>
-<li><ul>
-<li>解释概念和术语</li>
-</ul></li>
-<li><ul>
-<li>提出问题</li>
-</ul></li>
-<li>辩论</li>
-<li><ul>
-<li>教师引入问题</li>
-</ul></li>
-<li><ul>
-<li>学生正反两方辩论</li>
-</ul></li>
-<li><ul>
-<li>教师综合辩论</li>
-</ul></li>
-</ul>
-<h3 id="教父哲学">教父哲学</h3>
-<ul>
-<li>奥古斯丁</li>
-<li>启示为神学之本</li>
-<li>哲学是神学的婢女</li>
-</ul>
-<h3 id="经院哲学">经院哲学</h3>
-<ul>
-<li>安瑟尔谟</li>
-<li>上帝的本体论证明</li>
-<li>神学是最高的哲学</li>
-</ul>
+<p><span class="math inline">\(n\)</span> 次复系数多项式一定有根 <span
+class="math inline">\(\leftrightarrow\)</span> <span
+class="math inline">\(n\)</span> 复系数次多项式有 <span
+class="math inline">\(n\)</span> 个复根。</p>
+<p>若为实系数多项式：</p>
+<p><span class="math inline">\(Q(x) = q(x - x_1) ^ {r_1} (x - x_2) ^
+{r_2} \ldots (x - x_k) ^ {r_k} (x ^ 2 + b_1x + c) ^ {s_1}\ldots (x^2 +
+b_l x + c_l) ^ {s_l}\)</span></p>
+<p>其 <span class="math inline">\(q \in \mathbb R, \sum\limits_{j = 1} ^
+k r + 2 \sum\limits_{j = 1} ^ l s = m, \delta_j = b_j ^ 2 - 4 c_j &lt;
+0\)</span></p>
+<p>一般而言</p>
+<p><span class="math display">\[
+Q(x) = Q_1(x)(x - a) ^ m
+\]</span></p>
+<p>那么我们有</p>
+<p><span class="math display">\[
+\frac{P(x)}{Q(x)} = \frac{P_1(x)}{Q_1(x)}\sum\limits_{k = 1} ^ m
+\frac{A_k}{(x - a) ^ k}
+\]</span></p>
+<p>如果存在</p>
+<p><span class="math display">\[
+Q(x) = Q_1(x)(x +bx + c) ^ m,b ^ 2 - 4c &lt; 0
+\]</span></p>
+<p>那么我们有</p>
+<p><span class="math display">\[
+\frac{P(x)}{Q(x)} = \frac{P_1(x)}{Q_1(x)}\sum\limits_{k = 1} ^ m
+\frac{A_k}{(x +bx+c) ^ k}
+\]</span></p>
+<p>由因式分解，因该有</p>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\int  \frac{\mathrm{d}x}{(x - a) ^ m} = \begin{cases}
+    -\frac{1}{ m - 1}(x - a) ^ {-m + 1} + C &amp; m \not = 1\\
+    \ln \vert x - a\vert + C &amp; m = 1
+
+
+\end{cases}
+\\
+&amp;\int \frac{2x \mathrm{d}x}{(x ^ 2 + a ^ 2) ^ m}= \int
+\frac{\mathrm{d} (x ^ 2 + a ^ 2)}{(x ^ 2 + a ^ 2) ^ m} = \begin{cases}
+    -\frac{1}{ m - 1}(x ^ 2 + a ^ 2) ^ {-m + 1} + C &amp; m \not = 1\\
+    \ln (x ^ 2 + a ^ 2)+ C &amp; m = 1
+
+
+\end{cases}
+\\
+&amp;\int \frac{\mathrm{d} x}{(x ^ 2 + a ^ 2) ^ m} = \frac{x}{(x ^ 2  +
+a ^ 2) ^ m} + 2m \int \frac{\mathrm{d}x}{(x^2+a^2)^{m+1}}\\
+&amp;=\frac{x}{(x ^ 2  + a ^ 2) ^ m} + 2m\int \frac{\mathrm{d}
+x}{(x^2+a^2)^m} - 2ma^2\int\frac{\mathrm{d}x}{(x ^ 2 +a ^ 2) ^ {m + 1}}
+\end{aligned}\]</span>
+<p>$$</p>
+<p>于是我们得到递推式</p>
+<p><span class="math display">\[
+\int \frac{\mathrm{d} x}{(x ^ 2 + a ^ 2) ^ {m + 1}} =\frac{1}{2ma ^ 2}
+\frac{x}{(x^2+a^2)^m}+\frac{2m - 1}{2ma ^ 2} \int\frac{\mathrm{d}x}{(x ^
+2 + a ^ 2) ^ m}
+\]</span></p>
+<h4 id="例子">例子</h4>
+<p><span class="math inline">\(R(x) = \frac{x ^ 2 + x - 1}{(x - 1) ^ 2
+(x - 2)}\)</span></p>
+<p>计算不定积分 <span class="math inline">\(\int R(x) \mathrm{d}
+x\)</span></p>
+<p>解：</p>
+<p><span class="math inline">\(R(x) = \frac{A}{x - 1} + \frac{B}{(x - 1)
+^ 2} + \frac{C}{x - 2}, C = \lim\limits_{x \rightarrow 2}(x - 2) R(x) =
+7, B = \lim\limits_{x\rightarrow 1} (x - 1) ^ 2 R(x) = -3, A = \lim
+\limits_{x\rightarrow 1}(R(x) + \frac{3}{(x - 1) ^ 2}) = -6\)</span></p>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\int \frac{\mathrm{d}x }{x ^ 4 + 1} = \int \frac{\mathrm{d} x}{(x ^
+2 + \sqrt{2} x + 1)(x ^ 2 - \sqrt{2} x + 1)}
+
+=\int \left(\frac{x + \sqrt{2}}{2\sqrt{2}(x ^ 2 + \sqrt{2} x + 1)} -
+\frac{x - \sqrt{2}}{2 \sqrt{2} (x ^ 2 - \sqrt{ 2} x +
+1)}\right)\mathrm{d} x
+\\
+&amp;= \int \left(\frac{x + \frac{\sqrt{2}}{2} +
+\frac{\sqrt{2}}{2}}{2\sqrt{2}(x ^ 2 + \sqrt{2} x + 1)} - \frac{x -
+\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2}}{2\sqrt{2}(x ^ 2 -\sqrt{2} x +
+1)}\right)
+\\
+&amp;=\frac{1}{4\sqrt{2}}\left(\log (x ^ 2 + \sqrt{2}x + 1) - \log (x ^
+2 - \sqrt{2} x + 1)\right) + \frac{\sqrt{2}}{4}\left(\arctan(\sqrt{2}x +
+1) - \arctan(\sqrt{2}x - 1)\right) + C
+\end{aligned}\]</span>
+<p>$$</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -5878,6 +6142,187 @@ class="math inline">\(B\)</span> 那么 <span class="math inline">\(\psi
 class="math inline">\(\alpha\)</span> 是一个基</p>
 <p>设 <span class="math inline">\(\phi \in \mathcal {L}(V)\)</span>
 于是有对应的方阵 <span class="math inline">\(A\)</span></p>
+<p>定理，假设同上则 <span class="math inline">\(H\)</span>
+是一个线性同构，则 <span class="math inline">\(H\)</span>
+是一个线性同构，并且</p>
+<ol type="1">
+<li><span class="math inline">\(H(\phi \circ \psi) = H(\phi)
+H(\psi)\)</span></li>
+<li><span class="math inline">\(H(id_V) = I_n\)</span></li>
+<li><span class="math inline">\(\phi \in \mathcal{L}(V)\)</span>
+是线性同构，当且进仅当 <span class="math inline">\(H(\phi)\)</span>
+是可逆矩阵，并且此时 <span class="math inline">\(H (\phi ^ -1) = H(\phi)
+^ {-1}\)</span></li>
+</ol>
+<p>注：上述定理表明，作为 <span
+class="math inline">\(F-代数，\)</span>(V)$ 与 <span
+class="math inline">\(M_n(\mathbb F)\)</span> 是同构的</p>
+<p>设 <span class="math inline">\(V\)</span> 是 <span
+class="math inline">\(n\)</span> 维向量空间，<span
+class="math inline">\(\{\alpha_1, \ldots,\alpha_n\}\)</span> 和 <span
+class="math inline">\(\{\beta_1, \ldots, \beta_n\}, \beta = P\alpha,
+\phi(\alpha) = A\alpha, \phi(\beta) = B\beta\)</span>，那么 <span
+class="math inline">\(B = P ^ {-1} A P\)</span></p>
+<p>定义 <span class="math inline">\(A, B \in M_n(\mathbb
+F)\)</span>，如果存在一个 <span class="math inline">\(n\)</span>
+阶可逆矩阵 <span class="math inline">\(P\)</span>，使得 <span
+class="math inline">\(B = P ^ {-1} A P\)</span>。那么称 <span
+class="math inline">\(A\sim B\)</span> 相似</p>
+<p>命题：</p>
+<ol type="1">
+<li>矩阵的相似是等价关系</li>
+<li>设 <span class="math inline">\(V\)</span> 是有限维的，且 <span
+class="math inline">\(\phi \in \mathcal L V\)</span>。则 则 <span
+class="math inline">\(\phi\)</span> 在 <span
+class="math inline">\(V\)</span> 的不同基下的矩阵是相似的</li>
+</ol>
+<p>设 <span class="math inline">\(\lambda \in \mathbb F, A\in
+M_n(\mathbb F)\)</span> 若 <span class="math inline">\(A \sim \lambda
+I\)</span>，则 <span class="math inline">\(\lambda I \sim \mu I
+\Leftrightarrow \lambda = \mu\)</span></p>
+<p><span class="math inline">\(A, B \in M_n(\mathbb F)\)</span> 则 <span
+class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 相似当且仅当 <span
+class="math inline">\(A\)</span> 施行一系列如下形式初等变换可以得到
+<span class="math inline">\(B\)</span></p>
+<ol type="1">
+<li>交换 <span class="math inline">\(i,j\)</span> 列，交换 <span
+class="math inline">\(i, j\)</span> 行</li>
+<li>用 <span class="math inline">\(c\)</span> 乘上 <span
+class="math inline">\(i\)</span> 行，用 <span class="math inline">\(c ^
+{-1}\)</span> 乘 <span class="math inline">\(j\)</span> 列</li>
+<li>将 <span class="math inline">\(i\)</span> 行的 <span
+class="math inline">\(k\)</span> 倍加到 <span
+class="math inline">\(j\)</span> 行，同时把 <span
+class="math inline">\(j\)</span> 列的 <span
+class="math inline">\(-k\)</span> 倍加到 <span
+class="math inline">\(i\)</span> 列</li>
+</ol>
+<p>定义：设 <span class="math inline">\(\phi \in \mathcal L(V)\)</span>
+如果 <span class="math inline">\(V\)</span> 的一个子空间 <span
+class="math inline">\(U\)</span> 满足 <span class="math inline">\(\phi U
+\subset U\)</span>，那么称 <span class="math inline">\(U\)</span> 是
+<span class="math inline">\(\phi\)</span> 的不变子空间，此时 <span
+class="math inline">\(\phi\)</span> 诱导了 <span
+class="math inline">\(U\)</span> 上的一个现行变换 <span
+class="math inline">\(\phi|_U:U\rightarrow U , \alpha\mapsto
+\phi(\alpha)\)</span></p>
+<p>例一：设 <span class="math inline">\(\phi \in \mathcal{L}(V)\)</span>
+则 <span class="math inline">\(0\)</span> 和 <span
+class="math inline">\(V\)</span> 都是不变子空间，如果 <span
+class="math inline">\(V_1, V_2\)</span> 都是不变子空间，那么 <span
+class="math inline">\(V_1 \cap V_2, V_1 + V_2, \rm{Ker} \phi, \rm{Im}
+\phi\)</span> 也是</p>
+<p>例二：<span class="math inline">\(V = \mathbb R ^ 2, A =
+\begin{bmatrix}1 &amp; 1 \\ -1 &amp; 1\end{bmatrix},\phi_A = \mathbb R ^
+2\rightarrow \mathbb R ^ 2, (x, y)\mapsto (x, y)A = (x + y, -x + y),
+\phi_A\)</span> 中没有非平凡的不变子空间</p>
+<p>命题：设 <span class="math inline">\(\dim V = n,\phi \in
+\mathcal{L}(V)\)</span> 且 <span class="math inline">\(U\)</span> 是
+<span class="math inline">\(\phi\)</span> 中的不变子空间，取 <span
+class="math inline">\(U\)</span> 的一个基，<span
+class="math inline">\(\{\alpha_1, \ldots,\alpha_m\}, m= \dim U\)</span>
+并扩充成为 <span class="math inline">\(V\)</span> 的一个基 <span
+class="math inline">\(\{\alpha_1, \ldots,\alpha_m,\ldots,
+\alpha_n\}\)</span> 则 <span class="math inline">\(\phi\)</span> 在
+<span class="math inline">\(\alpha\)</span> 下的矩阵具有以下形式，矩阵
+<span class="math inline">\(a_{i, j}=0\)</span> 当 <span
+class="math inline">\(i\ge m, j\le m\)</span> 的时候。</p>
+<p>推论：设 <span class="math inline">\(V\)</span> 是
+一个有限维的向量空间，<span class="math inline">\(\phi \in \mathcal L V,
+V = V_1 \oplus V_2\)</span> 其中 <span class="math inline">\(V_1,
+V_2\)</span> 是不变子空间，选取 <span class="math inline">\(V_1\)</span>
+和 <span class="math inline">\(V_2\)</span> 的基 <span
+class="math inline">\(\{\alpha_1, \ldots, \alpha_s\}\)</span> 和 <span
+class="math inline">\(\{\beta_1, \ldots, \beta_t\}\)</span>，那么这基
+<span class="math inline">\(\{\alpha_1, \ldots, \alpha_s, \beta_1,
+\ldots, \beta_t\}\)</span> 的矩阵有如下形式 <span
+class="math inline">\(\begin{bmatrix}A_1 &amp; 0 \\ 0 &amp;
+A_2\end{bmatrix}\)</span>。</p>
+<p>----此处有特征值相关</p>
+<p>例一：设 <span class="math inline">\(V\)</span>
+是有限维的向量空间，<span class="math inline">\(\phi_1, \ldots, \phi_m
+\in \mathcal{L}(V), m\ge 2\)</span> 互不相同，那么存在 <span
+class="math inline">\(\alpha \in V\)</span> 使得 <span
+class="math inline">\(\phi_(\alpha) \not = \phi_j(\alpha)\)</span>，取
+<span class="math inline">\(\alpha V \backslash (\cup\limits_{i\not = j}
+\rm{Ker}(\phi_i -\phi_j))\)</span></p>
+<p>例二：<span class="math inline">\(\phi = \lambda id_V\)</span> 则
+<span class="math inline">\(V\)</span> 的每一个子空间都是 <span
+class="math inline">\(\phi\)</span> 的不变子空间，<span
+class="math inline">\(A =\begin{bmatrix}0 &amp; 0 \\
+1&amp;0\end{bmatrix}, \phi_A:(x, y) \mapsto (x, y)A = (0,
+x)\)</span></p>
+<p>那么 <span class="math inline">\(\rm{Ker} \phi = \rm{Im} \phi = (0,
+a)\)</span></p>
+<p>例三：设 <span class="math inline">\(\dim V &lt; \infty, \phi \in
+\mathcal{L}(V)\)</span>，存在 <span class="math inline">\(m\ge
+1\)</span> 使得 <span class="math inline">\(V = \rm{Ker} \phi ^ m
+\rm{Im} \phi ^ m\)</span></p>
+<p>证明：</p>
+<p>对于 <span class="math inline">\(i\ge 1\)</span> 有 <span
+class="math inline">\(\rm{Ker} \phi ^i \subset \rm{Ker} \phi ^ {i + 1},
+\rm{Im} \phi ^ {i + 1} \subset \rm{Im} \phi ^ i\)</span></p>
+<p>只需证明 <span class="math inline">\(m\)</span> 足够大之后 <span
+class="math inline">\(\rm{Ker} \phi ^ m \cap \rm{Im} \phi ^ m =
+0\)</span> 即可。</p>
+<p>例四：设 <span class="math inline">\(A, B\in M_{m, n} (\mathbb F), Ax
+= 0 , Bx = 0\)</span> 同解，存在 <span class="math inline">\(P \in
+M_(\mathbb F), B = PA\)</span></p>
+<h2 id="多项式-polynomials">多项式 Polynomials</h2>
+<h3
+id="一元多项式和一元多项式的整除性">一元多项式和一元多项式的整除性</h3>
+<p>设 <span class="math inline">\(\mathbb F\)</span> 是一个数域，<span
+class="math inline">\(x\)</span> 是一个符号叫不定元，形如下面的表达式
+<span class="math inline">\(f(x) = a_n x ^ n + \ldots + a_1 x +
+a_0\)</span>，称为 <span class="math inline">\(\mathbb F\)</span>
+上的一元多项式，其中 <span class="math inline">\(n\ge 0, a_n, \ldots,
+a_0\in \mathbb F\)</span></p>
+<p>第 <span class="math inline">\(i\)</span> 项是 <span
+class="math inline">\(a_i x ^ i\)</span>, <span
+class="math inline">\(a_i\)</span> 是第 <span
+class="math inline">\(i\)</span> 项系数，特别的 <span
+class="math inline">\(a_0\)</span> 为常数项，<span
+class="math inline">\(a_n \not = 0\)</span> 时，称 <span
+class="math inline">\(a_nx ^ n\)</span> 为首项，<span
+class="math inline">\(a_n\)</span> 为首项悉数，称 <span
+class="math inline">\(n\)</span> 为次数，<span class="math inline">\(n =
+\deg(f)\)</span>。 首一多项式就是首项为 <span
+class="math inline">\(0\)</span>,还有 <span
+class="math inline">\(0\)</span> 多项式，如果所有项数为 <span
+class="math inline">\(0\)</span>，那么是 <span
+class="math inline">\(0\)</span> 多项式</p>
+<p>记：$F[x] = {a_0 + + a_n x ^ n}, <span
+class="math inline">\(f(x)\)</span> 有代数结构</p>
+<ol type="1">
+<li>设 <span class="math inline">\(f(x), g(x) \in \mathbb F[x]\)</span>
+且 <span class="math inline">\(0 \not = c \in \mathbb F\)</span> 则
+<ol type="1">
+<li><span class="math inline">\(\deg (c f(x)) = \deg f(x)\)</span></li>
+<li><span class="math inline">\(\deg (f(x) \cdot g(x)) = \deg f(x) +
+\deg g(x)\)</span></li>
+<li><span class="math inline">\(\deg(f(x) \pm g(x))\le \max \{\deg f(x),
+\deg g(x)\}\)</span></li>
+</ol></li>
+<li><span class="math inline">\(f(x) \not = 0, g(x) \not = 0\Rightarrow
+f(x)g(x) \not = 0\)</span></li>
+<li><span class="math inline">\(f(x) g(x) = f(x) h(x), f(x) \not =
+0\Rightarrow g(x) = h(x)\)</span></li>
+</ol>
+<p>定义：设 <span class="math inline">\(f(x), g(x) \in \mathbb
+F[x]\)</span> 如果存在一个多项式 <span class="math inline">\(h(x) \in
+\mathbb F[x]\)</span> 使得 <span class="math inline">\(f(x) =
+g(x)h(x)\)</span>，那么称 <span class="math inline">\(g(x)\)</span> 是
+<span class="math inline">\(f(x)\)</span> 的一个因式，也称做 <span
+class="math inline">\(g(x)\)</span> 整除 <span
+class="math inline">\(f(x)\)</span>，记作 <span
+class="math inline">\(g(x)|f(x)\)</span></p>
+<p><span class="math inline">\(0|f(x)\Rightarrow f(x) = 0\)</span></p>
+<p>定理：<span class="math inline">\(f(x), g(x)\in \mathbb F[x]\)</span>
+且 <span class="math inline">\(g(x) \not = 0\)</span>,存在唯一 <span
+class="math inline">\(q(x), r(x) \in \mathbb F[x]\)</span> 满足 <span
+class="math inline">\(f(x) = g(x)q(x) + r(x)\)</span> 且 <span
+class="math inline">\(\deg r(x) &lt; \deg g(x)\)</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
