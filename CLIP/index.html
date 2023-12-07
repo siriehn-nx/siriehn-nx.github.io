@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="真学不会人工智能了，数学也学不会，不如死了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLIP学习笔记">
+<meta property="og:url" content="http://example.com/CLIP/">
+<meta property="og:site_name" content="siehn_nx&#39;s blog">
+<meta property="og:description" content="真学不会人工智能了，数学也学不会，不如死了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/CLIP/3.png">
+<meta property="og:image" content="http://example.com/CLIP/2.png">
+<meta property="og:image" content="http://example.com/CLIP/1.png">
+<meta property="og:image" content="http://example.com/CLIP/4.png">
+<meta property="og:image" content="http://example.com/CLIP/5.png">
+<meta property="article:published_time" content="2023-11-26T09:20:30.000Z">
+<meta property="article:modified_time" content="2023-12-07T08:04:10.748Z">
+<meta property="article:author" content="siriehn_nx">
+<meta property="article:tag" content="notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/CLIP/3.png">
+
+
+<link rel="canonical" href="http://example.com/CLIP/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/CLIP/","path":"CLIP/","title":"CLIP学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CLIP学习笔记 | siehn_nx's blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">siehn_nx's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">命运岐途</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">首页</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section">关于</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section">标签</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section">归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#learning-transferable-visual-models-from-natural-language-supervision-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">Learning
+Transferable Visual Models From Natural Language Supervision
+学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#abstract"><span class="nav-number">1.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-and-motivating-work"><span class="nav-number">1.2.</span> <span class="nav-text">Introduction and Motivating
+Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#approach"><span class="nav-number">1.3.</span> <span class="nav-text">Approach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiments"><span class="nav-number">1.4.</span> <span class="nav-text">Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A7%E4%B9%89%E8%AF%B4%E6%98%8E"><span class="nav-number">1.4.1.</span> <span class="nav-text">歧义说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#limitation"><span class="nav-number">1.5.</span> <span class="nav-text">Limitation</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="siriehn_nx"
+      src="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png">
+  <p class="site-author-name" itemprop="name">siriehn_nx</p>
+  <div class="site-description" itemprop="description">宿命回响</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/siriehn-nx" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;siriehn-nx" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:siriehn_nx@outlook.com" title="E-Mail → mailto:siriehn_nx@outlook.com" rel="noopener me" target="_blank">E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://siriehn-nx.github.io/" title="https:&#x2F;&#x2F;siriehn-nx.github.io" rel="noopener" target="_blank">Title</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/CLIP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/qdsnbm0h.png">
+      <meta itemprop="name" content="siriehn_nx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="siehn_nx's blog">
+      <meta itemprop="description" content="宿命回响">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CLIP学习笔记 | siehn_nx's blog">
+      <meta itemprop="description" content="真学不会人工智能了，数学也学不会，不如死了。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CLIP学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-11-26 17:20:30" itemprop="dateCreated datePublished" datetime="2023-11-26T17:20:30+08:00">2023-11-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-07 16:04:10" itemprop="dateModified" datetime="2023-12-07T16:04:10+08:00">2023-12-07</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">真学不会人工智能了，数学也学不会，不如死了。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1
+id="learning-transferable-visual-models-from-natural-language-supervision-学习笔记">Learning
+Transferable Visual Models From Natural Language Supervision
+学习笔记</h1>
+<h2 id="abstract">Abstract</h2>
+<p>这篇文章之前的计算机视觉系统是用事先设定好的对象类别来训练，这种方式限制了他们的通用性和可用性。原因是使用了额外的
+labeled data 来指定视觉的概念。</p>
+<p>OpenAI
+发现直接从图像的原始文本来学习是非常好的办法。他们说预测哪个标题与哪个图像对应的简单预训练任务是一种有效且可扩展的方式，可以在从互联网收集的
+4
+亿数据对（文字说明，图像）对数据集上从头开始学习当前最好的图像表示方法。在下游任务上，他们可以通过用自然语言匹配视觉概念从而实现zero-shot
+transfer（一种推理的图片认知方式，比如你机器学习过马和黑白相间，告诉你斑马是黑白相间的马，就应该能识别出来斑马）。</p>
+<p>他们用三十几个数据集来测试这种方法的性能，展示了强大的迁移能力，可以在
+ImageNet zero-shot 上媲美 ResNet-50
+的精度，而无需使用它所训练的128万个训练示例中的任何一个。</p>
+<h2 id="introduction-and-motivating-work">Introduction and Motivating
+Work</h2>
+<p>虽然从自然原始文本中的预学习方式改变了
+NLP，但是在计算机视觉领域，人们仍在提前标注好的 ImageNet
+数据集上预训练模型。作者说之前的弱监督模型和直接从自然语言中学习图像特征的模型的区别主要是规模。</p>
+<p>所以作者们缩小了这个差距，他们创建了一个包含 4
+亿数据对的（图像，文字说明）的新数据集，从头开始训练 ConVIRT
+的简化版本（<strong>Contrastive Language-Image
+Pre-training</strong>）用于对比语言-图像的预训练，这是自然语言监督学习的方法。</p>
+<p>他们训练了一个计算量级相差超过 100 倍的 8
+个模型，发现计算量级越大，模型表现越好。CLIP
+可以在预训练期间学习很多广泛的任务。他们在 30 多个数据集上测试了 CLIP 的
+0 次学习的迁移能力，发现都非常强悍，他们使用了 linear-probe
+的方法来证实了这一点。</p>
+<h2 id="approach">Approach</h2>
+<p>这个方法的核心是从自然语言中包含的监督中学习感知的想法。在当时，有很多前辈也采用了这种方法。但是他们的方法描述比较混乱，他们工作的共同点是将自然语言作为训练信号。并且因为早期的对于自然语言模型（n-gram
+and topic models）不够完善，但是现在自然语言模型（Transformer 和
+自监督的学习方式）很好了。</p>
+<p>和其他方法相比，利用自然语言训练的优势。和图像分类的标准标签相比，他不需要采取经典的机器学习兼容格式“从很多个标签中找到一个最符合的”，并且找到大量的训练集就简单许多，他可以被动的从网上的大量文本中学习。从自然语言中学习不仅仅是学习一个表征，它还可以和自然语言结合起来，使得模型具有良好的
+zero-shot 迁移能力。</p>
+<p>找数据集是一种比较费劲的事情，MS-COCO，Visual
+Genome，都是非常好的高质量人工标注数据集，但是样本数量太少。YFCC100M
+具有非常大的样本数量，但是数据参差补齐，质量太差。（有多么参差不齐呢，他们很多的标注都是自动生成的文件名）在过滤以仅保留具有自然语言标题和/或英文描述的图像后，数据集缩小了
+6 倍，只有 1500 万张照片。 这与 ImageNet 的大小大致相同。</p>
+<p>自然语言监督的非常大的好处就是具有非常多互联网公开的数据，现有数据集没有反映这个良好的性质，所以不能用以前的数据集，为了解决这个问题，他们爬了一个包含
+4 亿对（文本，图像）的数据对，他们称此为 WIT 数据集。</p>
+<p>之前先进的计算机视觉系统 ResNeXt101-32x48d 和 Noisy Student
+EfficientNet-L2 都需要训练以 GPU/TPU
+年为单位训练，训练效率是扩展自然语言监督能力的重要方法，所以他们精心选择了预训练方法。</p>
+<p>第一个预训练方法是预测图像的说明文字，然后发现效率太差。</p>
+<p>第二个方法是预测图像里面有什么特征单词，选取了 Bag of Words
+Prediction 的方式。这个提高了三倍</p>
+<p>第三个方法是对比学习，把文本当作一个整体来配对图像，这个让学习
+zero-shot 的效率比最开始提高了 4 倍。</p>
+<p><img src="3.png" /></p>
+<p>最后的方法就是给定 <span class="math inline">\(N\)</span>
+个数据对，然后 CLIP 被用来训练 <span class="math inline">\(N ^
+2\)</span> 个可能发生的对里面哪些实际发生，有 <span
+class="math inline">\(N\)</span> 个好样本，有 <span
+class="math inline">\(N^2-N\)</span> 个坏样本。</p>
+<p><img src="2.png" /></p>
+<p>这是 CLIP 的伪代码实现，先把图片和文本进行进行
+encoder，之后经过线性投影层进行归一化，然后算一个相似度，然后通过交叉熵目标函数算loss，把两个loss取平均。</p>
+<p>里面还提到了一个 softmax 的 temperature
+参数，就是能够让学习曲线变得光滑（不自信的时候）/非光滑，加快学习率的时候。</p>
+<p>这里面还有一个 cross_entropy_loss 函数，这个就是令 <span
+class="math inline">\(y_{ic}\)</span> 是样本匹配函数 <span
+class="math inline">\(i\)</span> 样本真实类别是不是 <span
+class="math inline">\(c\)</span>，<span
+class="math inline">\(p_{ic}\)</span> 是 <span
+class="math inline">\(i\)</span> 样本是 <span
+class="math inline">\(c\)</span> 类别的预测概率（经过 softmax
+之后），<span class="math inline">\(N\)</span> 个样本 <span
+class="math inline">\(M\)</span> 个类别，那么 <span
+class="math display">\[
+L = -\frac{1}{N} \sum_{i = 1} ^ N \sum_{c = 1} ^ M y_{ic} \ln (p_{ic})
+\]</span></p>
+<p><img src="1.png" /></p>
+<p>这张图片就是整个 CLIP 的模型示意图，首先是预训练部分先把文本传到 Text
+Encoder 里面，图像传到 ImageEncoder
+里面，然后做预训练的对比学习，对角线方向是正样本，其他的是负样本。他是没有分类头的。先把标签的单词变成句子（prompt
+template，好处是模型预训练的时候看见的是句子，后面也是句子比较好），然后来到一张照片，我们把它扔到
+ImageEncoder
+里面，然后找到一个最相似的特征，就是对应找到的标签。比之前好的是没有固定的类别概念，比如原来的方式不能判断类别里面没有的概念，但是由于使用了自然语言处理，
+CLIP 只要在前面加一个三轮车类就行了。</p>
+<p>图像编码器有两种架构 ResNet-50/Vision Transformer，文本编码器是一个
+Transformer。</p>
+<p>之前的计算机视觉模型总是单纯的增加宽度或者高度来优化模型，但是对于
+ResNet
+编码器，作者发现可以给宽度，深度，分辨率上分配额外计算是优于前面的，对于文本编码器，只缩放模型宽度。</p>
+<p>他们一共训练了八个模型，五个 ResNets 和 三个 Vision
+Transformer。训练了一个 ResNet-50, ResNets-101, RN50×4,RN ×
+16,RN50×64，对于 Vision Transformer 训练了一个 ViT-B/32、一个 ViT-B/16
+和一个 ViT-L/14。</p>
+<p>发现最好的模型是训练时间最长的 ViT-L/14@336px.
+论文里面的测试数据都是使用这个模型。</p>
+<h2 id="experiments">Experiments</h2>
+<p>这是重要部分</p>
+<p><img src="4.png" /></p>
+<p>这个实验表示没有用下游任务数据集里面的东西训练和 ResNet50
+的对比结果。</p>
+<p><strong>Few-shot CLIP v.s. SOTA (ImageNet) SSL methods</strong></p>
+<p><img src="5.png" /></p>
+<ul>
+<li>Zero-shot CLIP的性能和4-shot CLIP差不多；</li>
+<li>Few-shot CLIP的performance远高于之前的SOTA模型。</li>
+</ul>
+<h3 id="歧义说明">歧义说明</h3>
+<p>比如你的 prompt 可能会是 <code>a photo of &#123;object&#125;</code>
+的形式，但是可能会被理解成一词多义，比如说 cranes
+会被理解成起吊机或者是鹤，我们可以通过添加提示的方法来增高准确率，比如说
+<code>A photo of a &#123;label&#125;, a type of pet</code> 这种。</p>
+<h2 id="limitation">Limitation</h2>
+<p>CLIP的零样本在有些任务上仍然很弱，在某些详细物品分类任务不擅长。</p>
+<p>作者还发现 zero-shot CLIP 在复杂抽象的推理上不是很擅长（但是实际上
+human 也会不擅长）</p>
+<p>对于不太可能包含在CLIP预训练数据集中的新任务，例如，照片中最近的汽车的距离进行分类，CLIP的性能可以接近随机。CLIP在MNIST的手写数字上仅达到88%的正确率，这种也很好理解，因为这样的图片基本上不会广泛存在于网络搜索图片中。</p>
+<p>尽管CLIP可以灵活地为各种各样的任务和数据集生成零样本的分类器，但CLIP仍然仅限于从给定零样本分类器中的那些概念中进行选择。与真正灵活的方法(如图像字幕)相比，这是一个重大的限制。</p>
+<p>另外CLIP是通过与互联网上的图像配对的文本进行训练的，而这些图像-文本对，是未经过滤和管理的，所以将会导致CLIP模型学习许多社会偏见。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/notes/" rel="tag"># notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/MovieChat/" rel="prev" title="MovieChat学习笔记">
+                  <i class="fa fa-angle-left"></i> MovieChat学习笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">siriehn_nx</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">45k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:44</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"siriehn-nx","repo":"gitalk","client_id":"37d0512270894417f5e6","client_secret":"03663d52e188b52db8e4459d5a91ec87f7c4d09b","admin_user":"siriehn-nx","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"303ffdb955adfded6ef45ec92e7425f5"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
