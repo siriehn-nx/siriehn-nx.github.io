@@ -123,137 +123,6 @@ human 也会不擅长）</p>
       </tags>
   </entry>
   <entry>
-    <title>GPT-2学习笔记</title>
-    <url>/GPT-2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="gpt-2-学习笔记">GPT-2 学习笔记</h1>
-<h2 id="背景和动机">背景和动机</h2>
-<p>GPT-1
-展示出来，利用大量没有标注的数据，在特定语言任务中也能取得较好的性能。但是
-BERT 的横空出世，做到了比 GPT-1 更好的性能，他用 Transformer 的 Encoder
-训练了更大的模型。但是 GPT 的作者认为还是使用 Transformer 的 Decoder
-更有前途。 supervised finetuning
-有监督的学习只能造就模型在特定的训练集上称得上专家，一旦任务改变就不得不标记一个新的训练集进行训练
-即 "single task training on single domain datasets" 方法。</p>
-<p>两个问题</p>
-<ol type="1">
-<li>借助预训练提升性能，但是还是需要人工标注的有监督参数微调。</li>
-<li>需要在下游任务中有一定量的标注数据，zero-shot 情况下表现不好。</li>
-</ol>
-<p>GPT-2 表示，即使是一个语言模型，也可以在 Zero-Shot
-情形下解决问题。无需任何参数的微调。</p>
-<h2 id="zero-shot">Zero-Shot</h2>
-<p>先介绍一个概念就是
-Zero-Shot，就是说这个术语表示模型在没有事先接受下游任务的相关训练数据下执行任务的能力。在
-NLP
-当中就是处理未知词汇或者主题的能力。比如说一个模型在训练时没有见过某个特定主题的数据或者但是在测试的时候可以正确的分类相关文本，那么
-Zero-Shot 能力就有了。</p>
-<p>这种能力的实现通常涉及到使用预训练的模型，这些模型在大量数据上进行了训练，从而学到了通用的语言和知识表示。这样的模型能够泛化到新领域或任务，即使它们在训练时没有见过相关的数据。</p>
-<h2 id="方法">方法</h2>
-<p>一般的语言模型给的输入是 <code>P(输入|输出)</code>，但是 OpenAI
-公司的 GPT 团队的 GPT 模型是 <code>P(任务,输入|输出)</code> 的模式。</p>
-<p>GPT-2 的核心是语言建模，语言建模就是从一组样例 <span
-class="math inline">\((x_1, \ldots, x_n)\)</span>
-中进行无监督分布估计。每个例子包含一个不定长序列 <span
-class="math inline">\(\{s_1, \ldots, s_m\}\)</span></p>
-<p><span class="math display">\[
-P(x) = \prod\limits_{i = 1} ^ n p(s_n \vert s_1, \ldots, s_{n - 1})
-\]</span></p>
-<p>我觉得这个概率有问题啊，看起来模型好像是做的最大化这个事情</p>
-<p><span class="math display">\[
-\mathcal{L}(x) = \sum\limits \log p(s_i\vert s_{i - k}, \ldots , s_{i -
-1})
-\]</span></p>
-<p>式子的意思是让 GPT 只看到前 <span class="math inline">\(k\)</span>
-个单词来推理新的单词是什么，根据新的词是什么来计算误差，使用随机梯度下降进行训练。</p>
-<p><img src="1.webp" /></p>
-<p>这是 GPT-1 中一个 Decoder 块的结构就如图所示。</p>
-<p>但是 GPT2 有调整，比如说在每个 sub-block 之前都有一个 Layer
-normalization，并且在最后一个块后面也添加了一个 Layer
-normalization。关于初始化考虑了残差路径上随模型深度的累积。我们在初始化时将残差层的权重缩放为
-<span class="math inline">\(\frac{1}{\sqrt{N}}\)</span>。</p>
-<p><img src="4.png" /></p>
-<p>可以看到 GPT-2 是不断的堆叠 Decoder 块。</p>
-<p><img src="2.webp" /></p>
-<p>这就是 GPT 工作的示意图，用公式表示出来就是</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;h_0 = SW_e + W_p
-\\
-&amp;h_l = \text{Decoder\_bock}(h_{l - 1})
-\\
-&amp;p(u) = \text{softmax}(h_n W_e ^ T)
-\end{aligned}
-\]</span></p>
-<p>GPT-2 生成文本的过程实际上是一个自回归的过程，每次生成一个
-token，然后根据之前生成的东西来生成下一个 token。</p>
-<p>有时候生成的词语会造成循环，为了避免这种情况的产生，可以使用
-Top-k，从出现概率前几高的里面随机一个生成出来，而不是每次都选择概率最高的。</p>
-<p>GPT-2 中一次训练的 batch size 变成了
-512，然后还有就是上文可以看到的长度也就是 <span
-class="math inline">\(k\)</span> 变成了 1024。</p>
-<h2 id="输入表示">输入表示</h2>
-<p>GPT-2
-好像在这方面也做出来了调整，当时的大语言模型在处理输入问题上如小写化、标记化和词汇表外的标记，这些步骤限制模型能够模拟的字符串空间。字节级的
-LM 通过转为 UTF-8 编码来解决问题，但是字节级的 LM 性能远不如单词级的
-LM。</p>
-<p>考虑 <a href="https://zhuanlan.zhihu.com/p/383650769">BPE</a>
-算法怎么应用到模型中去即可，字节级别的只需要 256
-个基本词汇就可以，但是好像太长了？怎么办，接着 BPE
-就可以，但是文章里还说了一点是，对于不同类别的符号是禁止互相 merge
-的，但是空格可以。GPT</p>
-<p>按照贪心合并 40000 次，加上最开始 256 个，还有最后
-<code>&lt;/w&gt;</code> 符号，一共是 50257 个单词表。</p>
-<h3 id="模型的不同型号">模型的不同型号</h3>
-<p><img src="1.png" /></p>
-<h2 id="训练数据集">训练数据集</h2>
-<p>感觉是 OpenAI 的常用策略，就是使用海量的数据训练模型。他们想要让 GPT
-适应通用任务，那么就必须使用大量包含大多数种类的数据进行训练，他们选择在网上爬数据解决这个问题。</p>
-<p>具体而言，他们在一个叫做 Reddit 的网站上爬取了所有 <span
-class="math inline">\(\ge 3\)</span>
-个赞的链接（包含文章，推送等等）（获得赞表明这些链接不是无用的）。他们使用这种方法抓取了
-4500 万个网页链接，然后在链接的 HTML
-上抓取文本信息，然后对于这些网页进行了一些简单的人工处理（包括不限于查重和一些启发式清理（文章具体没说怎么清理的）），最后的到了一个超过
-800 万文档，超过 40GB 的数据集 WebText，他们还删除了所有包含 Wikipedia
-的文档，说是会和测试评估任务重叠（？这里不太理解那里会重叠）</p>
-<h3 id="预训练">预训练</h3>
-<p><img src="3.png" /></p>
-<p>这是 WebText 里面用来训练法语和英语自然翻译的一段文字，"Mentez
-mentez, il en restera toujours quelque chose," 是法语句子，"Lie lie and
-something will always remain."
-是英文句子，而我们在无监督训练语言模型的时候，并没有告诉模型要做
-translation 的任务，但是我们的文本中却有 which translates as
-这样的字样。换句话说，这一与具体下游任务任务相关的信息，竟然可以通过具体下游任务任务无关的无监督预训练过程学习到。</p>
-<h3 id="实验结果">实验结果</h3>
-<p>在八个数据集上有七个到达了 SOTA。</p>
-<p><img src="2.png" /></p>
-<ul>
-<li>儿童读物测试（CBT）对于词的认知，达到了
-SOTA，其中任务是预测10个可能的省略单词中的哪一个是正确的。</li>
-<li>LAMBADA测试，预测一个句子的最后一个单词，这个把 LM 正确性从 19%
-提高到了是 52.66%，添加了停止词检测器之后提高到了 63.24%，提高了 SOTA
-4%。</li>
-<li>阅读理解，CoQA对话问答数据集包含7个不同领域相关的文档，在无监督情况下达到了
-55 F1 的水平。</li>
-<li>概括，在 CNN 和 Daily Mail 上进行概括内容，采取 Top-k
-随机采样，生成的内容类似于摘要，但是会关注文章的最近内容和容易混淆的细节。任务提示被删除时性能也会严重下滑。</li>
-<li>翻译，GPT-2
-的翻译做的不是很理想，但是仍然出乎意料，因为他们把非英语从
-WebText里面删了。</li>
-<li>回答任务好像也有些差劲。</li>
-</ul>
-<p>F1
-分数是用来衡量模型在分类任务中的性能的一种指标。它是精确率和召回率的调和平均数，表示为
-<span class="math inline">\(F_1 = 2 * \frac{精确率 * 召回率}{精确率 +
-召回率}\)</span>。 F1分数越高，说明模型的性能越好。在上文中，提到的55
-F1意味着模型在分类任务中的F1分数为55，具体而言，它的精确率和召回率都达到了55%。</p>
-<p>还有一个很重要的现象，随着模型规模的扩大，Zero-Shot
-的性能在提升。</p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MovieChat学习笔记</title>
     <url>/MovieChat/</url>
     <content><![CDATA[<h1 id="moviechat论文学习笔记">MovieChat论文学习笔记</h1>
@@ -642,13 +511,131 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
       </tags>
   </entry>
   <entry>
-    <title>思想道德与法治</title>
-    <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
-<h1 id="思想道德与法治">思想道德与法治</h1>
-<h2 id="绪论">绪论</h2>
-<p>思法课是什么课？一门水课。一门金课。</p>
-<p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
+    <title>GPT-2学习笔记</title>
+    <url>/GPT-2%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="gpt-2-学习笔记">GPT-2 学习笔记</h1>
+<h2 id="背景和动机">背景和动机</h2>
+<p>GPT-1
+展示出来，利用大量没有标注的数据，在特定语言任务中也能取得较好的性能。但是
+BERT 的横空出世，做到了比 GPT-1 更好的性能，他用 Transformer 的 Encoder
+训练了更大的模型。但是 GPT 的作者认为还是使用 Transformer 的 Decoder
+更有前途。 supervised finetuning
+有监督的学习只能造就模型在特定的训练集上称得上专家，一旦任务改变就不得不标记一个新的训练集进行训练
+即 "single task training on single domain datasets" 方法。</p>
+<p>两个问题</p>
+<ol type="1">
+<li>借助预训练提升性能，但是还是需要人工标注的有监督参数微调。</li>
+<li>需要在下游任务中有一定量的标注数据，zero-shot 情况下表现不好。</li>
+</ol>
+<p>GPT-2 表示，即使是一个语言模型，也可以在 Zero-Shot
+情形下解决问题。无需任何参数的微调。</p>
+<h2 id="zero-shot">Zero-Shot</h2>
+<p>先介绍一个概念就是
+Zero-Shot，就是说这个术语表示模型在没有事先接受下游任务的相关训练数据下执行任务的能力。在
+NLP
+当中就是处理未知词汇或者主题的能力。比如说一个模型在训练时没有见过某个特定主题的数据或者但是在测试的时候可以正确的分类相关文本，那么
+Zero-Shot 能力就有了。</p>
+<p>这种能力的实现通常涉及到使用预训练的模型，这些模型在大量数据上进行了训练，从而学到了通用的语言和知识表示。这样的模型能够泛化到新领域或任务，即使它们在训练时没有见过相关的数据。</p>
+<h2 id="方法">方法</h2>
+<p>一般的语言模型给的输入是 <code>P(输入|输出)</code>，但是 OpenAI
+公司的 GPT 团队的 GPT 模型是 <code>P(任务,输入|输出)</code> 的模式。</p>
+<p>GPT-2 的核心是语言建模，语言建模就是从一组样例 <span
+class="math inline">\((x_1, \ldots, x_n)\)</span>
+中进行无监督分布估计。每个例子包含一个不定长序列 <span
+class="math inline">\(\{s_1, \ldots, s_m\}\)</span></p>
+<p><span class="math display">\[
+P(x) = \prod\limits_{i = 1} ^ n p(s_n \vert s_1, \ldots, s_{n - 1})
+\]</span></p>
+<p>我觉得这个概率有问题啊，看起来模型好像是做的最大化这个事情</p>
+<p><span class="math display">\[
+\mathcal{L}(x) = \sum\limits \log p(s_i\vert s_{i - k}, \ldots , s_{i -
+1})
+\]</span></p>
+<p>式子的意思是让 GPT 只看到前 <span class="math inline">\(k\)</span>
+个单词来推理新的单词是什么，根据新的词是什么来计算误差，使用随机梯度下降进行训练。</p>
+<p><img src="1.webp" /></p>
+<p>这是 GPT-1 中一个 Decoder 块的结构就如图所示。</p>
+<p>但是 GPT2 有调整，比如说在每个 sub-block 之前都有一个 Layer
+normalization，并且在最后一个块后面也添加了一个 Layer
+normalization。关于初始化考虑了残差路径上随模型深度的累积。我们在初始化时将残差层的权重缩放为
+<span class="math inline">\(\frac{1}{\sqrt{N}}\)</span>。</p>
+<p><img src="4.png" /></p>
+<p>可以看到 GPT-2 是不断的堆叠 Decoder 块。</p>
+<p><img src="2.webp" /></p>
+<p>这就是 GPT 工作的示意图，用公式表示出来就是</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;h_0 = SW_e + W_p
+\\
+&amp;h_l = \text{Decoder\_bock}(h_{l - 1})
+\\
+&amp;p(u) = \text{softmax}(h_n W_e ^ T)
+\end{aligned}
+\]</span></p>
+<p>GPT-2 生成文本的过程实际上是一个自回归的过程，每次生成一个
+token，然后根据之前生成的东西来生成下一个 token。</p>
+<p>有时候生成的词语会造成循环，为了避免这种情况的产生，可以使用
+Top-k，从出现概率前几高的里面随机一个生成出来，而不是每次都选择概率最高的。</p>
+<p>GPT-2 中一次训练的 batch size 变成了
+512，然后还有就是上文可以看到的长度也就是 <span
+class="math inline">\(k\)</span> 变成了 1024。</p>
+<h2 id="输入表示">输入表示</h2>
+<p>GPT-2
+好像在这方面也做出来了调整，当时的大语言模型在处理输入问题上如小写化、标记化和词汇表外的标记，这些步骤限制模型能够模拟的字符串空间。字节级的
+LM 通过转为 UTF-8 编码来解决问题，但是字节级的 LM 性能远不如单词级的
+LM。</p>
+<p>考虑 <a href="https://zhuanlan.zhihu.com/p/383650769">BPE</a>
+算法怎么应用到模型中去即可，字节级别的只需要 256
+个基本词汇就可以，但是好像太长了？怎么办，接着 BPE
+就可以，但是文章里还说了一点是，对于不同类别的符号是禁止互相 merge
+的，但是空格可以。GPT</p>
+<p>按照贪心合并 40000 次，加上最开始 256 个，还有最后
+<code>&lt;/w&gt;</code> 符号，一共是 50257 个单词表。</p>
+<h3 id="模型的不同型号">模型的不同型号</h3>
+<p><img src="1.png" /></p>
+<h2 id="训练数据集">训练数据集</h2>
+<p>感觉是 OpenAI 的常用策略，就是使用海量的数据训练模型。他们想要让 GPT
+适应通用任务，那么就必须使用大量包含大多数种类的数据进行训练，他们选择在网上爬数据解决这个问题。</p>
+<p>具体而言，他们在一个叫做 Reddit 的网站上爬取了所有 <span
+class="math inline">\(\ge 3\)</span>
+个赞的链接（包含文章，推送等等）（获得赞表明这些链接不是无用的）。他们使用这种方法抓取了
+4500 万个网页链接，然后在链接的 HTML
+上抓取文本信息，然后对于这些网页进行了一些简单的人工处理（包括不限于查重和一些启发式清理（文章具体没说怎么清理的）），最后的到了一个超过
+800 万文档，超过 40GB 的数据集 WebText，他们还删除了所有包含 Wikipedia
+的文档，说是会和测试评估任务重叠（？这里不太理解那里会重叠）</p>
+<h3 id="预训练">预训练</h3>
+<p><img src="3.png" /></p>
+<p>这是 WebText 里面用来训练法语和英语自然翻译的一段文字，"Mentez
+mentez, il en restera toujours quelque chose," 是法语句子，"Lie lie and
+something will always remain."
+是英文句子，而我们在无监督训练语言模型的时候，并没有告诉模型要做
+translation 的任务，但是我们的文本中却有 which translates as
+这样的字样。换句话说，这一与具体下游任务任务相关的信息，竟然可以通过具体下游任务任务无关的无监督预训练过程学习到。</p>
+<h3 id="实验结果">实验结果</h3>
+<p>在八个数据集上有七个到达了 SOTA。</p>
+<p><img src="2.png" /></p>
+<ul>
+<li>儿童读物测试（CBT）对于词的认知，达到了
+SOTA，其中任务是预测10个可能的省略单词中的哪一个是正确的。</li>
+<li>LAMBADA测试，预测一个句子的最后一个单词，这个把 LM 正确性从 19%
+提高到了是 52.66%，添加了停止词检测器之后提高到了 63.24%，提高了 SOTA
+4%。</li>
+<li>阅读理解，CoQA对话问答数据集包含7个不同领域相关的文档，在无监督情况下达到了
+55 F1 的水平。</li>
+<li>概括，在 CNN 和 Daily Mail 上进行概括内容，采取 Top-k
+随机采样，生成的内容类似于摘要，但是会关注文章的最近内容和容易混淆的细节。任务提示被删除时性能也会严重下滑。</li>
+<li>翻译，GPT-2
+的翻译做的不是很理想，但是仍然出乎意料，因为他们把非英语从
+WebText里面删了。</li>
+<li>回答任务好像也有些差劲。</li>
+</ul>
+<p>F1
+分数是用来衡量模型在分类任务中的性能的一种指标。它是精确率和召回率的调和平均数，表示为
+<span class="math inline">\(F_1 = 2 * \frac{精确率 * 召回率}{精确率 +
+召回率}\)</span>。 F1分数越高，说明模型的性能越好。在上文中，提到的55
+F1意味着模型在分类任务中的F1分数为55，具体而言，它的精确率和召回率都达到了55%。</p>
+<p>还有一个很重要的现象，随着模型规模的扩大，Zero-Shot
+的性能在提升。</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -1041,6 +1028,360 @@ Q)\)</span></p>
 &amp;P \vee Q = \neg(\neg P \wedge \neg Q)
 \end{aligned}
 \]</span></p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>思想道德与法治</title>
+    <url>/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>任课教师：吴菌 E-Mail: wujun74@163.com</p>
+<h1 id="思想道德与法治">思想道德与法治</h1>
+<h2 id="绪论">绪论</h2>
+<p>思法课是什么课？一门水课。一门金课。</p>
+<p>为什么要开这门课？立徳树人，培养社会主义的接班人和建设者，培养担当民族大任的时代新人。</p>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科学通论笔记</title>
+    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
+<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
+<p>广义和狭义的科学：</p>
+<ul>
+<li>广义：自然知识，技术，书里科学，全地域起源</li>
+<li>狭义：数学，实验科学，希腊源头</li>
+</ul>
+<p>不懂数学的大科学家：达尔文</p>
+<ul>
+<li>在希腊起源</li>
+<li>在罗马式微</li>
+<li>在伊斯兰世界发扬光大</li>
+<li>在中世纪后期的基督世界重获新生</li>
+<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
+<li>19世纪全方位转化为技术成为强大的物质力量</li>
+<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
+</ul>
+<h3 id="狭义科学的样本">狭义科学的样本</h3>
+<ul>
+<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
+<li>希腊哲学</li>
+</ul>
+<p>问题：如何理解狭义科学的形式？</p>
+<h3 id="文明与科学">文明与科学</h3>
+<p>文明不等于科学，科学出现在希腊城邦文明。</p>
+<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
+<h3 id="纯粹科学">纯粹科学</h3>
+<p>高度的自主性，自足性，为自身的目的而存在</p>
+<ol type="1">
+<li>远离任何意义上的实用主义</li>
+<li>内在性：自己推出自己</li>
+</ol>
+<p>自由科学特征之一：无用无功利之学</p>
+<ul>
+<li>欧几里德的故事</li>
+<li>亚里士多德三种知识：经验、技艺、科学</li>
+</ul>
+<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
+<ul>
+<li>内在展开、证明的知识</li>
+<li>证明、论证、推理、演绎</li>
+</ul>
+<p>自由科学的条件：</p>
+<ul>
+<li>惊异，好奇</li>
+<li>闲暇，快乐</li>
+<li>外在自由（言论自由，财务自由）</li>
+<li>内在自由</li>
+</ul>
+<p>希腊城邦文明，自由科学的温床。</p>
+<p>城邦文明的开端</p>
+<ul>
+<li>荷马史诗</li>
+<li>希腊字母文字</li>
+<li>奥林波斯神话</li>
+<li>奥林匹克竞技会</li>
+</ul>
+<p>神人之别：不死与有死</p>
+<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
+<p>希腊人的宗教：无宗教教义，无宗教经典</p>
+<p>竞技会：</p>
+<ul>
+<li>祭祀奥林波斯诸神</li>
+<li>神圣休战原则</li>
+<li>希腊身份认同</li>
+<li>不仅有体育，还有音乐戏剧歌舞</li>
+<li>全程裸体，展示人体之美</li>
+<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
+</ul>
+<p>城邦小国寡民，直接民主制，参军是公民义务</p>
+<p>戏剧：起源于酒神祭祀</p>
+<p>雕刻：三大雕刻家</p>
+<h3 id="城邦文明小结">城邦文明小结</h3>
+<ul>
+<li>城邦本位主义，自治自给，独立自由</li>
+<li>科学哲学艺术</li>
+<li>希腊波斯战争</li>
+</ul>
+<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
+<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
+<p>奴隶制：自由民获得闲暇</p>
+<p>米利都，科学的策源地：</p>
+<ul>
+<li>独立与自由</li>
+<li>挑战与竞争</li>
+<li>开放与交流</li>
+</ul>
+<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
+<p>自然的发现，事物有其自然</p>
+<p>自然就是本质：事物的自己即其本质</p>
+<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
+<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
+<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
+<p>希腊数学，自由学术的典范</p>
+<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
+<p>实践科学：政治学，伦理学，家政学</p>
+<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
+<p>学数学可以涵养真正人性</p>
+<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
+<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
+<p>什么是自然？何谓自然的发现？</p>
+<p>为什么说几何学是理性科学的代表？</p>
+<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
+<h3 id="本讲纲要">本讲纲要</h3>
+<ul>
+<li>天文学作为科学</li>
+<li>柏拉图及其理念论</li>
+<li>天球-地球宇宙</li>
+<li>行星问题与拯救形象</li>
+</ul>
+<h3 id="原始天文学">原始天文学</h3>
+<ul>
+<li>观天</li>
+<li>命名</li>
+<li>占卜</li>
+</ul>
+<h3 id="科学天文学">科学天文学</h3>
+<ul>
+<li>寻找规律</li>
+<li>预测天象</li>
+</ul>
+<h3 id="中国天文学">中国天文学</h3>
+<ul>
+<li>天人合一</li>
+<li>政治占星学</li>
+<li>日常伦理学</li>
+<li>当食不食</li>
+</ul>
+<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
+<h3 id="理念论">理念论</h3>
+<ul>
+<li>理想，相，理想，形式</li>
+<li>理想是可以超与的</li>
+<li>显示的可理解性来自与他对理念的模仿</li>
+<li>洞穴隐喻</li>
+</ul>
+<h3 id="思想来源">思想来源</h3>
+<ul>
+<li>巴门尼德</li>
+<li>苏格拉底</li>
+<li>泰拉泰德</li>
+<li>欧多克斯</li>
+<li>欧几里德</li>
+</ul>
+<p>《蒂迈欧篇》：理性创世</p>
+<h3 id="世界躯体">世界躯体</h3>
+<ul>
+<li>可视可见，就需要火</li>
+<li>可触可碰，就需要土</li>
+<li>火土结合，就需要中项</li>
+<li>世界是独一无二的球体</li>
+</ul>
+<h3 id="世界灵魂">世界灵魂</h3>
+<ul>
+<li>灵魂=运动</li>
+<li>宇宙的运动有相同运动和相异运动</li>
+</ul>
+<h3 id="宇宙">宇宙</h3>
+<ul>
+<li>有限，秩序，和谐</li>
+<li>宇宙=完美/完善/完满</li>
+</ul>
+<h3 id="地球">地球</h3>
+<ul>
+<li><p>圆盘浮在水上</p></li>
+<li><p>鼓状居于宇宙之上</p></li>
+<li><p>绕中心火转动</p></li>
+<li><p>居于宇宙之中</p></li>
+<li><p>经验之谈</p></li>
+<li><p>理论根据</p></li>
+</ul>
+<h3 id="圆球">圆球</h3>
+<ul>
+<li>几何化的天体把球心放到醒目位置</li>
+<li>对称性</li>
+<li>几何偏好</li>
+</ul>
+<h3 id="天界不朽">天界不朽</h3>
+<ul>
+<li>天地二分</li>
+<li>天界纯粹，绝对，不朽
+<ul>
+<li>位置不变</li>
+<li>性质不变</li>
+<li>数量不变</li>
+</ul></li>
+</ul>
+<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
+<h3 id="拯救现象">拯救现象</h3>
+<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
+<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
+<ul>
+<li>优点：拯救现象</li>
+<li>地球并不处于宇宙集合中心</li>
+<li>也不处于本轮中心的晕素运动中心</li>
+</ul>
+<p>小结</p>
+<ul>
+<li>观察记录不等于科学</li>
+<li>哲学预设：天界存在绝对规则运动</li>
+<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
+<li>透过现象看本质</li>
+<li>集合分解与还原</li>
+</ul>
+<h2 id="经院哲学与现代科学的起源">经院哲学与现代科学的起源</h2>
+<h3 id="三大历史背景">三大历史背景</h3>
+<ul>
+<li>希腊科学的衰落</li>
+<li>伊斯兰的传承和终端</li>
+<li>拉丁欧洲的黑暗和复兴</li>
+</ul>
+<h3 id="希腊科学为何衰落">希腊科学为何衰落</h3>
+<ul>
+<li>自由的科学</li>
+<li>早期基督教的反智主义</li>
+</ul>
+<h3 id="伊斯兰科学的贡献">伊斯兰科学的贡献</h3>
+<ul>
+<li>全面译介希腊科学</li>
+<li>炼金术</li>
+<li>代数</li>
+<li>天文学</li>
+<li>光学</li>
+</ul>
+<h3 id="伊斯兰科学的中断">伊斯兰科学的中断</h3>
+<ul>
+<li>伊斯兰为什么没有发生科学革命？</li>
+<li><ul>
+<li>宗教知识压倒世俗</li>
+</ul></li>
+<li><ul>
+<li>希腊科学没有制度化</li>
+</ul></li>
+<li><ul>
+<li>为产生伊斯兰版的经院哲学</li>
+</ul></li>
+</ul>
+<h3 id="欧洲的苏醒和三大技术革命">欧洲的苏醒和三大技术革命</h3>
+<ul>
+<li>奴隶制的废除与三大技术革命</li>
+<li>农业技术革命</li>
+<li>军事技术革命</li>
+<li>机械技术革命</li>
+</ul>
+<h3 id="机械钟表的出现">机械钟表的出现</h3>
+<ul>
+<li>擒纵器</li>
+</ul>
+<h3 id="什么是大学">什么是大学</h3>
+<ul>
+<li>拉丁翻译运动造就的欧洲学习热潮</li>
+<li>学生和教师的自治组织</li>
+<li>基督教世界的学位颁发机构</li>
+<li>两希文明的熔炉</li>
+</ul>
+<h3 id="学习中心">学习中心</h3>
+<ul>
+<li>神学</li>
+<li>法学</li>
+<li>医学</li>
+</ul>
+<h3 id="法律革命">法律革命</h3>
+<p>教会法</p>
+<ul>
+<li>教会经济财产的管理</li>
+<li>特殊权限规定</li>
+<li>处理教会当局与世俗当局的关系</li>
+<li>教会有法</li>
+<li>自治的法律实体</li>
+<li>法律是普遍和客观的</li>
+</ul>
+<h3 id="学生行会">学生行会</h3>
+<ul>
+<li>对外维护自然利益</li>
+<li>对内制定行业标准</li>
+<li>在王权和教权左右逢源</li>
+</ul>
+<h3 id="学位制度">学位制度</h3>
+<ul>
+<li>教师行会</li>
+<li>学士</li>
+<li>博士</li>
+<li>毕业文凭</li>
+</ul>
+<h3 id="融合两希文明">融合两希文明</h3>
+<ul>
+<li>设置艺学院</li>
+<li>将希腊学术作为大学教学的基础</li>
+<li>将亚里士多德的学说与基督教义密切结合</li>
+<li>为现在科学准备条件</li>
+</ul>
+<h3 id="四大学院">四大学院</h3>
+<ul>
+<li>医学院</li>
+<li>艺学院</li>
+<li>法学院</li>
+<li>法学院</li>
+</ul>
+<h3 id="自由辩论">自由辩论</h3>
+<ul>
+<li>讲座</li>
+<li><ul>
+<li>朗读经典文本</li>
+</ul></li>
+<li><ul>
+<li>解释概念和术语</li>
+</ul></li>
+<li><ul>
+<li>提出问题</li>
+</ul></li>
+<li>辩论</li>
+<li><ul>
+<li>教师引入问题</li>
+</ul></li>
+<li><ul>
+<li>学生正反两方辩论</li>
+</ul></li>
+<li><ul>
+<li>教师综合辩论</li>
+</ul></li>
+</ul>
+<h3 id="教父哲学">教父哲学</h3>
+<ul>
+<li>奥古斯丁</li>
+<li>启示为神学之本</li>
+<li>哲学是神学的婢女</li>
+</ul>
+<h3 id="经院哲学">经院哲学</h3>
+<ul>
+<li>安瑟尔谟</li>
+<li>上帝的本体论证明</li>
+<li>神学是最高的哲学</li>
+</ul>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -4221,347 +4562,371 @@ class="math inline">\((P, \xi), \Vert P \Vert &lt; \delta\)</span>
 <p>推论2：若 <span class="math inline">\(f\)</span> 有界在 <span
 class="math inline">\([a, b]\)</span> 上除有限个间断点外连续 则 <span
 class="math inline">\(f\in \mathcal{R}[a, b]\)</span></p>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科学通论笔记</title>
-    <url>/%E7%A7%91%E5%AD%A6%E9%80%9A%E8%AE%BA%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="科学通论笔记">科学通论笔记</h1>
-<h2 id="希腊城邦与科学的起源">希腊城邦与科学的起源</h2>
-<p>广义和狭义的科学：</p>
-<ul>
-<li>广义：自然知识，技术，书里科学，全地域起源</li>
-<li>狭义：数学，实验科学，希腊源头</li>
-</ul>
-<p>不懂数学的大科学家：达尔文</p>
-<ul>
-<li>在希腊起源</li>
-<li>在罗马式微</li>
-<li>在伊斯兰世界发扬光大</li>
-<li>在中世纪后期的基督世界重获新生</li>
-<li>在16,17世纪的欧洲的科学革命中形成现代形态</li>
-<li>19世纪全方位转化为技术成为强大的物质力量</li>
-<li>1600年后陆续传入中国史称西学格致，赛先生，科学</li>
-</ul>
-<h3 id="狭义科学的样本">狭义科学的样本</h3>
-<ul>
-<li>希腊数学-欧几里德几何学及形式逻辑体系</li>
-<li>希腊哲学</li>
-</ul>
-<p>问题：如何理解狭义科学的形式？</p>
-<h3 id="文明与科学">文明与科学</h3>
-<p>文明不等于科学，科学出现在希腊城邦文明。</p>
-<p>实用和功利的需要，国计民生，数学还不是独立的学科，没有对于数学本身进行研究，数学只是工具，这还不是数学科学。</p>
-<h3 id="纯粹科学">纯粹科学</h3>
-<p>高度的自主性，自足性，为自身的目的而存在</p>
+<p>推论3：设 <span class="math inline">\(f:[a, b]\rightarrow \mathbb
+R\)</span> 单调函数，则 <span class="math inline">\(f\in \mathcal{R}[a,
+b]\)</span>。</p>
+<h4 id="darboux-可积">darboux 可积</h4>
+<p>定义：设 <span class="math inline">\(f:[a, b]\)</span>R$ 函数，<span
+class="math inline">\((P,\xi)\)</span> 为一个分割令 <span
+class="math inline">\(m_i = \inf_{x\in \Delta _i} f(x), M_i = \sup_{x\in
+\Delta x_i} f(x)\)</span></p>
+<p><span class="math display">\[
+\underline{S}(f; P) = \sum\limits^n_{i = 1}m_i \Delta x_i\\
+\overline{S}(f; P) = \sum\limits^n_{i = 1}m_i \Delta x_i
+\]</span></p>
+<p>称上面那个是 Darboux 上和，下面那个是 Darboux 下和，</p>
+<p><span class="math display">\[
+\underline{S}(f; P) \le S(f; P, \xi) \le \overline{S}(f, P)
+\]</span></p>
+<p>定理：</p>
+<p>Darboux 上下和仅依靠分割，不依赖标记点。</p>
+<p>加细之后，下和不减，上和不增</p>
+<p>定义，Darbowx 上下积分</p>
+<p><span class="math display">\[
+\underline{I} = \sup_{P} \underline{S}(f; P)\\
+\overline{I} = \inf_{P} \overline{S}(f; P)
+\]</span></p>
+<p>称上面的是 Darboux 下积分，记 <span
+class="math inline">\(\underline{\int} ^ b_a f(x)
+\mathrm{d}x\)</span>，称上面的是 Darboux 上积分，记 <span
+class="math inline">\(\overline{\int} ^ b_a f(x)
+\mathrm{d}x\)</span></p>
+<p>定理 Darboux：设 <span class="math inline">\(f:[a, b]\rightarrow
+\mathbb R\)</span> 有界函数</p>
+<p><span class="math display">\[
+\underline{I} = \lim\limits_{\Vert P\Vert\rightarrow 0} \underline{S}
+(f; P)
+\\
+\overline{I} = \lim\limits_{\Vert P\Vert\rightarrow 0} \overline{S} (f;
+P)
+\]</span></p>
+<p>设 <span class="math inline">\(f:[a, b] \rightarrow \mathbb
+R\)</span> 有界，那么 <span class="math inline">\(f\in \mathcal{R}[a, b]
+\Leftrightarrow \overline{I} = \underline{I} = I\)</span></p>
+<p>只需要证明 <span class="math inline">\(\underline{I} = \lim\limits
+_{\Vert P \Vert \rightarrow 0} \underline{S}(f; P)\)</span></p>
+<p>我们要证明 <span class="math inline">\(\forall \varepsilon &gt; 0,
+\exists\delta &gt; 0,\text{s.t.} \Vert P \Vert &lt; \delta\)</span>
+时，</p>
+<p><span class="math display">\[
+\underline{I} - \varepsilon  &lt; \underline{S}(f; P) \le \underline{I}
+\]</span></p>
+<p>则存在分割 <span class="math inline">\(P_0\)</span> 使得 <span
+class="math inline">\(\underline{I} - \frac{\varepsilon}{2} &lt;
+\underline{S}(f; P_0)\)</span>，使得我们记 <span
+class="math inline">\(P_0\)</span> 有 <span
+class="math inline">\(k\)</span> 个分割点，那么对于 <span
+class="math inline">\([a, b]\)</span> 的任意分割 <span
+class="math inline">\(P\)</span> 满足：</p>
+<p><span class="math display">\[
+\underline{S}(f; P_0 \cup P) - \underline{S} (f; P) \le k \omega(f; [a,
+b])\Vert P\Vert
+\]</span></p>
+<p>因此我们得到</p>
+<p><span class="math display">\[
+\underline{S}(f; P) \ge \underline{S}(P \cup P_0) - k \omega M \Vert P
+\Vert &gt; I - \frac{\varepsilon}{2} - k M \Vert P \Vert
+\]</span></p>
+<p>则，在 <span class="math inline">\(\Vert P \Vert \rightarrow
+0\)</span> 时，<span class="math inline">\(\underline{I} \ge
+\underline{S}(f; P) &gt; I - \varepsilon\)</span></p>
+<p>如此，我们得到， <span class="math inline">\(\underline{I} =
+\underline{S}(f; P)\)</span></p>
+<p>推论：(Darboux) <span class="math inline">\(f:[a, b] \rightarrow
+\mathbb R\)</span> 有界函数，那么 <span class="math inline">\(\forall P,
+\lim \limits_{ \Vert P \Vert \rightarrow 0} \omega(f_i, \Delta_i) \Delta
+x_i = 0\)</span></p>
+<h3 id="lebesgue-定理">Lebesgue 定理</h3>
+<h4 id="零测集">零测集</h4>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0, \exists
+\{I_\lambda\}_{\lambda \in \Lambda},\text{s.t.} E \subset
+\bigcup\limits_{i \in \Lambda} I_i, \sum\limits_{i \in \Lambda} \vert
+I_i\vert &lt; \varepsilon\)</span></p>
+<p>引理：<span class="math inline">\(f:E\rightarrow \mathbb R\)</span>
+函数</p>
+<p><span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(x\in E\)</span> 上连续 <span
+class="math inline">\(\Leftrightarrow \forall \varepsilon &gt; 0,
+\exists \delta &gt; 0, \omega(f; U_{E} (x; \delta)) &lt;
+\varepsilon\)</span></p>
+<h4 id="lebesgue-定理-1">Lebesgue 定理</h4>
+<p>设 <span class="math inline">\(f:[a, b]\)</span> 上有界</p>
+<p><span class="math inline">\(f\in \mathcal{ R}[a, b]\Leftrightarrow
+f\)</span> 在 <span class="math inline">\([a, b]\)</span>
+上几乎处处连续，<span class="math inline">\(\text{i.e.}, f\)</span> 在
+<span class="math inline">\([a, b]\)</span> 上去掉一个零测集上连续。</p>
+<h4 id="可积函数性质-1">可积函数性质</h4>
 <ol type="1">
-<li>远离任何意义上的实用主义</li>
-<li>内在性：自己推出自己</li>
+<li><span class="math inline">\(f, g\in \mathcal{R}[a, b], \forall
+\alpha, \beta \in \mathbb R, \alpha f + \beta g \in \mathcal{R}[a,
+b]\)</span></li>
+<li><span class="math inline">\(f \in \mathcal{R}[a, b]\)</span> 则
+<span class="math inline">\(\vert f \vert \in \mathcal{R}[a, b], D(\vert
+f \vert) \subset D(f)\)</span></li>
+<li><span class="math inline">\(f\in \mathcal{R}[a, b], \forall [\alpha,
+\beta] \subset [a, b]\)</span> 则 <span class="math inline">\(\left.
+f\right\vert_{[\alpha,\beta]}\in \mathcal{R}[\alpha,\beta]\)</span></li>
+<li><span class="math inline">\(f, g \in \mathcal{R}[a, b]\)</span> 则
+<span class="math inline">\(fg\in \mathcal{R}[a, b]\)</span></li>
 </ol>
-<p>自由科学特征之一：无用无功利之学</p>
+<h4 id="积分第二中值定理">积分第二中值定理</h4>
+<p>定理：设 <span class="math inline">\(f, g\in \mathcal{R}[a, b],
+g\)</span> 在 <span class="math inline">\([a, b]\)</span> 上单调，</p>
+<p>则 <span class="math inline">\(\exists \xi \in [a, b], \text{s.t.}
+\int _a ^ b f(x) g(x) \mathrm{d}x = g(a) \int _a ^ \xi f(x) \mathrm{d}x
++ g(b) \int ^ b_\xi f(x) \mathrm{d}x\)</span></p>
+<p>注：若 <span class="math inline">\(f, g\in C^{1}[a, b]\)</span> 令
+<span class="math inline">\(F(x) = \int _a ^ x f(t) \mathrm{d}t,\int ^
+b_af(x) g(x) \mathrm{d}x = \int _a ^ b g \mathrm{d} F =F g \vert_a ^ b -
+\int _a ^ b F g&#39;\mathrm{d}x = g(b) \int _a ^ b f(x)\mathrm{d}x -
+\int ^b_a F(x)g&#39;(x) \mathrm{d}x\)</span></p>
+<p>由于第一积分中值定理 <span class="math inline">\(g&#39;(x)\)</span>
+在 <span class="math inline">\([a, b]\)</span> 上不变号，所以 <span
+class="math inline">\(\exists \xi\)</span> 使得</p>
+<p><span class="math display">\[
+F(\xi)[g(b) - g(a)] = \int ^ b_a F(x) g&#39;(x) \mathrm{d}x
+\]</span></p>
+<p>带入回去就做完了。这是百度百科的做法。</p>
+<p>Riemann-Lebesgue 引理：</p>
+<p>设 <span class="math inline">\(f\in \mathcal{R}[a, b]\)</span></p>
+<p><span class="math display">\[
+\lim_{\lambda\rightarrow +\infty}\int ^b_a f(x) \cos{\lambda}x =
+\lim_{\lambda\rightarrow +\infty}\int ^b_a f(x) \sin{\lambda}x = 0
+\]</span></p>
+<h3 id="广义积分">广义积分</h3>
+<h4 id="广义积分-1">广义积分</h4>
+<p>考虑在 <span class="math inline">\((0, 1]\)</span> 上的连续函数 <span
+class="math inline">\(\frac{1}{\sqrt{x}}\)</span> 其图像和 <span
+class="math inline">\(x = 0, x = 1\)</span> 以及 <span
+class="math inline">\(x\)</span>
+轴的区域虽然无界，但是其面积是有界的。</p>
+<p>定义：</p>
+<p>设函数 <span class="math inline">\(f:[a, +\infty) \rightarrow \mathbb
+R\)</span>，在任意闭区间 <span class="math inline">\([a, b]\)</span>
+上可积，如果极限</p>
+<p><span class="math display">\[
+\lim_{b\rightarrow + \infty} \int ^ b_a f(x) \mathrm{d}x
+\]</span></p>
+<p>存在，那么称此为函数 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\([a, +\infty)\)</span> 上的反常积分，记作</p>
+<p><span class="math display">\[
+\int _a ^ {+\infty} f(x) \mathrm{d}x
+\]</span></p>
+<p>注：如果极限不存在，那么也使用此符号，并称之为 <span
+class="math inline">\([a, +\infty)\)</span>
+上的反常积分，且发散的。如果极限存在，那么是收敛的。</p>
+<p>我们可以类似的定义反常积分</p>
+<p><span class="math display">\[
+\int _{-\infty} ^ a f(x) \mathrm{d}x
+\]</span></p>
+<p>及其收敛性。</p>
+<p>例 1.3：</p>
+<p>考虑反常积分</p>
+<p><span class="math display">\[
+\int_1 ^ {+\infty} \frac{\mathrm{d}x}{ x ^ p}, p\in \mathbb R
+\]</span></p>
 <ul>
-<li>欧几里德的故事</li>
-<li>亚里士多德三种知识：经验、技艺、科学</li>
+<li><span class="math inline">\(p &gt; 1\)</span> 时，积分收敛</li>
+<li>否则发散</li>
 </ul>
-<p>自由科学特征之二：演绎科学：自己推出自己的学问</p>
+<p>定义：</p>
+<p>设函数 <span class="math inline">\(f:[a, \beta) \rightarrow \mathbb
+R\)</span> 在任一闭区间 <span class="math inline">\([a, b] \subset [a,
+\beta)\)</span> 上可积， 如果极限</p>
+<p><span class="math display">\[
+\lim_{b\rightarrow \beta^-} \int _a ^ b f(x) \mathrm{d}x
+\]</span></p>
+<p>存在，则称瑕积分 <span class="math inline">\(\int _a ^ \beta f(x)
+\mathrm{d}x\)</span> 收敛， 反之则称其为发散的。 这里 <span
+class="math inline">\(\beta\)</span> 称为此反常积分的瑕点。</p>
+<p>假定 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\((\alpha, b]\)</span> 上有定义，在任一区间上 <span
+class="math inline">\([a, b] \subset (\alpha, b]\)</span>
+上可积，同样可以定义反常积分</p>
+<p><span class="math display">\[
+\int ^ b_\alpha f(x) \mathrm{d}x
+\]</span></p>
+<p>的敛散性.</p>
+<p>例 1.4. 积分</p>
+<p><span class="math display">\[
+\int ^ 1_0 \frac{\mathrm{d}x}{ x ^ p}
+\]</span></p>
+<p>解: 因</p>
+$$ ^ 1_a =
+<span class="math display">\[\begin{cases}
+    \left.\frac{x ^ {1 - p}}{1 - p} \right\vert _a ^ 1 &amp; p \ne 1\\
+
+    \left.\log x\right \vert_a ^ 1&amp; p = 1
+\end{cases}\]</span>
+<p>$$</p>
+<p>于是</p>
 <ul>
-<li>内在展开、证明的知识</li>
-<li>证明、论证、推理、演绎</li>
+<li><span class="math inline">\(p&lt;1\)</span> 时积分收敛</li>
+<li><span class="math inline">\(p\ge 1\)</span> 时积分发散</li>
 </ul>
-<p>自由科学的条件：</p>
+<p>注：</p>
+<p>如果</p>
 <ul>
-<li>惊异，好奇</li>
-<li>闲暇，快乐</li>
-<li>外在自由（言论自由，财务自由）</li>
-<li>内在自由</li>
+<li>函数 <span class="math inline">\(f:[a, \beta)\rightarrow \mathbb
+R\)</span> 在任一闭区间 <span class="math inline">\([a, b] \subset [a,
+\beta)\)</span> 可积</li>
+<li>在 <span class="math inline">\(\beta\)</span> 的某一邻域 <span
+class="math inline">\((\beta - \delta, \beta)\)</span> 上有界</li>
 </ul>
-<p>希腊城邦文明，自由科学的温床。</p>
-<p>城邦文明的开端</p>
+<p>则可以补充 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(\beta\)</span> 上的取值使得 <span
+class="math inline">\(f\)</span> 成为 <span class="math inline">\([a,
+\beta]\)</span> 上的有界函数。</p>
+<p>由 Lebesgue 定理，<span class="math inline">\(f\)</span> 在 <span
+class="math inline">\([a, \beta)\)</span> 上可积</p>
+<p><span class="math display">\[
+F(x) = \int _a ^x f(t) \mathrm{d}t
+\]</span></p>
+<p>连续，则有</p>
+<p><span class="math display">\[
+\lim_{b\rightarrow \beta} \int _a ^ b f(x) \mathrm{d}x = \int _a ^ \beta
+f(x) \mathrm{d}x
+\]</span></p>
+<p>上式右边的积分为通常意义下的 Riemann 积分。</p>
+<p>统一记号：</p>
+<p>在 <span class="math inline">\(\omega = \beta\)</span> 或 <span
+class="math inline">\(\omega =+\infty\)</span>
+上面考虑的反常积分通常记作</p>
+<p><span class="math display">\[
+\int _a ^ \omega f(x) \mathrm{d}x
+\]</span></p>
+<p>在 <span class="math inline">\(\omega = \alpha\)</span> 或 <span
+class="math inline">\(\omega =-\infty\)</span>
+上面考虑的反常积分通常记作</p>
+<p><span class="math display">\[
+\int _\omega ^ b f(x) \mathrm{d}x
+\]</span></p>
+<p>也将反常积分</p>
+<p><span class="math display">\[
+\int _b ^ \omega f(x) \mathrm{d}x = -\int ^b_\omega f(x) \mathrm{d}x
+\]</span></p>
+<p>如果函数 <span class="math inline">\(f:[a, \omega) \cup (\omega,
+b]\rightarrow\mathbb R\)</span> 在任意区间 <span
+class="math inline">\([a, c]\subset [a, \omega)\)</span> 和 <span
+class="math inline">\([d, b] \subset (\omega, b]\)</span>
+上可积，那么可以考虑反常积分</p>
+<p><span class="math display">\[
+\int _a ^ \omega f(x) \mathrm{d}x, \int _\omega ^ b f(x) \mathrm{d}x
+\]</span></p>
+<p>如果他们都收敛，那么反常积分</p>
+<p><span class="math display">\[
+\int _a ^ b f(x) \mathrm{d}x
+\]</span></p>
+<p>也收敛，反之如果有两个中有一个是发散的，那么其也是发散的。</p>
+<p>反常积分的性质和通常意义下的积分类似。</p>
+<h4 id="分部积分-2">分部积分</h4>
+<p>若 <span class="math inline">\(f, g \in C ^ 1([a,
+\omega))\)</span></p>
 <ul>
-<li>荷马史诗</li>
-<li>希腊字母文字</li>
-<li>奥林波斯神话</li>
-<li>奥林匹克竞技会</li>
+<li><span class="math inline">\(f\cdot g&#39;, f&#39;\cdot g\)</span> 在
+<span class="math inline">\([a, \omega)\)</span> 的反常积分以及极限
+<span class="math inline">\(\left.f(x) g(x) \right\vert_a ^ \omega =
+\lim\limits_{x\rightarrow \omega ^-}f(x) g(x) - f(a) g(a)\)</span></li>
 </ul>
-<p>神人之别：不死与有死</p>
-<p>神人同形同性：四肢发达，体魄完美，七情六欲</p>
-<p>希腊人的宗教：无宗教教义，无宗教经典</p>
-<p>竞技会：</p>
+<p>中两者收敛，那么则有</p>
+<p><span class="math display">\[
+\int_a ^ \omega f(x) \mathrm{d}g(x) = \left.f(x) g(x)\right\vert _a ^
+\omega - \int _a ^ \omega g(x) \mathrm{d} f(x)
+\]</span></p>
+<p><span class="math inline">\(\text{NL}\)</span> 公式：</p>
+<p>设在 <span class="math inline">\(f:[a, \omega)\rightarrow \mathbb
+R\)</span> 在任意区间 <span class="math inline">\([a, b]\subset[a,
+\omega)\)</span> 上可积，在 <span class="math inline">\([a,
+\omega)\)</span> 上有原函数 <span class="math inline">\(F\)</span></p>
+<p>则 <span class="math inline">\(\int_a ^ \omega f(x)
+\mathrm{d}x\)</span> 收敛当且仅当 <span
+class="math inline">\(\lim\limits_{x\rightarrow \omega ^ -} F(x) =
+F(\omega)\)</span> 存在，此时有 <span class="math inline">\(\int_a ^
+\omega f(x) \mathrm{d}x = F(\omega) - F(a)\)</span></p>
+<h4 id="cauchy-判别法">Cauchy 判别法</h4>
+<p>设在 <span class="math inline">\(f:[a, \omega)\rightarrow \mathbb
+R\)</span> 在任意区间 <span class="math inline">\([a, b]\subset[a,
+\omega)\)</span> 上可积，则 <span class="math inline">\(\int_a ^ \omega
+f(x) \mathrm{d}x\)</span> 收敛当且仅当 <span
+class="math inline">\(\forall \varepsilon &gt; 0, \exists b\in [a,
+\omega)\)</span> 使得对于 <span class="math inline">\(\forall b_1, b_2
+\in (b, \omega)\)</span></p>
+<p><span class="math display">\[
+\left\vert \int ^ {b_2}_{b_1} f(x) \mathrm{d}x\right\vert&lt;\varepsilon
+\]</span></p>
+<p>如果</p>
+<p><span class="math display">\[
+\int_a ^ \omega \vert f(x) \vert
+\]</span></p>
+<p>收敛，那么称这个反常积分是绝对收敛的</p>
+<p>如果一个反常积分绝对收敛，那么他肯定收敛。</p>
+<p>设非负 <span class="math inline">\(f:[a, \omega)\rightarrow \mathbb
+R\)</span> 在任意区间 <span class="math inline">\([a, b]\subset[a,
+\omega)\)</span> 上可积，则 <span class="math inline">\(\int_a ^ \omega
+f(x) \mathrm{d}x\)</span> 收敛当且仅当函数</p>
+<p><span class="math display">\[
+F(x) = \int _a ^ x f(t) \mathrm{d}t
+\]</span></p>
+<p>有界。</p>
+<p>推论：</p>
+<p>设 <span class="math inline">\(f\)</span> 为 <span
+class="math inline">\([1, +\infty)\)</span>
+的非负单调递减函数，那么无穷级数 <span class="math inline">\(\sum_{i =
+1} ^ \infty f(i)\)</span> 和反常积分 <span class="math inline">\(\int _a
+^ \omega f(x) \mathrm{d}x\)</span> 同收敛</p>
+<p>比较判断法：设函数 <span class="math inline">\(f, g:[a,
+\omega)\rightarrow \mathbb R\)</span> 在任意区间 <span
+class="math inline">\([a, b] \subset [a, \omega)\)</span> 均可积，且
+<span class="math inline">\(0\le f(x) \le g(x),\forall x \in [a,
+\omega)\)</span>，则当 <span class="math inline">\(\int _a ^ \omega g(x)
+\mathrm{d} x\)</span> 收敛时，<span class="math inline">\(\int _a ^
+\omega f(x) \mathrm{d}x\)</span> 也收敛。</p>
+<p>反之，如果 <span class="math inline">\(\int _a ^ \omega f(x)
+\mathrm{d}x\)</span> 发散，那么 <span class="math inline">\(\int _a ^
+\omega g(x) \mathrm{d}x\)</span> 也发散。</p>
+<p>推论：设函数 <span class="math inline">\(f, g:[a, \omega)\rightarrow
+\mathbb R\)</span> 在任意区间 <span class="math inline">\([a, b] \subset
+[a, \omega)\)</span> 均可积，且 <span class="math inline">\(0\le c_1f(x)
+\le g(x)\le c_2 f(x),\forall x \in [a, \omega)\)</span>，则 <span
+class="math inline">\(f, g\)</span> 的反常积分同收敛</p>
+<h4 id="条件收敛">条件收敛</h4>
+<p>如果一个反常积分收敛但是不绝对收敛，那么就是条件收敛的。</p>
+<p>设 <span class="math inline">\(f, g:[a, \omega)\rightarrow \mathbb
+R\)</span> 在任意区间 <span class="math inline">\([a, b]\subset[a,
+\omega)\)</span> 上可积且 <span class="math inline">\(g\)</span> 在
+<span class="math inline">\([a, \omega)\)</span> 上单调，那么</p>
 <ul>
-<li>祭祀奥林波斯诸神</li>
-<li>神圣休战原则</li>
-<li>希腊身份认同</li>
-<li>不仅有体育，还有音乐戏剧歌舞</li>
-<li>全程裸体，展示人体之美</li>
-<li>荣誉至上，金钱如土，胜者只有橄榄枝花冠</li>
+<li>Abel 判别法：<span class="math inline">\(\int _a ^ \omega f(x)
+\mathrm{d}x\)</span> 收敛，并且 <span class="math inline">\(g\)</span>
+在 <span class="math inline">\([a, \omega)\)</span> 有界</li>
+<li>Dirichlet 判别法：<span class="math inline">\(F(x) = \int_a ^ x f(t)
+\mathrm{d}t\)</span> 在 <span class="math inline">\([a, \omega)\)</span>
+上有界，且 <span class="math inline">\(\lim\limits_{x\rightarrow
+\omega^-} g(x) = 0\)</span></li>
 </ul>
-<p>城邦小国寡民，直接民主制，参军是公民义务</p>
-<p>戏剧：起源于酒神祭祀</p>
-<p>雕刻：三大雕刻家</p>
-<h3 id="城邦文明小结">城邦文明小结</h3>
-<ul>
-<li>城邦本位主义，自治自给，独立自由</li>
-<li>科学哲学艺术</li>
-<li>希腊波斯战争</li>
-</ul>
-<p>希腊人的性格：惊异，求知，好学，天真，热情</p>
-<p>城邦民主制：提供言论自由，鼓励公民就公共事务发言</p>
-<p>奴隶制：自由民获得闲暇</p>
-<p>米利都，科学的策源地：</p>
-<ul>
-<li>独立与自由</li>
-<li>挑战与竞争</li>
-<li>开放与交流</li>
-</ul>
-<p>米利都学派：在互相批判中传承，三个万物源头说法</p>
-<p>自然的发现，事物有其自然</p>
-<p>自然就是本质：事物的自己即其本质</p>
-<p>拥有自己的本性就是自然物，自然物的集合就是自然界</p>
-<p>中国古代没有自然的发现，天地人三才互感互通，天地万物并不独立于人。</p>
-<p>自然的发现是来自自己的发现，事物有其自身是为自然，人有其自身是为自由，思想有其自身视为理性</p>
-<p>希腊数学，自由学术的典范</p>
-<p>理论科学：第一哲学（神学）不变且无形，数学不变但有形，自然哲学变化且有形</p>
-<p>实践科学：政治学，伦理学，家政学</p>
-<p>制作科学：诗，戏剧，雕刻，建筑，医学</p>
-<p>学数学可以涵养真正人性</p>
-<p>理性精神的代表：自我展开，演绎推理，形式系统</p>
-<p>思考题：为什么科学独独出现在希腊城邦时代？</p>
-<p>什么是自然？何谓自然的发现？</p>
-<p>为什么说几何学是理性科学的代表？</p>
-<h2 id="柏拉图与希腊数理天文学的起源">柏拉图与希腊数理天文学的起源</h2>
-<h3 id="本讲纲要">本讲纲要</h3>
-<ul>
-<li>天文学作为科学</li>
-<li>柏拉图及其理念论</li>
-<li>天球-地球宇宙</li>
-<li>行星问题与拯救形象</li>
-</ul>
-<h3 id="原始天文学">原始天文学</h3>
-<ul>
-<li>观天</li>
-<li>命名</li>
-<li>占卜</li>
-</ul>
-<h3 id="科学天文学">科学天文学</h3>
-<ul>
-<li>寻找规律</li>
-<li>预测天象</li>
-</ul>
-<h3 id="中国天文学">中国天文学</h3>
-<ul>
-<li>天人合一</li>
-<li>政治占星学</li>
-<li>日常伦理学</li>
-<li>当食不食</li>
-</ul>
-<p>寻求绝对，规律精确预测天象，自然的发现，宇宙的确立</p>
-<h3 id="理念论">理念论</h3>
-<ul>
-<li>理想，相，理想，形式</li>
-<li>理想是可以超与的</li>
-<li>显示的可理解性来自与他对理念的模仿</li>
-<li>洞穴隐喻</li>
-</ul>
-<h3 id="思想来源">思想来源</h3>
-<ul>
-<li>巴门尼德</li>
-<li>苏格拉底</li>
-<li>泰拉泰德</li>
-<li>欧多克斯</li>
-<li>欧几里德</li>
-</ul>
-<p>《蒂迈欧篇》：理性创世</p>
-<h3 id="世界躯体">世界躯体</h3>
-<ul>
-<li>可视可见，就需要火</li>
-<li>可触可碰，就需要土</li>
-<li>火土结合，就需要中项</li>
-<li>世界是独一无二的球体</li>
-</ul>
-<h3 id="世界灵魂">世界灵魂</h3>
-<ul>
-<li>灵魂=运动</li>
-<li>宇宙的运动有相同运动和相异运动</li>
-</ul>
-<h3 id="宇宙">宇宙</h3>
-<ul>
-<li>有限，秩序，和谐</li>
-<li>宇宙=完美/完善/完满</li>
-</ul>
-<h3 id="地球">地球</h3>
-<ul>
-<li><p>圆盘浮在水上</p></li>
-<li><p>鼓状居于宇宙之上</p></li>
-<li><p>绕中心火转动</p></li>
-<li><p>居于宇宙之中</p></li>
-<li><p>经验之谈</p></li>
-<li><p>理论根据</p></li>
-</ul>
-<h3 id="圆球">圆球</h3>
-<ul>
-<li>几何化的天体把球心放到醒目位置</li>
-<li>对称性</li>
-<li>几何偏好</li>
-</ul>
-<h3 id="天界不朽">天界不朽</h3>
-<ul>
-<li>天地二分</li>
-<li>天界纯粹，绝对，不朽
-<ul>
-<li>位置不变</li>
-<li>性质不变</li>
-<li>数量不变</li>
-</ul></li>
-</ul>
-<p>行星成为问题，七大行星，黄道运动速度不匀。</p>
-<h3 id="拯救现象">拯救现象</h3>
-<p>做什么样的均匀有序运动，才能说明他们表面的运动。</p>
-<h3 id="托勒密体系的优缺点">托勒密体系的优缺点</h3>
-<ul>
-<li>优点：拯救现象</li>
-<li>地球并不处于宇宙集合中心</li>
-<li>也不处于本轮中心的晕素运动中心</li>
-</ul>
-<p>小结</p>
-<ul>
-<li>观察记录不等于科学</li>
-<li>哲学预设：天界存在绝对规则运动</li>
-<li>哲学预设：运动变化表像背后存在绝对不变的本质</li>
-<li>透过现象看本质</li>
-<li>集合分解与还原</li>
-</ul>
-<h2 id="经院哲学与现代科学的起源">经院哲学与现代科学的起源</h2>
-<h3 id="三大历史背景">三大历史背景</h3>
-<ul>
-<li>希腊科学的衰落</li>
-<li>伊斯兰的传承和终端</li>
-<li>拉丁欧洲的黑暗和复兴</li>
-</ul>
-<h3 id="希腊科学为何衰落">希腊科学为何衰落</h3>
-<ul>
-<li>自由的科学</li>
-<li>早期基督教的反智主义</li>
-</ul>
-<h3 id="伊斯兰科学的贡献">伊斯兰科学的贡献</h3>
-<ul>
-<li>全面译介希腊科学</li>
-<li>炼金术</li>
-<li>代数</li>
-<li>天文学</li>
-<li>光学</li>
-</ul>
-<h3 id="伊斯兰科学的中断">伊斯兰科学的中断</h3>
-<ul>
-<li>伊斯兰为什么没有发生科学革命？</li>
-<li><ul>
-<li>宗教知识压倒世俗</li>
-</ul></li>
-<li><ul>
-<li>希腊科学没有制度化</li>
-</ul></li>
-<li><ul>
-<li>为产生伊斯兰版的经院哲学</li>
-</ul></li>
-</ul>
-<h3 id="欧洲的苏醒和三大技术革命">欧洲的苏醒和三大技术革命</h3>
-<ul>
-<li>奴隶制的废除与三大技术革命</li>
-<li>农业技术革命</li>
-<li>军事技术革命</li>
-<li>机械技术革命</li>
-</ul>
-<h3 id="机械钟表的出现">机械钟表的出现</h3>
-<ul>
-<li>擒纵器</li>
-</ul>
-<h3 id="什么是大学">什么是大学</h3>
-<ul>
-<li>拉丁翻译运动造就的欧洲学习热潮</li>
-<li>学生和教师的自治组织</li>
-<li>基督教世界的学位颁发机构</li>
-<li>两希文明的熔炉</li>
-</ul>
-<h3 id="学习中心">学习中心</h3>
-<ul>
-<li>神学</li>
-<li>法学</li>
-<li>医学</li>
-</ul>
-<h3 id="法律革命">法律革命</h3>
-<p>教会法</p>
-<ul>
-<li>教会经济财产的管理</li>
-<li>特殊权限规定</li>
-<li>处理教会当局与世俗当局的关系</li>
-<li>教会有法</li>
-<li>自治的法律实体</li>
-<li>法律是普遍和客观的</li>
-</ul>
-<h3 id="学生行会">学生行会</h3>
-<ul>
-<li>对外维护自然利益</li>
-<li>对内制定行业标准</li>
-<li>在王权和教权左右逢源</li>
-</ul>
-<h3 id="学位制度">学位制度</h3>
-<ul>
-<li>教师行会</li>
-<li>学士</li>
-<li>博士</li>
-<li>毕业文凭</li>
-</ul>
-<h3 id="融合两希文明">融合两希文明</h3>
-<ul>
-<li>设置艺学院</li>
-<li>将希腊学术作为大学教学的基础</li>
-<li>将亚里士多德的学说与基督教义密切结合</li>
-<li>为现在科学准备条件</li>
-</ul>
-<h3 id="四大学院">四大学院</h3>
-<ul>
-<li>医学院</li>
-<li>艺学院</li>
-<li>法学院</li>
-<li>法学院</li>
-</ul>
-<h3 id="自由辩论">自由辩论</h3>
-<ul>
-<li>讲座</li>
-<li><ul>
-<li>朗读经典文本</li>
-</ul></li>
-<li><ul>
-<li>解释概念和术语</li>
-</ul></li>
-<li><ul>
-<li>提出问题</li>
-</ul></li>
-<li>辩论</li>
-<li><ul>
-<li>教师引入问题</li>
-</ul></li>
-<li><ul>
-<li>学生正反两方辩论</li>
-</ul></li>
-<li><ul>
-<li>教师综合辩论</li>
-</ul></li>
-</ul>
-<h3 id="教父哲学">教父哲学</h3>
-<ul>
-<li>奥古斯丁</li>
-<li>启示为神学之本</li>
-<li>哲学是神学的婢女</li>
-</ul>
-<h3 id="经院哲学">经院哲学</h3>
-<ul>
-<li>安瑟尔谟</li>
-<li>上帝的本体论证明</li>
-<li>神学是最高的哲学</li>
-</ul>
+<p>之一成立，则</p>
+<p><span class="math display">\[
+\int _a ^ \omega f(x) g(x) \mathrm{d}x
+\]</span></p>
+<p>收敛。</p>
+<p>定义：两端的反常积分</p>
+<p><span class="math display">\[
+\int ^ {\omega_2} _{\omega_1} f(x) \mathrm{d}x = \int ^ {\omega_2} _{c}
+f(x) \mathrm{d}x+\int ^ {c} _{\omega_1} f(x) \mathrm{d}x
+\]</span></p>
+<p>如果上式右段端的两个反常积分都收敛，那么左边也收敛。</p>
+<p><span class="math inline">\(\text{Beta}\)</span> 函数：</p>
+<p><span class="math display">\[
+\int _0 ^ 1 x ^ {p - 1} (1 - x) ^ {q - 1} \mathrm{d}x
+\]</span></p>
+<p>这个东西在 <span class="math inline">\(p &gt; 0, q &gt;
+0\)</span></p>
+<p><span class="math inline">\(\text{Gamma}\)</span> 函数：</p>
+<p>考虑函数</p>
+<p><span class="math display">\[
+\Gamma(x) = \int _0 ^ {+\infty} t ^ {x - 1} e ^ {-t} \mathrm{d}t
+\]</span></p>
+<p>当 <span class="math inline">\(x &gt; 0\)</span> 时有定义</p>
 ]]></content>
       <tags>
         <tag>notes</tag>
@@ -7195,6 +7560,428 @@ class="math inline">\(0\)</span> 或者单位根</p>
 <p>定理：(Fundeamental Theorem of algrbea)</p>
 <p>任何一个次数大于 <span class="math inline">\(0\)</span>
 的复系数多项式至少有一个复根</p>
+<p>证明：</p>
+<p>给定一个复数 <span class="math inline">\(z = a + bi(a, b \in \mathbb
+R)\)</span>，非负实数 <span class="math inline">\(\vert z \vert =
+\sqrt{a ^ 2 + b ^ 2}\)</span> 成为 <span class="math inline">\(\vert
+z\vert\)</span> 的模或者是 <span class="math inline">\(z\)</span>
+的绝对值，易见 <span class="math inline">\(z\)</span> 的模等于复平面上
+<span class="math inline">\((a, b)\)</span> 到原点的距离。</p>
+<p>若 <span class="math inline">\(\lim\limits_{n\rightarrow \infty}
+\vert z_n \vert = \infty\)</span>，那么 <span class="math inline">\(\lim
+\limits_{n\rightarrow \infty} f(z_n) = \infty\)</span></p>
+<p>D′Alembert’s Lemma: 设 <span class="math inline">\(f(z) \in \mathbb C
+[z]\)</span> 是一个正系数多项式，且设 <span class="math inline">\(z_0
+\in \mathbb C\)</span> 满足 <span class="math inline">\(f(z_0) \not =
+0\)</span>，则对于 <span class="math inline">\(z_0\)</span>
+的任意邻域均存在 <span class="math inline">\(z\in U\)</span> 使得 <span
+class="math inline">\(\vert f(z)\vert &gt; \vert
+f(z_0)\vert\)</span></p>
+<p>设：<span class="math inline">\(f(z) = \sum\limits_{i = 0} ^ n a_i z
+^ i, a_n \not = 0\)</span>，令 <span class="math inline">\(z = x +
+iy\)</span>，展开 <span class="math inline">\(f(z)\)</span> 得到 <span
+class="math inline">\(f(z) = u(x, y) + iv(x, y)\)</span>，其中 <span
+class="math inline">\(u(x, y), v(x, y)\)</span> 是实系数多项式。</p>
+<p>那么 <span class="math inline">\(\vert f(z) \vert = \sqrt{u(x, y) ^ 2
++ v(x, y) ^ 2}\)</span> 是二元连续的。</p>
+<p>由于 <span class="math inline">\(\lim\limits_{\vert z\vert
+\rightarrow \infty}\vert f(z) \vert= \infty,\exists r \in \mathbb R ^ +,
+\vert z \vert &gt; r, \vert f(z) \vert &gt; \vert f(0)\vert = \vert
+a_0\vert\)</span></p>
+<p>定义集合 <span class="math inline">\(D(r) = \{z\in \mathbb C \mid
+\vert f(z)\vert \le r\}\)</span>，那么必存在一个 <span
+class="math inline">\(z_0\)</span> 使得 <span
+class="math inline">\(\vert f(z_0) \vert \le f(z)\vert,\forall z \in
+\mathbb C\)</span></p>
+<h3 id="本原单位根">本原单位根</h3>
+<p>在 <span class="math inline">\(\mathbb C [x]\)</span> 上分解 <span
+class="math inline">\(x ^ n - 1 = \prod\limits_{i = 0}^ {n - 1} (x -
+\omega_i)\)</span></p>
+<p>其中，<span class="math inline">\(\omega_i = e ^ {\frac{2\pi i}{n}} =
+\cos(\frac{2\pi}{n}) + i \sin (\frac{2\pi}{n})\)</span></p>
+<h4 id="有理多项式和整系数多项式">有理多项式和整系数多项式</h4>
+<p>有理多项式可以归纳为在正系数多项式的问题。</p>
+<p>给出有理系数多项式是不可以约分的判别方法-—Eisenstein方法</p>
+<p>若 <span class="math inline">\(f(x) = \sum\limits_{k = 0} ^ n a_k x ^
+k\in \mathbb Q[x]\)</span>，那么存在非 <span
+class="math inline">\(0\)</span> 整数 <span class="math inline">\(r,
+q\)</span> 使得 <span class="math inline">\(\frac{s}{r} f(x) \in \mathbb
+Z[x]\)</span></p>
+<p>如果对于一个 <span class="math inline">\(f(x) = \sum_{k = 0} ^ n a_k
+x ^ k \in \mathbb Z[x], (a_n, a_{n - 1}, a_{n - 2}, \ldots, a_0) =
+1\)</span>，则 <span class="math inline">\(f(x)\)</span>
+是一个本原多项式。</p>
+<p>则 <span class="math inline">\(f(x) \in \mathbb Q[x], \exists a \in
+\mathbb Q, f(x) = a f_1(x)\)</span>，且 <span
+class="math inline">\(f_1(x)\)</span> 是本原多项式。</p>
+<p>如果 <span class="math inline">\(f, g\)</span> 都是本原多项式，那么
+<span class="math inline">\(f(x) g(x)\)</span> 也是本原多项式</p>
+<p>设 <span class="math inline">\(f(x) \in \mathbb Z[x] , \deg f(x) \ge
+2\)</span> 若任何整系数多项式 <span class="math inline">\(f(x)\)</span>
+在 <span class="math inline">\(\mathbb Q[x]\)</span> 中可约，则 <span
+class="math inline">\(f(x)\)</span>
+可以分解成两个次数比较低的整系数多项式的乘积。</p>
+<p>设 <span class="math inline">\(f(x) = \sum\limits_{i = 0} ^ n a_n x^
+n\)</span> 是一个次数为 <span class="math inline">\(n\)</span>
+的正系数多项式，若 <span class="math inline">\(\frac{s}{r}\)</span> 是
+<span class="math inline">\(f(x)\)</span> 的一个有理根，其中 <span
+class="math inline">\(r, s\)</span> 则 <span class="math inline">\(r\mid
+a_n, s \mid a_0\)</span>，进一步，</p>
+<p><span class="math display">\[
+f(x) = (x - \frac{s}{r})q(x)
+\]</span></p>
+<p>其中 <span class="math inline">\(q(x) \in \mathbb Z[x]\)</span></p>
+<p>推论：如果 <span class="math inline">\(c\)</span> 是整系数多项式
+<span class="math inline">\(f(x)\)</span> 的一个整数根，则 <span
+class="math inline">\(\frac{f(1)}{1 - c}, \frac{f(-1)}{c + 1}\)</span>
+都是整数。</p>
+<p>Eisenstein 判别法</p>
+<p><span class="math inline">\(f(x) = \sum_{i = 0} ^ {n} a_i x ^ i \in
+\mathbb Z[x]\)</span>，其中 <span class="math inline">\(n\ge 1, a_n \ne
+0, p \mid a_i (i = 0, \ldots, n - 1), p\nmid a_n, p \nmid a _0 ^
+2\)</span>，那么 <span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(\mathbb Q[x]\)</span> 是不可约的</p>
+<h3 id="多元多项式和对称多项式">多元多项式和对称多项式</h3>
+<h4 id="单项式">单项式</h4>
+<p>定义：</p>
+<p>设 <span class="math inline">\(\mathbb F\)</span> 是一个数域，<span
+class="math inline">\(x_1, \ldots, x_n\)</span>
+是不定元，称如下形式的表达式</p>
+<p><span class="math display">\[
+a x_1 ^ {k_1} x_2 ^ {k_2} \ldots x_n ^{k_n}
+\]</span></p>
+<p>是一个单项式，其中 <span class="math inline">\(a\in \mathbb F, k1_,
+\ldots k_n \ge 0\)</span>，若 <span class="math inline">\(a\ne =
+0\)</span>，则称 <span class="math inline">\(\sum _{k_i}\)</span>
+是这个单项式的系数，两个单项式</p>
+<p><span class="math display">\[
+a x_1 ^ {k_1} x_2 ^ {k_2} \ldots x_n ^{k_n},b x_1 ^ {l_1} x_2 ^ {l_2}
+\ldots x_n ^{l_n}
+\]</span></p>
+<p>称为同类项当且仅当 <span class="math inline">\(a = b, \forall i, k_i
+= l_i\)</span></p>
+<h4 id="n-元多项式"><span class="math inline">\(n\)</span> 元多项式</h4>
+<p>定义：</p>
+<p>设有限个单项式的形式和</p>
+<p><span class="math display">\[
+f(x_1,x_2,\ldots,x_n) = \sum_{i_1,i_2,\ldots,i_n}
+a_{i_1,i_2,\ldots,i_n}x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}
+\]</span></p>
+<p>称为系数在 <span class="math inline">\(\mathbb F\)</span> 上的一个
+<span class="math inline">\(n\)</span> 元多项式</p>
+<p>通过同类项的合并，我们可以假定上述表达式的单项式彼此不是同类项，此时称该表达式中系数非零的最大次数为
+<span class="math inline">\(f(x_1,x_2,\ldots,x_n)\)</span> 的次数，记为
+<span class="math inline">\(\deg f\)</span></p>
+<p><span class="math inline">\(\mathbb F[x_1,x_2,\ldots,x_n]\)</span>
+为数域 <span class="math inline">\(\mathbb F\)</span> 上的所有关于不定元
+<span class="math inline">\(x_1, x_2,\ldots,x_n\)</span>
+的多项式构成的集合，为了方便起见，也用 <span
+class="math inline">\(f\)</span> 表示 <span
+class="math inline">\(f(x_1,x_2,\ldots,x_n)\)</span></p>
+<p>给定两个 <span class="math inline">\(n\)</span> 元多项式</p>
+<p><span class="math display">\[
+f(x_1,x_2,\ldots,x_n) = \sum_{i_1,i_2,\ldots,i_n}
+a_{i_1,i_2,\ldots,i_n}x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}\\
+g(x_1,x_2,\ldots,x_n) = \sum_{i_1,i_2,\ldots,i_n}
+b_{i_1,i_2,\ldots,i_n}x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}
+\]</span></p>
+<p>那么我们定义他们的和</p>
+<p><span class="math display">\[
+f + g = \sum_{i_1,i_2,\ldots,i_n}(a_{i_1,i_2,\ldots,i_n}+
+b_{i_1,i_2,\ldots,i_n})x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}
+\]</span></p>
+<p>类似的定义数乘运算</p>
+<p><span class="math display">\[
+cf = \sum_{i_1,i_2,\ldots,i_n}
+ca_{i_1,i_2,\ldots,i_n}x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}
+\]</span></p>
+<p>类似一元多项式情形，对于上述加法和数乘运算，<span
+class="math inline">\(\mathbb F[x_1,x_2,\ldots,x_n]\)</span> 是数域
+<span class="math inline">\(\mathbb F\)</span>
+上的无限维向量空间，且有一个基 <span
+class="math inline">\(\{x_1^{i_1}x_2^{i_2}\ldots x_n ^{i_n}\vert
+i_1,i_2,\ldots,i_n\ge 0\}\)</span></p>
+<p>定义两个 <span class="math inline">\(n\)</span> 元单项式 <span
+class="math inline">\(a x_1 ^ {k_1} x_2 ^ {k_2} \ldots x_n ^{k_n},b x_1
+^ {l_1} x_2 ^ {l_2} \ldots x_n ^{l_n}\)</span> 的乘积为</p>
+<p><span class="math display">\[
+ab x_1 ^{l_1+k_1}x_2^{l_2+k_2}\ldots x_n ^ {l_n + k_n}
+\]</span></p>
+<p>进一步的，对于两个 <span class="math inline">\(n\)</span> 元多项式
+<span class="math inline">\(f, g\)</span> 的乘积为</p>
+<p><span class="math display">\[
+fg = \sum_{k_1,k_2,\ldots,k_n}\left(\sum_{i_s + j_s = k_s,1\le s \le n}
+a_{i_1,i_2,\ldots,i_n}b_{j_1,j_2,\ldots,j_n}\right) x _1 ^ {k_1}
+x_2^{k_2} \ldots x_n ^ {k_n}
+\]</span></p>
+<p>容易验证 <span class="math inline">\(n\)</span>
+元多项式的乘法运算满足：</p>
+<ol type="1">
+<li><span class="math inline">\(gf = fg\)</span></li>
+<li><span class="math inline">\((fg)h =f(gh)\)</span></li>
+<li><span class="math inline">\(1\cdot f = f\cdot 1\)</span></li>
+<li><span class="math inline">\(f(g + h) = fg + fh\)</span></li>
+<li><span class="math inline">\(c(fg) = (cf)g = f(cg)\)</span></li>
+</ol>
+<p>其中 <span class="math inline">\(f, g, h \in \mathbb
+F[x_1,x_2,\ldots,x_n],c\in \mathbb F\)</span></p>
+<p>综上得到 <span class="math inline">\(\mathbb
+F[x_1,x_2,\ldots,x_n]\)</span> 是一个交换的 <span
+class="math inline">\(\mathbb F-\)</span> 代数因此称他是数域 <span
+class="math inline">\(\mathbb F\)</span> 上的 <span
+class="math inline">\(n\)</span> 元多项式代数或者 <span
+class="math inline">\(n\)</span> 元多项式环。</p>
+<p>给定两个不同的单项式</p>
+<p><span class="math display">\[
+a x_1 ^ {k_1} x_2 ^ {k_2} \ldots x_n ^{k_n},b x_1 ^ {l_1} x_2 ^ {l_2}
+\ldots x_n ^{l_n}
+\]</span></p>
+<p>如果存在 <span class="math inline">\(s\)</span> 使得 <span
+class="math inline">\(\forall 1\le i &lt;s ,k_i = l_i,k_s &gt;
+l_s\)</span>，那么</p>
+<p><span class="math display">\[
+a x_1 ^ {k_1} x_2 ^ {k_2} \ldots x_n ^{k_n}\succ b x_1 ^ {l_1} x_2 ^
+{l_2} \ldots x_n ^{l_n}
+\]</span></p>
+<p>根据定义</p>
+<ol type="1">
+<li>任意两个单项式都可以排序</li>
+<li>这是一个偏序关系</li>
+<li>若 <span class="math inline">\(u\succ v\)</span>，对于非零单项式
+<span class="math inline">\(w\)</span>，则 <span
+class="math inline">\(uw \succ vw\)</span></li>
+</ol>
+<p>于是，给定一个多项式 <span
+class="math inline">\(f\)</span>，可以按照上面定义的大小关系从大到小排序，称为多项式的字典排序法。</p>
+<p>命题：</p>
+<p>设 <span class="math inline">\(f, g\)</span> 为 <span
+class="math inline">\(n\)</span>
+元多项式，按照字典排序法，他们的首项相乘恰好为 <span
+class="math inline">\(fg\)</span> 的首项。</p>
+<p>推论： 1. 若 <span class="math inline">\(f, g\in \mathbb
+F[x_1,x_2,\ldots,x_n]\)</span> 且 <span class="math inline">\(f\ne 0\ne
+g\)</span> 则 <span class="math inline">\(fg\ne 0\)</span> 2. 设 <span
+class="math inline">\(f,g,h\in\mathbb F[x_1,x_2,\ldots,x_n]\)</span> 且
+<span class="math inline">\(fg = fh\)</span> 若 <span
+class="math inline">\(f\ne 0\)</span>，那么 <span
+class="math inline">\(g = h\)</span></p>
+<p>一个 <span class="math inline">\(n\)</span> 元多项式 <span
+class="math inline">\(f\)</span> 为齐次多项式，当且仅当 <span
+class="math inline">\(f\)</span> 的所有非零单项式的次数都为 <span
+class="math inline">\(r\)</span>。</p>
+<p>命题：</p>
+<p>设 <span class="math inline">\(f, g \in \mathbb
+F[x_1,x_2,\ldots,x_n]\)</span>，那么 <span class="math inline">\(\deg fg
+= \deg f + \deg g\)</span></p>
+<h4 id="齐次子空间">齐次子空间</h4>
+<p>记 <span class="math inline">\(R = \mathbb
+F[x_1,x_2,\ldots,x_n]\)</span>，对于任意 <span
+class="math inline">\(m\ge 0\)</span>，用 <span
+class="math inline">\(R_m\)</span> 表示所有 <span
+class="math inline">\(m\)</span> 次单项式和零单项式的子集合，则 <span
+class="math inline">\(R_m\)</span> 是 <span
+class="math inline">\(R\)</span> 的子空间，并且</p>
+<p><span class="math display">\[
+\{x_1^{k_1}x_2^{k_2}\ldots x_n ^ {k_n}\vert \sum k_i = m\}
+\]</span></p>
+<p>特别的， <span class="math inline">\(\dim_{\mathbb F} R_m = \binom{n
++ m - 1}{n - 1}\)</span></p>
+<p>并且 <span class="math inline">\(R_m R_s \subseteq R_{m +
+s}\)</span>，事实上有</p>
+<p><span class="math display">\[
+R = \oplus_{m} R_m
+\]</span></p>
+<p>因此 <span class="math inline">\(R\)</span> 是一个 <span
+class="math inline">\(\mathbb N-\)</span> 分次代数</p>
+<p>对于 <span class="math inline">\(\mathbb F\)</span> 中的一个 <span
+class="math inline">\(n\)</span> 元数组 <span
+class="math inline">\((c_1,c_2,\ldots,c_n)\)</span> 会得到一个数</p>
+<p><span class="math display">\[
+f(c_1,c_2,\ldots,c_n) = \sum_{i_1,i_2,\ldots,i_n} c_1 ^ {x_1} c_2 ^
+{x_2} \ldots c_n ^ {x_n}\in\mathbb F
+\]</span></p>
+<p>称其为 <span class="math inline">\(f\)</span> 在 <span
+class="math inline">\((c_1,c_2,\ldots,c_n)\)</span> 的值，若 <span
+class="math inline">\(f(c_1,c_2,\ldots,c_n) =
+0\)</span>，那称其为一个零点。</p>
+<p>类似与一元函数的情况，得到一个函数</p>
+<p><span class="math display">\[
+\mathbb F ^ n \rightarrow \mathbb F, (c_1,c_2,\ldots,c_n) \mapsto
+f(c_1,c_2,\ldots,c_n)
+\]</span></p>
+<p>称之为由 <span class="math inline">\(f(x_1,x_2,\ldots,x_n)\)</span>
+的多项式函数。</p>
+<p>引理：</p>
+<p>设 <span class="math inline">\(0\ne f(x_1,x_2,\ldots,x_n)\)</span>
+则必存在一个数组，使得 <span
+class="math inline">\(f(c_1,c_2,\ldots,c_n)\ne 0\)</span></p>
+<p>命题：</p>
+<p>多项式函数 <span class="math inline">\(f = g\)</span>
+当且仅当对于任意数组 <span class="math inline">\(c\)</span> 有 <span
+class="math inline">\(f(c_1,c_2,\ldots,c_n) =
+g(c_1,c_2,\ldots,c_n)\)</span></p>
+<p>注：</p>
+<ol type="1">
+<li>对于 <span class="math inline">\(n\)</span>
+元多项式，带余除法不成立</li>
+<li>整除性理论仍是成立的</li>
+<li>但是并不一定存在裴蜀定理</li>
+</ol>
+<h4 id="对称多项式">对称多项式</h4>
+<p>设 <span class="math inline">\(f\in \mathbb F[x_1,
+x_2,\ldots,x_n]\)</span>，如果对于任意排列 <span
+class="math inline">\((i_1,i_2,\ldots,i_n)\)</span>，都有 <span
+class="math inline">\(f(x_1,x_2,\ldots,x_n) =
+f(x_{i_1},x_{i_2},\ldots,x_{i_n})\)</span>，那么就称其为数域 <span
+class="math inline">\(\mathbb F\)</span> 上的一个对称多项式。</p>
+<p>特别的，有幂和多项式：</p>
+<p><span class="math display">\[
+s_m = \sum_{i = 1} ^ n x_i ^ m
+\]</span></p>
+<p>因为若 <span class="math inline">\(f, g\)</span> 是对称的，那么 <span
+class="math inline">\(f + cg\)</span> 也是对称的</p>
+<p>初等对称多项式：</p>
+<p><span class="math display">\[
+\sigma _m = \sum_{1\le i_1&lt;i_2&lt;\ldots&lt;i_m \le n} x_{i_1}
+x_{i_2} \ldots x_{i_n}
+\]</span></p>
+<p>定理：</p>
+<p>设 <span class="math inline">\(f\)</span> 是一个对称多项式，那么存在
+<span class="math inline">\(\mathbb F\)</span> 上的唯一一个多项式 <span
+class="math inline">\(g(y_1,y_2,\ldots,y_n)\)</span> 使得：</p>
+<p><span class="math display">\[
+f(x_1,x_2,\ldots,x_n) = g(y_1,y_2,\ldots,y_n)
+\]</span></p>
+<p>引理：</p>
+<p><span class="math display">\[
+f(x) = \prod_{i = 1} ^ n (x - x_i) \in \mathbb F[x_1,x_2,\ldots,x_n,x]
+\]</span></p>
+<p>对于 <span class="math inline">\(k\ge 1\)</span> 有：</p>
+<p><span class="math display">\[
+x ^ {k + 1} f&#39;(x) = (s_0 x ^ k + s_1 x ^ {k - 1} + \ldots  +
+s_k)f(x) + g(x)
+\]</span></p>
+<p>其中 <span class="math inline">\(\deg g(x) &lt; n, f&#39;(x)\)</span>
+是 <span class="math inline">\(f(x)\)</span> 关于 <span
+class="math inline">\(x\)</span> 的导数</p>
+<p>定理（Newton's identity）：</p>
+<p>若 <span class="math inline">\(1\le k &lt; n\)</span> 则</p>
+<p><span class="math display">\[
+s_k - s_{k - 1} \sigma_1 + s_{k - 2} \sigma_2  + \ldots + (-1) ^ {k - 1}
+s_1 \sigma_{k - 1} + (-1) ^ k \sigma_k = 0
+\]</span></p>
+<p>若 <span class="math inline">\(k \ge n\)</span> 则</p>
+<p><span class="math display">\[
+\sum_{i = 0} ^ n  (-1) ^ i s_{k - i}\sigma_i  = 0
+\]</span></p>
+<p>推论：</p>
+<p>设 <span class="math inline">\(f(x_1,x_2,\ldots,x_n)\)</span>
+是一个对称多项式，那么存在 <span class="math inline">\(\mathbb
+F\)</span> 上的一个唯一多项式 <span
+class="math inline">\(g(y_1,y_2,\ldots,y_n)\)</span> 使得：</p>
+<p><span class="math display">\[
+f(x_1,x_2,\ldots,x_n) = g(s_1,s_2,\ldots,s_n)
+\]</span></p>
+<h3 id="结式和判别式">结式和判别式</h3>
+<p>引理：</p>
+<p>设 <span class="math inline">\(f, g\in \mathbb F[x]\)</span> 是两个非
+<span class="math inline">\(0\)</span> 多项式，设 <span
+class="math inline">\(d(x) = (f, g)\)</span>，则 <span
+class="math inline">\(d(x)\ne 1\)</span> 当且仅当存在 <span
+class="math inline">\(u(x), v(x) \in \mathbb F[x]\)</span> 使得</p>
+<p><span class="math display">\[
+\deg u &lt; \deg g,\deg v &lt; \deg f
+\]</span></p>
+<p>且 <span class="math inline">\(f(x) u(x) = g(x)v(x)\)</span></p>
+<p>记满足上面条件的</p>
+<p><span class="math display">\[
+f(x) = \sum _{i = 0} ^ n a_{i} x ^ {n - i}
+\\
+g(x) = \sum_{i = 0} ^ m  b_{i} x ^ {m - i}
+\\
+u(x) = \sum_{i = 0} ^ {m - 1} u_i x ^ {m - 1 - i}
+\\
+v(x) = \sum_{i = 0} ^ {n - 1} v_i x ^ {n - 1 - i}
+\]</span></p>
+<p>通过比较 <span class="math inline">\(f(x)u(x) = g(x)v(x)\)</span>
+可以得到 <span class="math inline">\(n + m\)</span> 个方程，将 <span
+class="math inline">\(u, v\)</span> 看作 <span class="math inline">\(m +
+n\)</span> 个未知元，可以得到系数矩阵的 <span class="math inline">\(m +
+n\)</span> 阶行列式</p>
+<p><span class="math display">\[
+R(f, g) =
+\begin{vmatrix}
+a_0 &amp; a_1  &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp;
+\cdots &amp;0
+\\
+0 &amp; a_0  &amp; a_1 &amp; \cdots &amp; \cdots &amp; \cdots &amp;
+\cdots &amp;0
+\\
+\vdots &amp; \vdots  &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots
+&amp; \ddots &amp;\vdots
+\\
+0 &amp; 0  &amp; \cdots &amp; a_0 &amp; a_1 &amp; \cdots &amp; \cdots
+&amp;a_n
+\\
+b_0 &amp; b_1  &amp; \cdots &amp; \cdots &amp; b_m &amp; 0 &amp; \cdots
+&amp;0
+\\
+0 &amp; b_0  &amp; b_1 &amp; \cdots &amp; \cdots &amp; b_m &amp; \cdots
+&amp;0
+\\
+\vdots &amp; \vdots  &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots
+&amp; \ddots &amp;\vdots
+\\
+0 &amp; 0  &amp; \cdots &amp; b_0 &amp; b_1 &amp; \cdots &amp; \cdots
+&amp;b_m
+\\
+\end{vmatrix}
+\]</span></p>
+<p>根据定义有：</p>
+<p><span class="math display">\[
+R(f, g) = (-1) ^ {mn} R(g, f)
+\]</span></p>
+<p>设</p>
+<p><span class="math display">\[
+f(x) = \sum_{i = 0} ^ n a_i x ^ {n - i}\\
+g(x) = \sum_{i = 0} ^ m b_i x ^ {m - i}
+\]</span></p>
+<p>则 <span class="math inline">\((f, g) \ne 1\)</span> 当且仅当 <span
+class="math inline">\(R(f, g) = 0\)</span></p>
+<p>设 <span class="math inline">\(f, g\)</span> 满足定理的假设条件，那么
+<span class="math inline">\(f(x), g(x)\)</span> 在复数域有公根当且仅当
+<span class="math inline">\(R(f, g) = 0\)</span></p>
+<p>推论：</p>
+<p>同上， <span class="math inline">\(f, g\)</span> 互素当且仅当 <span
+class="math inline">\(R(f, g)\ne 0\)</span></p>
+<p>若 <span class="math inline">\(\alpha_1,\ldots,\alpha_n\)</span> 是
+<span class="math inline">\(f(x)\)</span> 所有复数根，那么</p>
+<p><span class="math display">\[
+R(f, g) = a_0  ^ m \prod_{i = 1} ^ n g(\alpha_i)
+\]</span></p>
+<p>定理：</p>
+<p><span class="math inline">\(f, g\)</span> 同上定义，那么</p>
+<p><span class="math display">\[
+R(f, g) = a_0 ^ m b_0 ^ n \prod_{i = 1} ^ n \prod_{j = 1} ^ m (\alpha _i
+- \beta_j)
+\]</span></p>
+<p>推论：</p>
+<p><span class="math display">\[
+R(f, gh) = R(f, g) R(f, h)
+\]</span></p>
+<h4 id="判别式">判别式</h4>
+<p>设 <span class="math inline">\(f(x)\)</span> 是一个 <span
+class="math inline">\(n\)</span> 次多项式，并且 <span
+class="math inline">\(\alpha_1,\alpha_2,\ldots,\alpha_n\)</span>
+是其所有的复根，那么称</p>
+<p><span class="math display">\[
+\Delta(f) =  a_0 ^ {2n - 2} \prod_{1\le i &lt; j \le n} (\alpha_i -
+\alpha_j) ^ 2
+\]</span></p>
+<p>是 <span class="math inline">\(f(x)\)</span> 的判别式，并且</p>
+<p><span class="math display">\[
+\Delta (f) = (-1) ^  {\frac{n(n - 1)}{2}}a_0 ^ {-1} R(f, f&#39;)
+\]</span></p>
 ]]></content>
       <tags>
         <tag>notes</tag>
