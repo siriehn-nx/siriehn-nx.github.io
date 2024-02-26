@@ -6,7 +6,11 @@
 
 main:
   - name: Home
-  
+    url: /
+    weight: 10
+  - name: Posts
+    url: posts/
+    weight: 20
   #   url: '#about'
   #   weight: 10
   # - name: Posts
