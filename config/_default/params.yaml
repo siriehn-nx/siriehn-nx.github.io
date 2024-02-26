@@ -66,7 +66,7 @@ features:
     theme_light: github-light
     theme_dark: dracula
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
   repository:
@@ -77,17 +77,17 @@ features:
     gravatar: false
     shape: circle
   comment:
-    provider: ''
+    provider: 'giscus'
     disqus:
       shortname: ''
       show_count: true
     commento:
       url: ''
     giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
+      repo: 'siriehn-nx/giscus'
+      repo_id: 'R_kgDOLYOgnA'
+      category: 'Announcements'
+      category_id: 'DIC_kwDOLYOgnM4Cdh_F'
   search:
     provider: wowchemy
     algolia:
