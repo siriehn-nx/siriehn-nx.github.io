@@ -229,16 +229,16 @@ sections:
   #     title: Popular Topics
   #   design:
   #     columns: '2'
-  - block: contact
-    id: contact
-    content:
-      title: Contact
-      subtitle:
-      text: |-
-        可以通过邮件联系我.
-      # Contact (add or remove contact options as necessary)
-      email: siriehn_nx@outlook.com
-      phone: 18526285437
+  # - block: contact
+  #   id: contact
+  #   content:                
+  #     title: Contact
+  #     subtitle:
+  #     text: |-
+  #       可以通过邮件联系我.
+  #     # Contact (add or remove contact options as necessary)
+  #     email: siriehn_nx@outlook.com
+  #     phone: 18526285437
     #   appointment_url: 'https://calendly.com'
     #   address:
     #     street: 450 Serra Mall
@@ -271,13 +271,13 @@ sections:
     #   # Automatically link email and phone or display as text?
     #   autolink: true
     #   # Email form provider
-      form:
-        provider: netlify
-        formspree:
-          id:
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
-    design:
-      columns: '2'
+    #   form:
+    #     provider: netlify
+    #     formspree:
+    #       id:
+    #     netlify:
+    #       # Enable CAPTCHA challenge to reduce spam?
+    #       captcha: false
+    # design:
+    #   columns: '2'
 ---

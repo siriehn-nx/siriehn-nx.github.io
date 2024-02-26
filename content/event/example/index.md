@@ -1,6 +1,6 @@
 ---
 title: Example Talk
-
+draft: false
 event: Hugo Blox Builder Conference
 event_url: https://example.org
 
