@@ -109,6 +109,6 @@ highlight_name: true
 ---
 [中文博客](https://www.cnblogs.com/daodiaoren)
 
-一个曾经的 OIer 和现役大学生.1
+一个曾经的 OIer,喜欢谈天论地,现在是大学生,在学习数学.
 
 {style="text-align: justify;"}
