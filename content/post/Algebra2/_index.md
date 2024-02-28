@@ -12,4 +12,4 @@ categories:
 
 
 
-<embed id="pdfPlayer" src="Analysis2.pdf" type="application/pdf" width="100%" height="700" >
+<embed id="pdfPlayer" src="Algebra2.pdf" type="application/pdf" width="100%" height="700" >
