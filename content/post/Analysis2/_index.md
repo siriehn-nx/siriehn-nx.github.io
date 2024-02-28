@@ -6,11 +6,10 @@ date: '2024-02-28'
 summary: 数学分析(2)笔记
 commentable: true
 draft: false
-tags:
+categories:
   - notes
 ---
 
-<!--{{% staticref "Analysis2.pdf" "newtab" %}}My note{{% /staticref %}}-->
 
 
 <embed id="pdfPlayer" src="Analysis2.pdf" type="application/pdf" width="100%" height="600" >
