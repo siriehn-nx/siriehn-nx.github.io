@@ -10,4 +10,7 @@ tags:
   - notes
 ---
 
-{{% staticref "Analysis2.pdf" "newtab" %}}My note{{% /staticref %}}
+<!--{{% staticref "Analysis2.pdf" "newtab" %}}My note{{% /staticref %}}-->
+
+
+<embed id="pdfPlayer" src="uploads/Analysis2.pdf" type="application/pdf" width="100%" height="600" >
